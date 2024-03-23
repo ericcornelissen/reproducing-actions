@@ -1,0 +1,29 @@
+name: ericcornelissen/svgo-action@v4
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-test.yml
+      - .github/workflows/ericcornelissen-svgo-action-v4.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-test.yml
+      - .github/workflows/ericcornelissen-svgo-action-v4.yml
+  schedule:
+    - cron: "4 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  v4:
+    name: v4
+    uses: ericcornelissen/reproducing-actions/.github/workflows/reusable-test.yml@main
+    with:
+      files:              lib/index.cjs
+      build-cmd:          npm run build
+      install-cmd:        npm clean-install
+      node-version-file: .nvmrc
+      repository:        ericcornelissen/svgo-action
+      version-ref:       v4

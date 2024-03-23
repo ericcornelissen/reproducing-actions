@@ -1,0 +1,29 @@
+name: github/codeql-action@v3
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-test.yml
+      - .github/workflows/github-codeql-action-v3.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-test.yml
+      - .github/workflows/github-codeql-action-v3.yml
+  schedule:
+    - cron: "22 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  v3:
+    name: v3
+    uses: ericcornelissen/reproducing-actions/.github/workflows/reusable-test.yml@main
+    with:
+      files:        lib/*.js
+      build-cmd:    npm run build
+      install-cmd:  npm clean-install
+      node-version: 20.x
+      repository:   github/codeql-action
+      version-ref:  v3

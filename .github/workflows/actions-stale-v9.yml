@@ -1,0 +1,29 @@
+name: actions/stale@v9
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-test.yml
+      - .github/workflows/actions-stale-v9.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-test.yml
+      - .github/workflows/actions-stale-v9.yml
+  schedule:
+    - cron: "5 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  v9:
+    name: v9
+    uses: ericcornelissen/reproducing-actions/.github/workflows/reusable-test.yml@main
+    with:
+      files:        dist/index.js
+      build-cmd:    npm run build
+      install-cmd:  npm clean-install
+      node-version: 20.x
+      repository:   actions/stale
+      version-ref:  v9

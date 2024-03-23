@@ -1,0 +1,29 @@
+name: <ACTION>@<VERSION>
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-test.yml
+      - <FILE>
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-test.yml
+      - <FILE>
+  schedule:
+    - cron: "<MIN> <HOUR> * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  <VERSION>:
+    name: <VERSION>
+    uses: ericcornelissen/reproducing-actions/.github/workflows/reusable-test.yml@main
+    with:
+      files:        <FILES>
+      build-cmd:    <BUILD>
+      install-cmd:  <INSTALL>
+      node-version: <NODE>
+      repository:   <ACTION>
+      version-ref:  <VERSION>
