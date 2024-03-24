@@ -171,6 +171,11 @@ endings.
 
 ## Related Work
 
-- [Reproducible Builds]
+- [Reproducible Builds]: A project dedicated to promoting and making builds
+  reproducible.
+- [ActionsRemaker] ([demo][actionsremaker demo]): A tangentially related project
+  that aims to reproduce GitHub Actions jobs (rather than Actions themselves).
 
 [reproducible builds]: https://reproducible-builds.org/
+[actionsremaker demo]: https://www.youtube.com/watch?v=flblSqoxeAk
+[actionsremaker]: http://cdn.zhuhaonan.com/files/icse-23-actionsremaker.pdf
