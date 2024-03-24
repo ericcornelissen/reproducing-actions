@@ -83,4 +83,4 @@ jobs:
         run: shasum --strict --check $CHECKSUMS_FILE
       - name: Build files diff
         if: ${{ failure() }}
-        run: git diff ${{ input.files }}
+        run: git diff ${{ inputs.files }}
