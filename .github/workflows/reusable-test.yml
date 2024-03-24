@@ -62,7 +62,6 @@ jobs:
       - name: Install dependencies
         run: ${{ inputs.install-cmd }}
 
-
       # Check reproducibility
       - name: Normalize line endings
         run: |
@@ -82,3 +81,6 @@ jobs:
           done
       - name: Check checksums
         run: shasum --strict --check $CHECKSUMS_FILE
+      - name: Build files diff
+        if: ${{ failure() }}
+        run: git diff ${{ input.files }}
