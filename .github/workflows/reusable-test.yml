@@ -1,3 +1,10 @@
+# WARNING:
+# When using this reusable workflow, provide only trusted values to the inputs
+# `build-cmd`, `install-cmd`, and `files`. The design of this workflow requires
+# these to be embedded in scripts, which allows them to be used to execute an
+# arbitrary command (in fact, that is exactly what `build-cmd` and `install-cmd`
+# do).
+
 name: Check
 on:
   workflow_call:
@@ -64,8 +71,9 @@ jobs:
 
       # Check reproducibility
       - name: Normalize line endings
+        env:
+          files: ${{ inputs.files }}
         run: |
-          files='${{ inputs.files }}'
           for file in $files; do
             sed -i 's/\r$//' "$file"
           done
@@ -74,8 +82,9 @@ jobs:
       - name: Rebuild
         run: ${{ inputs.build-cmd }}
       - name: Normalize line endings
+        env:
+          files: ${{ inputs.files }}
         run: |
-          files='${{ inputs.files }}'
           for file in $files; do
             sed -i 's/\r$//' "$file"
           done
