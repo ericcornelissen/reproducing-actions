@@ -34,7 +34,11 @@ with more information about the project and statuses.
 | [docker/login-action@v3] | v3 | [![][docker/login-action-v3-badge]][docker/login-action-v3-url] |
 | [docker/build-push-action@v5] | v5 | [![][docker/build-push-action-v5-badge]][docker/build-push-action-v5-url] |
 | [github/codeql-action@v3] | v3 | [![][github/codeql-action-v3-badge]][github/codeql-action-v3-url] |
+| [dorny/paths-filter@v3] | v3 | [![][dorny/paths-filter-v3-badge]][dorny/paths-filter-v3-url] |
 <!-- INSERT ROW -->
+[dorny/paths-filter@v3]: https://github.com/dorny/paths-filter/tree/v3
+[dorny/paths-filter-v3-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/dorny-paths-filter-v3.yml/badge.svg?event=schedule
+[dorny/paths-filter-v3-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/dorny-paths-filter-v3.yml
 [github/codeql-action@v3]: https://github.com/github/codeql-action/tree/v3
 [github/codeql-action-v3-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/github-codeql-action-v3.yml/badge.svg?event=schedule
 [github/codeql-action-v3-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/github-codeql-action-v3.yml
