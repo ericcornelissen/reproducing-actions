@@ -96,12 +96,7 @@ jobs:
             sed -i 's/\r$//' "$file"
           done
       - name: Check checksums
-        run: |
-          shasum --strict --check $CHECKSUMS_FILE
-
-          echo 'Checksums:'
-          echo '----------'
-          cat $CHECKSUMS_FILE
+        run: shasum --strict --check $CHECKSUMS_FILE
       - name: Build files diff
         if: ${{ failure() }}
         run: git diff ${{ inputs.files }}
