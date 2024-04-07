@@ -75,10 +75,16 @@ jobs:
           files: ${{ inputs.files }}
         run: |
           for file in $files; do
+            echo "Normalizing line endings in '$file'"
             sed -i 's/\r$//' "$file"
           done
       - name: Compute original checksums
-        run: shasum --algorithm 512 ${{ inputs.files }} >$CHECKSUMS_FILE
+        run: |
+          shasum --algorithm 512 ${{ inputs.files }} >$CHECKSUMS_FILE
+
+          echo 'Checksums:'
+          echo '----------'
+          cat $CHECKSUMS_FILE
       - name: Rebuild
         run: ${{ inputs.build-cmd }}
       - name: Normalize line endings
@@ -86,6 +92,7 @@ jobs:
           files: ${{ inputs.files }}
         run: |
           for file in $files; do
+            echo "Normalizing line endings in '$file'"
             sed -i 's/\r$//' "$file"
           done
       - name: Check checksums
