@@ -44,7 +44,7 @@ permissions: read-all
 jobs:
   build:
     name: Reproducible build
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     env:
       CHECKSUMS_FILE: reproducing-actions-checksums.txt
       BACKUP_DIR: /tmp/reproducing-actions
