@@ -19,7 +19,7 @@ permissions: read-all
 jobs:
   <VERSION>:
     name: <VERSION>
-    uses: ericcornelissen/reproducing-actions/.github/workflows/reusable-test.yml@main
+    uses: ./.github/workflows/reusable-test.yml
     with:
       files:        <FILES>
       build-cmd:    <BUILD>

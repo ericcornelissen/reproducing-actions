@@ -19,7 +19,7 @@ permissions: read-all
 jobs:
   v5:
     name: v5
-    uses: ericcornelissen/reproducing-actions/.github/workflows/reusable-test.yml@main
+    uses: ./.github/workflows/reusable-test.yml
     with:
       files:        dist/index.js
       build-cmd:    yarn build

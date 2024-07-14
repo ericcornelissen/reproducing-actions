@@ -19,7 +19,7 @@ permissions: read-all
 jobs:
   v4:
     name: v4
-    uses: ericcornelissen/reproducing-actions/.github/workflows/reusable-test.yml@main
+    uses: ./.github/workflows/reusable-test.yml
     with:
       files:        dist/restore-only/index.js dist/restore/index.js dist/save-only/index.js dist/save/index.js
       build-cmd:    npm run build

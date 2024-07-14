@@ -19,7 +19,7 @@ permissions: read-all
 jobs:
   v3:
     name: v3
-    uses: ericcornelissen/reproducing-actions/.github/workflows/reusable-test.yml@main
+    uses: ./.github/workflows/reusable-test.yml
     with:
       files:        lib/*.js
       build-cmd:    npm run build
