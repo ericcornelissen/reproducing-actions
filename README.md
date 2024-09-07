@@ -16,7 +16,6 @@ with more information about the project and statuses.
 | [actions/setup-java@v4] | v4 | [![][actions/setup-java-v4-badge]][actions/setup-java-v4-url] |
 | [actions/setup-node@v4] | v4 | [![][actions/setup-node-v4-badge]][actions/setup-node-v4-url] |
 | [gitleaks/gitleaks-action@v2] | v2 | [![][gitleaks/gitleaks-action-v2-badge]][gitleaks/gitleaks-action-v2-url] |
-| [ericcornelissen/svgo-action@v4] | v4 | [![][ericcornelissen/svgo-action-v4-badge]][ericcornelissen/svgo-action-v4-url] |
 | [actions/stale@v9] | v9 | [![][actions/stale-v9-badge]][actions/stale-v9-url] |
 | [actions/github-script@v7] | v7 | [![][actions/github-script-v7-badge]][actions/github-script-v7-url] |
 | [actions/upload-artifact@v4] | v4 | [![][actions/upload-artifact-v4-badge]][actions/upload-artifact-v4-url] |
@@ -94,9 +93,6 @@ with more information about the project and statuses.
 [actions/stale@v9]: https://github.com/actions/stale/tree/v9
 [actions/stale-v9-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-stale-v9.yml/badge.svg?event=schedule
 [actions/stale-v9-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-stale-v9.yml
-[ericcornelissen/svgo-action@v4]: https://github.com/ericcornelissen/svgo-action/tree/v4
-[ericcornelissen/svgo-action-v4-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/ericcornelissen-svgo-action-v4.yml/badge.svg?event=schedule
-[ericcornelissen/svgo-action-v4-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/ericcornelissen-svgo-action-v4.yml
 [gitleaks/gitleaks-action@v2]: https://github.com/gitleaks/gitleaks-action/tree/v2
 [gitleaks/gitleaks-action-v2-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/gitleaks-gitleaks-action-v2.yml/badge.svg?event=schedule
 [gitleaks/gitleaks-action-v2-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/gitleaks-gitleaks-action-v2.yml
