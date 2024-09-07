@@ -47,6 +47,7 @@ jobs:
     runs-on: ubuntu-22.04
     env:
       CHECKSUMS_FILE: reproducing-actions-checksums.txt
+      BACKUP_DIR: /tmp/reproducing-actions
     steps:
       # Repository setup
       - name: Checkout repository
@@ -78,7 +79,11 @@ jobs:
             echo "Normalizing line endings in '$file'"
             sed -i 's/\r$//' "$file"
           done
-      - name: Compute original checksums
+      - name: Store original build files
+        run: |
+          mkdir --parents "$BACKUP_DIR"
+          cp --parents ${{ inputs.files }} "$BACKUP_DIR"
+      - name: Compute original checksums (legacy)
         run: |
           shasum --algorithm 512 ${{ inputs.files }} >$CHECKSUMS_FILE
 
@@ -95,7 +100,17 @@ jobs:
             echo "Normalizing line endings in '$file'"
             sed -i 's/\r$//' "$file"
           done
-      - name: Check checksums
+      - name: Check build files
+        env:
+          files: ${{ inputs.files }}
+        run: |
+          for file in $files; do
+            rebuild=$file
+            original=$BACKUP_DIR/$file
+            echo "Checking '$rebuild' against '$original'"
+            cmp "$rebuild" "$original"
+          done
+      - name: Check checksums (legacy)
         run: shasum --strict --check $CHECKSUMS_FILE
       - name: Build files diff
         if: ${{ failure() }}
