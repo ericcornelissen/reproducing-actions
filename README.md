@@ -179,10 +179,13 @@ endings.
   reproducible.
 - [Reproducible Builds for Maven Central Repository]: A project dedicated to
   rebuild instructions for artifacts published to (Maven) Central Repository.
+- [OSS Rebuild]: Aims to apply the reproducible build concepts at low-cost and
+  high-scale for open-source package ecosystems.
 - [ActionsRemaker] ([demo][actionsremaker demo]): A tangentially related project
   that aims to reproduce GitHub Actions jobs (rather than Actions themselves).
 
 [reproducible builds]: https://reproducible-builds.org/
 [reproducible builds for maven central repository]: https://github.com/jvm-repo-rebuild/reproducible-central
+[oss rebuild]: https://github.com/google/oss-rebuild
 [actionsremaker demo]: https://www.youtube.com/watch?v=flblSqoxeAk
 [actionsremaker]: http://cdn.zhuhaonan.com/files/icse-23-actionsremaker.pdf
