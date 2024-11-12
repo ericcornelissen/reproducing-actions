@@ -24,6 +24,6 @@ jobs:
       files:             lib/*.js
       build-cmd:         yarn build
       install-cmd:       yarn install
-      node-version-file: .nvmrc
+      node-version-file: .node-version
       repository:        JamesIves/github-pages-deploy-action
       version-ref:       v4
