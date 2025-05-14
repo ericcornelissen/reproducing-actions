@@ -112,10 +112,14 @@ with more information about the project and statuses.
 
 To monitor the reproducibility of GitHub Actions we use GitHub Actions jobs that
 attempt to rebuild a given Action from its source code and see if that changes
-the build output. To see if a change occurred, SHA512 checksums are computed on
-the build output files stored in the repository and compared to SHA512 checksums
-computed after rebuilding the Action. If these don't match the Action is
-considered not reproducible.
+the build output. To see if a change occurred, we perform a byte-by-byte
+comparison as well as a checksums-based comparison. In both cases the committed
+build files are compared against the build output of a fresh build. If either
+doesn't match the Action is considered not reproducible.
+
+For the checksum approach, SHA512 checksums are computed on the build output
+files stored in the repository and compared to SHA512 checksums computed after
+rebuilding the Action.
 
 We only monitor major versions of Actions. This avoids the need of having to
 commit changes whenever a new Action version is released, but risks incorrect
