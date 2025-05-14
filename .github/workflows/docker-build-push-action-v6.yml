@@ -1,4 +1,4 @@
-name: docker/build-push-action@v5
+name: docker/build-push-action@v6
 on:
   pull_request:
     paths:
@@ -17,15 +17,15 @@ on:
 permissions: read-all
 
 jobs:
-  v5:
-    name: v5
+  v6:
+    name: v6
     uses: ./.github/workflows/reusable-test.yml
     with:
-      files:        dist/index.js
+      files:        dist/index.js dist/licenses.txt
       build-cmd:    yarn build
       install-cmd:  |
         corepack enable
         yarn install
       node-version: 20.x
       repository:   docker/build-push-action
-      version-ref:  v5
+      version-ref:  v6

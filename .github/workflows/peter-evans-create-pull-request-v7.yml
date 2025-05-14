@@ -1,15 +1,15 @@
-name: peter-evans/create-pull-request@v6
+name: peter-evans/create-pull-request@v7
 on:
   pull_request:
     paths:
       - .github/workflows/reusable-test.yml
-      - .github/workflows/peter-evans-create-pull-request-v6.yml
+      - .github/workflows/peter-evans-create-pull-request-v7.yml
   push:
     branches:
       - main
     paths:
       - .github/workflows/reusable-test.yml
-      - .github/workflows/peter-evans-create-pull-request-v6.yml
+      - .github/workflows/peter-evans-create-pull-request-v7.yml
   schedule:
     - cron: "18 1 * * *"
   workflow_dispatch: ~
@@ -17,13 +17,13 @@ on:
 permissions: read-all
 
 jobs:
-  v6:
-    name: v6
+  v7:
+    name: v7
     uses: ./.github/workflows/reusable-test.yml
     with:
-      files:        dist/index.js
+      files:        dist/790.index.js dist/index.js
       build-cmd:    npm run build
       install-cmd:  npm clean-install
       node-version: 20.x
       repository:   peter-evans/create-pull-request
-      version-ref:  v6
+      version-ref:  v7

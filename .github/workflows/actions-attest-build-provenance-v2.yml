@@ -1,15 +1,15 @@
-name: actions/attest-build-provenance@v1
+name: actions/attest-build-provenance@v2
 on:
   pull_request:
     paths:
       - .github/workflows/reusable-test.yml
-      - .github/workflows/actions-attest-build-provenance-v1.yml
+      - .github/workflows/actions-attest-build-provenance-v2.yml
   push:
     branches:
       - main
     paths:
       - .github/workflows/reusable-test.yml
-      - .github/workflows/actions-attest-build-provenance-v1.yml
+      - .github/workflows/actions-attest-build-provenance-v2.yml
   schedule:
     - cron: "24 1 * * *"
   workflow_dispatch: ~
@@ -17,13 +17,13 @@ on:
 permissions: read-all
 
 jobs:
-  v1:
-    name: v1
+  v2:
+    name: v2
     uses: ./.github/workflows/reusable-test.yml
     with:
-      files:             dist/index.js
+      files:             dist/606.index.js dist/index.js dist/licenses.txt
       build-cmd:         npm run package
       install-cmd:       npm clean-install
       node-version-file: .node-version
       repository:        actions/attest-build-provenance
-      version-ref:       v1
+      version-ref:       v2

@@ -28,35 +28,35 @@ with more information about the project and statuses.
 | [actions/cache@v4] | v4 | [![][actions/cache-v4-badge]][actions/cache-v4-url] |
 | [JamesIves/github-pages-deploy-action@v4] | v4 | [![][JamesIves/github-pages-deploy-action-v4-badge]][JamesIves/github-pages-deploy-action-v4-url] |
 | [step-security/harden-runner@v2] | v2 | [![][step-security/harden-runner-v2-badge]][step-security/harden-runner-v2-url] |
-| [peter-evans/create-pull-request@v6] | v6 | [![][peter-evans/create-pull-request-v6-badge]][peter-evans/create-pull-request-v6-url] |
+| [peter-evans/create-pull-request@v7] | v7 | [![][peter-evans/create-pull-request-v7-badge]][peter-evans/create-pull-request-v7-url] |
 | [ncipollo/release-action@v1] | v1 | [![][ncipollo/release-action-v1-badge]][ncipollo/release-action-v1-url] |
 | [docker/login-action@v3] | v3 | [![][docker/login-action-v3-badge]][docker/login-action-v3-url] |
-| [docker/build-push-action@v5] | v5 | [![][docker/build-push-action-v5-badge]][docker/build-push-action-v5-url] |
+| [docker/build-push-action@v6] | v6 | [![][docker/build-push-action-v6-badge]][docker/build-push-action-v6-url] |
 | [github/codeql-action@v3] | v3 | [![][github/codeql-action-v3-badge]][github/codeql-action-v3-url] |
 | [dorny/paths-filter@v3] | v3 | [![][dorny/paths-filter-v3-badge]][dorny/paths-filter-v3-url] |
-| [actions/attest-build-provenance@v1] | v1 | [![][actions/attest-build-provenance-v1-badge]][actions/attest-build-provenance-v1-url] |
+| [actions/attest-build-provenance@v2] | v2 | [![][actions/attest-build-provenance-v2-badge]][actions/attest-build-provenance-v2-url] |
 <!-- INSERT ROW -->
-[actions/attest-build-provenance@v1]: https://github.com/actions/attest-build-provenance/tree/v1
-[actions/attest-build-provenance-v1-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-attest-build-provenance-v1.yml/badge.svg?event=schedule
-[actions/attest-build-provenance-v1-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-attest-build-provenance-v1.yml
+[actions/attest-build-provenance@v2]: https://github.com/actions/attest-build-provenance/tree/v2
+[actions/attest-build-provenance-v2-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-attest-build-provenance-v2.yml/badge.svg?event=schedule
+[actions/attest-build-provenance-v2-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-attest-build-provenance-v2.yml
 [dorny/paths-filter@v3]: https://github.com/dorny/paths-filter/tree/v3
 [dorny/paths-filter-v3-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/dorny-paths-filter-v3.yml/badge.svg?event=schedule
 [dorny/paths-filter-v3-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/dorny-paths-filter-v3.yml
 [github/codeql-action@v3]: https://github.com/github/codeql-action/tree/v3
 [github/codeql-action-v3-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/github-codeql-action-v3.yml/badge.svg?event=schedule
 [github/codeql-action-v3-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/github-codeql-action-v3.yml
-[docker/build-push-action@v5]: https://github.com/docker/build-push-action/tree/v5
-[docker/build-push-action-v5-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/docker-build-push-action-v5.yml/badge.svg?event=schedule
-[docker/build-push-action-v5-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/docker-build-push-action-v5.yml
+[docker/build-push-action@v6]: https://github.com/docker/build-push-action/tree/v6
+[docker/build-push-action-v6-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/docker-build-push-action-v6.yml/badge.svg?event=schedule
+[docker/build-push-action-v6-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/docker-build-push-action-v6.yml
 [docker/login-action@v3]: https://github.com/docker/login-action/tree/v3
 [docker/login-action-v3-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/docker-login-action-v3.yml/badge.svg?event=schedule
 [docker/login-action-v3-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/docker-login-action-v3.yml
 [ncipollo/release-action@v1]: https://github.com/ncipollo/release-action/tree/v1
 [ncipollo/release-action-v1-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/ncipollo-release-action-v1.yml/badge.svg?event=schedule
 [ncipollo/release-action-v1-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/ncipollo-release-action-v1.yml
-[peter-evans/create-pull-request@v6]: https://github.com/peter-evans/create-pull-request/tree/v6
-[peter-evans/create-pull-request-v6-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/peter-evans-create-pull-request-v6.yml/badge.svg?event=schedule
-[peter-evans/create-pull-request-v6-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/peter-evans-create-pull-request-v6.yml
+[peter-evans/create-pull-request@v7]: https://github.com/peter-evans/create-pull-request/tree/v7
+[peter-evans/create-pull-request-v7-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/peter-evans-create-pull-request-v7.yml/badge.svg?event=schedule
+[peter-evans/create-pull-request-v7-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/peter-evans-create-pull-request-v7.yml
 [step-security/harden-runner@v2]: https://github.com/step-security/harden-runner/tree/v2
 [step-security/harden-runner-v2-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/step-security-harden-runner-v2.yml/badge.svg?event=schedule
 [step-security/harden-runner-v2-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/step-security-harden-runner-v2.yml
