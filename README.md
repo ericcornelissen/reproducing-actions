@@ -34,11 +34,11 @@ with more information about the project and statuses.
 | [docker/build-push-action@v6] | v6 | [![][docker/build-push-action-v6-badge]][docker/build-push-action-v6-url] |
 | [github/codeql-action@v3] | v3 | [![][github/codeql-action-v3-badge]][github/codeql-action-v3-url] |
 | [dorny/paths-filter@v3] | v3 | [![][dorny/paths-filter-v3-badge]][dorny/paths-filter-v3-url] |
-| [actions/attest-build-provenance@v1] | v1 | [![][actions/attest-build-provenance-v1-badge]][actions/attest-build-provenance-v1-url] |
+| [actions/attest-build-provenance@v2] | v2 | [![][actions/attest-build-provenance-v2-badge]][actions/attest-build-provenance-v2-url] |
 <!-- INSERT ROW -->
-[actions/attest-build-provenance@v1]: https://github.com/actions/attest-build-provenance/tree/v1
-[actions/attest-build-provenance-v1-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-attest-build-provenance-v1.yml/badge.svg?event=schedule
-[actions/attest-build-provenance-v1-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-attest-build-provenance-v1.yml
+[actions/attest-build-provenance@v2]: https://github.com/actions/attest-build-provenance/tree/v2
+[actions/attest-build-provenance-v2-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-attest-build-provenance-v2.yml/badge.svg?event=schedule
+[actions/attest-build-provenance-v2-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-attest-build-provenance-v2.yml
 [dorny/paths-filter@v3]: https://github.com/dorny/paths-filter/tree/v3
 [dorny/paths-filter-v3-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/dorny-paths-filter-v3.yml/badge.svg?event=schedule
 [dorny/paths-filter-v3-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/dorny-paths-filter-v3.yml
