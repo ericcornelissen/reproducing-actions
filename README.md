@@ -35,7 +35,11 @@ with more information about the project and statuses.
 | [github/codeql-action@v3] | v3 | [![][github/codeql-action-v3-badge]][github/codeql-action-v3-url] |
 | [dorny/paths-filter@v3] | v3 | [![][dorny/paths-filter-v3-badge]][dorny/paths-filter-v3-url] |
 | [actions/attest-build-provenance@v2] | v2 | [![][actions/attest-build-provenance-v2-badge]][actions/attest-build-provenance-v2-url] |
+| [stepci/stepci@2.8.2] | 2.8.2 | [![][stepci/stepci-2.8.2-badge]][stepci/stepci-2.8.2-url] |
 <!-- INSERT ROW -->
+[stepci/stepci@2.8.2]: https://github.com/stepci/stepci/tree/2.8.2
+[stepci/stepci-2.8.2-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/stepci-2.8.2.yml/badge.svg?event=schedule
+[stepci/stepci-2.8.2-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/stepci-2.8.2.yml
 [actions/attest-build-provenance@v2]: https://github.com/actions/attest-build-provenance/tree/v2
 [actions/attest-build-provenance-v2-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-attest-build-provenance-v2.yml/badge.svg?event=schedule
 [actions/attest-build-provenance-v2-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-attest-build-provenance-v2.yml
