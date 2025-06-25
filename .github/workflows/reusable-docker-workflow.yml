@@ -52,4 +52,4 @@ jobs:
       # Diff images
       - name: Diff images
         run: |
-          diffoci diff ${{ inputs.reference-image }} docker://test
+          diffoci diff --semantic ${{ inputs.reference-image }} docker://test
