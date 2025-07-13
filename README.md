@@ -39,7 +39,11 @@ with more information about the project and statuses.
 | [fastify/github-action-merge-dependabot@v3] | v3 | [![][fastify/github-action-merge-dependabot-v3-badge]][fastify/github-action-merge-dependabot-v3-url] |
 | [googleapis/release-please-action@v4] | v4 | [![][googleapis/release-please-action-v4-badge]][googleapis/release-please-action-v4-url] |
 | [actions/create-github-app-token@v2] | v2 | [![][actions/create-github-app-token-v2-badge]][actions/create-github-app-token-v2-url] |
+| [asdf-vm/actions@v4] | v4 | [![][asdf-vm/actions-v4-badge]][asdf-vm/actions-v4-url] |
 <!-- INSERT ROW -->
+[asdf-vm/actions@v4]: https://github.com/asdf-vm/actions/tree/v4
+[asdf-vm/actions-v4-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/asdf-vm-actions-v4.yml/badge.svg?event=schedule
+[asdf-vm/actions-v4-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/asdf-vm-actions-v4.yml
 [actions/create-github-app-token@v2]: https://github.com/actions/create-github-app-token/tree/v2
 [actions/create-github-app-token-v2-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-create-github-app-token-v2.yml/badge.svg?event=schedule
 [actions/create-github-app-token-v2-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-create-github-app-token-v2.yml
