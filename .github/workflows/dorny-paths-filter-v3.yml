@@ -17,8 +17,7 @@ on:
 permissions: read-all
 
 jobs:
-  v3:
-    name: v3
+  build:
     uses: ./.github/workflows/reusable-test.yml
     with:
       files:        dist/index.js

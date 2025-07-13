@@ -17,8 +17,7 @@ on:
 permissions: read-all
 
 jobs:
-  v6:
-    name: v6
+  build:
     uses: ./.github/workflows/reusable-test.yml
     with:
       files:        dist/index.js dist/licenses.txt

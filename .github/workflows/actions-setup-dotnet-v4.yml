@@ -17,8 +17,7 @@ on:
 permissions: read-all
 
 jobs:
-  v4:
-    name: v4
+  build:
     uses: ./.github/workflows/reusable-test.yml
     with:
       files:        dist/cache-save/index.js dist/setup/index.js
