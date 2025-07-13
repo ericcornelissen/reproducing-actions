@@ -38,7 +38,11 @@ with more information about the project and statuses.
 | [JS-DevTools/npm-publish@v3] | v3 | [![][JS-DevTools/npm-publish-v3-badge]][JS-DevTools/npm-publish-v3-url] |
 | [fastify/github-action-merge-dependabot@v3] | v3 | [![][fastify/github-action-merge-dependabot-v3-badge]][fastify/github-action-merge-dependabot-v3-url] |
 | [googleapis/release-please-action@v4] | v4 | [![][googleapis/release-please-action-v4-badge]][googleapis/release-please-action-v4-url] |
+| [actions/create-github-app-token@v2] | v2 | [![][actions/create-github-app-token-v2-badge]][actions/create-github-app-token-v2-url] |
 <!-- INSERT ROW -->
+[actions/create-github-app-token@v2]: https://github.com/actions/create-github-app-token/tree/v2
+[actions/create-github-app-token-v2-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-create-github-app-token-v2.yml/badge.svg?event=schedule
+[actions/create-github-app-token-v2-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-create-github-app-token-v2.yml
 [googleapis/release-please-action@v4]: https://github.com/googleapis/release-please-action/tree/v4
 [googleapis/release-please-action-v4-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/googleapis-release-please-action-v4.yml/badge.svg?event=schedule
 [googleapis/release-please-action-v4-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/googleapis-release-please-action-v4.yml
