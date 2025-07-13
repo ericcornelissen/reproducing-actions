@@ -72,19 +72,23 @@ jobs:
 
       # Check reproducibility
       - name: Normalize line endings
-        env:
-          files: ${{ inputs.files }}
         run: |
-          for file in $files; do
+          shopt -s globstar
+
+          for file in ${{ inputs.files }}; do
             echo "Normalizing line endings in '$file'"
             sed -i 's/\r$//' "$file"
           done
       - name: Store original build files
         run: |
+          shopt -s globstar
+
           mkdir --parents "$BACKUP_DIR"
           cp --parents ${{ inputs.files }} "$BACKUP_DIR"
       - name: Compute original checksums (legacy)
         run: |
+          shopt -s globstar
+
           shasum --algorithm 512 ${{ inputs.files }} >$CHECKSUMS_FILE
 
           echo 'Checksums:'
@@ -93,18 +97,18 @@ jobs:
       - name: Rebuild
         run: ${{ inputs.build-cmd }}
       - name: Normalize line endings
-        env:
-          files: ${{ inputs.files }}
         run: |
-          for file in $files; do
+          shopt -s globstar
+
+          for file in ${{ inputs.files }}; do
             echo "Normalizing line endings in '$file'"
             sed -i 's/\r$//' "$file"
           done
       - name: Check build files
-        env:
-          files: ${{ inputs.files }}
         run: |
-          for file in $files; do
+          shopt -s globstar
+
+          for file in ${{ inputs.files }}; do
             rebuild=$file
             original=$BACKUP_DIR/$file
             echo "Checking '$rebuild' against '$original'"
@@ -114,4 +118,7 @@ jobs:
         run: shasum --strict --check $CHECKSUMS_FILE
       - name: Build files diff
         if: ${{ failure() }}
-        run: git diff ${{ inputs.files }}
+        run: |
+          shopt -s globstar
+
+          git diff ${{ inputs.files }}

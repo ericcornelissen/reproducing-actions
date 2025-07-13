@@ -1,0 +1,28 @@
+name: google-github-actions/release-please-action@v4
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-test.yml
+      - .github/workflows/google-github-actions-release-please-action-v4.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-test.yml
+      - .github/workflows/google-github-actions-release-please-action-v4.yml
+  schedule:
+    - cron: "27 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  build:
+    uses: ./.github/workflows/reusable-test.yml
+    with:
+      files:        dist/**/*.{hbs,js,ts}
+      build-cmd:    npm run build
+      install-cmd:  npm clean-install
+      node-version: 20
+      repository:   google-github-actions/release-please-action
+      version-ref:  v4
