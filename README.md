@@ -36,7 +36,11 @@ with more information about the project and statuses.
 | [dorny/paths-filter@v3] | v3 | [![][dorny/paths-filter-v3-badge]][dorny/paths-filter-v3-url] |
 | [actions/attest-build-provenance@v2] | v2 | [![][actions/attest-build-provenance-v2-badge]][actions/attest-build-provenance-v2-url] |
 | [JS-DevTools/npm-publish@v3] | v3 | [![][JS-DevTools/npm-publish-v3-badge]][JS-DevTools/npm-publish-v3-url] |
+| [fastify/github-action-merge-dependabot@v3] | v3 | [![][fastify/github-action-merge-dependabot-v3-badge]][fastify/github-action-merge-dependabot-v3-url] |
 <!-- INSERT ROW -->
+[fastify/github-action-merge-dependabot@v3]: https://github.com/fastify/github-action-merge-dependabot/tree/v3
+[fastify/github-action-merge-dependabot-v3-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/fastify-github-action-merge-dependabot-v3.yml/badge.svg?event=schedule
+[fastify/github-action-merge-dependabot-v3-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/fastify-github-action-merge-dependabot-v3.yml
 [JS-DevTools/npm-publish@v3]: https://github.com/JS-DevTools/npm-publish/tree/v3
 [JS-DevTools/npm-publish-v3-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/js-devtools-npm-publish-v3.yml/badge.svg?event=schedule
 [JS-DevTools/npm-publish-v3-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/js-devtools-npm-publish-v3.yml
