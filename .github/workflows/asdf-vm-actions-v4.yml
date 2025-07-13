@@ -24,6 +24,11 @@ jobs:
       build-cmd:         pnpm build
       install-cmd: |
         corepack enable
+
+        npm uninstall -g pnpm
+        which pnpm
+        pnpm --version
+
         pnpm install
       node-version-file: .tool-versions
       repository:        asdf-vm/actions
