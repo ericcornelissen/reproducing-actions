@@ -35,7 +35,11 @@ with more information about the project and statuses.
 | [github/codeql-action@v3] | v3 | [![][github/codeql-action-v3-badge]][github/codeql-action-v3-url] |
 | [dorny/paths-filter@v3] | v3 | [![][dorny/paths-filter-v3-badge]][dorny/paths-filter-v3-url] |
 | [actions/attest-build-provenance@v2] | v2 | [![][actions/attest-build-provenance-v2-badge]][actions/attest-build-provenance-v2-url] |
+| [JS-DevTools/npm-publish@v3] | v3 | [![][JS-DevTools/npm-publish-v3-badge]][JS-DevTools/npm-publish-v3-url] |
 <!-- INSERT ROW -->
+[JS-DevTools/npm-publish@v3]: https://github.com/JS-DevTools/npm-publish/tree/v3
+[JS-DevTools/npm-publish-v3-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/js-devtools-npm-publish-v3.yml/badge.svg?event=schedule
+[JS-DevTools/npm-publish-v3-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/js-devtools-npm-publish-v3.yml
 [actions/attest-build-provenance@v2]: https://github.com/actions/attest-build-provenance/tree/v2
 [actions/attest-build-provenance-v2-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-attest-build-provenance-v2.yml/badge.svg?event=schedule
 [actions/attest-build-provenance-v2-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-attest-build-provenance-v2.yml
