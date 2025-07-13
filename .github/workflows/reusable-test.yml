@@ -72,10 +72,8 @@ jobs:
 
       # Check reproducibility
       - name: Normalize line endings
-        env:
-          files: ${{ inputs.files }}
         run: |
-          for file in $files; do
+          for file in ${{ inputs.files }}; do
             echo "Normalizing line endings in '$file'"
             sed -i 's/\r$//' "$file"
           done
@@ -93,18 +91,14 @@ jobs:
       - name: Rebuild
         run: ${{ inputs.build-cmd }}
       - name: Normalize line endings
-        env:
-          files: ${{ inputs.files }}
         run: |
-          for file in $files; do
+          for file in ${{ inputs.files }}; do
             echo "Normalizing line endings in '$file'"
             sed -i 's/\r$//' "$file"
           done
       - name: Check build files
-        env:
-          files: ${{ inputs.files }}
         run: |
-          for file in $files; do
+          for file in ${{ inputs.files }}; do
             rebuild=$file
             original=$BACKUP_DIR/$file
             echo "Checking '$rebuild' against '$original'"
