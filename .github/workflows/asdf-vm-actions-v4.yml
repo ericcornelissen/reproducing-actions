@@ -22,7 +22,9 @@ jobs:
     with:
       files:             install/main.js plugin-test/main.js plugins-add/main.js setup/main.js
       build-cmd:         pnpm build
-      install-cmd:       pnpm install
+      install-cmd: |
+        corepack enable
+        pnpm install
       node-version-file: .tool-versions
       repository:        asdf-vm/actions
       version-ref:       v4
