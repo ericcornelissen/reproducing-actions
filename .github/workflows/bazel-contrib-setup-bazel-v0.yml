@@ -1,0 +1,28 @@
+name: bazel-contrib/setup-bazel@v0
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-test.yml
+      - .github/workflows/bazel-contrib-setup-bazel-v0.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-test.yml
+      - .github/workflows/bazel-contrib-setup-bazel-v0.yml
+  schedule:
+    - cron: "29 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  build:
+    uses: ./.github/workflows/reusable-test.yml
+    with:
+      files:             dist/main/index.js dist/post/index.js
+      build-cmd:         npm run build
+      install-cmd:       npm clean-install
+      node-version-file: package.json
+      repository:        bazel-contrib/setup-bazel
+      version-ref:       v0

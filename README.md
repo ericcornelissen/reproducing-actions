@@ -37,7 +37,11 @@ with more information about the project and statuses.
 | [actions/attest-build-provenance@v2] | v2 | [![][actions/attest-build-provenance-v2-badge]][actions/attest-build-provenance-v2-url] |
 | [JS-DevTools/npm-publish@v3] | v3 | [![][JS-DevTools/npm-publish-v3-badge]][JS-DevTools/npm-publish-v3-url] |
 | [fastify/github-action-merge-dependabot@v3] | v3 | [![][fastify/github-action-merge-dependabot-v3-badge]][fastify/github-action-merge-dependabot-v3-url] |
+| [bazel-contrib/setup-bazel@v0] | v0 | [![][bazel-contrib/setup-bazel-v0-badge]][bazel-contrib/setup-bazel-v0-url] |
 <!-- INSERT ROW -->
+[bazel-contrib/setup-bazel@v0]: https://github.com/bazel-contrib/setup-bazel/tree/v0
+[bazel-contrib/setup-bazel-v0-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/bazel-contrib-setup-bazel-v0.yml/badge.svg?event=schedule
+[bazel-contrib/setup-bazel-v0-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/bazel-contrib-setup-bazel-v0.yml
 [fastify/github-action-merge-dependabot@v3]: https://github.com/fastify/github-action-merge-dependabot/tree/v3
 [fastify/github-action-merge-dependabot-v3-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/fastify-github-action-merge-dependabot-v3.yml/badge.svg?event=schedule
 [fastify/github-action-merge-dependabot-v3-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/fastify-github-action-merge-dependabot-v3.yml
