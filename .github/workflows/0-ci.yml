@@ -1,0 +1,36 @@
+name: Check
+on:
+  pull_request: ~
+  push:
+    branches:
+      - main
+
+permissions: read-all
+
+jobs:
+  check:
+    name: ${{ matrix.what }}
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - what: GitHub Actions
+            how: |
+              export SHELLCHECK_OPTS='-e SC2086'
+              actionlint
+          - what: Shell scripts
+            how: |
+              shellcheck new.sh
+          - what: Formatting
+            how: |
+              shfmt --simplify --diff new.sh
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Install tooling
+        uses: asdf-vm/actions/install@1902764435ca0dd2f3388eea723a4f92a4eb8302 # v4.0.0
+      - name: ${{ matrix.what }}
+        run: ${{ matrix.how }}
