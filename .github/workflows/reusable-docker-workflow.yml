@@ -1,0 +1,55 @@
+name: Reusable Docker Workflow
+
+on:
+  workflow_call:
+    inputs:
+      # Target
+      repository:
+        required: true
+        type: string
+      version-ref:
+        required: true
+        type: string
+      
+      # Build
+      build-cmd:
+        required: true
+        type: string
+      
+      # Reference image
+      reference-image:
+        required: true
+        type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      # Clone repository whose reproducibility is to be tested
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+          ref: ${{ inputs.version-ref }}
+          repository: ${{ inputs.repository }}
+
+      # Install diffoci tool to help diff images
+      - name: Install diffoci
+        run: |
+          DIFFOCI_VERSION=v0.1.6
+          curl -L https://github.com/reproducible-containers/diffoci/releases/download/${DIFFOCI_VERSION}/diffoci-${DIFFOCI_VERSION}.linux-amd64 -o /usr/local/bin/diffoci
+          chmod +x /usr/local/bin/diffoci
+
+      # Pull reference image
+      - name: Pull reference image
+        run: |
+          docker pull ${{ inputs.reference-image }}
+
+      # Build image
+      - name: Build image
+        run: ${{ inputs.build-cmd }}
+      
+      # Diff images
+      - name: Diff images
+        run: |
+          diffoci diff --semantic ${{ inputs.reference-image }} docker://test

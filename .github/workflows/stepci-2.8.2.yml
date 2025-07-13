@@ -1,0 +1,27 @@
+name: stepci/stepci@2.8.2
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-docker-workflow.yml
+      - .github/workflows/stepci-2.8.2.yml
+  push:
+    branches:
+      - '*'
+    paths:
+      - .github/workflows/reusable-docker-workflow.yml
+      - .github/workflows/stepci-2.8.2.yml
+  schedule:
+    - cron: "16 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  stepci:
+    name: stepci
+    uses: ./.github/workflows/reusable-docker-workflow.yml
+    with:
+      build-cmd:    docker build -f Dockerfile.action -t test .
+      repository:   stepci/stepci
+      version-ref:  2.8.2
+      reference-image: ghcr.io/stepci/stepci:2.8.2
