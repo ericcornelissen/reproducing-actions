@@ -23,7 +23,11 @@ jobs:
       files:             install/main.js plugin-test/main.js plugins-add/main.js setup/main.js
       build-cmd:         pnpm build
       install-cmd: |
+        PNPM_VERSION=$(jq -r '.engines.pnpm' package.json | sed 's/^=//')
+
         corepack enable
+        corepack prepare "pnpm@${PNPM_VERSION}" --activate
+
         corepack pnpm install
       node-version-file: .tool-versions
       repository:        asdf-vm/actions
