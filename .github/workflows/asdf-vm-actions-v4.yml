@@ -28,7 +28,7 @@ jobs:
         corepack enable
         corepack prepare "pnpm@${PNPM_VERSION}" --activate
 
-        corepack pnpm install
+        corepack pnpm install --ignore-scripts
       node-version-file: .tool-versions
       repository:        asdf-vm/actions
       version-ref:       v4
