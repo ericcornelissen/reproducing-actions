@@ -21,8 +21,12 @@ jobs:
     uses: ./.github/workflows/reusable-test.yml
     with:
       files:        dist/**/*.js
-      build-cmd:    npm run compile
-      install-cmd:  npm clean-install
+      build-cmd: |
+        cd sources/
+        npm run compile
+      install-cmd: |
+        cd sources/
+        npm clean-install
       node-version: 20
       repository:   gradle/actions
       version-ref:  v4
