@@ -1,0 +1,18 @@
+name: Weekly
+on:
+  schedule:
+    - cron: "0 0 * * 0"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  tooling:
+    name: Update tooling
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Update tooling
+        uses: ericcornelissen/tool-versions-update-action/pr@1a22fed2aa6ac761cfd753c0b3db943b961b4484 # v1.1.5
