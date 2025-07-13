@@ -166,7 +166,7 @@ Any non-JavaScript Action or any JavaScript-based Action without a build step is
 currently considered out of scope. If you have a need for monitoring of such
 Actions please check out and comment on [issue #1].
 
-[contributing guidelines]: https://github.com/ericcornelissen/reproducing-actions/blob/main/CONTRIBUTING.md
+[contributing guidelines]: ./CONTRIBUTING.md
 [new issue]: https://github.com/ericcornelissen/reproducing-actions/issues/new
 [issue #1]: https://github.com/ericcornelissen/reproducing-actions/issues/1
 
