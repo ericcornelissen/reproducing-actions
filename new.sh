@@ -17,7 +17,7 @@ hyphenated=${action//'/'/'-'}
 hyphenated=$(echo "$hyphenated" | tr '[:upper:]' '[:lower:]')
 file=".github/workflows/${hyphenated}-${version}.yml"
 
-if [ -f "${file}" ]; then
+if [[ -f ${file} ]]; then
 	echo "There is already a monitor for ${action}@${version}"
 	exit 1
 fi
