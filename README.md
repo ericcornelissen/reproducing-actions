@@ -37,7 +37,11 @@ with more information about the project and statuses.
 | [actions/attest-build-provenance@v2] | v2 | [![][actions/attest-build-provenance-v2-badge]][actions/attest-build-provenance-v2-url] |
 | [JS-DevTools/npm-publish@v3] | v3 | [![][JS-DevTools/npm-publish-v3-badge]][JS-DevTools/npm-publish-v3-url] |
 | [fastify/github-action-merge-dependabot@v3] | v3 | [![][fastify/github-action-merge-dependabot-v3-badge]][fastify/github-action-merge-dependabot-v3-url] |
+| [bazelbuild/setup-bazelisk@v3] | v3 | [![][bazelbuild/setup-bazelisk-v3-badge]][bazelbuild/setup-bazelisk-v3-url] |
 <!-- INSERT ROW -->
+[bazelbuild/setup-bazelisk@v3]: https://github.com/bazelbuild/setup-bazelisk/tree/v3
+[bazelbuild/setup-bazelisk-v3-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/bazelbuild-setup-bazelisk-v3.yml/badge.svg?event=schedule
+[bazelbuild/setup-bazelisk-v3-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/bazelbuild-setup-bazelisk-v3.yml
 [fastify/github-action-merge-dependabot@v3]: https://github.com/fastify/github-action-merge-dependabot/tree/v3
 [fastify/github-action-merge-dependabot-v3-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/fastify-github-action-merge-dependabot-v3.yml/badge.svg?event=schedule
 [fastify/github-action-merge-dependabot-v3-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/fastify-github-action-merge-dependabot-v3.yml

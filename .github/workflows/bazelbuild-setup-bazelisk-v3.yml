@@ -1,0 +1,28 @@
+name: bazelbuild/setup-bazelisk@v3
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-test.yml
+      - .github/workflows/bazelbuild-setup-bazelisk-v3.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-test.yml
+      - .github/workflows/bazelbuild-setup-bazelisk-v3.yml
+  schedule:
+    - cron: "29 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  build:
+    uses: ./.github/workflows/reusable-test.yml
+    with:
+      files:        dist/index.js
+      build-cmd:    npm run build
+      install-cmd:  npm clean-install
+      node-version: 20
+      repository:   bazelbuild/setup-bazelisk
+      version-ref:  v3
