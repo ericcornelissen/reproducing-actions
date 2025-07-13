@@ -6,7 +6,7 @@ action="$1"
 version="$2"
 
 ## Usage
-if [[ -z "${action}" || -z "${version}" ]]; then
+if [[ -z ${action} || -z ${version} ]]; then
 	echo 'USAGE:   new.sh <action> <major version>'
 	echo 'EXAMPLE: new.sh action/checkout v4'
 	exit 0
@@ -34,7 +34,7 @@ table=${table//'<ACTION>'/"${action}"}
 table=${table//'<HYPHENATED>'/"${hyphenated}"}
 table=${table//'<VERSION>'/"${version}"}
 
-## Ouptut
+## Output
 echo "${workflow}" >"${file}"
 
 readme=$(cat README.md)
