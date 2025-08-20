@@ -12,7 +12,6 @@ with more information about the project and statuses.
 
 | Action | Version | Status |
 | ------ | ------- | ------ |
-| [actions/checkout@v4] | v4 | [![][actions/checkout-v4-badge]][actions/checkout-v4-url] |
 | [actions/setup-java@v4] | v4 | [![][actions/setup-java-v4-badge]][actions/setup-java-v4-url] |
 | [actions/setup-node@v4] | v4 | [![][actions/setup-node-v4-badge]][actions/setup-node-v4-url] |
 | [gitleaks/gitleaks-action@v2] | v2 | [![][gitleaks/gitleaks-action-v2-badge]][gitleaks/gitleaks-action-v2-url] |
@@ -134,9 +133,6 @@ with more information about the project and statuses.
 [actions/setup-java@v4]: https://github.com/actions/setup-java/tree/v4
 [actions/setup-java-v4-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-java-v4.yml/badge.svg?event=schedule
 [actions/setup-java-v4-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-java-v4.yml
-[actions/checkout@v4]: https://github.com/actions/checkout/tree/v4
-[actions/checkout-v4-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-checkout-v4.yml/badge.svg?event=schedule
-[actions/checkout-v4-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-checkout-v4.yml
 
 ## About
 
