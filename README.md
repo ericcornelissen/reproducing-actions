@@ -207,7 +207,7 @@ endings.
 
 ## Trophies
 
-The following is a list of unreproducible action version detected by this
+The following is a list of unreproducible action versions detected by this
 project.
 
 - `gitleaks/gitleaks-action`: [v2.3.3 and v2.3.4](https://github.com/gitleaks/gitleaks-action/issues/137#issuecomment-1937801212)
