@@ -205,6 +205,13 @@ respective job in this project are byte-for-byte reproducible using the target
 project's dependencies and build command modulo Unix vs. Windows-style line
 endings.
 
+## Trophies
+
+The following is a list of unreproducible action version detected by this
+project.
+
+- `gitleaks/gitleaks-action`: [v2.3.3 and v2.3.4](https://github.com/gitleaks/gitleaks-action/issues/137#issuecomment-1937801212)
+
 ## Related Work
 
 - [Reproducible Builds]: A project dedicated to promoting and making builds
