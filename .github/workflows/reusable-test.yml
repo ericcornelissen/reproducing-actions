@@ -62,11 +62,13 @@ jobs:
         uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
         with:
           node-version: ${{ inputs.node-version }}
+          package-manager-cache: false
       - name: Install Node.js (from version file)
         if: ${{ inputs.node-version-file != '' }}
         uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
         with:
           node-version-file: ${{ inputs.node-version-file }}
+          package-manager-cache: false
       - name: Install dependencies
         run: ${{ inputs.install-cmd }}
 
