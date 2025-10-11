@@ -42,7 +42,11 @@ with more information about the project and statuses.
 | [gradle/actions@v4] | v4 | [![][gradle/actions-v4-badge]][gradle/actions-v4-url] |
 | [actions/checkout@v5] | v5 | [![][actions/checkout-v5-badge]][actions/checkout-v5-url] |
 | [actions/download-artifact@v5] | v5 | [![][actions/download-artifact-v5-badge]][actions/download-artifact-v5-url] |
+| [SonarSource/sonarqube-scan-action@v6] | v6 | [![][SonarSource/sonarqube-scan-action-v6-badge]][SonarSource/sonarqube-scan-action-v6-url] |
 <!-- INSERT ROW -->
+[SonarSource/sonarqube-scan-action@v6]: https://github.com/SonarSource/sonarqube-scan-action/tree/v6
+[SonarSource/sonarqube-scan-action-v6-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/sonarsource-sonarqube-scan-action-v6.yml/badge.svg?event=schedule
+[SonarSource/sonarqube-scan-action-v6-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/sonarsource-sonarqube-scan-action-v6.yml
 [actions/download-artifact@v5]: https://github.com/actions/download-artifact/tree/v5
 [actions/download-artifact-v5-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-download-artifact-v5.yml/badge.svg?event=schedule
 [actions/download-artifact-v5-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-download-artifact-v5.yml
