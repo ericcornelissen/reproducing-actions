@@ -13,7 +13,6 @@ with more information about the project and statuses.
 | Action | Version | Status |
 | ------ | ------- | ------ |
 | [actions/setup-java@v4] | v4 | [![][actions/setup-java-v4-badge]][actions/setup-java-v4-url] |
-| [actions/setup-node@v4] | v4 | [![][actions/setup-node-v4-badge]][actions/setup-node-v4-url] |
 | [gitleaks/gitleaks-action@v2] | v2 | [![][gitleaks/gitleaks-action-v2-badge]][gitleaks/gitleaks-action-v2-url] |
 | [actions/stale@v9] | v9 | [![][actions/stale-v9-badge]][actions/stale-v9-url] |
 | [actions/github-script@v7] | v7 | [![][actions/github-script-v7-badge]][actions/github-script-v7-url] |
@@ -43,7 +42,11 @@ with more information about the project and statuses.
 | [actions/checkout@v5] | v5 | [![][actions/checkout-v5-badge]][actions/checkout-v5-url] |
 | [actions/download-artifact@v5] | v5 | [![][actions/download-artifact-v5-badge]][actions/download-artifact-v5-url] |
 | [SonarSource/sonarqube-scan-action@v6] | v6 | [![][SonarSource/sonarqube-scan-action-v6-badge]][SonarSource/sonarqube-scan-action-v6-url] |
+| [actions/setup-node@v6] | v6 | [![][actions/setup-node-v6-badge]][actions/setup-node-v6-url] |
 <!-- INSERT ROW -->
+[actions/setup-node@v6]: https://github.com/actions/setup-node/tree/v6
+[actions/setup-node-v6-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-node-v6.yml/badge.svg?event=schedule
+[actions/setup-node-v6-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-node-v6.yml
 [SonarSource/sonarqube-scan-action@v6]: https://github.com/SonarSource/sonarqube-scan-action/tree/v6
 [SonarSource/sonarqube-scan-action-v6-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/sonarsource-sonarqube-scan-action-v6.yml/badge.svg?event=schedule
 [SonarSource/sonarqube-scan-action-v6-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/sonarsource-sonarqube-scan-action-v6.yml
@@ -131,9 +134,6 @@ with more information about the project and statuses.
 [gitleaks/gitleaks-action@v2]: https://github.com/gitleaks/gitleaks-action/tree/v2
 [gitleaks/gitleaks-action-v2-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/gitleaks-gitleaks-action-v2.yml/badge.svg?event=schedule
 [gitleaks/gitleaks-action-v2-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/gitleaks-gitleaks-action-v2.yml
-[actions/setup-node@v4]: https://github.com/actions/setup-node/tree/v4
-[actions/setup-node-v4-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-node-v4.yml/badge.svg?event=schedule
-[actions/setup-node-v4-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-node-v4.yml
 [actions/setup-java@v4]: https://github.com/actions/setup-java/tree/v4
 [actions/setup-java-v4-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-java-v4.yml/badge.svg?event=schedule
 [actions/setup-java-v4-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-java-v4.yml
