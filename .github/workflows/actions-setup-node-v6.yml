@@ -1,0 +1,28 @@
+name: actions/setup-node@v6
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-test.yml
+      - .github/workflows/actions-setup-node-v6.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-test.yml
+      - .github/workflows/actions-setup-node-v6.yml
+  schedule:
+    - cron: "36 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  build:
+    uses: ./.github/workflows/reusable-test.yml
+    with:
+      files:        dist/cache-save/index.js dist/setup/index.js
+      build-cmd:    npm run build
+      install-cmd:  npm clean-install
+      node-version: 24.x
+      repository:   actions/setup-node
+      version-ref:  v6

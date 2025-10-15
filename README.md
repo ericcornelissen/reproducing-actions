@@ -43,7 +43,11 @@ with more information about the project and statuses.
 | [actions/checkout@v5] | v5 | [![][actions/checkout-v5-badge]][actions/checkout-v5-url] |
 | [actions/download-artifact@v5] | v5 | [![][actions/download-artifact-v5-badge]][actions/download-artifact-v5-url] |
 | [SonarSource/sonarqube-scan-action@v6] | v6 | [![][SonarSource/sonarqube-scan-action-v6-badge]][SonarSource/sonarqube-scan-action-v6-url] |
+| [actions/setup-node@v6] | v6 | [![][actions/setup-node-v6-badge]][actions/setup-node-v6-url] |
 <!-- INSERT ROW -->
+[actions/setup-node@v6]: https://github.com/actions/setup-node/tree/v6
+[actions/setup-node-v6-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-node-v6.yml/badge.svg?event=schedule
+[actions/setup-node-v6-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-node-v6.yml
 [SonarSource/sonarqube-scan-action@v6]: https://github.com/SonarSource/sonarqube-scan-action/tree/v6
 [SonarSource/sonarqube-scan-action-v6-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/sonarsource-sonarqube-scan-action-v6.yml/badge.svg?event=schedule
 [SonarSource/sonarqube-scan-action-v6-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/sonarsource-sonarqube-scan-action-v6.yml
