@@ -16,7 +16,6 @@ with more information about the project and statuses.
 | [gitleaks/gitleaks-action@v2] | v2 | [![][gitleaks/gitleaks-action-v2-badge]][gitleaks/gitleaks-action-v2-url] |
 | [actions/stale@v9] | v9 | [![][actions/stale-v9-badge]][actions/stale-v9-url] |
 | [actions/github-script@v7] | v7 | [![][actions/github-script-v7-badge]][actions/github-script-v7-url] |
-| [actions/upload-artifact@v4] | v4 | [![][actions/upload-artifact-v4-badge]][actions/upload-artifact-v4-url] |
 | [actions/setup-python@v5] | v5 | [![][actions/setup-python-v5-badge]][actions/setup-python-v5-url] |
 | [actions/setup-dotnet@v4] | v4 | [![][actions/setup-dotnet-v4-badge]][actions/setup-dotnet-v4-url] |
 | [actions/setup-go@v5] | v5 | [![][actions/setup-go-v5-badge]][actions/setup-go-v5-url] |
@@ -126,9 +125,6 @@ with more information about the project and statuses.
 [actions/setup-python@v5]: https://github.com/actions/setup-python/tree/v5
 [actions/setup-python-v5-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-python-v5.yml/badge.svg?event=schedule
 [actions/setup-python-v5-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-python-v5.yml
-[actions/upload-artifact@v4]: https://github.com/actions/upload-artifact/tree/v4
-[actions/upload-artifact-v4-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-upload-artifact-v4.yml/badge.svg?event=schedule
-[actions/upload-artifact-v4-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-upload-artifact-v4.yml
 [actions/github-script@v7]: https://github.com/actions/github-script/tree/v7
 [actions/github-script-v7-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-github-script-v7.yml/badge.svg?event=schedule
 [actions/github-script-v7-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-github-script-v7.yml
