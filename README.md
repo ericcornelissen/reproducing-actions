@@ -43,7 +43,11 @@ with more information about the project and statuses.
 | [actions/download-artifact@v5] | v5 | [![][actions/download-artifact-v5-badge]][actions/download-artifact-v5-url] |
 | [SonarSource/sonarqube-scan-action@v6] | v6 | [![][SonarSource/sonarqube-scan-action-v6-badge]][SonarSource/sonarqube-scan-action-v6-url] |
 | [actions/setup-node@v6] | v6 | [![][actions/setup-node-v6-badge]][actions/setup-node-v6-url] |
+| [actions/upload-artifact@v5] | v5 | [![][actions/upload-artifact-v5-badge]][actions/upload-artifact-v5-url] |
 <!-- INSERT ROW -->
+[actions/upload-artifact@v5]: https://github.com/actions/upload-artifact/tree/v5
+[actions/upload-artifact-v5-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-upload-artifact-v5.yml/badge.svg?event=schedule
+[actions/upload-artifact-v5-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-upload-artifact-v5.yml
 [actions/setup-node@v6]: https://github.com/actions/setup-node/tree/v6
 [actions/setup-node-v6-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-node-v6.yml/badge.svg?event=schedule
 [actions/setup-node-v6-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-node-v6.yml
