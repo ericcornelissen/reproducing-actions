@@ -39,11 +39,14 @@ with more information about the project and statuses.
 | [cardinalby/schema-validator-action@v3] | v3 | [![][cardinalby/schema-validator-action-v3-badge]][cardinalby/schema-validator-action-v3-url] |
 | [gradle/actions@v4] | v4 | [![][gradle/actions-v4-badge]][gradle/actions-v4-url] |
 | [actions/checkout@v5] | v5 | [![][actions/checkout-v5-badge]][actions/checkout-v5-url] |
-| [actions/download-artifact@v5] | v5 | [![][actions/download-artifact-v5-badge]][actions/download-artifact-v5-url] |
 | [SonarSource/sonarqube-scan-action@v6] | v6 | [![][SonarSource/sonarqube-scan-action-v6-badge]][SonarSource/sonarqube-scan-action-v6-url] |
 | [actions/setup-node@v6] | v6 | [![][actions/setup-node-v6-badge]][actions/setup-node-v6-url] |
 | [actions/upload-artifact@v5] | v5 | [![][actions/upload-artifact-v5-badge]][actions/upload-artifact-v5-url] |
+| [actions/download-artifact@v6] | v6 | [![][actions/download-artifact-v6-badge]][actions/download-artifact-v6-url] |
 <!-- INSERT ROW -->
+[actions/download-artifact@v6]: https://github.com/actions/download-artifact/tree/v6
+[actions/download-artifact-v6-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-download-artifact-v6.yml/badge.svg?event=schedule
+[actions/download-artifact-v6-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-download-artifact-v6.yml
 [actions/upload-artifact@v5]: https://github.com/actions/upload-artifact/tree/v5
 [actions/upload-artifact-v5-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-upload-artifact-v5.yml/badge.svg?event=schedule
 [actions/upload-artifact-v5-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-upload-artifact-v5.yml
@@ -53,9 +56,6 @@ with more information about the project and statuses.
 [SonarSource/sonarqube-scan-action@v6]: https://github.com/SonarSource/sonarqube-scan-action/tree/v6
 [SonarSource/sonarqube-scan-action-v6-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/sonarsource-sonarqube-scan-action-v6.yml/badge.svg?event=schedule
 [SonarSource/sonarqube-scan-action-v6-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/sonarsource-sonarqube-scan-action-v6.yml
-[actions/download-artifact@v5]: https://github.com/actions/download-artifact/tree/v5
-[actions/download-artifact-v5-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-download-artifact-v5.yml/badge.svg?event=schedule
-[actions/download-artifact-v5-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-download-artifact-v5.yml
 [actions/checkout@v5]: https://github.com/actions/checkout/tree/v5
 [actions/checkout-v5-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-checkout-v5.yml/badge.svg?event=schedule
 [actions/checkout-v5-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-checkout-v5.yml
