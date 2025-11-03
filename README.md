@@ -43,7 +43,11 @@ with more information about the project and statuses.
 | [actions/setup-node@v6] | v6 | [![][actions/setup-node-v6-badge]][actions/setup-node-v6-url] |
 | [actions/upload-artifact@v5] | v5 | [![][actions/upload-artifact-v5-badge]][actions/upload-artifact-v5-url] |
 | [actions/download-artifact@v6] | v6 | [![][actions/download-artifact-v6-badge]][actions/download-artifact-v6-url] |
+| [wearerequired/lint-action@v2] | v2 | [![][wearerequired/lint-action-v2-badge]][wearerequired/lint-action-v2-url] |
 <!-- INSERT ROW -->
+[wearerequired/lint-action@v2]: https://github.com/wearerequired/lint-action/tree/v2
+[wearerequired/lint-action-v2-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/wearerequired-lint-action-v2.yml/badge.svg?event=schedule
+[wearerequired/lint-action-v2-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/wearerequired-lint-action-v2.yml
 [actions/download-artifact@v6]: https://github.com/actions/download-artifact/tree/v6
 [actions/download-artifact-v6-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-download-artifact-v6.yml/badge.svg?event=schedule
 [actions/download-artifact-v6-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-download-artifact-v6.yml
