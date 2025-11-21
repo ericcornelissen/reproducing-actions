@@ -43,7 +43,11 @@ with more information about the project and statuses.
 | [actions/upload-artifact@v5] | v5 | [![][actions/upload-artifact-v5-badge]][actions/upload-artifact-v5-url] |
 | [actions/download-artifact@v6] | v6 | [![][actions/download-artifact-v6-badge]][actions/download-artifact-v6-url] |
 | [wearerequired/lint-action@v2] | v2 | [![][wearerequired/lint-action-v2-badge]][wearerequired/lint-action-v2-url] |
+| [actions/attest-build-provenance@v3] | v3 | [![][actions/attest-build-provenance-v3-badge]][actions/attest-build-provenance-v3-url] |
 <!-- INSERT ROW -->
+[actions/attest-build-provenance@v3]: https://github.com/actions/attest-build-provenance/tree/v3
+[actions/attest-build-provenance-v3-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-attest-build-provenance-v3.yml/badge.svg?event=schedule
+[actions/attest-build-provenance-v3-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-attest-build-provenance-v3.yml
 [wearerequired/lint-action@v2]: https://github.com/wearerequired/lint-action/tree/v2
 [wearerequired/lint-action-v2-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/wearerequired-lint-action-v2.yml/badge.svg?event=schedule
 [wearerequired/lint-action-v2-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/wearerequired-lint-action-v2.yml
