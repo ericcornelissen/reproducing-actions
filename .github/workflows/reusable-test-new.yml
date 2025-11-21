@@ -113,15 +113,17 @@ jobs:
           echo 'Checksums:'
           echo '----------'
           cat $CHECKSUMS_FILE
+
       - name: Rebuild
         run: ${{ inputs.build-cmd }}
+
       - name: Normalize line endings
         run: |
           while IFS= read -r file; do
             echo "Normalizing line endings in '$file'"
             sed -i 's/\r$//' "$file"
           done <<<"$FILES_LINES"
-      - name: Check build files
+      - name: Check byte-by-byte equality
         run: |
           while IFS= read -r file; do
             rebuild=$file
@@ -131,13 +133,6 @@ jobs:
           done <<<"$FILES_LINES"
       - name: Check checksums (legacy)
         run: shasum --strict --check $CHECKSUMS_FILE
-      - name: Build files diff
-        if: ${{ failure() }}
-        run: |
-          while IFS= read -r file; do
-            echo "--- Diff of '$file' ---"
-            git diff "$file"
-          done <<<"$FILES_LINES"
       - name: Check for new files
         run: |
           git clean -dfX
@@ -151,3 +146,11 @@ jobs:
             echo "$AFTER"
             exit 1
           fi
+
+      - name: Build files diff
+        if: ${{ failure() }}
+        run: |
+          while IFS= read -r file; do
+            echo "--- Diff of '$file' ---"
+            git diff "$file"
+          done <<<"$FILES_LINES"
