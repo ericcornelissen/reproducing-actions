@@ -57,6 +57,7 @@ jobs:
     needs:
       - setup
     env:
+      BACKUP_DIR: /tmp/reproducing-actions
       CHECKSUMS_FILE: /tmp/reproducing-actions-checksums.txt
     steps:
       # Repository setup
@@ -87,21 +88,27 @@ jobs:
       - name: List files
         id: files
         run: |
+          TMP=$(find . \( -path ./node_modules -o -path ./.git \) -prune -o -type f -print)
+
           {
-            echo 'FILES<<EOF'
-            find . \( -path ./node_modules -o -path ./.git \) -prune -o -type f -print
+            echo 'FILES_LINES<<EOF'
+            echo "$TMP"
             echo 'EOF'
           } >>"${GITHUB_ENV}"
+          echo "FILES_LIST=$(echo $TMP | tr '\n' ' ')" >>"${GITHUB_ENV}"
       - name: Normalize line endings
         run: |
           while IFS= read -r file; do
             echo "Normalizing line endings in '$file'"
             sed -i 's/\r$//' "$file"
-          done <<<"$FILES"
-      - name: Compute original checksums
+          done <<<"$FILES_LINES"
+      - name: Store original files
         run: |
-          # shellcheck disable=SC2046 # intentional word splitting
-          shasum --algorithm 512 $(echo $FILES | tr '\n' ' ') >$CHECKSUMS_FILE
+          mkdir --parents "$BACKUP_DIR"
+          cp --parents $FILES_LIST "$BACKUP_DIR"
+      - name: Compute original checksums (legacy)
+        run: |
+          shasum --algorithm 512 $FILES_LIST >$CHECKSUMS_FILE
 
           echo 'Checksums:'
           echo '----------'
@@ -113,8 +120,16 @@ jobs:
           while IFS= read -r file; do
             echo "Normalizing line endings in '$file'"
             sed -i 's/\r$//' "$file"
-          done <<<"$FILES"
-      - name: Check checksums
+          done <<<"$FILES_LINES"
+      - name: Check build files
+        run: |
+          while IFS= read -r file; do
+            rebuild=$file
+            original=$BACKUP_DIR/$file
+            echo "Checking '$rebuild' against '$original'"
+            cmp "$rebuild" "$original"
+          done <<<"$FILES_LINES"
+      - name: Check checksums (legacy)
         run: shasum --strict --check $CHECKSUMS_FILE
       - name: Build files diff
         if: ${{ failure() }}
@@ -122,12 +137,12 @@ jobs:
           while IFS= read -r file; do
             echo "--- Diff of '$file' ---"
             git diff "$file"
-          done <<<"$FILES"
+          done <<<"$FILES_LINES"
       - name: Check for new files
         run: |
           git clean -dfX
 
-          BEFORE=$FILES
+          BEFORE=$FILES_LINES
           AFTER=$(find . \( -path ./node_modules -o -path ./.git \) -prune -o -type f -print)
           if [ "$BEFORE" != "$AFTER" ]; then
             echo '--- FILES BEFORE ---'
