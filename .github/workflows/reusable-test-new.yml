@@ -45,9 +45,10 @@ jobs:
           persist-credentials: false
       - name: Determine version to reproduce
         id: version
+        env:
+          REPO: ${{ inputs.repository }}
         run: |
-          VERSION=$(cat .github/workflows/2-versions.yml \
-            | grep '${{ inputs.repository }}' \
+          VERSION=$(cat .github/workflows/${REPO//\//-}.yml \
             | grep -o '@v[^"]*' \
             | cut -c2-)
           echo "$VERSION"
