@@ -70,14 +70,15 @@ jobs:
       # Check reproducibility
       - name: Normalize line endings
         run: |
-          find . \
+          FILES=$(find . \
             \( -path ./node_modules -o -path ./.git \) -prune -o \
-            -type f -print |
+            -type f -print)
+
           while IFS= read -r file; do
             echo "Normalizing line endings in '$file'"
             sed -i 's/\r$//' "$file"
-          done
-      - name: Compute original checksums (legacy)
+          done <<<"$FILES"
+      - name: Compute original checksums
         run: |
           FILES=$(find . \
             \( -path ./node_modules -o -path ./.git \) -prune -o \
@@ -92,22 +93,24 @@ jobs:
         run: ${{ inputs.build-cmd }}
       - name: Normalize line endings
         run: |
-          find . \
+          FILES=$(find . \
             \( -path ./node_modules -o -path ./.git \) -prune -o \
-            -type f -print |
+            -type f -print)
+
           while IFS= read -r file; do
             echo "Normalizing line endings in '$file'"
             sed -i 's/\r$//' "$file"
-          done
+          done <<<"$FILES"
       - name: Check checksums
         run: shasum --strict --check $CHECKSUMS_FILE
       - name: Build files diff
         if: ${{ failure() }}
         run: |
-          find . \
+          FILES=$(find . \
             \( -path ./node_modules -o -path ./.git \) -prune -o \
-            -type f -print |
+            -type f -print)
+
           while IFS= read -r file; do
-            echo "Diff of '$file'"
+            echo "--- Diff of '$file' ---"
             git diff "$file"
-          done
+          done <<<"$FILES"
