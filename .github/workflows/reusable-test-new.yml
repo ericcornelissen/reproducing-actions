@@ -30,15 +30,31 @@ on:
       repository:
         required: true
         type: string
-      version-ref:
-        required: true
-        type: string
 
 permissions: read-all
 
 jobs:
+  setup:
+    runs-on: ubuntu-24.04
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
+        with:
+          persist-credentials: false
+      - name: Determine version to reproduce
+        id: version
+        run: |
+          VERSION=$(cat .github/workflows/2-versions.yml \
+            | grep '${{ inputs.repository }}' \
+            | grep -o '@v[^"]*' \
+            | cut -c2-)
+          echo "VERSION=$VERSION" >>"$GITHUB_OUTPUT"
   build:
     runs-on: ubuntu-24.04
+    needs:
+      - setup
     env:
       CHECKSUMS_FILE: reproducing-actions-checksums.txt
       BACKUP_DIR: /tmp/reproducing-actions
@@ -48,7 +64,7 @@ jobs:
         uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
         with:
           persist-credentials: false
-          ref: ${{ inputs.version-ref }}
+          ref: ${{ needs.setup.outputs.version }}
           repository: ${{ inputs.repository }}
 
       # Environment setup
