@@ -28,4 +28,4 @@ jobs:
     if: ${{ false }}
     runs-on: ubuntu-24.04
     steps:
-      - uses: gitleaks/gitleaks-action@v2.3.3
+      - uses: gitleaks/gitleaks-action@v2.3.9
