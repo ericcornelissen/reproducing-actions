@@ -20,7 +20,7 @@ jobs:
   test:
     uses: ./.github/workflows/reusable-test-new.yml
     with:
-      build-cmd:         npm run package
+      build-cmd:         npm run packag
       install-cmd:       npm clean-install
       node-version-file: .node-version
       repository:        actions/attest-build-provenance
