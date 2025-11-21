@@ -17,10 +17,10 @@ on:
 permissions: read-all
 
 jobs:
-  build:
+  test:
     uses: ./.github/workflows/reusable-test-new.yml
     with:
-      build-cmd:          npx ncc build src/index.js
-      install-cmd:        npm clean-install
+      build-cmd:         npx ncc build src/index.js
+      install-cmd:       npm clean-install
       node-version-file: .nvmrc
-      repository:         gitleaks/gitleaks-action
+      repository:        gitleaks/gitleaks-action
