@@ -2,14 +2,12 @@ name: actions/attest-build-provenance
 on:
   pull_request:
     paths:
-      - .github/workflows/2-versions.yml
       - .github/workflows/reusable-test.yml
       - .github/workflows/actions-attest-build-provenance.yml
   push:
     branches:
       - main
     paths:
-      - .github/workflows/2-versions.yml
       - .github/workflows/reusable-test.yml
       - .github/workflows/actions-attest-build-provenance.yml
   schedule:
@@ -26,3 +24,8 @@ jobs:
       install-cmd:       npm clean-install
       node-version-file: .node-version
       repository:        actions/attest-build-provenance
+  versions:
+    if: ${{ false }}
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/attest-build-provenance@v3.0.0
