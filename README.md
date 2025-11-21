@@ -38,13 +38,16 @@ with more information about the project and statuses.
 | [asdf-vm/actions@v4] | v4 | [![][asdf-vm/actions-v4-badge]][asdf-vm/actions-v4-url] |
 | [cardinalby/schema-validator-action@v3] | v3 | [![][cardinalby/schema-validator-action-v3-badge]][cardinalby/schema-validator-action-v3-url] |
 | [gradle/actions@v4] | v4 | [![][gradle/actions-v4-badge]][gradle/actions-v4-url] |
-| [actions/checkout@v5] | v5 | [![][actions/checkout-v5-badge]][actions/checkout-v5-url] |
 | [SonarSource/sonarqube-scan-action@v6] | v6 | [![][SonarSource/sonarqube-scan-action-v6-badge]][SonarSource/sonarqube-scan-action-v6-url] |
 | [actions/setup-node@v6] | v6 | [![][actions/setup-node-v6-badge]][actions/setup-node-v6-url] |
 | [actions/upload-artifact@v5] | v5 | [![][actions/upload-artifact-v5-badge]][actions/upload-artifact-v5-url] |
 | [actions/download-artifact@v6] | v6 | [![][actions/download-artifact-v6-badge]][actions/download-artifact-v6-url] |
 | [wearerequired/lint-action@v2] | v2 | [![][wearerequired/lint-action-v2-badge]][wearerequired/lint-action-v2-url] |
+| [actions/checkout@v6] | v6 | [![][actions/checkout-v6-badge]][actions/checkout-v6-url] |
 <!-- INSERT ROW -->
+[actions/checkout@v6]: https://github.com/actions/checkout/tree/v6
+[actions/checkout-v6-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-checkout-v6.yml/badge.svg?event=schedule
+[actions/checkout-v6-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-checkout-v6.yml
 [wearerequired/lint-action@v2]: https://github.com/wearerequired/lint-action/tree/v2
 [wearerequired/lint-action-v2-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/wearerequired-lint-action-v2.yml/badge.svg?event=schedule
 [wearerequired/lint-action-v2-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/wearerequired-lint-action-v2.yml
@@ -60,9 +63,6 @@ with more information about the project and statuses.
 [SonarSource/sonarqube-scan-action@v6]: https://github.com/SonarSource/sonarqube-scan-action/tree/v6
 [SonarSource/sonarqube-scan-action-v6-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/sonarsource-sonarqube-scan-action-v6.yml/badge.svg?event=schedule
 [SonarSource/sonarqube-scan-action-v6-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/sonarsource-sonarqube-scan-action-v6.yml
-[actions/checkout@v5]: https://github.com/actions/checkout/tree/v5
-[actions/checkout-v5-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-checkout-v5.yml/badge.svg?event=schedule
-[actions/checkout-v5-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-checkout-v5.yml
 [gradle/actions@v4]: https://github.com/gradle/actions/tree/v4
 [gradle/actions-v4-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/gradle-actions-v4.yml/badge.svg?event=schedule
 [gradle/actions-v4-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/gradle-actions-v4.yml
