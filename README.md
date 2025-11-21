@@ -30,7 +30,6 @@ with more information about the project and statuses.
 | [docker/build-push-action@v6] | v6 | [![][docker/build-push-action-v6-badge]][docker/build-push-action-v6-url] |
 | [github/codeql-action@v3] | v3 | [![][github/codeql-action-v3-badge]][github/codeql-action-v3-url] |
 | [dorny/paths-filter@v3] | v3 | [![][dorny/paths-filter-v3-badge]][dorny/paths-filter-v3-url] |
-| [actions/attest-build-provenance@v2] | v2 | [![][actions/attest-build-provenance-v2-badge]][actions/attest-build-provenance-v2-url] |
 | [JS-DevTools/npm-publish@v3] | v3 | [![][JS-DevTools/npm-publish-v3-badge]][JS-DevTools/npm-publish-v3-url] |
 | [fastify/github-action-merge-dependabot@v3] | v3 | [![][fastify/github-action-merge-dependabot-v3-badge]][fastify/github-action-merge-dependabot-v3-url] |
 | [googleapis/release-please-action@v4] | v4 | [![][googleapis/release-please-action-v4-badge]][googleapis/release-please-action-v4-url] |
@@ -84,9 +83,6 @@ with more information about the project and statuses.
 [JS-DevTools/npm-publish@v3]: https://github.com/JS-DevTools/npm-publish/tree/v3
 [JS-DevTools/npm-publish-v3-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/js-devtools-npm-publish-v3.yml/badge.svg?event=schedule
 [JS-DevTools/npm-publish-v3-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/js-devtools-npm-publish-v3.yml
-[actions/attest-build-provenance@v2]: https://github.com/actions/attest-build-provenance/tree/v2
-[actions/attest-build-provenance-v2-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-attest-build-provenance-v2.yml/badge.svg?event=schedule
-[actions/attest-build-provenance-v2-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-attest-build-provenance-v2.yml
 [dorny/paths-filter@v3]: https://github.com/dorny/paths-filter/tree/v3
 [dorny/paths-filter-v3-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/dorny-paths-filter-v3.yml/badge.svg?event=schedule
 [dorny/paths-filter-v3-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/dorny-paths-filter-v3.yml
