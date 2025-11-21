@@ -125,6 +125,8 @@ jobs:
           done <<<"$FILES"
       - name: Check for new files
         run: |
+          git clean -dfX
+
           BEFORE=$FILES
           AFTER=$(find . \( -path ./node_modules -o -path ./.git \) -prune -o -type f -print)
           if [ "$BEFORE" != "$AFTER" ]; then
