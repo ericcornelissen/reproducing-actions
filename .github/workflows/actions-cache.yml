@@ -2,14 +2,12 @@ name: actions/cache
 on:
   pull_request:
     paths:
-      - .github/workflows/2-versions.yml
       - .github/workflows/reusable-test.yml
       - .github/workflows/actions-cache.yml
   push:
     branches:
       - main
     paths:
-      - .github/workflows/2-versions.yml
       - .github/workflows/reusable-test.yml
       - .github/workflows/actions-cache.yml
   schedule:
@@ -26,3 +24,8 @@ jobs:
       install-cmd:  npm clean-install
       node-version: 20.x
       repository:   actions/cache
+  versions:
+    if: ${{ false }}
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/cache@v4.3.0
