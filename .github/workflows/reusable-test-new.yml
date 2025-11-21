@@ -1,8 +1,7 @@
 # WARNING:
 # When using this reusable workflow, provide only trusted values to the inputs
-# `build-cmd`, and `install-cmd`. The design of this workflow requires these to
-# be embedded in scripts, which allows them to be used to execute an arbitrary
-# command (in fact, that is exactly what `build-cmd` and `install-cmd` do).
+# `build-cmd` and `install-cmd`. These inputs are embedded directly into scripts
+# because they are meant to be executed as commands.
 
 name: Check
 on:
