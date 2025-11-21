@@ -2,12 +2,14 @@ name: gitleaks/gitleaks-action
 on:
   pull_request:
     paths:
+      - .github/workflows/2-versions.yml
       - .github/workflows/reusable-test.yml
       - .github/workflows/gitleaks-gitleaks-action.yml
   push:
     branches:
       - main
     paths:
+      - .github/workflows/2-versions.yml
       - .github/workflows/reusable-test.yml
       - .github/workflows/gitleaks-gitleaks-action.yml
   schedule:

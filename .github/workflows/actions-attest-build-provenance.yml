@@ -2,12 +2,14 @@ name: actions/attest-build-provenance
 on:
   pull_request:
     paths:
+      - .github/workflows/2-versions.yml
       - .github/workflows/reusable-test.yml
       - .github/workflows/actions-attest-build-provenance.yml
   push:
     branches:
       - main
     paths:
+      - .github/workflows/2-versions.yml
       - .github/workflows/reusable-test.yml
       - .github/workflows/actions-attest-build-provenance.yml
   schedule:
