@@ -13,7 +13,7 @@ with more information about the project and statuses.
 | Action | Version | Status |
 | ------ | ------- | ------ |
 | [actions/setup-java@v4] | v4 | [![][actions/setup-java-v4-badge]][actions/setup-java-v4-url] |
-| [gitleaks/gitleaks-action@v2] | v2 | [![][gitleaks/gitleaks-action-v2-badge]][gitleaks/gitleaks-action-v2-url] |
+| [gitleaks/gitleaks-action] | - | [![][gitleaks/gitleaks-action-badge]][gitleaks/gitleaks-action-url] |
 | [actions/stale@v9] | v9 | [![][actions/stale-v9-badge]][actions/stale-v9-url] |
 | [actions/github-script@v7] | v7 | [![][actions/github-script-v7-badge]][actions/github-script-v7-url] |
 | [actions/setup-python@v5] | v5 | [![][actions/setup-python-v5-badge]][actions/setup-python-v5-url] |
@@ -21,7 +21,7 @@ with more information about the project and statuses.
 | [actions/setup-go@v5] | v5 | [![][actions/setup-go-v5-badge]][actions/setup-go-v5-url] |
 | [actions/labeler@v5] | v5 | [![][actions/labeler-v5-badge]][actions/labeler-v5-url] |
 | [actions/dependency-review-action@v4] | v4 | [![][actions/dependency-review-action-v4-badge]][actions/dependency-review-action-v4-url] |
-| [actions/cache@v4] | v4 | [![][actions/cache-v4-badge]][actions/cache-v4-url] |
+| [actions/cache] | - | [![][actions/cache-badge]][actions/cache-url] |
 | [JamesIves/github-pages-deploy-action@v4] | v4 | [![][JamesIves/github-pages-deploy-action-v4-badge]][JamesIves/github-pages-deploy-action-v4-url] |
 | [step-security/harden-runner@v2] | v2 | [![][step-security/harden-runner-v2-badge]][step-security/harden-runner-v2-url] |
 | [peter-evans/create-pull-request@v7] | v7 | [![][peter-evans/create-pull-request-v7-badge]][peter-evans/create-pull-request-v7-url] |
@@ -30,7 +30,7 @@ with more information about the project and statuses.
 | [docker/build-push-action@v6] | v6 | [![][docker/build-push-action-v6-badge]][docker/build-push-action-v6-url] |
 | [github/codeql-action@v3] | v3 | [![][github/codeql-action-v3-badge]][github/codeql-action-v3-url] |
 | [dorny/paths-filter@v3] | v3 | [![][dorny/paths-filter-v3-badge]][dorny/paths-filter-v3-url] |
-| [actions/attest-build-provenance@v2] | v2 | [![][actions/attest-build-provenance-v2-badge]][actions/attest-build-provenance-v2-url] |
+| [actions/attest-build-provenance] | - | [![][actions/attest-build-provenance-badge]][actions/attest-build-provenance-url] |
 | [JS-DevTools/npm-publish@v3] | v3 | [![][JS-DevTools/npm-publish-v3-badge]][JS-DevTools/npm-publish-v3-url] |
 | [fastify/github-action-merge-dependabot@v3] | v3 | [![][fastify/github-action-merge-dependabot-v3-badge]][fastify/github-action-merge-dependabot-v3-url] |
 | [googleapis/release-please-action@v4] | v4 | [![][googleapis/release-please-action-v4-badge]][googleapis/release-please-action-v4-url] |
@@ -84,9 +84,9 @@ with more information about the project and statuses.
 [JS-DevTools/npm-publish@v3]: https://github.com/JS-DevTools/npm-publish/tree/v3
 [JS-DevTools/npm-publish-v3-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/js-devtools-npm-publish-v3.yml/badge.svg?event=schedule
 [JS-DevTools/npm-publish-v3-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/js-devtools-npm-publish-v3.yml
-[actions/attest-build-provenance@v2]: https://github.com/actions/attest-build-provenance/tree/v2
-[actions/attest-build-provenance-v2-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-attest-build-provenance-v2.yml/badge.svg?event=schedule
-[actions/attest-build-provenance-v2-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-attest-build-provenance-v2.yml
+[actions/attest-build-provenance]: https://github.com/actions/attest-build-provenance
+[actions/attest-build-provenance-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-attest-build-provenance.yml/badge.svg?event=schedule
+[actions/attest-build-provenance-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-attest-build-provenance.yml
 [dorny/paths-filter@v3]: https://github.com/dorny/paths-filter/tree/v3
 [dorny/paths-filter-v3-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/dorny-paths-filter-v3.yml/badge.svg?event=schedule
 [dorny/paths-filter-v3-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/dorny-paths-filter-v3.yml
@@ -111,9 +111,9 @@ with more information about the project and statuses.
 [JamesIves/github-pages-deploy-action@v4]: https://github.com/JamesIves/github-pages-deploy-action/tree/v4
 [JamesIves/github-pages-deploy-action-v4-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/jamesives-github-pages-deploy-action-v4.yml/badge.svg?event=schedule
 [JamesIves/github-pages-deploy-action-v4-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/jamesives-github-pages-deploy-action-v4.yml
-[actions/cache@v4]: https://github.com/actions/cache/tree/v4
-[actions/cache-v4-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-cache-v4.yml/badge.svg?event=schedule
-[actions/cache-v4-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-cache-v4.yml
+[actions/cache]: https://github.com/actions/cache
+[actions/cache-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-cache.yml/badge.svg?event=schedule
+[actions/cache-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-cache.yml
 [actions/dependency-review-action@v4]: https://github.com/actions/dependency-review-action/tree/v4
 [actions/dependency-review-action-v4-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-dependency-review-action-v4.yml/badge.svg?event=schedule
 [actions/dependency-review-action-v4-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-dependency-review-action-v4.yml
@@ -135,9 +135,9 @@ with more information about the project and statuses.
 [actions/stale@v9]: https://github.com/actions/stale/tree/v9
 [actions/stale-v9-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-stale-v9.yml/badge.svg?event=schedule
 [actions/stale-v9-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-stale-v9.yml
-[gitleaks/gitleaks-action@v2]: https://github.com/gitleaks/gitleaks-action/tree/v2
-[gitleaks/gitleaks-action-v2-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/gitleaks-gitleaks-action-v2.yml/badge.svg?event=schedule
-[gitleaks/gitleaks-action-v2-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/gitleaks-gitleaks-action-v2.yml
+[gitleaks/gitleaks-action]: https://github.com/gitleaks/gitleaks-action
+[gitleaks/gitleaks-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/gitleaks-gitleaks-action.yml/badge.svg?event=schedule
+[gitleaks/gitleaks-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/gitleaks-gitleaks-action.yml
 [actions/setup-java@v4]: https://github.com/actions/setup-java/tree/v4
 [actions/setup-java-v4-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-java-v4.yml/badge.svg?event=schedule
 [actions/setup-java-v4-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-java-v4.yml

@@ -1,15 +1,15 @@
-name: gitleaks/gitleaks-action@v2
+name: gitleaks/gitleaks-action
 on:
   pull_request:
     paths:
       - .github/workflows/reusable-test.yml
-      - .github/workflows/gitleaks-gitleaks-action-v2.yml
+      - .github/workflows/gitleaks-gitleaks-action.yml
   push:
     branches:
       - main
     paths:
       - .github/workflows/reusable-test.yml
-      - .github/workflows/gitleaks-gitleaks-action-v2.yml
+      - .github/workflows/gitleaks-gitleaks-action.yml
   schedule:
     - cron: "3 1 * * *"
   workflow_dispatch: ~
@@ -18,11 +18,9 @@ permissions: read-all
 
 jobs:
   build:
-    uses: ./.github/workflows/reusable-test.yml
+    uses: ./.github/workflows/reusable-test-new.yml
     with:
-      files:              dist/index.js
       build-cmd:          npx ncc build src/index.js
       install-cmd:        npm clean-install
       node-version-file: .nvmrc
       repository:         gitleaks/gitleaks-action
-      version-ref:        v2

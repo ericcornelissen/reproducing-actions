@@ -50,6 +50,7 @@ jobs:
             | grep '${{ inputs.repository }}' \
             | grep -o '@v[^"]*' \
             | cut -c2-)
+          echo "$VERSION"
           echo "VERSION=$VERSION" >>"$GITHUB_OUTPUT"
   build:
     runs-on: ubuntu-24.04
