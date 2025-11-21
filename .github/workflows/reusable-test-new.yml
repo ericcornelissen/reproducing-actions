@@ -84,23 +84,24 @@ jobs:
         run: ${{ inputs.install-cmd }}
 
       # Check reproducibility
+      - name: List files
+        id: files
+        run: |
+          {
+            echo 'FILES<<EOF'
+            find . \( -path ./node_modules -o -path ./.git \) -prune -o -type f -print
+            echo 'EOF'
+          } >>"${GITHUB_ENV}"
       - name: Normalize line endings
         run: |
-          FILES=$(find . \
-            \( -path ./node_modules -o -path ./.git \) -prune -o \
-            -type f -print)
-
           while IFS= read -r file; do
             echo "Normalizing line endings in '$file'"
             sed -i 's/\r$//' "$file"
           done <<<"$FILES"
       - name: Compute original checksums
         run: |
-          FILES=$(find . \
-            \( -path ./node_modules -o -path ./.git \) -prune -o \
-            -type f -print | tr '\n' ' ')
-
-          shasum --algorithm 512 $FILES >$CHECKSUMS_FILE
+          # shellcheck disable=SC2046 # intentional word splitting
+          shasum --algorithm 512 $(echo $FILES | tr '\n' ' ') >$CHECKSUMS_FILE
 
           echo 'Checksums:'
           echo '----------'
@@ -109,10 +110,6 @@ jobs:
         run: ${{ inputs.build-cmd }}
       - name: Normalize line endings
         run: |
-          FILES=$(find . \
-            \( -path ./node_modules -o -path ./.git \) -prune -o \
-            -type f -print)
-
           while IFS= read -r file; do
             echo "Normalizing line endings in '$file'"
             sed -i 's/\r$//' "$file"
@@ -122,11 +119,18 @@ jobs:
       - name: Build files diff
         if: ${{ failure() }}
         run: |
-          FILES=$(find . \
-            \( -path ./node_modules -o -path ./.git \) -prune -o \
-            -type f -print)
-
           while IFS= read -r file; do
             echo "--- Diff of '$file' ---"
             git diff "$file"
           done <<<"$FILES"
+      - name: Check for new files
+        run: |
+          BEFORE=$FILES
+          AFTER=$(find . \( -path ./node_modules -o -path ./.git \) -prune -o -type f -print)
+          if [ "$BEFORE" != "$AFTER" ]; then
+            echo '--- FILES BEFORE ---'
+            echo "$BEFORE"
+            echo '--- FILES AFTER ---'
+            echo "$AFTER"
+            exit 1
+          fi
