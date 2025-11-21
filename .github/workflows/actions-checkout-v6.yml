@@ -1,15 +1,15 @@
-name: actions/checkout@v5
+name: actions/checkout@v6
 on:
   pull_request:
     paths:
       - .github/workflows/reusable-test.yml
-      - .github/workflows/actions-checkout-v5.yml
+      - .github/workflows/actions-checkout-v6.yml
   push:
     branches:
       - main
     paths:
       - .github/workflows/reusable-test.yml
-      - .github/workflows/actions-checkout-v5.yml
+      - .github/workflows/actions-checkout-v6.yml
   schedule:
     - cron: "33 1 * * *"
   workflow_dispatch: ~
@@ -25,4 +25,4 @@ jobs:
       install-cmd:  npm clean-install
       node-version: 24.x
       repository:   actions/checkout
-      version-ref:  v5
+      version-ref:  v6
