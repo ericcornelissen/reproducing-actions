@@ -1,0 +1,46 @@
+name: actions/cache
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-test.yml
+      - .github/workflows/actions-cache.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-test.yml
+      - .github/workflows/actions-cache.yml
+  schedule:
+    - cron: "14 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  setup:
+    runs-on: ubuntu-24.04
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
+        with:
+          persist-credentials: false
+      - name: Determine version to reproduce
+        id: version
+        run: |
+          VERSION=$(cat .github/workflows/2-versions.yml \
+            | grep 'actions/cache' \
+            | grep -o '@v[^"]*' \
+            | cut -c2-)
+          echo "VERSION=$VERSION" >>"$GITHUB_OUTPUT"
+  build:
+    uses: ./.github/workflows/reusable-test-new.yml
+    needs:
+      - setup
+    with:
+      build-cmd:    npm run build
+      install-cmd:  npm clean-install
+      node-version: 20.x
+      repository:   actions/cache
+      version-ref:  ${{ needs.setup.outputs.version }}

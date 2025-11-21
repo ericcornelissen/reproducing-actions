@@ -1,0 +1,16 @@
+name: This should not be called
+on:
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  versions:
+    name: List monitored action versions
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/attest-build-provenance@v2.4.0
+      - uses: actions/cache@v4.3.0
