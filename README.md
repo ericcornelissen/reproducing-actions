@@ -34,12 +34,12 @@ with more information about the project and statuses.
 | [JS-DevTools/npm-publish@v3] | v3 | [![][JS-DevTools/npm-publish-v3-badge]][JS-DevTools/npm-publish-v3-url] |
 | [fastify/github-action-merge-dependabot@v3] | v3 | [![][fastify/github-action-merge-dependabot-v3-badge]][fastify/github-action-merge-dependabot-v3-url] |
 | [googleapis/release-please-action@v4] | v4 | [![][googleapis/release-please-action-v4-badge]][googleapis/release-please-action-v4-url] |
-| [actions/create-github-app-token@v2] | v2 | [![][actions/create-github-app-token-v2-badge]][actions/create-github-app-token-v2-url] |
+| [actions/create-github-app-token] | - | [![][actions/create-github-app-token-badge]][actions/create-github-app-token-url] |
 | [asdf-vm/actions@v4] | v4 | [![][asdf-vm/actions-v4-badge]][asdf-vm/actions-v4-url] |
 | [cardinalby/schema-validator-action@v3] | v3 | [![][cardinalby/schema-validator-action-v3-badge]][cardinalby/schema-validator-action-v3-url] |
 | [gradle/actions@v4] | v4 | [![][gradle/actions-v4-badge]][gradle/actions-v4-url] |
 | [SonarSource/sonarqube-scan-action@v6] | v6 | [![][SonarSource/sonarqube-scan-action-v6-badge]][SonarSource/sonarqube-scan-action-v6-url] |
-| [actions/setup-node@v6] | v6 | [![][actions/setup-node-v6-badge]][actions/setup-node-v6-url] |
+| [actions/setup-node] | - | [![][actions/setup-node-badge]][actions/setup-node-url] |
 | [actions/upload-artifact@v5] | v5 | [![][actions/upload-artifact-v5-badge]][actions/upload-artifact-v5-url] |
 | [actions/download-artifact@v6] | v6 | [![][actions/download-artifact-v6-badge]][actions/download-artifact-v6-url] |
 | [wearerequired/lint-action@v2] | v2 | [![][wearerequired/lint-action-v2-badge]][wearerequired/lint-action-v2-url] |
@@ -57,9 +57,9 @@ with more information about the project and statuses.
 [actions/upload-artifact@v5]: https://github.com/actions/upload-artifact/tree/v5
 [actions/upload-artifact-v5-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-upload-artifact-v5.yml/badge.svg?event=schedule
 [actions/upload-artifact-v5-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-upload-artifact-v5.yml
-[actions/setup-node@v6]: https://github.com/actions/setup-node/tree/v6
-[actions/setup-node-v6-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-node-v6.yml/badge.svg?event=schedule
-[actions/setup-node-v6-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-node-v6.yml
+[actions/setup-node]: https://github.com/actions/setup-node
+[actions/setup-node-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-node.yml/badge.svg?event=schedule
+[actions/setup-node-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-node.yml
 [SonarSource/sonarqube-scan-action@v6]: https://github.com/SonarSource/sonarqube-scan-action/tree/v6
 [SonarSource/sonarqube-scan-action-v6-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/sonarsource-sonarqube-scan-action-v6.yml/badge.svg?event=schedule
 [SonarSource/sonarqube-scan-action-v6-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/sonarsource-sonarqube-scan-action-v6.yml
@@ -72,9 +72,9 @@ with more information about the project and statuses.
 [asdf-vm/actions@v4]: https://github.com/asdf-vm/actions/tree/v4
 [asdf-vm/actions-v4-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/asdf-vm-actions-v4.yml/badge.svg?event=schedule
 [asdf-vm/actions-v4-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/asdf-vm-actions-v4.yml
-[actions/create-github-app-token@v2]: https://github.com/actions/create-github-app-token/tree/v2
-[actions/create-github-app-token-v2-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-create-github-app-token-v2.yml/badge.svg?event=schedule
-[actions/create-github-app-token-v2-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-create-github-app-token-v2.yml
+[actions/create-github-app-token]: https://github.com/actions/create-github-app-token
+[actions/create-github-app-token-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-create-github-app-token.yml/badge.svg?event=schedule
+[actions/create-github-app-token-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-create-github-app-token.yml
 [googleapis/release-please-action@v4]: https://github.com/googleapis/release-please-action/tree/v4
 [googleapis/release-please-action-v4-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/googleapis-release-please-action-v4.yml/badge.svg?event=schedule
 [googleapis/release-please-action-v4-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/googleapis-release-please-action-v4.yml

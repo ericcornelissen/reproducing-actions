@@ -24,7 +24,7 @@ jobs:
       install-cmd:       npm clean-install
       node-version-file: .nvmrc
       repository:        gitleaks/gitleaks-action
-  versions:
+  version:
     if: ${{ false }}
     runs-on: ubuntu-24.04
     steps:
