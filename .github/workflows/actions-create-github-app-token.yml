@@ -1,15 +1,15 @@
-name: actions/create-github-app-token@v2
+name: actions/create-github-app-token
 on:
   pull_request:
     paths:
       - .github/workflows/reusable-test.yml
-      - .github/workflows/actions-create-github-app-token-v2.yml
+      - .github/workflows/actions-create-github-app-token.yml
   push:
     branches:
       - main
     paths:
       - .github/workflows/reusable-test.yml
-      - .github/workflows/actions-create-github-app-token-v2.yml
+      - .github/workflows/actions-create-github-app-token.yml
   schedule:
     - cron: "29 1 * * *"
   workflow_dispatch: ~
@@ -18,11 +18,14 @@ permissions: read-all
 
 jobs:
   build:
-    uses: ./.github/workflows/reusable-test.yml
+    uses: ./.github/workflows/reusable-test-new.yml
     with:
-      files:             dist/main.cjs dist/post.cjs
       build-cmd:         npm run build
       install-cmd:       npm clean-install
-      node-version-file: .node-version
+      node-version-file: package.json
       repository:        actions/create-github-app-token
-      version-ref:       v2
+  versions:
+    if: ${{ false }}
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/create-github-app-token@v2.2.0
