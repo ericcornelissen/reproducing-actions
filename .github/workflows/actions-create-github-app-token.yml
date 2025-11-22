@@ -17,14 +17,14 @@ on:
 permissions: read-all
 
 jobs:
-  build:
+  test:
     uses: ./.github/workflows/reusable-test-new.yml
     with:
       build-cmd:         npm run build
       install-cmd:       npm clean-install
       node-version-file: package.json
       repository:        actions/create-github-app-token
-  versions:
+  version:
     if: ${{ false }}
     runs-on: ubuntu-24.04
     steps:
