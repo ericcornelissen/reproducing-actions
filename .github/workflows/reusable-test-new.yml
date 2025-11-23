@@ -89,6 +89,7 @@ jobs:
         id: files
         run: |
           TMP=$(find . \( -path ./node_modules -o -path ./.git \) -prune -o -type f -print)
+          echo "$TMP"
 
           {
             echo 'FILES_LINES<<EOF'
@@ -100,7 +101,7 @@ jobs:
         run: |
           while IFS= read -r file; do
             echo "Normalizing line endings in '$file'"
-            sed -i 's/\r$//' "$file"
+            sed -i 's/\r*$//' "$file"
           done <<<"$FILES_LINES"
       - name: Store original files
         run: |
@@ -121,7 +122,7 @@ jobs:
         run: |
           while IFS= read -r file; do
             echo "Normalizing line endings in '$file'"
-            sed -i 's/\r$//' "$file"
+            sed -i 's/\r*$//' "$file"
           done <<<"$FILES_LINES"
       - name: Check byte-by-byte equality
         run: |
