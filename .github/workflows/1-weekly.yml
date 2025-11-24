@@ -15,6 +15,6 @@ jobs:
       pull-requests: write
     steps:
       - name: Update tooling
-        uses: ericcornelissen/tool-versions-update-action/pr@85461df8352d85d08b2424c0f47b11baf06725eb # v2.1.0
+        uses: ericcornelissen/tool-versions-update-action/pr@8900c39f101a61623f3ac432a6a9efc92475b0ec # v2.2.0
         with:
           install-tools: false
