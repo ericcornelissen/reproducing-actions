@@ -1,15 +1,15 @@
-name: actions/checkout@v6
+name: actions/checkout
 on:
   pull_request:
     paths:
       - .github/workflows/reusable-test.yml
-      - .github/workflows/actions-checkout-v6.yml
+      - .github/workflows/actions-checkout.yml
   push:
     branches:
       - main
     paths:
       - .github/workflows/reusable-test.yml
-      - .github/workflows/actions-checkout-v6.yml
+      - .github/workflows/actions-checkout.yml
   schedule:
     - cron: "33 1 * * *"
   workflow_dispatch: ~
@@ -18,11 +18,14 @@ permissions: read-all
 
 jobs:
   build:
-    uses: ./.github/workflows/reusable-test.yml
+    uses: ./.github/workflows/reusable-test-new.yml
     with:
-      files:        dist/index.js dist/problem-matcher.json
       build-cmd:    npm run build
       install-cmd:  npm clean-install
       node-version: 24.x
       repository:   actions/checkout
-      version-ref:  v6
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6.0.0

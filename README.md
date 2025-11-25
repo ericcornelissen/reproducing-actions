@@ -43,11 +43,11 @@ with more information about the project and statuses.
 | [actions/upload-artifact@v5] | v5 | [![][actions/upload-artifact-v5-badge]][actions/upload-artifact-v5-url] |
 | [actions/download-artifact@v6] | v6 | [![][actions/download-artifact-v6-badge]][actions/download-artifact-v6-url] |
 | [wearerequired/lint-action@v2] | v2 | [![][wearerequired/lint-action-v2-badge]][wearerequired/lint-action-v2-url] |
-| [actions/checkout@v6] | v6 | [![][actions/checkout-v6-badge]][actions/checkout-v6-url] |
+| [actions/checkout] | - | [![][actions/checkout-badge]][actions/checkout-url] |
 <!-- INSERT ROW -->
-[actions/checkout@v6]: https://github.com/actions/checkout/tree/v6
-[actions/checkout-v6-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-checkout-v6.yml/badge.svg?event=schedule
-[actions/checkout-v6-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-checkout-v6.yml
+[actions/checkout]: https://github.com/actions/checkout
+[actions/checkout-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-checkout.yml/badge.svg?event=schedule
+[actions/checkout-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-checkout.yml
 [wearerequired/lint-action@v2]: https://github.com/wearerequired/lint-action/tree/v2
 [wearerequired/lint-action-v2-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/wearerequired-lint-action-v2.yml/badge.svg?event=schedule
 [wearerequired/lint-action-v2-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/wearerequired-lint-action-v2.yml
