@@ -2,13 +2,13 @@ name: actions/setup-node
 on:
   pull_request:
     paths:
-      - .github/workflows/reusable-test.yml
+      - .github/workflows/reusable-test-new.yml
       - .github/workflows/actions-setup-node.yml
   push:
     branches:
       - main
     paths:
-      - .github/workflows/reusable-test.yml
+      - .github/workflows/reusable-test-new.yml
       - .github/workflows/actions-setup-node.yml
   schedule:
     - cron: "36 1 * * *"
@@ -26,6 +26,6 @@ jobs:
       repository:   actions/setup-node
   version:
     if: ${{ false }}
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-node@v6.0.0

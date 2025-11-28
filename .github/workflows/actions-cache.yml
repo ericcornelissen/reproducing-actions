@@ -2,13 +2,13 @@ name: actions/cache
 on:
   pull_request:
     paths:
-      - .github/workflows/reusable-test.yml
+      - .github/workflows/reusable-test-new.yml
       - .github/workflows/actions-cache.yml
   push:
     branches:
       - main
     paths:
-      - .github/workflows/reusable-test.yml
+      - .github/workflows/reusable-test-new.yml
       - .github/workflows/actions-cache.yml
   schedule:
     - cron: "14 1 * * *"
@@ -26,6 +26,6 @@ jobs:
       repository:   actions/cache
   version:
     if: ${{ false }}
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/cache@v4.3.0
