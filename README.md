@@ -20,7 +20,7 @@ with more information about the project and statuses.
 | [actions/setup-dotnet@v4] | v4 | [![][actions/setup-dotnet-v4-badge]][actions/setup-dotnet-v4-url] |
 | [actions/setup-go@v5] | v5 | [![][actions/setup-go-v5-badge]][actions/setup-go-v5-url] |
 | [actions/labeler@v5] | v5 | [![][actions/labeler-v5-badge]][actions/labeler-v5-url] |
-| [actions/dependency-review-action@v4] | v4 | [![][actions/dependency-review-action-v4-badge]][actions/dependency-review-action-v4-url] |
+| [actions/dependency-review-action] | - | [![][actions/dependency-review-action-badge]][actions/dependency-review-action-url] |
 | [actions/cache] | - | [![][actions/cache-badge]][actions/cache-url] |
 | [JamesIves/github-pages-deploy-action@v4] | v4 | [![][JamesIves/github-pages-deploy-action-v4-badge]][JamesIves/github-pages-deploy-action-v4-url] |
 | [step-security/harden-runner@v2] | v2 | [![][step-security/harden-runner-v2-badge]][step-security/harden-runner-v2-url] |
@@ -41,19 +41,19 @@ with more information about the project and statuses.
 | [SonarSource/sonarqube-scan-action@v6] | v6 | [![][SonarSource/sonarqube-scan-action-v6-badge]][SonarSource/sonarqube-scan-action-v6-url] |
 | [actions/setup-node] | - | [![][actions/setup-node-badge]][actions/setup-node-url] |
 | [actions/upload-artifact@v5] | v5 | [![][actions/upload-artifact-v5-badge]][actions/upload-artifact-v5-url] |
-| [actions/download-artifact@v6] | v6 | [![][actions/download-artifact-v6-badge]][actions/download-artifact-v6-url] |
+| [actions/download-artifact] | - | [![][actions/download-artifact-badge]][actions/download-artifact-url] |
 | [wearerequired/lint-action@v2] | v2 | [![][wearerequired/lint-action-v2-badge]][wearerequired/lint-action-v2-url] |
-| [actions/checkout@v6] | v6 | [![][actions/checkout-v6-badge]][actions/checkout-v6-url] |
+| [actions/checkout] | - | [![][actions/checkout-badge]][actions/checkout-url] |
 <!-- INSERT ROW -->
-[actions/checkout@v6]: https://github.com/actions/checkout/tree/v6
-[actions/checkout-v6-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-checkout-v6.yml/badge.svg?event=schedule
-[actions/checkout-v6-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-checkout-v6.yml
+[actions/checkout]: https://github.com/actions/checkout
+[actions/checkout-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-checkout.yml/badge.svg?event=schedule
+[actions/checkout-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-checkout.yml
 [wearerequired/lint-action@v2]: https://github.com/wearerequired/lint-action/tree/v2
 [wearerequired/lint-action-v2-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/wearerequired-lint-action-v2.yml/badge.svg?event=schedule
 [wearerequired/lint-action-v2-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/wearerequired-lint-action-v2.yml
-[actions/download-artifact@v6]: https://github.com/actions/download-artifact/tree/v6
-[actions/download-artifact-v6-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-download-artifact-v6.yml/badge.svg?event=schedule
-[actions/download-artifact-v6-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-download-artifact-v6.yml
+[actions/download-artifact]: https://github.com/actions/download-artifact
+[actions/download-artifact-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-download-artifact.yml/badge.svg?event=schedule
+[actions/download-artifact-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-download-artifact.yml
 [actions/upload-artifact@v5]: https://github.com/actions/upload-artifact/tree/v5
 [actions/upload-artifact-v5-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-upload-artifact-v5.yml/badge.svg?event=schedule
 [actions/upload-artifact-v5-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-upload-artifact-v5.yml
@@ -114,9 +114,9 @@ with more information about the project and statuses.
 [actions/cache]: https://github.com/actions/cache
 [actions/cache-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-cache.yml/badge.svg?event=schedule
 [actions/cache-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-cache.yml
-[actions/dependency-review-action@v4]: https://github.com/actions/dependency-review-action/tree/v4
-[actions/dependency-review-action-v4-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-dependency-review-action-v4.yml/badge.svg?event=schedule
-[actions/dependency-review-action-v4-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-dependency-review-action-v4.yml
+[actions/dependency-review-action]: https://github.com/actions/dependency-review-action
+[actions/dependency-review-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-dependency-review-action.yml/badge.svg?event=schedule
+[actions/dependency-review-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-dependency-review-action.yml
 [actions/labeler@v5]: https://github.com/actions/labeler/tree/v5
 [actions/labeler-v5-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-labeler-v5.yml/badge.svg?event=schedule
 [actions/labeler-v5-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-labeler-v5.yml
