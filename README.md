@@ -41,7 +41,7 @@ with more information about the project and statuses.
 | [SonarSource/sonarqube-scan-action@v6] | v6 | [![][SonarSource/sonarqube-scan-action-v6-badge]][SonarSource/sonarqube-scan-action-v6-url] |
 | [actions/setup-node] | - | [![][actions/setup-node-badge]][actions/setup-node-url] |
 | [actions/upload-artifact@v5] | v5 | [![][actions/upload-artifact-v5-badge]][actions/upload-artifact-v5-url] |
-| [actions/download-artifact@v6] | v6 | [![][actions/download-artifact-v6-badge]][actions/download-artifact-v6-url] |
+| [actions/download-artifact] | - | [![][actions/download-artifact-badge]][actions/download-artifact-url] |
 | [wearerequired/lint-action@v2] | v2 | [![][wearerequired/lint-action-v2-badge]][wearerequired/lint-action-v2-url] |
 | [actions/checkout] | - | [![][actions/checkout-badge]][actions/checkout-url] |
 <!-- INSERT ROW -->
@@ -51,9 +51,9 @@ with more information about the project and statuses.
 [wearerequired/lint-action@v2]: https://github.com/wearerequired/lint-action/tree/v2
 [wearerequired/lint-action-v2-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/wearerequired-lint-action-v2.yml/badge.svg?event=schedule
 [wearerequired/lint-action-v2-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/wearerequired-lint-action-v2.yml
-[actions/download-artifact@v6]: https://github.com/actions/download-artifact/tree/v6
-[actions/download-artifact-v6-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-download-artifact-v6.yml/badge.svg?event=schedule
-[actions/download-artifact-v6-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-download-artifact-v6.yml
+[actions/download-artifact]: https://github.com/actions/download-artifact
+[actions/download-artifact-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-download-artifact.yml/badge.svg?event=schedule
+[actions/download-artifact-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-download-artifact.yml
 [actions/upload-artifact@v5]: https://github.com/actions/upload-artifact/tree/v5
 [actions/upload-artifact-v5-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-upload-artifact-v5.yml/badge.svg?event=schedule
 [actions/upload-artifact-v5-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-upload-artifact-v5.yml
