@@ -15,7 +15,7 @@ with more information about the project and statuses.
 | [actions/setup-java@v4] | v4 | [![][actions/setup-java-v4-badge]][actions/setup-java-v4-url] |
 | [gitleaks/gitleaks-action] | - | [![][gitleaks/gitleaks-action-badge]][gitleaks/gitleaks-action-url] |
 | [actions/stale@v9] | v9 | [![][actions/stale-v9-badge]][actions/stale-v9-url] |
-| [actions/github-script@v7] | v7 | [![][actions/github-script-v7-badge]][actions/github-script-v7-url] |
+| [actions/github-script] | - | [![][actions/github-script-badge]][actions/github-script-url] |
 | [actions/setup-python@v5] | v5 | [![][actions/setup-python-v5-badge]][actions/setup-python-v5-url] |
 | [actions/setup-dotnet@v4] | v4 | [![][actions/setup-dotnet-v4-badge]][actions/setup-dotnet-v4-url] |
 | [actions/setup-go@v5] | v5 | [![][actions/setup-go-v5-badge]][actions/setup-go-v5-url] |
@@ -129,9 +129,9 @@ with more information about the project and statuses.
 [actions/setup-python@v5]: https://github.com/actions/setup-python/tree/v5
 [actions/setup-python-v5-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-python-v5.yml/badge.svg?event=schedule
 [actions/setup-python-v5-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-python-v5.yml
-[actions/github-script@v7]: https://github.com/actions/github-script/tree/v7
-[actions/github-script-v7-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-github-script-v7.yml/badge.svg?event=schedule
-[actions/github-script-v7-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-github-script-v7.yml
+[actions/github-script]: https://github.com/actions/github-script
+[actions/github-script-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-github-script.yml/badge.svg?event=schedule
+[actions/github-script-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-github-script.yml
 [actions/stale@v9]: https://github.com/actions/stale/tree/v9
 [actions/stale-v9-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-stale-v9.yml/badge.svg?event=schedule
 [actions/stale-v9-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-stale-v9.yml
