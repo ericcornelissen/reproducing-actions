@@ -19,7 +19,7 @@ with more information about the project and statuses.
 | [actions/setup-python@v5] | v5 | [![][actions/setup-python-v5-badge]][actions/setup-python-v5-url] |
 | [actions/setup-dotnet@v4] | v4 | [![][actions/setup-dotnet-v4-badge]][actions/setup-dotnet-v4-url] |
 | [actions/setup-go@v5] | v5 | [![][actions/setup-go-v5-badge]][actions/setup-go-v5-url] |
-| [actions/labeler@v5] | v5 | [![][actions/labeler-v5-badge]][actions/labeler-v5-url] |
+| [actions/labeler] | - | [![][actions/labeler-badge]][actions/labeler-url] |
 | [actions/dependency-review-action] | - | [![][actions/dependency-review-action-badge]][actions/dependency-review-action-url] |
 | [actions/cache] | - | [![][actions/cache-badge]][actions/cache-url] |
 | [JamesIves/github-pages-deploy-action@v4] | v4 | [![][JamesIves/github-pages-deploy-action-v4-badge]][JamesIves/github-pages-deploy-action-v4-url] |
@@ -117,9 +117,9 @@ with more information about the project and statuses.
 [actions/dependency-review-action]: https://github.com/actions/dependency-review-action
 [actions/dependency-review-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-dependency-review-action.yml/badge.svg?event=schedule
 [actions/dependency-review-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-dependency-review-action.yml
-[actions/labeler@v5]: https://github.com/actions/labeler/tree/v5
-[actions/labeler-v5-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-labeler-v5.yml/badge.svg?event=schedule
-[actions/labeler-v5-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-labeler-v5.yml
+[actions/labeler]: https://github.com/actions/labeler
+[actions/labeler-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-labeler.yml/badge.svg?event=schedule
+[actions/labeler-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-labeler.yml
 [actions/setup-go@v5]: https://github.com/actions/setup-go/tree/v5
 [actions/setup-go-v5-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-go-v5.yml/badge.svg?event=schedule
 [actions/setup-go-v5-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-go-v5.yml
