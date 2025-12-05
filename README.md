@@ -17,7 +17,7 @@ with more information about the project and statuses.
 | [actions/stale@v9] | v9 | [![][actions/stale-v9-badge]][actions/stale-v9-url] |
 | [actions/github-script] | - | [![][actions/github-script-badge]][actions/github-script-url] |
 | [actions/setup-python@v5] | v5 | [![][actions/setup-python-v5-badge]][actions/setup-python-v5-url] |
-| [actions/setup-dotnet@v4] | v4 | [![][actions/setup-dotnet-v4-badge]][actions/setup-dotnet-v4-url] |
+| [actions/setup-dotnet] | - | [![][actions/setup-dotnet-badge]][actions/setup-dotnet-url] |
 | [actions/setup-go@v5] | v5 | [![][actions/setup-go-v5-badge]][actions/setup-go-v5-url] |
 | [actions/labeler] | - | [![][actions/labeler-badge]][actions/labeler-url] |
 | [actions/dependency-review-action] | - | [![][actions/dependency-review-action-badge]][actions/dependency-review-action-url] |
@@ -123,9 +123,9 @@ with more information about the project and statuses.
 [actions/setup-go@v5]: https://github.com/actions/setup-go/tree/v5
 [actions/setup-go-v5-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-go-v5.yml/badge.svg?event=schedule
 [actions/setup-go-v5-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-go-v5.yml
-[actions/setup-dotnet@v4]: https://github.com/actions/setup-dotnet/tree/v4
-[actions/setup-dotnet-v4-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-dotnet-v4.yml/badge.svg?event=schedule
-[actions/setup-dotnet-v4-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-dotnet-v4.yml
+[actions/setup-dotnet]: https://github.com/actions/setup-dotnet
+[actions/setup-dotnet-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-dotnet.yml/badge.svg?event=schedule
+[actions/setup-dotnet-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-dotnet.yml
 [actions/setup-python@v5]: https://github.com/actions/setup-python/tree/v5
 [actions/setup-python-v5-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-python-v5.yml/badge.svg?event=schedule
 [actions/setup-python-v5-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-python-v5.yml
