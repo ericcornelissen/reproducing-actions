@@ -16,7 +16,7 @@ with more information about the project and statuses.
 | [gitleaks/gitleaks-action] | - | [![][gitleaks/gitleaks-action-badge]][gitleaks/gitleaks-action-url] |
 | [actions/stale@v9] | v9 | [![][actions/stale-v9-badge]][actions/stale-v9-url] |
 | [actions/github-script] | - | [![][actions/github-script-badge]][actions/github-script-url] |
-| [actions/setup-python@v5] | v5 | [![][actions/setup-python-v5-badge]][actions/setup-python-v5-url] |
+| [actions/setup-python] | - | [![][actions/setup-python-badge]][actions/setup-python-url] |
 | [actions/setup-dotnet] | - | [![][actions/setup-dotnet-badge]][actions/setup-dotnet-url] |
 | [actions/setup-go] | - | [![][actions/setup-go-badge]][actions/setup-go-url] |
 | [actions/labeler] | - | [![][actions/labeler-badge]][actions/labeler-url] |
@@ -126,9 +126,9 @@ with more information about the project and statuses.
 [actions/setup-dotnet]: https://github.com/actions/setup-dotnet
 [actions/setup-dotnet-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-dotnet.yml/badge.svg?event=schedule
 [actions/setup-dotnet-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-dotnet.yml
-[actions/setup-python@v5]: https://github.com/actions/setup-python/tree/v5
-[actions/setup-python-v5-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-python-v5.yml/badge.svg?event=schedule
-[actions/setup-python-v5-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-python-v5.yml
+[actions/setup-python]: https://github.com/actions/setup-python
+[actions/setup-python-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-python.yml/badge.svg?event=schedule
+[actions/setup-python-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-python.yml
 [actions/github-script]: https://github.com/actions/github-script
 [actions/github-script-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-github-script.yml/badge.svg?event=schedule
 [actions/github-script-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-github-script.yml
