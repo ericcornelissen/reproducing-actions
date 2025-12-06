@@ -40,7 +40,7 @@ with more information about the project and statuses.
 | [gradle/actions@v4] | v4 | [![][gradle/actions-v4-badge]][gradle/actions-v4-url] |
 | [SonarSource/sonarqube-scan-action@v6] | v6 | [![][SonarSource/sonarqube-scan-action-v6-badge]][SonarSource/sonarqube-scan-action-v6-url] |
 | [actions/setup-node] | - | [![][actions/setup-node-badge]][actions/setup-node-url] |
-| [actions/upload-artifact@v5] | v5 | [![][actions/upload-artifact-v5-badge]][actions/upload-artifact-v5-url] |
+| [actions/upload-artifact] | - | [![][actions/upload-artifact-badge]][actions/upload-artifact-url] |
 | [actions/download-artifact] | - | [![][actions/download-artifact-badge]][actions/download-artifact-url] |
 | [wearerequired/lint-action@v2] | v2 | [![][wearerequired/lint-action-v2-badge]][wearerequired/lint-action-v2-url] |
 | [actions/checkout] | - | [![][actions/checkout-badge]][actions/checkout-url] |
@@ -54,9 +54,9 @@ with more information about the project and statuses.
 [actions/download-artifact]: https://github.com/actions/download-artifact
 [actions/download-artifact-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-download-artifact.yml/badge.svg?event=schedule
 [actions/download-artifact-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-download-artifact.yml
-[actions/upload-artifact@v5]: https://github.com/actions/upload-artifact/tree/v5
-[actions/upload-artifact-v5-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-upload-artifact-v5.yml/badge.svg?event=schedule
-[actions/upload-artifact-v5-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-upload-artifact-v5.yml
+[actions/upload-artifact]: https://github.com/actions/upload-artifact
+[actions/upload-artifact-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-upload-artifact.yml/badge.svg?event=schedule
+[actions/upload-artifact-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-upload-artifact.yml
 [actions/setup-node]: https://github.com/actions/setup-node
 [actions/setup-node-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-node.yml/badge.svg?event=schedule
 [actions/setup-node-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-node.yml
