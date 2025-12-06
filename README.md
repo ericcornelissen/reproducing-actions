@@ -14,7 +14,7 @@ with more information about the project and statuses.
 | ------ | ------- | ------ |
 | [actions/setup-java] | - | [![][actions/setup-java-badge]][actions/setup-java-url] |
 | [gitleaks/gitleaks-action] | - | [![][gitleaks/gitleaks-action-badge]][gitleaks/gitleaks-action-url] |
-| [actions/stale@v9] | v9 | [![][actions/stale-v9-badge]][actions/stale-v9-url] |
+| [actions/stale] | - | [![][actions/stale-badge]][actions/stale-url] |
 | [actions/github-script] | - | [![][actions/github-script-badge]][actions/github-script-url] |
 | [actions/setup-python] | - | [![][actions/setup-python-badge]][actions/setup-python-url] |
 | [actions/setup-dotnet] | - | [![][actions/setup-dotnet-badge]][actions/setup-dotnet-url] |
@@ -132,9 +132,9 @@ with more information about the project and statuses.
 [actions/github-script]: https://github.com/actions/github-script
 [actions/github-script-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-github-script.yml/badge.svg?event=schedule
 [actions/github-script-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-github-script.yml
-[actions/stale@v9]: https://github.com/actions/stale/tree/v9
-[actions/stale-v9-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-stale-v9.yml/badge.svg?event=schedule
-[actions/stale-v9-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-stale-v9.yml
+[actions/stale]: https://github.com/actions/stale
+[actions/stale-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-stale.yml/badge.svg?event=schedule
+[actions/stale-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-stale.yml
 [gitleaks/gitleaks-action]: https://github.com/gitleaks/gitleaks-action
 [gitleaks/gitleaks-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/gitleaks-gitleaks-action.yml/badge.svg?event=schedule
 [gitleaks/gitleaks-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/gitleaks-gitleaks-action.yml
