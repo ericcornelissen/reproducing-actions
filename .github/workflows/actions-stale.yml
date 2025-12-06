@@ -1,17 +1,17 @@
-name: actions/setup-node
+name: actions/stale
 on:
   pull_request:
     paths:
       - .github/workflows/reusable-test-new.yml
-      - .github/workflows/actions-setup-node.yml
+      - .github/workflows/actions-stale.yml
   push:
     branches:
       - main
     paths:
       - .github/workflows/reusable-test-new.yml
-      - .github/workflows/actions-setup-node.yml
+      - .github/workflows/actions-stale.yml
   schedule:
-    - cron: "36 1 * * *"
+    - cron: "5 1 * * *"
   workflow_dispatch: ~
 
 permissions: read-all
@@ -22,10 +22,10 @@ jobs:
     with:
       build-cmd:    npm run build
       install-cmd:  npm clean-install
-      node-version: 24.x
-      repository:   actions/setup-node
+      node-version: 20.x
+      repository:   actions/stale
   version:
     if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v6.1.0
+      - uses: actions/stale@v9.1.0

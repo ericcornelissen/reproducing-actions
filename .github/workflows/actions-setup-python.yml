@@ -1,17 +1,17 @@
-name: actions/setup-node
+name: actions/setup-python
 on:
   pull_request:
     paths:
       - .github/workflows/reusable-test-new.yml
-      - .github/workflows/actions-setup-node.yml
+      - .github/workflows/actions-setup-python.yml
   push:
     branches:
       - main
     paths:
       - .github/workflows/reusable-test-new.yml
-      - .github/workflows/actions-setup-node.yml
+      - .github/workflows/actions-setup-python.yml
   schedule:
-    - cron: "36 1 * * *"
+    - cron: "8 1 * * *"
   workflow_dispatch: ~
 
 permissions: read-all
@@ -22,10 +22,10 @@ jobs:
     with:
       build-cmd:    npm run build
       install-cmd:  npm clean-install
-      node-version: 24.x
-      repository:   actions/setup-node
+      node-version: 20.x
+      repository:   actions/setup-python
   version:
     if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v6.1.0
+      - uses: actions/setup-python@v5.6.0

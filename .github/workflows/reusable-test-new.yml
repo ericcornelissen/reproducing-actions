@@ -67,6 +67,18 @@ jobs:
           persist-credentials: false
           ref: ${{ needs.setup.outputs.version }}
           repository: ${{ inputs.repository }}
+      - name: Obtain original list of files
+        id: files
+        run: |
+          TMP=$(find . \( -path ./node_modules -o -path ./.git \) -prune -o -type f -print)
+          echo "$TMP"
+
+          {
+            echo 'FILES_LINES<<EOF'
+            echo "$TMP"
+            echo 'EOF'
+          } >>"${GITHUB_ENV}"
+          echo "FILES_LIST=$(echo $TMP | tr '\n' ' ')" >>"${GITHUB_ENV}"
 
       # Environment setup
       - name: Install Node.js (from version)
@@ -85,18 +97,6 @@ jobs:
         run: ${{ inputs.install-cmd }}
 
       # Check reproducibility
-      - name: List files
-        id: files
-        run: |
-          TMP=$(find . \( -path ./node_modules -o -path ./.git \) -prune -o -type f -print)
-          echo "$TMP"
-
-          {
-            echo 'FILES_LINES<<EOF'
-            echo "$TMP"
-            echo 'EOF'
-          } >>"${GITHUB_ENV}"
-          echo "FILES_LIST=$(echo $TMP | tr '\n' ' ')" >>"${GITHUB_ENV}"
       - name: Normalize line endings
         run: |
           while IFS= read -r file; do

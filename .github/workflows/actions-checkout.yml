@@ -1,17 +1,17 @@
-name: actions/setup-node
+name: actions/checkout
 on:
   pull_request:
     paths:
       - .github/workflows/reusable-test-new.yml
-      - .github/workflows/actions-setup-node.yml
+      - .github/workflows/actions-checkout.yml
   push:
     branches:
       - main
     paths:
       - .github/workflows/reusable-test-new.yml
-      - .github/workflows/actions-setup-node.yml
+      - .github/workflows/actions-checkout.yml
   schedule:
-    - cron: "36 1 * * *"
+    - cron: "33 1 * * *"
   workflow_dispatch: ~
 
 permissions: read-all
@@ -23,9 +23,9 @@ jobs:
       build-cmd:    npm run build
       install-cmd:  npm clean-install
       node-version: 24.x
-      repository:   actions/setup-node
+      repository:   actions/checkout
   version:
     if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v6.1.0
+      - uses: actions/checkout@v6.0.0
