@@ -12,7 +12,7 @@ with more information about the project and statuses.
 
 | Action | Version | Status |
 | ------ | ------- | ------ |
-| [actions/setup-java@v4] | v4 | [![][actions/setup-java-v4-badge]][actions/setup-java-v4-url] |
+| [actions/setup-java] | - | [![][actions/setup-java-badge]][actions/setup-java-url] |
 | [gitleaks/gitleaks-action] | - | [![][gitleaks/gitleaks-action-badge]][gitleaks/gitleaks-action-url] |
 | [actions/stale@v9] | v9 | [![][actions/stale-v9-badge]][actions/stale-v9-url] |
 | [actions/github-script] | - | [![][actions/github-script-badge]][actions/github-script-url] |
@@ -138,9 +138,9 @@ with more information about the project and statuses.
 [gitleaks/gitleaks-action]: https://github.com/gitleaks/gitleaks-action
 [gitleaks/gitleaks-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/gitleaks-gitleaks-action.yml/badge.svg?event=schedule
 [gitleaks/gitleaks-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/gitleaks-gitleaks-action.yml
-[actions/setup-java@v4]: https://github.com/actions/setup-java/tree/v4
-[actions/setup-java-v4-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-java-v4.yml/badge.svg?event=schedule
-[actions/setup-java-v4-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-java-v4.yml
+[actions/setup-java]: https://github.com/actions/setup-java
+[actions/setup-java-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-java.yml/badge.svg?event=schedule
+[actions/setup-java-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-java.yml
 
 ## About
 
