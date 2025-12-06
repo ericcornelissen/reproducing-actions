@@ -18,7 +18,7 @@ with more information about the project and statuses.
 | [actions/github-script] | - | [![][actions/github-script-badge]][actions/github-script-url] |
 | [actions/setup-python@v5] | v5 | [![][actions/setup-python-v5-badge]][actions/setup-python-v5-url] |
 | [actions/setup-dotnet] | - | [![][actions/setup-dotnet-badge]][actions/setup-dotnet-url] |
-| [actions/setup-go@v5] | v5 | [![][actions/setup-go-v5-badge]][actions/setup-go-v5-url] |
+| [actions/setup-go] | - | [![][actions/setup-go-badge]][actions/setup-go-url] |
 | [actions/labeler] | - | [![][actions/labeler-badge]][actions/labeler-url] |
 | [actions/dependency-review-action] | - | [![][actions/dependency-review-action-badge]][actions/dependency-review-action-url] |
 | [actions/cache] | - | [![][actions/cache-badge]][actions/cache-url] |
@@ -120,9 +120,9 @@ with more information about the project and statuses.
 [actions/labeler]: https://github.com/actions/labeler
 [actions/labeler-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-labeler.yml/badge.svg?event=schedule
 [actions/labeler-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-labeler.yml
-[actions/setup-go@v5]: https://github.com/actions/setup-go/tree/v5
-[actions/setup-go-v5-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-go-v5.yml/badge.svg?event=schedule
-[actions/setup-go-v5-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-go-v5.yml
+[actions/setup-go]: https://github.com/actions/setup-go
+[actions/setup-go-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-go.yml/badge.svg?event=schedule
+[actions/setup-go-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-go.yml
 [actions/setup-dotnet]: https://github.com/actions/setup-dotnet
 [actions/setup-dotnet-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-dotnet.yml/badge.svg?event=schedule
 [actions/setup-dotnet-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-dotnet.yml
