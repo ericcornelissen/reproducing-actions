@@ -22,7 +22,7 @@ jobs:
     with:
       build-cmd:    npm run build
       install-cmd:  npm clean-install
-      node-version: 20.x
+      node-version: 24.x
       repository:   actions/setup-dotnet
   version:
     if: ${{ false }}
