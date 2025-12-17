@@ -22,10 +22,10 @@ jobs:
     with:
       build-cmd:    npm run build
       install-cmd:  npm clean-install
-      node-version: 20.x
+      node-version: 24.x
       repository:   actions/cache
   version:
     if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/cache@v4.3.0
+      - uses: actions/cache@v5.0.1
