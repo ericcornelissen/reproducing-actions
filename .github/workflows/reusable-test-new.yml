@@ -34,6 +34,7 @@ permissions: read-all
 
 jobs:
   setup:
+    name: setup
     runs-on: ubuntu-24.04
     outputs:
       version: ${{ steps.version.outputs.version }}
@@ -53,6 +54,7 @@ jobs:
           echo "$VERSION"
           echo "VERSION=$VERSION" >>"$GITHUB_OUTPUT"
   build:
+    name: build ${{ needs.setup.outputs.version }}
     runs-on: ubuntu-24.04
     needs:
       - setup
