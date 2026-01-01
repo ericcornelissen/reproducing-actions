@@ -1,0 +1,33 @@
+name: docker/build-push-action
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/docker-build-push-action.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/docker-build-push-action.yml
+  schedule:
+    - cron: "21 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  test:
+    uses: ./.github/workflows/reusable-test-new.yml
+    with:
+      build-cmd:    yarn build
+      install-cmd:  |
+        corepack enable
+        yarn install
+      node-version: 20.x
+      repository:   docker/build-push-action
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: docker/build-push-action@v6.18.0

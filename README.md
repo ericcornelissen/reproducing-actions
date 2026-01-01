@@ -27,7 +27,7 @@ with more information about the project and statuses.
 | [peter-evans/create-pull-request@v7] | v7 | [![][peter-evans/create-pull-request-v7-badge]][peter-evans/create-pull-request-v7-url] |
 | [ncipollo/release-action@v1] | v1 | [![][ncipollo/release-action-v1-badge]][ncipollo/release-action-v1-url] |
 | [docker/login-action] | - | [![][docker/login-action-badge]][docker/login-action-url] |
-| [docker/build-push-action@v6] | v6 | [![][docker/build-push-action-v6-badge]][docker/build-push-action-v6-url] |
+| [docker/build-push-action] | - | [![][docker/build-push-action-badge]][docker/build-push-action-url] |
 | [github/codeql-action@v3] | v3 | [![][github/codeql-action-v3-badge]][github/codeql-action-v3-url] |
 | [dorny/paths-filter@v3] | v3 | [![][dorny/paths-filter-v3-badge]][dorny/paths-filter-v3-url] |
 | [actions/attest-build-provenance] | - | [![][actions/attest-build-provenance-badge]][actions/attest-build-provenance-url] |
@@ -93,9 +93,9 @@ with more information about the project and statuses.
 [github/codeql-action@v3]: https://github.com/github/codeql-action/tree/v3
 [github/codeql-action-v3-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/github-codeql-action-v3.yml/badge.svg?event=schedule
 [github/codeql-action-v3-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/github-codeql-action-v3.yml
-[docker/build-push-action@v6]: https://github.com/docker/build-push-action/tree/v6
-[docker/build-push-action-v6-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/docker-build-push-action-v6.yml/badge.svg?event=schedule
-[docker/build-push-action-v6-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/docker-build-push-action-v6.yml
+[docker/build-push-action]: https://github.com/docker/build-push-action
+[docker/build-push-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/docker-build-push-action.yml/badge.svg?event=schedule
+[docker/build-push-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/docker-build-push-action.yml
 [docker/login-action]: https://github.com/docker/login-action
 [docker/login-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/docker-login-action.yml/badge.svg?event=schedule
 [docker/login-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/docker-login-action.yml
