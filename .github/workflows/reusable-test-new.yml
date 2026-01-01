@@ -49,7 +49,7 @@ jobs:
           REPO: ${{ inputs.repository }}
         run: |
           VERSION=$(cat .github/workflows/${REPO//\//-}.yml \
-            | grep -o '@v[^"]*' \
+            | grep -oE '@v?[^"]*' \
             | cut -c2-)
           echo "$VERSION"
           echo "VERSION=$VERSION" >>"$GITHUB_OUTPUT"
