@@ -1,14 +1,14 @@
-name: <ACTION>@<VERSION>
+name: <ACTION>
 on:
   pull_request:
     paths:
-      - .github/workflows/reusable-test.yml
+      - .github/workflows/reusable-test-new.yml
       - <FILE>
   push:
     branches:
       - main
     paths:
-      - .github/workflows/reusable-test.yml
+      - .github/workflows/reusable-test-new.yml
       - <FILE>
   schedule:
     - cron: "<MIN> <HOUR> * * *"
@@ -17,12 +17,15 @@ on:
 permissions: read-all
 
 jobs:
-  build:
-    uses: ./.github/workflows/reusable-test.yml
+  test:
+    uses: ./.github/workflows/reusable-test-new.yml
     with:
-      files:        <FILES>
       build-cmd:    <BUILD>
       install-cmd:  <INSTALL>
       node-version: <NODE>
       repository:   <ACTION>
-      version-ref:  <VERSION>
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: <ACTION>@<VERSION>
