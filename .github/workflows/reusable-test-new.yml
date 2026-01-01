@@ -48,9 +48,11 @@ jobs:
         env:
           REPO: ${{ inputs.repository }}
         run: |
-          VERSION=$(cat .github/workflows/${REPO//\//-}.yml \
-            | grep -oE '@v?[^"]*' \
-            | cut -c2-)
+          VERSION=$( \
+            cat .github/workflows/${REPO//\//-}.yml \
+              | grep -oE '^\s+- uses: [^@]+@v?[^"]*' \
+              | sed 's/.*@//' \
+          )
           echo "$VERSION"
           echo "VERSION=$VERSION" >>"$GITHUB_OUTPUT"
   build:
