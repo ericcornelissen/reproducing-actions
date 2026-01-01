@@ -35,7 +35,7 @@ with more information about the project and statuses.
 | [fastify/github-action-merge-dependabot@v3] | v3 | [![][fastify/github-action-merge-dependabot-v3-badge]][fastify/github-action-merge-dependabot-v3-url] |
 | [googleapis/release-please-action@v4] | v4 | [![][googleapis/release-please-action-v4-badge]][googleapis/release-please-action-v4-url] |
 | [actions/create-github-app-token] | - | [![][actions/create-github-app-token-badge]][actions/create-github-app-token-url] |
-| [asdf-vm/actions@v4] | v4 | [![][asdf-vm/actions-v4-badge]][asdf-vm/actions-v4-url] |
+| [asdf-vm/actions] | - | [![][asdf-vm/actions-badge]][asdf-vm/actions-url] |
 | [cardinalby/schema-validator-action] | - | [![][cardinalby/schema-validator-action-badge]][cardinalby/schema-validator-action-url] |
 | [gradle/actions@v4] | v4 | [![][gradle/actions-v4-badge]][gradle/actions-v4-url] |
 | [SonarSource/sonarqube-scan-action@v6] | v6 | [![][SonarSource/sonarqube-scan-action-v6-badge]][SonarSource/sonarqube-scan-action-v6-url] |
@@ -69,9 +69,9 @@ with more information about the project and statuses.
 [cardinalby/schema-validator-action]: https://github.com/cardinalby/schema-validator-action
 [cardinalby/schema-validator-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/cardinalby-schema-validator-action.yml/badge.svg?event=schedule
 [cardinalby/schema-validator-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/cardinalby-schema-validator-action.yml
-[asdf-vm/actions@v4]: https://github.com/asdf-vm/actions/tree/v4
-[asdf-vm/actions-v4-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/asdf-vm-actions-v4.yml/badge.svg?event=schedule
-[asdf-vm/actions-v4-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/asdf-vm-actions-v4.yml
+[asdf-vm/actions]: https://github.com/asdf-vm/actions
+[asdf-vm/actions-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/asdf-vm-actions.yml/badge.svg?event=schedule
+[asdf-vm/actions-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/asdf-vm-actions.yml
 [actions/create-github-app-token]: https://github.com/actions/create-github-app-token
 [actions/create-github-app-token-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-create-github-app-token.yml/badge.svg?event=schedule
 [actions/create-github-app-token-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-create-github-app-token.yml
