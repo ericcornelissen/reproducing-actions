@@ -1,0 +1,31 @@
+name: actions/attest
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/actions-attest.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/actions-attest.yml
+  schedule:
+    - cron: "2 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  test:
+    uses: ./.github/workflows/reusable-test-new.yml
+    with:
+      build-cmd:         npm run bundle
+      install-cmd:       npm clean-install
+      node-version-file: .node-version
+      repository:        actions/attest
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/attest@v3.1.0
