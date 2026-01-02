@@ -1,0 +1,31 @@
+name: fastify/github-action-merge-dependabot
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/fastify-github-action-merge-dependabot.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/fastify-github-action-merge-dependabot.yml
+  schedule:
+    - cron: "28 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  build:
+    uses: ./.github/workflows/reusable-test-new.yml
+    with:
+      build-cmd:         npm run build
+      install-cmd:       npm clean-install --ignore-scripts
+      node-version-file: .nvmrc
+      repository:        fastify/github-action-merge-dependabot
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: dorny/paths-filter@v3.11.2
