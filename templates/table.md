@@ -1,5 +1,5 @@
-| [<ACTION>@<VERSION>] | <VERSION> | [![][<ACTION>-<VERSION>-badge]][<ACTION>-<VERSION>-url] |
+| [<ACTION>] | - | [![][<ACTION>-badge]][<ACTION>-url] |
 <!-- INSERT ROW -->
-[<ACTION>@<VERSION>]: https://github.com/<ACTION>/tree/<VERSION>
-[<ACTION>-<VERSION>-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/<HYPHENATED>-<VERSION>.yml/badge.svg?event=schedule
-[<ACTION>-<VERSION>-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/<HYPHENATED>-<VERSION>.yml
+[<ACTION>]: https://github.com/<ACTION>
+[<ACTION>-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/<FILE>/badge.svg?event=schedule
+[<ACTION>-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/<FILE>

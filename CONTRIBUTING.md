@@ -25,7 +25,6 @@ script. To add a monitor for a new Action follow these steps:
    GitHub Actions workflow with the name of the Action and update the statuses
    table in the `README.md`.
 1. Manually adjust the newly created workflow:
-   - Set the `<FILES>` to check for reproducibility.
    - Set the `<BUILD>` command, typically `npm run build`.
    - Set the `<INSTALL>` command, typically `npm clean-install`.
    - Set the `<NODE>` version, this can be a version, e.g. `node-version: 20.x`,
@@ -34,9 +33,9 @@ script. To add a monitor for a new Action follow these steps:
    - Set the `<MIN>` and `<HOUR>` values to the next minute when compared to the
      last added workflow.
 1. Commit with the title `Add monitor for <owner>/<repo> at v<X>` and a message
-   linking to the source code on which the values for `files`, `build-cmd`,
-   `install-cmd`, and `node-version(-file)` are based. Use permanent URLs, i.e.,
-   including the commit hash.
+   linking to the source code on which the `build-cmd`, `install-cmd`, and
+   `node-version(-file)` values are based. Use permanent URLs, i.e., including
+   the commit hash.
 1. Open a Pull Request.
 
 [`actions/setup-node`]: https://github.com/actions/setup-node
