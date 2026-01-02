@@ -29,7 +29,7 @@ with more information about the project and statuses.
 | [docker/login-action] | - | [![][docker/login-action-badge]][docker/login-action-url] |
 | [docker/build-push-action] | - | [![][docker/build-push-action-badge]][docker/build-push-action-url] |
 | [github/codeql-action@v3] | v3 | [![][github/codeql-action-v3-badge]][github/codeql-action-v3-url] |
-| [dorny/paths-filter@v3] | v3 | [![][dorny/paths-filter-v3-badge]][dorny/paths-filter-v3-url] |
+| [dorny/paths-filter] | - | [![][dorny/paths-filter-badge]][dorny/paths-filter-url] |
 | [actions/attest-build-provenance] | - | [![][actions/attest-build-provenance-badge]][actions/attest-build-provenance-url] |
 | [JS-DevTools/npm-publish@v3] | v3 | [![][JS-DevTools/npm-publish-v3-badge]][JS-DevTools/npm-publish-v3-url] |
 | [fastify/github-action-merge-dependabot@v3] | v3 | [![][fastify/github-action-merge-dependabot-v3-badge]][fastify/github-action-merge-dependabot-v3-url] |
@@ -87,9 +87,9 @@ with more information about the project and statuses.
 [actions/attest-build-provenance]: https://github.com/actions/attest-build-provenance
 [actions/attest-build-provenance-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-attest-build-provenance.yml/badge.svg?event=schedule
 [actions/attest-build-provenance-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-attest-build-provenance.yml
-[dorny/paths-filter@v3]: https://github.com/dorny/paths-filter/tree/v3
-[dorny/paths-filter-v3-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/dorny-paths-filter-v3.yml/badge.svg?event=schedule
-[dorny/paths-filter-v3-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/dorny-paths-filter-v3.yml
+[dorny/paths-filter]: https://github.com/dorny/paths-filter
+[dorny/paths-filter-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/dorny-paths-filter.yml/badge.svg?event=schedule
+[dorny/paths-filter-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/dorny-paths-filter.yml
 [github/codeql-action@v3]: https://github.com/github/codeql-action/tree/v3
 [github/codeql-action-v3-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/github-codeql-action-v3.yml/badge.svg?event=schedule
 [github/codeql-action-v3-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/github-codeql-action-v3.yml
