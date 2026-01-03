@@ -44,7 +44,11 @@ with more information about the project and statuses.
 | [actions/download-artifact] | - | [![][actions/download-artifact-badge]][actions/download-artifact-url] |
 | [wearerequired/lint-action@v2] | v2 | [![][wearerequired/lint-action-v2-badge]][wearerequired/lint-action-v2-url] |
 | [actions/checkout] | - | [![][actions/checkout-badge]][actions/checkout-url] |
+| [actions/attest] | - | [![][actions/attest-badge]][actions/attest-url] |
 <!-- INSERT ROW -->
+[actions/attest]: https://github.com/actions/attest
+[actions/attest-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/actions-attest.yml/badge.svg?event=schedule
+[actions/attest-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/actions-attest.yml
 [actions/checkout]: https://github.com/actions/checkout
 [actions/checkout-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-checkout.yml/badge.svg?event=schedule
 [actions/checkout-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-checkout.yml
