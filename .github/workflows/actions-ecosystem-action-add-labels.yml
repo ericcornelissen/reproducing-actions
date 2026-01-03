@@ -21,9 +21,7 @@ jobs:
     uses: ./.github/workflows/reusable-test-new.yml
     with:
       build-cmd:    yarn build
-      install-cmd:  |
-        corepack enable
-        yarn install
+      install-cmd:  yarn install
       node-version: 12.x
       repository:   actions-ecosystem/action-add-labels
   version:
