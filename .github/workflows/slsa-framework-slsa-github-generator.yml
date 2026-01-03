@@ -17,7 +17,15 @@ on:
 permissions: read-all
 
 jobs:
-  test-detect-workflow-js:
+  actions-delegator-setup-generic:
+    uses: ./.github/workflows/reusable-test-new.yml
+    with:
+      build-cmd:         make clean package
+      install-cmd:       npm clean-install
+      node-version:      22
+      repository:        slsa-framework/slsa-github-generator
+      working-directory: actions/delegator/setup-generic
+  github-actions-detect-workflow-js:
     uses: ./.github/workflows/reusable-test-new.yml
     with:
       build-cmd:         make clean package
