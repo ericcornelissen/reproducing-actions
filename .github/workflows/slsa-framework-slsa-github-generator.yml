@@ -1,0 +1,35 @@
+name: slsa-framework/slsa-github-generator
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/slsa-framework-slsa-github-generator.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/slsa-framework-slsa-github-generator.yml
+  schedule:
+    - cron: "4 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  test-detect-workflow-js:
+    uses: ./.github/workflows/reusable-test-new.yml
+    with:
+      build-cmd:    |
+        cd .github/actions/detect-workflow-js
+        make clean package
+      install-cmd:  |
+        cd .github/actions/detect-workflow-js
+        npm clean-install
+      node-version: 22
+      repository:   slsa-framework/slsa-github-generator
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: slsa-framework/slsa-github-generator@v2.1.0
