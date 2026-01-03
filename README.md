@@ -26,17 +26,17 @@ with more information about the project and statuses.
 | [step-security/harden-runner@v2] | v2 | [![][step-security/harden-runner-v2-badge]][step-security/harden-runner-v2-url] |
 | [peter-evans/create-pull-request@v7] | v7 | [![][peter-evans/create-pull-request-v7-badge]][peter-evans/create-pull-request-v7-url] |
 | [ncipollo/release-action@v1] | v1 | [![][ncipollo/release-action-v1-badge]][ncipollo/release-action-v1-url] |
-| [docker/login-action@v3] | v3 | [![][docker/login-action-v3-badge]][docker/login-action-v3-url] |
-| [docker/build-push-action@v6] | v6 | [![][docker/build-push-action-v6-badge]][docker/build-push-action-v6-url] |
-| [github/codeql-action@v3] | v3 | [![][github/codeql-action-v3-badge]][github/codeql-action-v3-url] |
-| [dorny/paths-filter@v3] | v3 | [![][dorny/paths-filter-v3-badge]][dorny/paths-filter-v3-url] |
+| [docker/login-action] | - | [![][docker/login-action-badge]][docker/login-action-url] |
+| [docker/build-push-action] | - | [![][docker/build-push-action-badge]][docker/build-push-action-url] |
+| [github/codeql-action] | - | [![][github/codeql-action-badge]][github/codeql-action-url] |
+| [dorny/paths-filter] | - | [![][dorny/paths-filter-badge]][dorny/paths-filter-url] |
 | [actions/attest-build-provenance] | - | [![][actions/attest-build-provenance-badge]][actions/attest-build-provenance-url] |
 | [JS-DevTools/npm-publish@v3] | v3 | [![][JS-DevTools/npm-publish-v3-badge]][JS-DevTools/npm-publish-v3-url] |
-| [fastify/github-action-merge-dependabot@v3] | v3 | [![][fastify/github-action-merge-dependabot-v3-badge]][fastify/github-action-merge-dependabot-v3-url] |
+| [fastify/github-action-merge-dependabot] | - | [![][fastify/github-action-merge-dependabot-badge]][fastify/github-action-merge-dependabot-url] |
 | [googleapis/release-please-action@v4] | v4 | [![][googleapis/release-please-action-v4-badge]][googleapis/release-please-action-v4-url] |
 | [actions/create-github-app-token] | - | [![][actions/create-github-app-token-badge]][actions/create-github-app-token-url] |
-| [asdf-vm/actions@v4] | v4 | [![][asdf-vm/actions-v4-badge]][asdf-vm/actions-v4-url] |
-| [cardinalby/schema-validator-action@v3] | v3 | [![][cardinalby/schema-validator-action-v3-badge]][cardinalby/schema-validator-action-v3-url] |
+| [asdf-vm/actions] | - | [![][asdf-vm/actions-badge]][asdf-vm/actions-url] |
+| [cardinalby/schema-validator-action] | - | [![][cardinalby/schema-validator-action-badge]][cardinalby/schema-validator-action-url] |
 | [gradle/actions@v4] | v4 | [![][gradle/actions-v4-badge]][gradle/actions-v4-url] |
 | [SonarSource/sonarqube-scan-action@v6] | v6 | [![][SonarSource/sonarqube-scan-action-v6-badge]][SonarSource/sonarqube-scan-action-v6-url] |
 | [actions/setup-node] | - | [![][actions/setup-node-badge]][actions/setup-node-url] |
@@ -70,39 +70,39 @@ with more information about the project and statuses.
 [gradle/actions@v4]: https://github.com/gradle/actions/tree/v4
 [gradle/actions-v4-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/gradle-actions-v4.yml/badge.svg?event=schedule
 [gradle/actions-v4-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/gradle-actions-v4.yml
-[cardinalby/schema-validator-action@v3]: https://github.com/cardinalby/schema-validator-action/tree/v3
-[cardinalby/schema-validator-action-v3-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/cardinalby-schema-validator-action-v3.yml/badge.svg?event=schedule
-[cardinalby/schema-validator-action-v3-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/cardinalby-schema-validator-action-v3.yml
-[asdf-vm/actions@v4]: https://github.com/asdf-vm/actions/tree/v4
-[asdf-vm/actions-v4-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/asdf-vm-actions-v4.yml/badge.svg?event=schedule
-[asdf-vm/actions-v4-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/asdf-vm-actions-v4.yml
+[cardinalby/schema-validator-action]: https://github.com/cardinalby/schema-validator-action
+[cardinalby/schema-validator-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/cardinalby-schema-validator-action.yml/badge.svg?event=schedule
+[cardinalby/schema-validator-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/cardinalby-schema-validator-action.yml
+[asdf-vm/actions]: https://github.com/asdf-vm/actions
+[asdf-vm/actions-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/asdf-vm-actions.yml/badge.svg?event=schedule
+[asdf-vm/actions-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/asdf-vm-actions.yml
 [actions/create-github-app-token]: https://github.com/actions/create-github-app-token
 [actions/create-github-app-token-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-create-github-app-token.yml/badge.svg?event=schedule
 [actions/create-github-app-token-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-create-github-app-token.yml
 [googleapis/release-please-action@v4]: https://github.com/googleapis/release-please-action/tree/v4
 [googleapis/release-please-action-v4-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/googleapis-release-please-action-v4.yml/badge.svg?event=schedule
 [googleapis/release-please-action-v4-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/googleapis-release-please-action-v4.yml
-[fastify/github-action-merge-dependabot@v3]: https://github.com/fastify/github-action-merge-dependabot/tree/v3
-[fastify/github-action-merge-dependabot-v3-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/fastify-github-action-merge-dependabot-v3.yml/badge.svg?event=schedule
-[fastify/github-action-merge-dependabot-v3-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/fastify-github-action-merge-dependabot-v3.yml
+[fastify/github-action-merge-dependabot]: https://github.com/fastify/github-action-merge-dependabot
+[fastify/github-action-merge-dependabot-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/fastify-github-action-merge-dependabot.yml/badge.svg?event=schedule
+[fastify/github-action-merge-dependabot-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/fastify-github-action-merge-dependabot.yml
 [JS-DevTools/npm-publish@v3]: https://github.com/JS-DevTools/npm-publish/tree/v3
 [JS-DevTools/npm-publish-v3-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/js-devtools-npm-publish-v3.yml/badge.svg?event=schedule
 [JS-DevTools/npm-publish-v3-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/js-devtools-npm-publish-v3.yml
 [actions/attest-build-provenance]: https://github.com/actions/attest-build-provenance
 [actions/attest-build-provenance-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-attest-build-provenance.yml/badge.svg?event=schedule
 [actions/attest-build-provenance-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-attest-build-provenance.yml
-[dorny/paths-filter@v3]: https://github.com/dorny/paths-filter/tree/v3
-[dorny/paths-filter-v3-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/dorny-paths-filter-v3.yml/badge.svg?event=schedule
-[dorny/paths-filter-v3-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/dorny-paths-filter-v3.yml
-[github/codeql-action@v3]: https://github.com/github/codeql-action/tree/v3
-[github/codeql-action-v3-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/github-codeql-action-v3.yml/badge.svg?event=schedule
-[github/codeql-action-v3-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/github-codeql-action-v3.yml
-[docker/build-push-action@v6]: https://github.com/docker/build-push-action/tree/v6
-[docker/build-push-action-v6-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/docker-build-push-action-v6.yml/badge.svg?event=schedule
-[docker/build-push-action-v6-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/docker-build-push-action-v6.yml
-[docker/login-action@v3]: https://github.com/docker/login-action/tree/v3
-[docker/login-action-v3-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/docker-login-action-v3.yml/badge.svg?event=schedule
-[docker/login-action-v3-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/docker-login-action-v3.yml
+[dorny/paths-filter]: https://github.com/dorny/paths-filter
+[dorny/paths-filter-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/dorny-paths-filter.yml/badge.svg?event=schedule
+[dorny/paths-filter-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/dorny-paths-filter.yml
+[github/codeql-action]: https://github.com/github/codeql-action
+[github/codeql-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/github-codeql-action.yml/badge.svg?event=schedule
+[github/codeql-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/github-codeql-action.yml
+[docker/build-push-action]: https://github.com/docker/build-push-action
+[docker/build-push-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/docker-build-push-action.yml/badge.svg?event=schedule
+[docker/build-push-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/docker-build-push-action.yml
+[docker/login-action]: https://github.com/docker/login-action
+[docker/login-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/docker-login-action.yml/badge.svg?event=schedule
+[docker/login-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/docker-login-action.yml
 [ncipollo/release-action@v1]: https://github.com/ncipollo/release-action/tree/v1
 [ncipollo/release-action-v1-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/ncipollo-release-action-v1.yml/badge.svg?event=schedule
 [ncipollo/release-action-v1-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/ncipollo-release-action-v1.yml

@@ -1,15 +1,15 @@
-name: asdf-vm/actions@v4
+name: asdf-vm/actions
 on:
   pull_request:
     paths:
-      - .github/workflows/reusable-test.yml
-      - .github/workflows/asdf-vm-actions-v4.yml
+      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/asdf-vm-actions.yml
   push:
     branches:
       - main
     paths:
-      - .github/workflows/reusable-test.yml
-      - .github/workflows/asdf-vm-actions-v4.yml
+      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/asdf-vm-actions.yml
   schedule:
     - cron: "30 1 * * *"
   workflow_dispatch: ~
@@ -17,10 +17,9 @@ on:
 permissions: read-all
 
 jobs:
-  build:
-    uses: ./.github/workflows/reusable-test.yml
+  test:
+    uses: ./.github/workflows/reusable-test-new.yml
     with:
-      files:             install/main.js plugin-test/main.js plugins-add/main.js setup/main.js
       build-cmd:         pnpm build
       install-cmd: |
         PNPM_VERSION=$(jq -r '.engines.pnpm' package.json | sed 's/^=//')
@@ -31,4 +30,8 @@ jobs:
         corepack pnpm install --ignore-scripts
       node-version-file: .tool-versions
       repository:        asdf-vm/actions
-      version-ref:       v4
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: asdf-vm/actions@v4.0.1

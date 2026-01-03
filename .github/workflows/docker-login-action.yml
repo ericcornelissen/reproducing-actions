@@ -1,0 +1,33 @@
+name: docker/login-action
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/docker-login-action.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/docker-login-action.yml
+  schedule:
+    - cron: "20 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  test:
+    uses: ./.github/workflows/reusable-test-new.yml
+    with:
+      build-cmd:    yarn build
+      install-cmd:  |
+        corepack enable
+        yarn install
+      node-version: 20.x
+      repository:   docker/login-action
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: docker/login-action@v3.6.0
