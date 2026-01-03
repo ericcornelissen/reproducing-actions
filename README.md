@@ -45,7 +45,11 @@ with more information about the project and statuses.
 | [wearerequired/lint-action@v2] | v2 | [![][wearerequired/lint-action-v2-badge]][wearerequired/lint-action-v2-url] |
 | [actions/checkout] | - | [![][actions/checkout-badge]][actions/checkout-url] |
 | [actions/attest] | - | [![][actions/attest-badge]][actions/attest-url] |
+| [slsa-framework/slsa-github-generator] | - | [![][slsa-framework/slsa-github-generator-badge]][slsa-framework/slsa-github-generator-url] |
 <!-- INSERT ROW -->
+[slsa-framework/slsa-github-generator]: https://github.com/slsa-framework/slsa-github-generator
+[slsa-framework/slsa-github-generator-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/slsa-framework-slsa-github-generator.yml/badge.svg?event=schedule
+[slsa-framework/slsa-github-generator-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/slsa-framework-slsa-github-generator.yml
 [actions/attest]: https://github.com/actions/attest
 [actions/attest-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/actions-attest.yml/badge.svg?event=schedule
 [actions/attest-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/actions-attest.yml
