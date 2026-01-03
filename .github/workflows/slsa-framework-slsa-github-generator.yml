@@ -20,14 +20,11 @@ jobs:
   test-detect-workflow-js:
     uses: ./.github/workflows/reusable-test-new.yml
     with:
-      build-cmd:    |
-        cd .github/actions/detect-workflow-js
-        make clean package
-      install-cmd:  |
-        cd .github/actions/detect-workflow-js
-        npm clean-install
-      node-version: 22
-      repository:   slsa-framework/slsa-github-generator
+      build-cmd:         make clean package
+      install-cmd:       npm clean-install
+      node-version:      22
+      repository:        slsa-framework/slsa-github-generator
+      working-directory: .github/actions/detect-workflow-js
   version:
     if: ${{ false }}
     runs-on: ubuntu-latest
