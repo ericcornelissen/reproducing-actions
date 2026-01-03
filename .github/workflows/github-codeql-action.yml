@@ -28,4 +28,4 @@ jobs:
     if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
-      - uses: github/codeql-action@v3.31.9
+      - uses: github/codeql-action@v4.31.9
