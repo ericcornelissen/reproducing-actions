@@ -1,0 +1,35 @@
+name: gradle/actions
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/gradle-actions.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/gradle-actions.yml
+  schedule:
+    - cron: "32 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  test:
+    uses: ./.github/workflows/reusable-test-new.yml
+    with:
+      build-cmd:    |
+        cd sources/
+        npm run compile
+      install-cmd:  |
+        cd sources/
+        npm clean-install
+      node-version: 20
+      repository:   gradle/actions
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: gradle/actions@v4.4.4
