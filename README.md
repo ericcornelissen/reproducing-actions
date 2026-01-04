@@ -46,7 +46,11 @@ with more information about the project and statuses.
 | [actions/checkout] | - | [![][actions/checkout-badge]][actions/checkout-url] |
 | [actions/attest] | - | [![][actions/attest-badge]][actions/attest-url] |
 | [slsa-framework/slsa-github-generator] | - | [![][slsa-framework/slsa-github-generator-badge]][slsa-framework/slsa-github-generator-url] |
+| [actions-ecosystem/action-add-labels] | - | [![][actions-ecosystem/action-add-labels-badge]][actions-ecosystem/action-add-labels-url] |
 <!-- INSERT ROW -->
+[actions-ecosystem/action-add-labels]: https://github.com/actions-ecosystem/action-add-labels
+[actions-ecosystem/action-add-labels-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/actions-ecosystem-action-add-labels.yml/badge.svg?event=schedule
+[actions-ecosystem/action-add-labels-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/actions-ecosystem-action-add-labels.yml
 [slsa-framework/slsa-github-generator]: https://github.com/slsa-framework/slsa-github-generator
 [slsa-framework/slsa-github-generator-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/slsa-framework-slsa-github-generator.yml/badge.svg?event=schedule
 [slsa-framework/slsa-github-generator-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/slsa-framework-slsa-github-generator.yml

@@ -1,0 +1,31 @@
+name: actions-ecosystem/action-add-labels
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/actions-ecosystem-action-add-labels.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/actions-ecosystem-action-add-labels.yml
+  schedule:
+    - cron: "7 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  test:
+    uses: ./.github/workflows/reusable-test-new.yml
+    with:
+      build-cmd:    yarn build
+      install-cmd:  yarn install
+      node-version: 12.x
+      repository:   actions-ecosystem/action-add-labels
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions-ecosystem/action-add-labels@v1.1.0
