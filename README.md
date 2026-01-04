@@ -47,7 +47,11 @@ with more information about the project and statuses.
 | [actions/attest] | - | [![][actions/attest-badge]][actions/attest-url] |
 | [slsa-framework/slsa-github-generator] | - | [![][slsa-framework/slsa-github-generator-badge]][slsa-framework/slsa-github-generator-url] |
 | [actions-ecosystem/action-add-labels] | - | [![][actions-ecosystem/action-add-labels-badge]][actions-ecosystem/action-add-labels-url] |
+| [extractions/setup-crate] | - | [![][extractions/setup-crate-badge]][extractions/setup-crate-url] |
 <!-- INSERT ROW -->
+[extractions/setup-crate]: https://github.com/extractions/setup-crate
+[extractions/setup-crate-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/extractions-setup-crate.yml/badge.svg?event=schedule
+[extractions/setup-crate-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/extractions-setup-crate.yml
 [actions-ecosystem/action-add-labels]: https://github.com/actions-ecosystem/action-add-labels
 [actions-ecosystem/action-add-labels-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/actions-ecosystem-action-add-labels.yml/badge.svg?event=schedule
 [actions-ecosystem/action-add-labels-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/actions-ecosystem-action-add-labels.yml
