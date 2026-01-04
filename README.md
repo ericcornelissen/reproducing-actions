@@ -33,7 +33,7 @@ with more information about the project and statuses.
 | [actions/attest-build-provenance] | - | [![][actions/attest-build-provenance-badge]][actions/attest-build-provenance-url] |
 | [JS-DevTools/npm-publish@v3] | v3 | [![][JS-DevTools/npm-publish-v3-badge]][JS-DevTools/npm-publish-v3-url] |
 | [fastify/github-action-merge-dependabot] | - | [![][fastify/github-action-merge-dependabot-badge]][fastify/github-action-merge-dependabot-url] |
-| [googleapis/release-please-action@v4] | v4 | [![][googleapis/release-please-action-v4-badge]][googleapis/release-please-action-v4-url] |
+| [googleapis/release-please-action] | - | [![][googleapis/release-please-action-badge]][googleapis/release-please-action-url] |
 | [actions/create-github-app-token] | - | [![][actions/create-github-app-token-badge]][actions/create-github-app-token-url] |
 | [asdf-vm/actions] | - | [![][asdf-vm/actions-badge]][asdf-vm/actions-url] |
 | [cardinalby/schema-validator-action] | - | [![][cardinalby/schema-validator-action-badge]][cardinalby/schema-validator-action-url] |
@@ -91,9 +91,9 @@ with more information about the project and statuses.
 [actions/create-github-app-token]: https://github.com/actions/create-github-app-token
 [actions/create-github-app-token-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-create-github-app-token.yml/badge.svg?event=schedule
 [actions/create-github-app-token-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-create-github-app-token.yml
-[googleapis/release-please-action@v4]: https://github.com/googleapis/release-please-action/tree/v4
-[googleapis/release-please-action-v4-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/googleapis-release-please-action-v4.yml/badge.svg?event=schedule
-[googleapis/release-please-action-v4-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/googleapis-release-please-action-v4.yml
+[googleapis/release-please-action]: https://github.com/googleapis/release-please-action
+[googleapis/release-please-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/googleapis-release-please-action.yml/badge.svg?event=schedule
+[googleapis/release-please-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/googleapis-release-please-action.yml
 [fastify/github-action-merge-dependabot]: https://github.com/fastify/github-action-merge-dependabot
 [fastify/github-action-merge-dependabot-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/fastify-github-action-merge-dependabot.yml/badge.svg?event=schedule
 [fastify/github-action-merge-dependabot-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/fastify-github-action-merge-dependabot.yml

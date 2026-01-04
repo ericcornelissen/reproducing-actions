@@ -1,0 +1,31 @@
+name: googleapis/release-please-action
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/googleapis-release-please-action.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/googleapis-release-please-action.yml
+  schedule:
+    - cron: "27 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  test:
+    uses: ./.github/workflows/reusable-test-new.yml
+    with:
+      build-cmd:    npm run build
+      install-cmd:  npm clean-install
+      node-version: 20
+      repository:   googleapis/release-please-action
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: googleapis/release-please-action@v4.4.0
