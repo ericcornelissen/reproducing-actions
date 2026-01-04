@@ -17,7 +17,6 @@ jobs:
         include:
           - what: GitHub Actions
             how: |
-              export SHELLCHECK_OPTS='-e SC2086'
               actionlint
           - what: Shell scripts
             how: |
