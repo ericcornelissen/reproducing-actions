@@ -1,0 +1,8 @@
+# Configuration file for actionlint (https://github.com/rhysd/actionlint)
+
+config-variables: []
+
+paths:
+  .github/workflows/reusable-test*.yml:
+    ignore:
+      - 'shellcheck reported issue in this script: SC2086:.+'
