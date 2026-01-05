@@ -235,6 +235,7 @@ The following is a list of unreproducible action versions detected by this
 project.
 
 - `gitleaks/gitleaks-action`: [v2.3.3 and v2.3.4](https://github.com/gitleaks/gitleaks-action/issues/137#issuecomment-1937801212)
+- `actions-ecosystem/action-add-labels`: [v1.1.3](https://github.com/actions-ecosystem/action-add-labels/issues/186)
 
 ## Related Work
 
