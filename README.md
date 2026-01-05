@@ -22,7 +22,7 @@ with more information about the project and statuses.
 | [actions/labeler] | - | [![][actions/labeler-badge]][actions/labeler-url] |
 | [actions/dependency-review-action] | - | [![][actions/dependency-review-action-badge]][actions/dependency-review-action-url] |
 | [actions/cache] | - | [![][actions/cache-badge]][actions/cache-url] |
-| [JamesIves/github-pages-deploy-action@v4] | v4 | [![][JamesIves/github-pages-deploy-action-v4-badge]][JamesIves/github-pages-deploy-action-v4-url] |
+| [JamesIves/github-pages-deploy-action] | - | [![][JamesIves/github-pages-deploy-action-badge]][JamesIves/github-pages-deploy-action-url] |
 | [step-security/harden-runner@v2] | v2 | [![][step-security/harden-runner-v2-badge]][step-security/harden-runner-v2-url] |
 | [peter-evans/create-pull-request@v7] | v7 | [![][peter-evans/create-pull-request-v7-badge]][peter-evans/create-pull-request-v7-url] |
 | [ncipollo/release-action@v1] | v1 | [![][ncipollo/release-action-v1-badge]][ncipollo/release-action-v1-url] |
@@ -124,9 +124,9 @@ with more information about the project and statuses.
 [step-security/harden-runner@v2]: https://github.com/step-security/harden-runner/tree/v2
 [step-security/harden-runner-v2-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/step-security-harden-runner-v2.yml/badge.svg?event=schedule
 [step-security/harden-runner-v2-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/step-security-harden-runner-v2.yml
-[JamesIves/github-pages-deploy-action@v4]: https://github.com/JamesIves/github-pages-deploy-action/tree/v4
-[JamesIves/github-pages-deploy-action-v4-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/jamesives-github-pages-deploy-action-v4.yml/badge.svg?event=schedule
-[JamesIves/github-pages-deploy-action-v4-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/jamesives-github-pages-deploy-action-v4.yml
+[JamesIves/github-pages-deploy-action]: https://github.com/JamesIves/github-pages-deploy-action
+[JamesIves/github-pages-deploy-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/jamesives-github-pages-deploy-action.yml/badge.svg?event=schedule
+[JamesIves/github-pages-deploy-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/jamesives-github-pages-deploy-action.yml
 [actions/cache]: https://github.com/actions/cache
 [actions/cache-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-cache.yml/badge.svg?event=schedule
 [actions/cache-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-cache.yml
