@@ -31,7 +31,7 @@ with more information about the project and statuses.
 | [github/codeql-action] | - | [![][github/codeql-action-badge]][github/codeql-action-url] |
 | [dorny/paths-filter] | - | [![][dorny/paths-filter-badge]][dorny/paths-filter-url] |
 | [actions/attest-build-provenance] | - | [![][actions/attest-build-provenance-badge]][actions/attest-build-provenance-url] |
-| [JS-DevTools/npm-publish@v3] | v3 | [![][JS-DevTools/npm-publish-v3-badge]][JS-DevTools/npm-publish-v3-url] |
+| [JS-DevTools/npm-publish] | - | [![][JS-DevTools/npm-publish-badge]][JS-DevTools/npm-publish-url] |
 | [fastify/github-action-merge-dependabot] | - | [![][fastify/github-action-merge-dependabot-badge]][fastify/github-action-merge-dependabot-url] |
 | [googleapis/release-please-action] | - | [![][googleapis/release-please-action-badge]][googleapis/release-please-action-url] |
 | [actions/create-github-app-token] | - | [![][actions/create-github-app-token-badge]][actions/create-github-app-token-url] |
@@ -97,9 +97,9 @@ with more information about the project and statuses.
 [fastify/github-action-merge-dependabot]: https://github.com/fastify/github-action-merge-dependabot
 [fastify/github-action-merge-dependabot-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/fastify-github-action-merge-dependabot.yml/badge.svg?event=schedule
 [fastify/github-action-merge-dependabot-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/fastify-github-action-merge-dependabot.yml
-[JS-DevTools/npm-publish@v3]: https://github.com/JS-DevTools/npm-publish/tree/v3
-[JS-DevTools/npm-publish-v3-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/js-devtools-npm-publish-v3.yml/badge.svg?event=schedule
-[JS-DevTools/npm-publish-v3-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/js-devtools-npm-publish-v3.yml
+[JS-DevTools/npm-publish]: https://github.com/JS-DevTools/npm-publish
+[JS-DevTools/npm-publish-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/js-devtools-npm-publish.yml/badge.svg?event=schedule
+[JS-DevTools/npm-publish-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/js-devtools-npm-publish.yml
 [actions/attest-build-provenance]: https://github.com/actions/attest-build-provenance
 [actions/attest-build-provenance-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-attest-build-provenance.yml/badge.svg?event=schedule
 [actions/attest-build-provenance-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-attest-build-provenance.yml

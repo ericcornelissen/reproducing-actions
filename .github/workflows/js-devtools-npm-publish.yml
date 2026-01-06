@@ -1,0 +1,31 @@
+name: JS-DevTools/npm-publish
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/js-devtools-npm-publish.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/js-devtools-npm-publish.yml
+  schedule:
+    - cron: "26 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  test:
+    uses: ./.github/workflows/reusable-test-new.yml
+    with:
+      build-cmd:    npm run build
+      install-cmd:  npm clean-install
+      node-version: 20
+      repository:   JS-DevTools/npm-publish
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: JS-DevTools/npm-publish@v3.1.1
