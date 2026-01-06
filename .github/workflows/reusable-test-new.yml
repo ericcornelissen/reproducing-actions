@@ -52,8 +52,9 @@ jobs:
         env:
           REPO: ${{ inputs.repository }}
         run: |
+          WORKFLOW=$(echo "${REPO//\//-}.yml" | tr '[:upper:]' '[:lower:]')
           VERSION=$( \
-            cat .github/workflows/${REPO//\//-}.yml \
+            cat ".github/workflows/$WORKFLOW" \
               | grep -oE '^\s+- uses: [^@]+@v?[^"]*' \
               | sed 's/.*@//' \
           )
