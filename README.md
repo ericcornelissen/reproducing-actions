@@ -25,7 +25,7 @@ with more information about the project and statuses.
 | [JamesIves/github-pages-deploy-action] | - | [![][JamesIves/github-pages-deploy-action-badge]][JamesIves/github-pages-deploy-action-url] |
 | [step-security/harden-runner@v2] | v2 | [![][step-security/harden-runner-v2-badge]][step-security/harden-runner-v2-url] |
 | [peter-evans/create-pull-request@v7] | v7 | [![][peter-evans/create-pull-request-v7-badge]][peter-evans/create-pull-request-v7-url] |
-| [ncipollo/release-action@v1] | v1 | [![][ncipollo/release-action-v1-badge]][ncipollo/release-action-v1-url] |
+| [ncipollo/release-action] | - | [![][ncipollo/release-action-badge]][ncipollo/release-action-url] |
 | [docker/login-action] | - | [![][docker/login-action-badge]][docker/login-action-url] |
 | [docker/build-push-action] | - | [![][docker/build-push-action-badge]][docker/build-push-action-url] |
 | [github/codeql-action] | - | [![][github/codeql-action-badge]][github/codeql-action-url] |
@@ -115,9 +115,9 @@ with more information about the project and statuses.
 [docker/login-action]: https://github.com/docker/login-action
 [docker/login-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/docker-login-action.yml/badge.svg?event=schedule
 [docker/login-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/docker-login-action.yml
-[ncipollo/release-action@v1]: https://github.com/ncipollo/release-action/tree/v1
-[ncipollo/release-action-v1-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/ncipollo-release-action-v1.yml/badge.svg?event=schedule
-[ncipollo/release-action-v1-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/ncipollo-release-action-v1.yml
+[ncipollo/release-action]: https://github.com/ncipollo/release-action
+[ncipollo/release-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/ncipollo-release-action.yml/badge.svg?event=schedule
+[ncipollo/release-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/ncipollo-release-action.yml
 [peter-evans/create-pull-request@v7]: https://github.com/peter-evans/create-pull-request/tree/v7
 [peter-evans/create-pull-request-v7-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/peter-evans-create-pull-request-v7.yml/badge.svg?event=schedule
 [peter-evans/create-pull-request-v7-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/peter-evans-create-pull-request-v7.yml
