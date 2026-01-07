@@ -32,4 +32,4 @@ jobs:
     if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
-      - uses: JS-DevTools/npm-publish@v4.1.0
+      - uses: JS-DevTools/npm-publish@v4.0.1
