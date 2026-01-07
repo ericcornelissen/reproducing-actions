@@ -20,12 +20,16 @@ jobs:
   test:
     uses: ./.github/workflows/reusable-test-new.yml
     with:
-      build-cmd:    npm run build
-      install-cmd:  npm clean-install
-      node-version: 20
+      build-cmd:    pnpm build
+      install-cmd:  |
+        corepack enable
+        corepack prepare pnpm@10.27.0 --activate
+
+        corepack pnpm install
+      node-version: 24
       repository:   JS-DevTools/npm-publish
   version:
     if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
-      - uses: JS-DevTools/npm-publish@v3.1.1
+      - uses: JS-DevTools/npm-publish@v4.1.2
