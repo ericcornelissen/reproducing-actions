@@ -20,9 +20,9 @@ jobs:
   build:
     uses: ./.github/workflows/reusable-test-new.yml
     with:
-      build-cmd:    npm run build
-      install-cmd:  npm install
-      node-version: 20.x
+      build-cmd:    yarn build
+      install-cmd:  yarn install
+      node-version: 20
       repository:   ncipollo/release-action
   version:
     if: ${{ false }}
