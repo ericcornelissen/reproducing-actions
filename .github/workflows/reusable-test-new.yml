@@ -79,7 +79,7 @@ jobs:
       - name: Obtain original list of files
         id: files
         run: |
-          TMP=$(find . \( -path ./node_modules -o -path ./.git \) -prune -o -type f -print)
+          TMP=$(find . \( -path ./.git \) -prune -o -type f -print)
           echo "$TMP"
 
           {
@@ -150,7 +150,7 @@ jobs:
           git clean -dfX
 
           BEFORE=$FILES_LINES
-          AFTER=$(find . \( -path ./node_modules -o -path ./.git \) -prune -o -type f -print)
+          AFTER=$(find . \( -path ./.git \) -prune -o -type f -print)
           if [ "$BEFORE" != "$AFTER" ]; then
             echo '--- FILES BEFORE ---'
             echo "$BEFORE"
