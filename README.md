@@ -24,7 +24,7 @@ with more information about the project and statuses.
 | [actions/cache] | - | [![][actions/cache-badge]][actions/cache-url] |
 | [JamesIves/github-pages-deploy-action] | - | [![][JamesIves/github-pages-deploy-action-badge]][JamesIves/github-pages-deploy-action-url] |
 | [step-security/harden-runner@v2] | v2 | [![][step-security/harden-runner-v2-badge]][step-security/harden-runner-v2-url] |
-| [peter-evans/create-pull-request@v7] | v7 | [![][peter-evans/create-pull-request-v7-badge]][peter-evans/create-pull-request-v7-url] |
+| [peter-evans/create-pull-request] | - | [![][peter-evans/create-pull-request-badge]][peter-evans/create-pull-request-url] |
 | [ncipollo/release-action] | - | [![][ncipollo/release-action-badge]][ncipollo/release-action-url] |
 | [docker/login-action] | - | [![][docker/login-action-badge]][docker/login-action-url] |
 | [docker/build-push-action] | - | [![][docker/build-push-action-badge]][docker/build-push-action-url] |
@@ -118,9 +118,9 @@ with more information about the project and statuses.
 [ncipollo/release-action]: https://github.com/ncipollo/release-action
 [ncipollo/release-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/ncipollo-release-action.yml/badge.svg?event=schedule
 [ncipollo/release-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/ncipollo-release-action.yml
-[peter-evans/create-pull-request@v7]: https://github.com/peter-evans/create-pull-request/tree/v7
-[peter-evans/create-pull-request-v7-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/peter-evans-create-pull-request-v7.yml/badge.svg?event=schedule
-[peter-evans/create-pull-request-v7-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/peter-evans-create-pull-request-v7.yml
+[peter-evans/create-pull-request]: https://github.com/peter-evans/create-pull-request
+[peter-evans/create-pull-request-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/peter-evans-create-pull-request.yml/badge.svg?event=schedule
+[peter-evans/create-pull-request-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/peter-evans-create-pull-request.yml
 [step-security/harden-runner@v2]: https://github.com/step-security/harden-runner/tree/v2
 [step-security/harden-runner-v2-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/step-security-harden-runner-v2.yml/badge.svg?event=schedule
 [step-security/harden-runner-v2-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/step-security-harden-runner-v2.yml

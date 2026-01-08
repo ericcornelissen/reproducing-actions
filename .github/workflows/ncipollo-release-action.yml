@@ -17,7 +17,7 @@ on:
 permissions: read-all
 
 jobs:
-  build:
+  test:
     uses: ./.github/workflows/reusable-test-new.yml
     with:
       build-cmd:    yarn build
