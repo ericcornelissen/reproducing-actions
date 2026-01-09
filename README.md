@@ -48,7 +48,11 @@ with more information about the project and statuses.
 | [slsa-framework/slsa-github-generator] | - | [![][slsa-framework/slsa-github-generator-badge]][slsa-framework/slsa-github-generator-url] |
 | [actions-ecosystem/action-add-labels] | - | [![][actions-ecosystem/action-add-labels-badge]][actions-ecosystem/action-add-labels-url] |
 | [extractions/setup-crate] | - | [![][extractions/setup-crate-badge]][extractions/setup-crate-url] |
+| [peter-evans/create-or-update-comment] | - | [![][peter-evans/create-or-update-comment-badge]][peter-evans/create-or-update-comment-url] |
 <!-- INSERT ROW -->
+[peter-evans/create-or-update-comment]: https://github.com/peter-evans/create-or-update-comment
+[peter-evans/create-or-update-comment-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/peter-evans-create-or-update-comment.yml/badge.svg?event=schedule
+[peter-evans/create-or-update-comment-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/peter-evans-create-or-update-comment.yml
 [extractions/setup-crate]: https://github.com/extractions/setup-crate
 [extractions/setup-crate-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/extractions-setup-crate.yml/badge.svg?event=schedule
 [extractions/setup-crate-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/extractions-setup-crate.yml
