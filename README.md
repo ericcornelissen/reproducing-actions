@@ -38,7 +38,7 @@ with more information about the project and statuses.
 | [asdf-vm/actions] | - | [![][asdf-vm/actions-badge]][asdf-vm/actions-url] |
 | [cardinalby/schema-validator-action] | - | [![][cardinalby/schema-validator-action-badge]][cardinalby/schema-validator-action-url] |
 | [gradle/actions] | - | [![][gradle/actions-badge]][gradle/actions-url] |
-| [SonarSource/sonarqube-scan-action@v6] | v6 | [![][SonarSource/sonarqube-scan-action-v6-badge]][SonarSource/sonarqube-scan-action-v6-url] |
+| [SonarSource/sonarqube-scan-action] | - | [![][SonarSource/sonarqube-scan-action-badge]][SonarSource/sonarqube-scan-action-url] |
 | [actions/setup-node] | - | [![][actions/setup-node-badge]][actions/setup-node-url] |
 | [actions/upload-artifact] | - | [![][actions/upload-artifact-badge]][actions/upload-artifact-url] |
 | [actions/download-artifact] | - | [![][actions/download-artifact-badge]][actions/download-artifact-url] |
@@ -80,9 +80,9 @@ with more information about the project and statuses.
 [actions/setup-node]: https://github.com/actions/setup-node
 [actions/setup-node-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-node.yml/badge.svg?event=schedule
 [actions/setup-node-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-node.yml
-[SonarSource/sonarqube-scan-action@v6]: https://github.com/SonarSource/sonarqube-scan-action/tree/v6
-[SonarSource/sonarqube-scan-action-v6-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/sonarsource-sonarqube-scan-action-v6.yml/badge.svg?event=schedule
-[SonarSource/sonarqube-scan-action-v6-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/sonarsource-sonarqube-scan-action-v6.yml
+[SonarSource/sonarqube-scan-action]: https://github.com/SonarSource/sonarqube-scan-action
+[SonarSource/sonarqube-scan-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/sonarsource-sonarqube-scan-action.yml/badge.svg?event=schedule
+[SonarSource/sonarqube-scan-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/sonarsource-sonarqube-scan-action.yml
 [gradle/actions]: https://github.com/gradle/actions
 [gradle/actions-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/gradle-actions.yml/badge.svg?event=schedule
 [gradle/actions-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/gradle-actions.yml
