@@ -1,0 +1,31 @@
+name: peter-evans/create-or-update-comment
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/peter-evans-create-or-update-comment.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/peter-evans-create-or-update-comment.yml
+  schedule:
+    - cron: "10 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  test:
+    uses: ./.github/workflows/reusable-test-new.yml
+    with:
+      build-cmd:         npm run build
+      install-cmd:       npm clean-install
+      node-version-file: package.json
+      repository:        peter-evans/create-or-update-comment
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: peter-evans/create-or-update-comment@v5.0.0
