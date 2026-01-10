@@ -23,7 +23,7 @@ with more information about the project and statuses.
 | [actions/dependency-review-action] | - | [![][actions/dependency-review-action-badge]][actions/dependency-review-action-url] |
 | [actions/cache] | - | [![][actions/cache-badge]][actions/cache-url] |
 | [JamesIves/github-pages-deploy-action] | - | [![][JamesIves/github-pages-deploy-action-badge]][JamesIves/github-pages-deploy-action-url] |
-| [step-security/harden-runner@v2] | v2 | [![][step-security/harden-runner-v2-badge]][step-security/harden-runner-v2-url] |
+| [step-security/harden-runner] | - | [![][step-security/harden-runner-badge]][step-security/harden-runner-url] |
 | [peter-evans/create-pull-request] | - | [![][peter-evans/create-pull-request-badge]][peter-evans/create-pull-request-url] |
 | [ncipollo/release-action] | - | [![][ncipollo/release-action-badge]][ncipollo/release-action-url] |
 | [docker/login-action] | - | [![][docker/login-action-badge]][docker/login-action-url] |
@@ -125,9 +125,9 @@ with more information about the project and statuses.
 [peter-evans/create-pull-request]: https://github.com/peter-evans/create-pull-request
 [peter-evans/create-pull-request-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/peter-evans-create-pull-request.yml/badge.svg?event=schedule
 [peter-evans/create-pull-request-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/peter-evans-create-pull-request.yml
-[step-security/harden-runner@v2]: https://github.com/step-security/harden-runner/tree/v2
-[step-security/harden-runner-v2-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/step-security-harden-runner-v2.yml/badge.svg?event=schedule
-[step-security/harden-runner-v2-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/step-security-harden-runner-v2.yml
+[step-security/harden-runner]: https://github.com/step-security/harden-runner
+[step-security/harden-runner-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/step-security-harden-runner.yml/badge.svg?event=schedule
+[step-security/harden-runner-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/step-security-harden-runner.yml
 [JamesIves/github-pages-deploy-action]: https://github.com/JamesIves/github-pages-deploy-action
 [JamesIves/github-pages-deploy-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/jamesives-github-pages-deploy-action.yml/badge.svg?event=schedule
 [JamesIves/github-pages-deploy-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/jamesives-github-pages-deploy-action.yml
