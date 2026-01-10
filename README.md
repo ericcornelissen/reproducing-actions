@@ -23,9 +23,9 @@ with more information about the project and statuses.
 | [actions/dependency-review-action] | - | [![][actions/dependency-review-action-badge]][actions/dependency-review-action-url] |
 | [actions/cache] | - | [![][actions/cache-badge]][actions/cache-url] |
 | [JamesIves/github-pages-deploy-action] | - | [![][JamesIves/github-pages-deploy-action-badge]][JamesIves/github-pages-deploy-action-url] |
-| [step-security/harden-runner@v2] | v2 | [![][step-security/harden-runner-v2-badge]][step-security/harden-runner-v2-url] |
-| [peter-evans/create-pull-request@v7] | v7 | [![][peter-evans/create-pull-request-v7-badge]][peter-evans/create-pull-request-v7-url] |
-| [ncipollo/release-action@v1] | v1 | [![][ncipollo/release-action-v1-badge]][ncipollo/release-action-v1-url] |
+| [step-security/harden-runner] | - | [![][step-security/harden-runner-badge]][step-security/harden-runner-url] |
+| [peter-evans/create-pull-request] | - | [![][peter-evans/create-pull-request-badge]][peter-evans/create-pull-request-url] |
+| [ncipollo/release-action] | - | [![][ncipollo/release-action-badge]][ncipollo/release-action-url] |
 | [docker/login-action] | - | [![][docker/login-action-badge]][docker/login-action-url] |
 | [docker/build-push-action] | - | [![][docker/build-push-action-badge]][docker/build-push-action-url] |
 | [github/codeql-action] | - | [![][github/codeql-action-badge]][github/codeql-action-url] |
@@ -38,7 +38,7 @@ with more information about the project and statuses.
 | [asdf-vm/actions] | - | [![][asdf-vm/actions-badge]][asdf-vm/actions-url] |
 | [cardinalby/schema-validator-action] | - | [![][cardinalby/schema-validator-action-badge]][cardinalby/schema-validator-action-url] |
 | [gradle/actions] | - | [![][gradle/actions-badge]][gradle/actions-url] |
-| [SonarSource/sonarqube-scan-action@v6] | v6 | [![][SonarSource/sonarqube-scan-action-v6-badge]][SonarSource/sonarqube-scan-action-v6-url] |
+| [SonarSource/sonarqube-scan-action] | - | [![][SonarSource/sonarqube-scan-action-badge]][SonarSource/sonarqube-scan-action-url] |
 | [actions/setup-node] | - | [![][actions/setup-node-badge]][actions/setup-node-url] |
 | [actions/upload-artifact] | - | [![][actions/upload-artifact-badge]][actions/upload-artifact-url] |
 | [actions/download-artifact] | - | [![][actions/download-artifact-badge]][actions/download-artifact-url] |
@@ -80,9 +80,9 @@ with more information about the project and statuses.
 [actions/setup-node]: https://github.com/actions/setup-node
 [actions/setup-node-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-node.yml/badge.svg?event=schedule
 [actions/setup-node-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-node.yml
-[SonarSource/sonarqube-scan-action@v6]: https://github.com/SonarSource/sonarqube-scan-action/tree/v6
-[SonarSource/sonarqube-scan-action-v6-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/sonarsource-sonarqube-scan-action-v6.yml/badge.svg?event=schedule
-[SonarSource/sonarqube-scan-action-v6-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/sonarsource-sonarqube-scan-action-v6.yml
+[SonarSource/sonarqube-scan-action]: https://github.com/SonarSource/sonarqube-scan-action
+[SonarSource/sonarqube-scan-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/sonarsource-sonarqube-scan-action.yml/badge.svg?event=schedule
+[SonarSource/sonarqube-scan-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/sonarsource-sonarqube-scan-action.yml
 [gradle/actions]: https://github.com/gradle/actions
 [gradle/actions-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/gradle-actions.yml/badge.svg?event=schedule
 [gradle/actions-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/gradle-actions.yml
@@ -119,15 +119,15 @@ with more information about the project and statuses.
 [docker/login-action]: https://github.com/docker/login-action
 [docker/login-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/docker-login-action.yml/badge.svg?event=schedule
 [docker/login-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/docker-login-action.yml
-[ncipollo/release-action@v1]: https://github.com/ncipollo/release-action/tree/v1
-[ncipollo/release-action-v1-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/ncipollo-release-action-v1.yml/badge.svg?event=schedule
-[ncipollo/release-action-v1-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/ncipollo-release-action-v1.yml
-[peter-evans/create-pull-request@v7]: https://github.com/peter-evans/create-pull-request/tree/v7
-[peter-evans/create-pull-request-v7-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/peter-evans-create-pull-request-v7.yml/badge.svg?event=schedule
-[peter-evans/create-pull-request-v7-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/peter-evans-create-pull-request-v7.yml
-[step-security/harden-runner@v2]: https://github.com/step-security/harden-runner/tree/v2
-[step-security/harden-runner-v2-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/step-security-harden-runner-v2.yml/badge.svg?event=schedule
-[step-security/harden-runner-v2-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/step-security-harden-runner-v2.yml
+[ncipollo/release-action]: https://github.com/ncipollo/release-action
+[ncipollo/release-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/ncipollo-release-action.yml/badge.svg?event=schedule
+[ncipollo/release-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/ncipollo-release-action.yml
+[peter-evans/create-pull-request]: https://github.com/peter-evans/create-pull-request
+[peter-evans/create-pull-request-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/peter-evans-create-pull-request.yml/badge.svg?event=schedule
+[peter-evans/create-pull-request-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/peter-evans-create-pull-request.yml
+[step-security/harden-runner]: https://github.com/step-security/harden-runner
+[step-security/harden-runner-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/step-security-harden-runner.yml/badge.svg?event=schedule
+[step-security/harden-runner-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/step-security-harden-runner.yml
 [JamesIves/github-pages-deploy-action]: https://github.com/JamesIves/github-pages-deploy-action
 [JamesIves/github-pages-deploy-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/jamesives-github-pages-deploy-action.yml/badge.svg?event=schedule
 [JamesIves/github-pages-deploy-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/jamesives-github-pages-deploy-action.yml

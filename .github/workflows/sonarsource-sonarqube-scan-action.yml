@@ -1,0 +1,31 @@
+name: SonarSource/sonarqube-scan-action
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/sonarsource-sonarqube-scan-action.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/sonarsource-sonarqube-scan-action.yml
+  schedule:
+    - cron: "35 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  test:
+    uses: ./.github/workflows/reusable-test-new.yml
+    with:
+      build-cmd:    npm run build
+      install-cmd:  npm clean-install
+      node-version: 20
+      repository:   SonarSource/sonarqube-scan-action
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: slsa-framework/slsa-github-generator@v6.0.0
