@@ -10,45 +10,45 @@ with more information about the project and statuses.
 
 ## Statuses
 
-| Action | Version | Status |
-| ------ | ------- | ------ |
-| [actions/setup-java] | - | [![][actions/setup-java-badge]][actions/setup-java-url] |
-| [gitleaks/gitleaks-action] | - | [![][gitleaks/gitleaks-action-badge]][gitleaks/gitleaks-action-url] |
-| [actions/stale] | - | [![][actions/stale-badge]][actions/stale-url] |
-| [actions/github-script] | - | [![][actions/github-script-badge]][actions/github-script-url] |
-| [actions/setup-python] | - | [![][actions/setup-python-badge]][actions/setup-python-url] |
-| [actions/setup-dotnet] | - | [![][actions/setup-dotnet-badge]][actions/setup-dotnet-url] |
-| [actions/setup-go] | - | [![][actions/setup-go-badge]][actions/setup-go-url] |
-| [actions/labeler] | - | [![][actions/labeler-badge]][actions/labeler-url] |
-| [actions/dependency-review-action] | - | [![][actions/dependency-review-action-badge]][actions/dependency-review-action-url] |
-| [actions/cache] | - | [![][actions/cache-badge]][actions/cache-url] |
-| [JamesIves/github-pages-deploy-action] | - | [![][JamesIves/github-pages-deploy-action-badge]][JamesIves/github-pages-deploy-action-url] |
-| [step-security/harden-runner] | - | [![][step-security/harden-runner-badge]][step-security/harden-runner-url] |
-| [peter-evans/create-pull-request] | - | [![][peter-evans/create-pull-request-badge]][peter-evans/create-pull-request-url] |
-| [ncipollo/release-action] | - | [![][ncipollo/release-action-badge]][ncipollo/release-action-url] |
-| [docker/login-action] | - | [![][docker/login-action-badge]][docker/login-action-url] |
-| [docker/build-push-action] | - | [![][docker/build-push-action-badge]][docker/build-push-action-url] |
-| [github/codeql-action] | - | [![][github/codeql-action-badge]][github/codeql-action-url] |
-| [dorny/paths-filter] | - | [![][dorny/paths-filter-badge]][dorny/paths-filter-url] |
-| [actions/attest-build-provenance] | - | [![][actions/attest-build-provenance-badge]][actions/attest-build-provenance-url] |
-| [JS-DevTools/npm-publish] | - | [![][JS-DevTools/npm-publish-badge]][JS-DevTools/npm-publish-url] |
-| [fastify/github-action-merge-dependabot] | - | [![][fastify/github-action-merge-dependabot-badge]][fastify/github-action-merge-dependabot-url] |
-| [googleapis/release-please-action] | - | [![][googleapis/release-please-action-badge]][googleapis/release-please-action-url] |
-| [actions/create-github-app-token] | - | [![][actions/create-github-app-token-badge]][actions/create-github-app-token-url] |
-| [asdf-vm/actions] | - | [![][asdf-vm/actions-badge]][asdf-vm/actions-url] |
-| [cardinalby/schema-validator-action] | - | [![][cardinalby/schema-validator-action-badge]][cardinalby/schema-validator-action-url] |
-| [gradle/actions] | - | [![][gradle/actions-badge]][gradle/actions-url] |
-| [SonarSource/sonarqube-scan-action] | - | [![][SonarSource/sonarqube-scan-action-badge]][SonarSource/sonarqube-scan-action-url] |
-| [actions/setup-node] | - | [![][actions/setup-node-badge]][actions/setup-node-url] |
-| [actions/upload-artifact] | - | [![][actions/upload-artifact-badge]][actions/upload-artifact-url] |
-| [actions/download-artifact] | - | [![][actions/download-artifact-badge]][actions/download-artifact-url] |
-| [wearerequired/lint-action] | - | [![][wearerequired/lint-action-badge]][wearerequired/lint-action-url] |
-| [actions/checkout] | - | [![][actions/checkout-badge]][actions/checkout-url] |
-| [actions/attest] | - | [![][actions/attest-badge]][actions/attest-url] |
-| [slsa-framework/slsa-github-generator] | - | [![][slsa-framework/slsa-github-generator-badge]][slsa-framework/slsa-github-generator-url] |
-| [actions-ecosystem/action-add-labels] | - | [![][actions-ecosystem/action-add-labels-badge]][actions-ecosystem/action-add-labels-url] |
-| [extractions/setup-crate] | - | [![][extractions/setup-crate-badge]][extractions/setup-crate-url] |
-| [peter-evans/create-or-update-comment] | - | [![][peter-evans/create-or-update-comment-badge]][peter-evans/create-or-update-comment-url] |
+| Action | Status |
+| ------ | ------ |
+| [actions/setup-java] | [![][actions/setup-java-badge]][actions/setup-java-url] |
+| [gitleaks/gitleaks-action] | [![][gitleaks/gitleaks-action-badge]][gitleaks/gitleaks-action-url] |
+| [actions/stale] | [![][actions/stale-badge]][actions/stale-url] |
+| [actions/github-script] | [![][actions/github-script-badge]][actions/github-script-url] |
+| [actions/setup-python] | [![][actions/setup-python-badge]][actions/setup-python-url] |
+| [actions/setup-dotnet] | [![][actions/setup-dotnet-badge]][actions/setup-dotnet-url] |
+| [actions/setup-go] | [![][actions/setup-go-badge]][actions/setup-go-url] |
+| [actions/labeler] | [![][actions/labeler-badge]][actions/labeler-url] |
+| [actions/dependency-review-action] | [![][actions/dependency-review-action-badge]][actions/dependency-review-action-url] |
+| [actions/cache] | [![][actions/cache-badge]][actions/cache-url] |
+| [JamesIves/github-pages-deploy-action] | [![][JamesIves/github-pages-deploy-action-badge]][JamesIves/github-pages-deploy-action-url] |
+| [step-security/harden-runner] | [![][step-security/harden-runner-badge]][step-security/harden-runner-url] |
+| [peter-evans/create-pull-request] | [![][peter-evans/create-pull-request-badge]][peter-evans/create-pull-request-url] |
+| [ncipollo/release-action] | [![][ncipollo/release-action-badge]][ncipollo/release-action-url] |
+| [docker/login-action] | [![][docker/login-action-badge]][docker/login-action-url] |
+| [docker/build-push-action] | [![][docker/build-push-action-badge]][docker/build-push-action-url] |
+| [github/codeql-action] | [![][github/codeql-action-badge]][github/codeql-action-url] |
+| [dorny/paths-filter] | [![][dorny/paths-filter-badge]][dorny/paths-filter-url] |
+| [actions/attest-build-provenance] | [![][actions/attest-build-provenance-badge]][actions/attest-build-provenance-url] |
+| [JS-DevTools/npm-publish] | [![][JS-DevTools/npm-publish-badge]][JS-DevTools/npm-publish-url] |
+| [fastify/github-action-merge-dependabot] | [![][fastify/github-action-merge-dependabot-badge]][fastify/github-action-merge-dependabot-url] |
+| [googleapis/release-please-action] | [![][googleapis/release-please-action-badge]][googleapis/release-please-action-url] |
+| [actions/create-github-app-token] | [![][actions/create-github-app-token-badge]][actions/create-github-app-token-url] |
+| [asdf-vm/actions] | [![][asdf-vm/actions-badge]][asdf-vm/actions-url] |
+| [cardinalby/schema-validator-action] | [![][cardinalby/schema-validator-action-badge]][cardinalby/schema-validator-action-url] |
+| [gradle/actions] | [![][gradle/actions-badge]][gradle/actions-url] |
+| [SonarSource/sonarqube-scan-action] | [![][SonarSource/sonarqube-scan-action-badge]][SonarSource/sonarqube-scan-action-url] |
+| [actions/setup-node] | [![][actions/setup-node-badge]][actions/setup-node-url] |
+| [actions/upload-artifact] | [![][actions/upload-artifact-badge]][actions/upload-artifact-url] |
+| [actions/download-artifact] | [![][actions/download-artifact-badge]][actions/download-artifact-url] |
+| [wearerequired/lint-action] | [![][wearerequired/lint-action-badge]][wearerequired/lint-action-url] |
+| [actions/checkout] | [![][actions/checkout-badge]][actions/checkout-url] |
+| [actions/attest] | [![][actions/attest-badge]][actions/attest-url] |
+| [slsa-framework/slsa-github-generator] | [![][slsa-framework/slsa-github-generator-badge]][slsa-framework/slsa-github-generator-url] |
+| [actions-ecosystem/action-add-labels] | [![][actions-ecosystem/action-add-labels-badge]][actions-ecosystem/action-add-labels-url] |
+| [extractions/setup-crate] | [![][extractions/setup-crate-badge]][extractions/setup-crate-url] |
+| [peter-evans/create-or-update-comment] | [![][peter-evans/create-or-update-comment-badge]][peter-evans/create-or-update-comment-url] |
 <!-- INSERT ROW -->
 [peter-evans/create-or-update-comment]: https://github.com/peter-evans/create-or-update-comment
 [peter-evans/create-or-update-comment-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/peter-evans-create-or-update-comment.yml/badge.svg?event=schedule
