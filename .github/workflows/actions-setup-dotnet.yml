@@ -11,7 +11,7 @@ on:
       - .github/workflows/reusable-test-new.yml
       - .github/workflows/actions-setup-dotnet.yml
   schedule:
-    - cron: "6 1 * * *"
+    - cron: "12 1 * * *"
   workflow_dispatch: ~
 
 permissions: read-all

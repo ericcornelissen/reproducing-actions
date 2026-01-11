@@ -11,7 +11,7 @@ on:
       - .github/workflows/reusable-test-new.yml
       - .github/workflows/actions-download-artifact.yml
   schedule:
-    - cron: "38 1 * * *"
+    - cron: "34 1 * * *"
   workflow_dispatch: ~
 
 permissions: read-all
