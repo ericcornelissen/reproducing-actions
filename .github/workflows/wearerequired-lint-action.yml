@@ -1,0 +1,31 @@
+name: wearerequired/lint-action
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/wearerequired-lint-action.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/wearerequired-lint-action.yml
+  schedule:
+    - cron: "39 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  test:
+    uses: ./.github/workflows/reusable-test-new.yml
+    with:
+      build-cmd:         yarn build
+      install-cmd:       yarn install
+      node-version-file: .nvmrc
+      repository:        wearerequired/lint-action
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: wearerequired/lint-action@v2.3.0

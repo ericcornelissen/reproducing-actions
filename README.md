@@ -10,45 +10,45 @@ with more information about the project and statuses.
 
 ## Statuses
 
-| Action | Version | Status |
-| ------ | ------- | ------ |
-| [actions/setup-java] | - | [![][actions/setup-java-badge]][actions/setup-java-url] |
-| [gitleaks/gitleaks-action] | - | [![][gitleaks/gitleaks-action-badge]][gitleaks/gitleaks-action-url] |
-| [actions/stale] | - | [![][actions/stale-badge]][actions/stale-url] |
-| [actions/github-script] | - | [![][actions/github-script-badge]][actions/github-script-url] |
-| [actions/setup-python] | - | [![][actions/setup-python-badge]][actions/setup-python-url] |
-| [actions/setup-dotnet] | - | [![][actions/setup-dotnet-badge]][actions/setup-dotnet-url] |
-| [actions/setup-go] | - | [![][actions/setup-go-badge]][actions/setup-go-url] |
-| [actions/labeler] | - | [![][actions/labeler-badge]][actions/labeler-url] |
-| [actions/dependency-review-action] | - | [![][actions/dependency-review-action-badge]][actions/dependency-review-action-url] |
-| [actions/cache] | - | [![][actions/cache-badge]][actions/cache-url] |
-| [JamesIves/github-pages-deploy-action] | - | [![][JamesIves/github-pages-deploy-action-badge]][JamesIves/github-pages-deploy-action-url] |
-| [step-security/harden-runner@v2] | v2 | [![][step-security/harden-runner-v2-badge]][step-security/harden-runner-v2-url] |
-| [peter-evans/create-pull-request@v7] | v7 | [![][peter-evans/create-pull-request-v7-badge]][peter-evans/create-pull-request-v7-url] |
-| [ncipollo/release-action@v1] | v1 | [![][ncipollo/release-action-v1-badge]][ncipollo/release-action-v1-url] |
-| [docker/login-action] | - | [![][docker/login-action-badge]][docker/login-action-url] |
-| [docker/build-push-action] | - | [![][docker/build-push-action-badge]][docker/build-push-action-url] |
-| [github/codeql-action] | - | [![][github/codeql-action-badge]][github/codeql-action-url] |
-| [dorny/paths-filter] | - | [![][dorny/paths-filter-badge]][dorny/paths-filter-url] |
-| [actions/attest-build-provenance] | - | [![][actions/attest-build-provenance-badge]][actions/attest-build-provenance-url] |
-| [JS-DevTools/npm-publish] | - | [![][JS-DevTools/npm-publish-badge]][JS-DevTools/npm-publish-url] |
-| [fastify/github-action-merge-dependabot] | - | [![][fastify/github-action-merge-dependabot-badge]][fastify/github-action-merge-dependabot-url] |
-| [googleapis/release-please-action] | - | [![][googleapis/release-please-action-badge]][googleapis/release-please-action-url] |
-| [actions/create-github-app-token] | - | [![][actions/create-github-app-token-badge]][actions/create-github-app-token-url] |
-| [asdf-vm/actions] | - | [![][asdf-vm/actions-badge]][asdf-vm/actions-url] |
-| [cardinalby/schema-validator-action] | - | [![][cardinalby/schema-validator-action-badge]][cardinalby/schema-validator-action-url] |
-| [gradle/actions] | - | [![][gradle/actions-badge]][gradle/actions-url] |
-| [SonarSource/sonarqube-scan-action@v6] | v6 | [![][SonarSource/sonarqube-scan-action-v6-badge]][SonarSource/sonarqube-scan-action-v6-url] |
-| [actions/setup-node] | - | [![][actions/setup-node-badge]][actions/setup-node-url] |
-| [actions/upload-artifact] | - | [![][actions/upload-artifact-badge]][actions/upload-artifact-url] |
-| [actions/download-artifact] | - | [![][actions/download-artifact-badge]][actions/download-artifact-url] |
-| [wearerequired/lint-action@v2] | v2 | [![][wearerequired/lint-action-v2-badge]][wearerequired/lint-action-v2-url] |
-| [actions/checkout] | - | [![][actions/checkout-badge]][actions/checkout-url] |
-| [actions/attest] | - | [![][actions/attest-badge]][actions/attest-url] |
-| [slsa-framework/slsa-github-generator] | - | [![][slsa-framework/slsa-github-generator-badge]][slsa-framework/slsa-github-generator-url] |
-| [actions-ecosystem/action-add-labels] | - | [![][actions-ecosystem/action-add-labels-badge]][actions-ecosystem/action-add-labels-url] |
-| [extractions/setup-crate] | - | [![][extractions/setup-crate-badge]][extractions/setup-crate-url] |
-| [peter-evans/create-or-update-comment] | - | [![][peter-evans/create-or-update-comment-badge]][peter-evans/create-or-update-comment-url] |
+| Action | Status |
+| ------ | ------ |
+| [actions/setup-java] | [![][actions/setup-java-badge]][actions/setup-java-url] |
+| [gitleaks/gitleaks-action] | [![][gitleaks/gitleaks-action-badge]][gitleaks/gitleaks-action-url] |
+| [actions/stale] | [![][actions/stale-badge]][actions/stale-url] |
+| [actions/github-script] | [![][actions/github-script-badge]][actions/github-script-url] |
+| [actions/setup-python] | [![][actions/setup-python-badge]][actions/setup-python-url] |
+| [actions/setup-dotnet] | [![][actions/setup-dotnet-badge]][actions/setup-dotnet-url] |
+| [actions/setup-go] | [![][actions/setup-go-badge]][actions/setup-go-url] |
+| [actions/labeler] | [![][actions/labeler-badge]][actions/labeler-url] |
+| [actions/dependency-review-action] | [![][actions/dependency-review-action-badge]][actions/dependency-review-action-url] |
+| [actions/cache] | [![][actions/cache-badge]][actions/cache-url] |
+| [JamesIves/github-pages-deploy-action] | [![][JamesIves/github-pages-deploy-action-badge]][JamesIves/github-pages-deploy-action-url] |
+| [step-security/harden-runner] | [![][step-security/harden-runner-badge]][step-security/harden-runner-url] |
+| [peter-evans/create-pull-request] | [![][peter-evans/create-pull-request-badge]][peter-evans/create-pull-request-url] |
+| [ncipollo/release-action] | [![][ncipollo/release-action-badge]][ncipollo/release-action-url] |
+| [docker/login-action] | [![][docker/login-action-badge]][docker/login-action-url] |
+| [docker/build-push-action] | [![][docker/build-push-action-badge]][docker/build-push-action-url] |
+| [github/codeql-action] | [![][github/codeql-action-badge]][github/codeql-action-url] |
+| [dorny/paths-filter] | [![][dorny/paths-filter-badge]][dorny/paths-filter-url] |
+| [actions/attest-build-provenance] | [![][actions/attest-build-provenance-badge]][actions/attest-build-provenance-url] |
+| [JS-DevTools/npm-publish] | [![][JS-DevTools/npm-publish-badge]][JS-DevTools/npm-publish-url] |
+| [fastify/github-action-merge-dependabot] | [![][fastify/github-action-merge-dependabot-badge]][fastify/github-action-merge-dependabot-url] |
+| [googleapis/release-please-action] | [![][googleapis/release-please-action-badge]][googleapis/release-please-action-url] |
+| [actions/create-github-app-token] | [![][actions/create-github-app-token-badge]][actions/create-github-app-token-url] |
+| [asdf-vm/actions] | [![][asdf-vm/actions-badge]][asdf-vm/actions-url] |
+| [cardinalby/schema-validator-action] | [![][cardinalby/schema-validator-action-badge]][cardinalby/schema-validator-action-url] |
+| [gradle/actions] | [![][gradle/actions-badge]][gradle/actions-url] |
+| [SonarSource/sonarqube-scan-action] | [![][SonarSource/sonarqube-scan-action-badge]][SonarSource/sonarqube-scan-action-url] |
+| [actions/setup-node] | [![][actions/setup-node-badge]][actions/setup-node-url] |
+| [actions/upload-artifact] | [![][actions/upload-artifact-badge]][actions/upload-artifact-url] |
+| [actions/download-artifact] | [![][actions/download-artifact-badge]][actions/download-artifact-url] |
+| [wearerequired/lint-action] | [![][wearerequired/lint-action-badge]][wearerequired/lint-action-url] |
+| [actions/checkout] | [![][actions/checkout-badge]][actions/checkout-url] |
+| [actions/attest] | [![][actions/attest-badge]][actions/attest-url] |
+| [slsa-framework/slsa-github-generator] | [![][slsa-framework/slsa-github-generator-badge]][slsa-framework/slsa-github-generator-url] |
+| [actions-ecosystem/action-add-labels] | [![][actions-ecosystem/action-add-labels-badge]][actions-ecosystem/action-add-labels-url] |
+| [extractions/setup-crate] | [![][extractions/setup-crate-badge]][extractions/setup-crate-url] |
+| [peter-evans/create-or-update-comment] | [![][peter-evans/create-or-update-comment-badge]][peter-evans/create-or-update-comment-url] |
 <!-- INSERT ROW -->
 [peter-evans/create-or-update-comment]: https://github.com/peter-evans/create-or-update-comment
 [peter-evans/create-or-update-comment-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/peter-evans-create-or-update-comment.yml/badge.svg?event=schedule
@@ -68,9 +68,9 @@ with more information about the project and statuses.
 [actions/checkout]: https://github.com/actions/checkout
 [actions/checkout-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-checkout.yml/badge.svg?event=schedule
 [actions/checkout-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-checkout.yml
-[wearerequired/lint-action@v2]: https://github.com/wearerequired/lint-action/tree/v2
-[wearerequired/lint-action-v2-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/wearerequired-lint-action-v2.yml/badge.svg?event=schedule
-[wearerequired/lint-action-v2-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/wearerequired-lint-action-v2.yml
+[wearerequired/lint-action]: https://github.com/wearerequired/lint-action
+[wearerequired/lint-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/wearerequired-lint-action.yml/badge.svg?event=schedule
+[wearerequired/lint-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/wearerequired-lint-action.yml
 [actions/download-artifact]: https://github.com/actions/download-artifact
 [actions/download-artifact-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-download-artifact.yml/badge.svg?event=schedule
 [actions/download-artifact-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-download-artifact.yml
@@ -80,9 +80,9 @@ with more information about the project and statuses.
 [actions/setup-node]: https://github.com/actions/setup-node
 [actions/setup-node-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-node.yml/badge.svg?event=schedule
 [actions/setup-node-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-node.yml
-[SonarSource/sonarqube-scan-action@v6]: https://github.com/SonarSource/sonarqube-scan-action/tree/v6
-[SonarSource/sonarqube-scan-action-v6-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/sonarsource-sonarqube-scan-action-v6.yml/badge.svg?event=schedule
-[SonarSource/sonarqube-scan-action-v6-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/sonarsource-sonarqube-scan-action-v6.yml
+[SonarSource/sonarqube-scan-action]: https://github.com/SonarSource/sonarqube-scan-action
+[SonarSource/sonarqube-scan-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/sonarsource-sonarqube-scan-action.yml/badge.svg?event=schedule
+[SonarSource/sonarqube-scan-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/sonarsource-sonarqube-scan-action.yml
 [gradle/actions]: https://github.com/gradle/actions
 [gradle/actions-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/gradle-actions.yml/badge.svg?event=schedule
 [gradle/actions-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/gradle-actions.yml
@@ -119,15 +119,15 @@ with more information about the project and statuses.
 [docker/login-action]: https://github.com/docker/login-action
 [docker/login-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/docker-login-action.yml/badge.svg?event=schedule
 [docker/login-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/docker-login-action.yml
-[ncipollo/release-action@v1]: https://github.com/ncipollo/release-action/tree/v1
-[ncipollo/release-action-v1-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/ncipollo-release-action-v1.yml/badge.svg?event=schedule
-[ncipollo/release-action-v1-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/ncipollo-release-action-v1.yml
-[peter-evans/create-pull-request@v7]: https://github.com/peter-evans/create-pull-request/tree/v7
-[peter-evans/create-pull-request-v7-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/peter-evans-create-pull-request-v7.yml/badge.svg?event=schedule
-[peter-evans/create-pull-request-v7-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/peter-evans-create-pull-request-v7.yml
-[step-security/harden-runner@v2]: https://github.com/step-security/harden-runner/tree/v2
-[step-security/harden-runner-v2-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/step-security-harden-runner-v2.yml/badge.svg?event=schedule
-[step-security/harden-runner-v2-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/step-security-harden-runner-v2.yml
+[ncipollo/release-action]: https://github.com/ncipollo/release-action
+[ncipollo/release-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/ncipollo-release-action.yml/badge.svg?event=schedule
+[ncipollo/release-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/ncipollo-release-action.yml
+[peter-evans/create-pull-request]: https://github.com/peter-evans/create-pull-request
+[peter-evans/create-pull-request-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/peter-evans-create-pull-request.yml/badge.svg?event=schedule
+[peter-evans/create-pull-request-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/peter-evans-create-pull-request.yml
+[step-security/harden-runner]: https://github.com/step-security/harden-runner
+[step-security/harden-runner-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/step-security-harden-runner.yml/badge.svg?event=schedule
+[step-security/harden-runner-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/step-security-harden-runner.yml
 [JamesIves/github-pages-deploy-action]: https://github.com/JamesIves/github-pages-deploy-action
 [JamesIves/github-pages-deploy-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/jamesives-github-pages-deploy-action.yml/badge.svg?event=schedule
 [JamesIves/github-pages-deploy-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/jamesives-github-pages-deploy-action.yml
