@@ -42,7 +42,7 @@ with more information about the project and statuses.
 | [actions/setup-node] | - | [![][actions/setup-node-badge]][actions/setup-node-url] |
 | [actions/upload-artifact] | - | [![][actions/upload-artifact-badge]][actions/upload-artifact-url] |
 | [actions/download-artifact] | - | [![][actions/download-artifact-badge]][actions/download-artifact-url] |
-| [wearerequired/lint-action@v2] | v2 | [![][wearerequired/lint-action-v2-badge]][wearerequired/lint-action-v2-url] |
+| [wearerequired/lint-action] | - | [![][wearerequired/lint-action-badge]][wearerequired/lint-action-url] |
 | [actions/checkout] | - | [![][actions/checkout-badge]][actions/checkout-url] |
 | [actions/attest] | - | [![][actions/attest-badge]][actions/attest-url] |
 | [slsa-framework/slsa-github-generator] | - | [![][slsa-framework/slsa-github-generator-badge]][slsa-framework/slsa-github-generator-url] |
@@ -68,9 +68,9 @@ with more information about the project and statuses.
 [actions/checkout]: https://github.com/actions/checkout
 [actions/checkout-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-checkout.yml/badge.svg?event=schedule
 [actions/checkout-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-checkout.yml
-[wearerequired/lint-action@v2]: https://github.com/wearerequired/lint-action/tree/v2
-[wearerequired/lint-action-v2-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/wearerequired-lint-action-v2.yml/badge.svg?event=schedule
-[wearerequired/lint-action-v2-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/wearerequired-lint-action-v2.yml
+[wearerequired/lint-action]: https://github.com/wearerequired/lint-action
+[wearerequired/lint-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/wearerequired-lint-action.yml/badge.svg?event=schedule
+[wearerequired/lint-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/wearerequired-lint-action.yml
 [actions/download-artifact]: https://github.com/actions/download-artifact
 [actions/download-artifact-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-download-artifact.yml/badge.svg?event=schedule
 [actions/download-artifact-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-download-artifact.yml
