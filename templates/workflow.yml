@@ -2,13 +2,13 @@ name: <ACTION>
 on:
   pull_request:
     paths:
-      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/reusable-test.yml
       - <FILE>
   push:
     branches:
       - main
     paths:
-      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/reusable-test.yml
       - <FILE>
   schedule:
     - cron: "<MIN> <HOUR> * * *"
@@ -18,7 +18,7 @@ permissions: read-all
 
 jobs:
   test:
-    uses: ./.github/workflows/reusable-test-new.yml
+    uses: ./.github/workflows/reusable-test.yml
     with:
       build-cmd:    <BUILD>
       install-cmd:  <INSTALL>

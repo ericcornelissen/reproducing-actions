@@ -2,13 +2,13 @@ name: actions/labeler
 on:
   pull_request:
     paths:
-      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/reusable-test.yml
       - .github/workflows/actions-labeler.yml
   push:
     branches:
       - main
     paths:
-      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/reusable-test.yml
       - .github/workflows/actions-labeler.yml
   schedule:
     - cron: "17 1 * * *"
@@ -18,7 +18,7 @@ permissions: read-all
 
 jobs:
   test:
-    uses: ./.github/workflows/reusable-test-new.yml
+    uses: ./.github/workflows/reusable-test.yml
     with:
       build-cmd:    npm run build
       install-cmd:  npm clean-install

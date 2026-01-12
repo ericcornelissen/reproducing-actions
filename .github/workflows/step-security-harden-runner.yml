@@ -2,13 +2,13 @@ name: step-security/harden-runner
 on:
   pull_request:
     paths:
-      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/reusable-test.yml
       - .github/workflows/step-security-harden-runner.yml
   push:
     branches:
       - main
     paths:
-      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/reusable-test.yml
       - .github/workflows/step-security-harden-runner.yml
   schedule:
     - cron: "16 1 * * *"
@@ -18,7 +18,7 @@ permissions: read-all
 
 jobs:
   test:
-    uses: ./.github/workflows/reusable-test-new.yml
+    uses: ./.github/workflows/reusable-test.yml
     with:
       build-cmd:    npm run build
       install-cmd:  npm clean-install
