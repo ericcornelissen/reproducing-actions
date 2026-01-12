@@ -49,7 +49,11 @@ with more information about the project and statuses.
 | [actions-ecosystem/action-add-labels] | [![][actions-ecosystem/action-add-labels-badge]][actions-ecosystem/action-add-labels-url] |
 | [extractions/setup-crate] | [![][extractions/setup-crate-badge]][extractions/setup-crate-url] |
 | [peter-evans/create-or-update-comment] | [![][peter-evans/create-or-update-comment-badge]][peter-evans/create-or-update-comment-url] |
+| [docker/setup-buildx-action] | - | [![][docker/setup-buildx-action-badge]][docker/setup-buildx-action-url] |
 <!-- INSERT ROW -->
+[docker/setup-buildx-action]: https://github.com/docker/setup-buildx-action
+[docker/setup-buildx-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/docker-setup-buildx-action.yml/badge.svg?event=schedule
+[docker/setup-buildx-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/docker-setup-buildx-action.yml
 [peter-evans/create-or-update-comment]: https://github.com/peter-evans/create-or-update-comment
 [peter-evans/create-or-update-comment-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/peter-evans-create-or-update-comment.yml/badge.svg?event=schedule
 [peter-evans/create-or-update-comment-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/peter-evans-create-or-update-comment.yml

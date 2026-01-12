@@ -1,17 +1,17 @@
-name: SonarSource/sonarqube-scan-action
+name: docker/setup-buildx-action
 on:
   pull_request:
     paths:
       - .github/workflows/reusable-test-new.yml
-      - .github/workflows/sonarsource-sonarqube-scan-action.yml
+      - .github/workflows/docker-setup-buildx-action.yml
   push:
     branches:
       - main
     paths:
       - .github/workflows/reusable-test-new.yml
-      - .github/workflows/sonarsource-sonarqube-scan-action.yml
+      - .github/workflows/docker-setup-buildx-action.yml
   schedule:
-    - cron: "35 1 * * *"
+    - cron: "38 1 * * *"
   workflow_dispatch: ~
 
 permissions: read-all
@@ -20,12 +20,14 @@ jobs:
   test:
     uses: ./.github/workflows/reusable-test-new.yml
     with:
-      build-cmd:    npm run build
-      install-cmd:  npm clean-install
+      build-cmd:    yarn build
+      install-cmd:  |
+        corepack enable
+        yarn install
       node-version: 20
-      repository:   SonarSource/sonarqube-scan-action
+      repository:   docker/setup-buildx-action
   version:
     if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
-      - uses: SonarSource/sonarqube-scan-action@v6.0.0
+      - uses: docker/setup-buildx-action@v3.12.0
