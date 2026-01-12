@@ -21,7 +21,9 @@ jobs:
     uses: ./.github/workflows/reusable-test-new.yml
     with:
       build-cmd:    yarn build
-      install-cmd:  yarn install
+      install-cmd:  |
+        corepack enable
+        yarn install
       node-version: 20
       repository:   docker/setup-buildx-action
   version:
