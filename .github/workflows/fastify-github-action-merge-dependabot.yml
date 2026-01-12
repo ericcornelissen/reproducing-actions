@@ -2,13 +2,13 @@ name: fastify/github-action-merge-dependabot
 on:
   pull_request:
     paths:
-      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/reusable-test.yml
       - .github/workflows/fastify-github-action-merge-dependabot.yml
   push:
     branches:
       - main
     paths:
-      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/reusable-test.yml
       - .github/workflows/fastify-github-action-merge-dependabot.yml
   schedule:
     - cron: "28 1 * * *"
@@ -18,7 +18,7 @@ permissions: read-all
 
 jobs:
   test:
-    uses: ./.github/workflows/reusable-test-new.yml
+    uses: ./.github/workflows/reusable-test.yml
     with:
       build-cmd:         npm run build
       install-cmd:       npm clean-install --ignore-scripts
