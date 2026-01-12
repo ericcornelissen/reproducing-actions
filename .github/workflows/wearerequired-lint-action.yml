@@ -11,7 +11,7 @@ on:
       - .github/workflows/reusable-test-new.yml
       - .github/workflows/wearerequired-lint-action.yml
   schedule:
-    - cron: "39 1 * * *"
+    - cron: "25 1 * * *"
   workflow_dispatch: ~
 
 permissions: read-all

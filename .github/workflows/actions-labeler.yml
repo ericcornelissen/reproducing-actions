@@ -11,7 +11,7 @@ on:
       - .github/workflows/reusable-test-new.yml
       - .github/workflows/actions-labeler.yml
   schedule:
-    - cron: "6 1 * * *"
+    - cron: "17 1 * * *"
   workflow_dispatch: ~
 
 permissions: read-all
