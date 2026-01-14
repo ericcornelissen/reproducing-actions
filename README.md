@@ -172,19 +172,27 @@ with more information about the project and statuses.
 
 To monitor the reproducibility of GitHub Actions we use GitHub Actions jobs that
 attempt to rebuild a given Action from its source code and see if that changes
-the build output. To see if a change occurred, we perform a byte-by-byte
-comparison as well as a checksums-based comparison. In both cases the committed
-build files are compared against the build output of a fresh build. If either
-doesn't match the Action is considered not reproducible.
+the build output. If it does not this _could_ indicate a supply chain attack or,
+[more likely][hanlon razor], a lack of awareness.
 
-For the checksum approach, SHA512 checksums are computed on the build output
-files stored in the repository and compared to SHA512 checksums computed after
-rebuilding the Action.
+To determine reproducibility we leverage the fact that GitHub Actions require
+all source code necessary to run the (JavaScript-based) Action be present in the
+repository. This usually means the build output is committed to the repository.
+Using this we can perform a fresh build and compare against the committed build
+output. To determine reproducibility we use a bit-by-bit comparison (as well as
+a SHA512 checksums-based comparison as backup). If there is any mismatch the
+Action is considered not reproducible.
 
-We only monitor major versions of Actions. This avoids the need of having to
-commit changes whenever a new Action version is released, but risks incorrect
-results when build details change (more on this in the "Incorrect Results"
-section).
+Each monitor focusses on one Action repository (which may consist of multiple
+Actions) and tests a specific version (e.g., v1.2.3). As versions are not
+necessarily immutable we run every monitor on a daily schedule. (This does not
+catch mutated versions, just ensures the mutated version is still reproducible.)
+
+The version being monitored is tracked in git and is automatically managed using
+[Dependabot].
+
+[dependabot]: https://github.com/dependabot
+[hanlon razor]: https://wikipedia.org/wiki/Hanlon%27s_razor
 
 ### Understanding Statuses
 
@@ -193,34 +201,36 @@ status is `passing` it indicates that Action is currently reproducible and if a
 status is `failing` it indicates that Action is not currently reproducible. A
 `failing` status (notwithstanding false negatives) may occur when
 
-- the build is randomized in some way, or
+- the build is randomized in some way, _or_
+- the build fails due to a compilation error, _or_
 - the build output has not been updated with respect to the latest source code
-  changes.
+  changes, _or_
+- the build output has not been updated with respect to the latest dependency
+  versions.
 
-Actions are monitored on a daily basis, so there is a slight lag in the status
+Note that Actions are tested once a day, so there is a slight lag in the status
 of any given Action.
 
 #### Incorrect Results
 
-A `passing` status could be a *false positive* if:
+A `passing` status could be a _false positive_ if:
 
 - The build process was changed but this has not yet been reflected in this
-  repository (e.g. the files checked for reproducibility are reproducible but
-  new build files are not).
+  repository (e.g., the build command changed and the old command is a no-op).
 
-A `failing` status could be a *false negative* if:
+A `failing` status could be a _false negative_ if:
 
 - The build process has changed but this has not yet been reflected in this
-  repository (e.g. the build output expected by this project is no longer used).
-- The CI job failed for some other reason (e.g. there was an unexpected error in
-  the job setup).
+  repository (e.g., the build command changed and the old command was removed).
+- The CI job failed for some other reason (e.g., there was an unexpected error
+  during the job setup).
 
 ### Action Coverage
 
 This project is geared towards monitoring any JavaScript-based Action with a
-build script at any supported version. Adding a monitor is a manual effort so
-not all available Actions are monitored. If you want to add a new monitor, open
-a [new issue] or follow the instructions from the [Contributing Guidelines].
+build script. Adding a monitor is a manual effort so not all available Actions
+are monitored. If you want to add a new monitor, open a [new issue] or follow
+the instructions from the [Contributing Guidelines].
 
 Any non-JavaScript Action or any JavaScript-based Action without a build step is
 currently considered out of scope. If you have a need for monitoring of such
@@ -230,16 +240,15 @@ Actions please check out and comment on [issue #1].
 [new issue]: https://github.com/ericcornelissen/reproducing-actions/issues/new
 [issue #1]: https://github.com/ericcornelissen/reproducing-actions/issues/1
 
-### Reproducibility
+### Reproducibility Definition
 
-An Action is considered reproducible if the build output files declared in the
-respective job in this project are byte-for-byte reproducible using the target
-project's dependencies and build command modulo Unix vs. Windows-style line
-endings.
+An Action is considered reproducible if any git-tracked files of the repository
+are bit-by-bit reproducible using the target project's dependencies and build
+command, modulo Unix vs. Windows-style line endings.
 
 ## Trophies
 
-The following is a list of unreproducible action versions detected by this
+The following is a list of unreproducible Action versions detected by this
 project.
 
 - `gitleaks/gitleaks-action`: [v2.3.3...v2.3.4](https://github.com/gitleaks/gitleaks-action/issues/137#issuecomment-1937801212)
