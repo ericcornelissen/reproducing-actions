@@ -248,12 +248,14 @@ command, modulo Unix vs. Windows-style line endings.
 
 ## Trophies
 
-The following is a list of unreproducible Action versions detected by this
+The following is an overview of unreproducible Action versions detected by this
 project.
 
-- `gitleaks/gitleaks-action`: [v2.3.3...v2.3.4](https://github.com/gitleaks/gitleaks-action/issues/137#issuecomment-1937801212)
-- `actions-ecosystem/action-add-labels`: [v1.1.3](https://github.com/actions-ecosystem/action-add-labels/issues/186)
-- `JS-DevTools/npm-publish`: [v4.0.0...v4.1.2](https://github.com/JS-DevTools/npm-publish/pull/258)
+| Action | Version(s) | Cause |
+| ------ | ---------- | ----- |
+| gitleaks/gitleaks-action | v2.3.3...v2.3.4 | [outdated dependencies](https://github.com/gitleaks/gitleaks-action/issues/137#issuecomment-1937801212) |
+| actions-ecosystem/action-add-labels | v1.1.3 | [compiler error](https://github.com/actions-ecosystem/action-add-labels/issues/186) |
+| JS-DevTools/npm-publish | v4.0.0...v4.1.2 | [untracked files](https://github.com/JS-DevTools/npm-publish/pull/258) |
 
 ## Related Work
 
