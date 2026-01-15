@@ -1,15 +1,15 @@
-name: step-security/harden-runner@v2
+name: step-security/harden-runner
 on:
   pull_request:
     paths:
       - .github/workflows/reusable-test.yml
-      - .github/workflows/step-security-harden-runner-v2.yml
+      - .github/workflows/step-security-harden-runner.yml
   push:
     branches:
       - main
     paths:
       - .github/workflows/reusable-test.yml
-      - .github/workflows/step-security-harden-runner-v2.yml
+      - .github/workflows/step-security-harden-runner.yml
   schedule:
     - cron: "16 1 * * *"
   workflow_dispatch: ~
@@ -17,12 +17,15 @@ on:
 permissions: read-all
 
 jobs:
-  build:
+  test:
     uses: ./.github/workflows/reusable-test.yml
     with:
-      files:        dist/post/index.js dist/pre/index.js dist/index.js
       build-cmd:    npm run build
       install-cmd:  npm clean-install
       node-version: 16.x
       repository:   step-security/harden-runner
-      version-ref:  v2
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: step-security/harden-runner@v2.14.0

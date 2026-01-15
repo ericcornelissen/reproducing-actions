@@ -2,13 +2,13 @@ name: github/codeql-action
 on:
   pull_request:
     paths:
-      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/reusable-test.yml
       - .github/workflows/github-codeql-action.yml
   push:
     branches:
       - main
     paths:
-      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/reusable-test.yml
       - .github/workflows/github-codeql-action.yml
   schedule:
     - cron: "22 1 * * *"
@@ -18,7 +18,7 @@ permissions: read-all
 
 jobs:
   test:
-    uses: ./.github/workflows/reusable-test-new.yml
+    uses: ./.github/workflows/reusable-test.yml
     with:
       build-cmd:    npm run build
       install-cmd:  npm clean-install
@@ -28,4 +28,4 @@ jobs:
     if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
-      - uses: github/codeql-action@v4.31.9
+      - uses: github/codeql-action@v4.31.10

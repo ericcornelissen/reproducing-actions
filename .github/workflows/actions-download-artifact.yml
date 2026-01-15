@@ -2,23 +2,23 @@ name: actions/download-artifact
 on:
   pull_request:
     paths:
-      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/reusable-test.yml
       - .github/workflows/actions-download-artifact.yml
   push:
     branches:
       - main
     paths:
-      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/reusable-test.yml
       - .github/workflows/actions-download-artifact.yml
   schedule:
-    - cron: "38 1 * * *"
+    - cron: "34 1 * * *"
   workflow_dispatch: ~
 
 permissions: read-all
 
 jobs:
   test:
-    uses: ./.github/workflows/reusable-test-new.yml
+    uses: ./.github/workflows/reusable-test.yml
     with:
       build-cmd:    npm run build
       install-cmd:  npm clean-install
