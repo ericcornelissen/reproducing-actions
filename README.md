@@ -50,7 +50,11 @@ with more information about the project and statuses.
 | [extractions/setup-crate] | [![][extractions/setup-crate-badge]][extractions/setup-crate-url] |
 | [peter-evans/create-or-update-comment] | [![][peter-evans/create-or-update-comment-badge]][peter-evans/create-or-update-comment-url] |
 | [docker/setup-buildx-action] | [![][docker/setup-buildx-action-badge]][docker/setup-buildx-action-url] |
+| [actions/configure-pages] | [![][actions/configure-pages-badge]][actions/configure-pages-url] |
 <!-- INSERT ROW -->
+[actions/configure-pages]: https://github.com/actions/configure-pages
+[actions/configure-pages-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/actions-configure-pages.yml/badge.svg?event=schedule
+[actions/configure-pages-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/actions-configure-pages.yml
 [docker/setup-buildx-action]: https://github.com/docker/setup-buildx-action
 [docker/setup-buildx-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/docker-setup-buildx-action.yml/badge.svg?event=schedule
 [docker/setup-buildx-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/docker-setup-buildx-action.yml
