@@ -20,7 +20,9 @@ jobs:
   test:
     uses: ./.github/workflows/reusable-test.yml
     with:
-      build-cmd:         yarn build
+      build-cmd:         |
+        yarn build
+        yarn install --production --frozen-lockfile
       install-cmd:       |
         npm install -g yarn
         yarn install --frozen-lockfile
