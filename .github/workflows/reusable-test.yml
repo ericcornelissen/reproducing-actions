@@ -68,6 +68,7 @@ jobs:
     env:
       BACKUP_DIR: /tmp/reproducing-actions
       CHECKSUMS_FILE: /tmp/reproducing-actions-checksums.txt
+      FILES_LIST_FILE: /tmp/reproducing-actions-files.txt
     steps:
       # Repository setup
       - name: Checkout repository
@@ -80,7 +81,7 @@ jobs:
         id: files
         run: |
           FILES=$(find . \( -path ./.git \) -prune -o -type f -print)
-          echo "$FILES"
+          echo "$FILES" | tee "$FILES_LIST_FILE"
 
           {
             echo 'lines<<EOF'
@@ -114,7 +115,7 @@ jobs:
           while IFS= read -r file; do
             echo "Normalizing line endings in '$file'"
             sed -i 's/\r*$//' "$file"
-          done <<<"$FILES"
+          done <"$FILES_LIST_FILE"
       - name: Store original files
         env:
           FILES: ${{ steps.files.outputs.list }}
