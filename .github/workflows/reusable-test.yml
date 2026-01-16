@@ -66,9 +66,9 @@ jobs:
     needs:
       - setup
     env:
-      BACKUP_DIR: /tmp/reproducing-actions
-      CHECKSUMS_FILE: /tmp/reproducing-actions-checksums.txt
-      FILES_LIST_FILE: /tmp/reproducing-actions-files.txt
+      BACKUP_DIR: /tmp/reproducing-actions/original
+      CHECKSUMS_FILE: /tmp/reproducing-actions/checksums.txt
+      FILES_LIST_FILE: /tmp/reproducing-actions/files.txt
     steps:
       # Repository setup
       - name: Checkout repository
