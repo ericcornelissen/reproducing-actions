@@ -68,6 +68,7 @@ jobs:
     env:
       BACKUP_DIR: /tmp/reproducing-actions
       CHECKSUMS_FILE: /tmp/reproducing-actions-checksums.txt
+      FILES_LIST_FILE: /tmp/reproducing-actions-files.txt
     steps:
       # Repository setup
       - name: Checkout repository
@@ -77,17 +78,8 @@ jobs:
           ref: ${{ needs.setup.outputs.version }}
           repository: ${{ inputs.repository }}
       - name: Obtain original list of files
-        id: files
         run: |
-          TMP=$(find . \( -path ./node_modules -o -path ./.git \) -prune -o -type f -print)
-          echo "$TMP"
-
-          {
-            echo 'FILES_LINES<<EOF'
-            echo "$TMP"
-            echo 'EOF'
-          } >>"${GITHUB_ENV}"
-          echo "FILES_LIST=$(echo $TMP | tr '\n' ' ')" >>"${GITHUB_ENV}"
+          find . \( -path ./.git \) -prune -o -type f -print | tee "$FILES_LIST_FILE"
 
       # Environment setup
       - name: Install Node.js (from version)
@@ -112,14 +104,14 @@ jobs:
           while IFS= read -r file; do
             echo "Normalizing line endings in '$file'"
             sed -i 's/\r*$//' "$file"
-          done <<<"$FILES_LINES"
+          done <"$FILES_LIST_FILE"
       - name: Store original files
         run: |
           mkdir --parents "$BACKUP_DIR"
-          cp --parents $FILES_LIST "$BACKUP_DIR"
+          xargs -d '\n' cp --parents --target-directory="$BACKUP_DIR" <"$FILES_LIST_FILE"
       - name: Compute original checksums (legacy)
         run: |
-          shasum --algorithm 512 $FILES_LIST >$CHECKSUMS_FILE
+          xargs -d '\n' shasum --algorithm 512 <"$FILES_LIST_FILE" >"$CHECKSUMS_FILE"
 
           echo 'Checksums:'
           echo '----------'
@@ -134,7 +126,7 @@ jobs:
           while IFS= read -r file; do
             echo "Normalizing line endings in '$file'"
             sed -i 's/\r*$//' "$file"
-          done <<<"$FILES_LINES"
+          done <"$FILES_LIST_FILE"
       - name: Check byte-by-byte equality
         run: |
           while IFS= read -r file; do
@@ -142,22 +134,9 @@ jobs:
             original=$BACKUP_DIR/$file
             echo "Checking '$rebuild' against '$original'"
             cmp "$rebuild" "$original"
-          done <<<"$FILES_LINES"
+          done <"$FILES_LIST_FILE"
       - name: Check checksums (legacy)
         run: shasum --strict --check $CHECKSUMS_FILE
-      - name: Check for new files
-        run: |
-          git clean -dfX
-
-          BEFORE=$FILES_LINES
-          AFTER=$(find . \( -path ./node_modules -o -path ./.git \) -prune -o -type f -print)
-          if [ "$BEFORE" != "$AFTER" ]; then
-            echo '--- FILES BEFORE ---'
-            echo "$BEFORE"
-            echo '--- FILES AFTER ---'
-            echo "$AFTER"
-            exit 1
-          fi
 
       - name: Build files diff
         if: ${{ failure() }}
@@ -165,4 +144,13 @@ jobs:
           while IFS= read -r file; do
             echo "--- Diff of '$file' ---"
             git diff "$file"
-          done <<<"$FILES_LINES"
+          done <"$FILES_LIST_FILE"
+      - name: Check for new files
+        run: |
+          git clean -dfX
+
+          before=$FILES_LIST_FILE
+          after=$FILES_LIST_FILE.2
+
+          find . \( -path ./.git \) -prune -o -type f -print >$after
+          diff "$after" "$before"
