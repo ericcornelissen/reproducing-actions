@@ -83,11 +83,11 @@ jobs:
           echo "$TMP"
 
           {
-            echo 'lines<<EOF'
-            echo -n "$TMP"
+            echo 'FILES_LINES<<EOF'
+            echo "$TMP"
             echo 'EOF'
-          } >>"${GITHUB_OUTPUT}"
-          echo "list=$(echo $TMP | tr '\n' ' ')" >>"${GITHUB_OUTPUT}"
+          } >>"${GITHUB_ENV}"
+          echo "FILES_LIST=$(echo $TMP | tr '\n' ' ')" >>"${GITHUB_ENV}"
 
       # Environment setup
       - name: Install Node.js (from version)
@@ -108,24 +108,18 @@ jobs:
 
       # Check reproducibility
       - name: Normalize line endings
-        env:
-          FILES: ${{ steps.files.outputs.lines }}
         run: |
           while IFS= read -r file; do
             echo "Normalizing line endings in '$file'"
             sed -i 's/\r*$//' "$file"
-          done <<<"$FILES"
+          done <<<"$FILES_LINES"
       - name: Store original files
-        env:
-          FILES: ${{ steps.files.outputs.list }}
         run: |
           mkdir --parents "$BACKUP_DIR"
-          cp --parents $FILES "$BACKUP_DIR"
+          cp --parents $FILES_LIST "$BACKUP_DIR"
       - name: Compute original checksums (legacy)
-        env:
-          FILES: ${{ steps.files.outputs.list }}
         run: |
-          shasum --algorithm 512 $FILES >$CHECKSUMS_FILE
+          shasum --algorithm 512 $FILES_LIST >$CHECKSUMS_FILE
 
           echo 'Checksums:'
           echo '----------'
@@ -136,32 +130,26 @@ jobs:
         run: ${{ inputs.build-cmd }}
 
       - name: Normalize line endings
-        env:
-          FILES: ${{ steps.files.outputs.lines }}
         run: |
           while IFS= read -r file; do
             echo "Normalizing line endings in '$file'"
             sed -i 's/\r*$//' "$file"
-          done <<<"$LINES"
+          done <<<"$FILES_LINES"
       - name: Check byte-by-byte equality
-        env:
-          FILES: ${{ steps.files.outputs.lines }}
         run: |
           while IFS= read -r file; do
             rebuild=$file
             original=$BACKUP_DIR/$file
             echo "Checking '$rebuild' against '$original'"
             cmp "$rebuild" "$original"
-          done <<<"$LINES"
+          done <<<"$FILES_LINES"
       - name: Check checksums (legacy)
         run: shasum --strict --check $CHECKSUMS_FILE
       - name: Check for new files
-        env:
-          FILES: ${{ steps.files.outputs.lines }}
         run: |
           git clean -dfX
 
-          BEFORE=$LINES
+          BEFORE=$FILES_LINES
           AFTER=$(find . \( -path ./.git \) -prune -o -type f -print)
           if [ "$BEFORE" != "$AFTER" ]; then
             echo '--- FILES BEFORE ---'
@@ -173,10 +161,8 @@ jobs:
 
       - name: Build files diff
         if: ${{ failure() }}
-        env:
-          FILES: ${{ steps.files.outputs.lines }}
         run: |
           while IFS= read -r file; do
             echo "--- Diff of '$file' ---"
             git diff "$file"
-          done <<<"$LINES"
+          done <<<"$FILES_LINES"
