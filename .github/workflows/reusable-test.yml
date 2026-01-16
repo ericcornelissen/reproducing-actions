@@ -142,15 +142,11 @@ jobs:
         run: |
           git clean -dfX
 
-          BEFORE=$(cat "$FILES_LIST_FILE")
-          AFTER=$(find . \( -path ./.git \) -prune -o -type f -print)
-          if [ "$BEFORE" != "$AFTER" ]; then
-            echo '--- FILES BEFORE ---'
-            echo "$BEFORE"
-            echo '--- FILES AFTER ---'
-            echo "$AFTER"
-            exit 1
-          fi
+          before=$FILES_LIST_FILE
+          after=$FILES_LIST_FILE.2
+
+          find . \( -path ./.git \) -prune -o -type f -print >$after
+          cmp "$after" "$before"
 
       - name: Build files diff
         if: ${{ failure() }}
