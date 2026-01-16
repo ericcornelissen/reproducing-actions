@@ -79,15 +79,15 @@ jobs:
       - name: Obtain original list of files
         id: files
         run: |
-          TMP=$(find . \( -path ./.git \) -prune -o -type f -print)
-          echo "$TMP"
+          FILES=$(find . \( -path ./.git \) -prune -o -type f -print)
+          echo "$FILES"
 
           {
             echo 'lines<<EOF'
-            echo "$TMP"
+            echo "$FILES"
             echo 'EOF'
           } >>"${GITHUB_OUTPUT}"
-          echo "list=$(echo $TMP | tr '\n' ' ')" >>"${GITHUB_OUTPUT}"
+          echo "list=$(echo $FILES | tr '\n' ' ')" >>"${GITHUB_OUTPUT}"
 
       # Environment setup
       - name: Install Node.js (from version)
