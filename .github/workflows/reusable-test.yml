@@ -109,10 +109,10 @@ jobs:
       - name: Store original files
         run: |
           mkdir --parents "$BACKUP_DIR"
-          cp --parents $FILES "$BACKUP_DIR"
+          cp --parents $(cat "$FILES_LIST_FILE" | tr '\n' ' ') "$BACKUP_DIR"
       - name: Compute original checksums (legacy)
         run: |
-          shasum --algorithm 512 $(cat "$FILES_LIST_FILE") >$CHECKSUMS_FILE
+          shasum --algorithm 512 $(cat "$FILES_LIST_FILE" | tr '\n' ' ') >$CHECKSUMS_FILE
 
           echo 'Checksums:'
           echo '----------'
