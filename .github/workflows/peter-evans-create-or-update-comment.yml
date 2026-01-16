@@ -1,17 +1,17 @@
-name: actions/create-github-app-token
+name: peter-evans/create-or-update-comment
 on:
   pull_request:
     paths:
       - .github/workflows/reusable-test.yml
-      - .github/workflows/actions-create-github-app-token.yml
+      - .github/workflows/peter-evans-create-or-update-comment.yml
   push:
     branches:
       - main
     paths:
       - .github/workflows/reusable-test.yml
-      - .github/workflows/actions-create-github-app-token.yml
+      - .github/workflows/peter-evans-create-or-update-comment.yml
   schedule:
-    - cron: "29 1 * * *"
+    - cron: "10 1 * * *"
   workflow_dispatch: ~
 
 permissions: read-all
@@ -23,9 +23,9 @@ jobs:
       build-cmd:         npm run build
       install-cmd:       npm clean-install
       node-version-file: package.json
-      repository:        actions/create-github-app-token
+      repository:        peter-evans/create-or-update-comment
   version:
     if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/create-github-app-token@v2.2.1
+      - uses: peter-evans/create-or-update-comment@v5.0.0

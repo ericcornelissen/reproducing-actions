@@ -2,13 +2,13 @@ name: actions/attest
 on:
   pull_request:
     paths:
-      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/reusable-test.yml
       - .github/workflows/actions-attest.yml
   push:
     branches:
       - main
     paths:
-      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/reusable-test.yml
       - .github/workflows/actions-attest.yml
   schedule:
     - cron: "2 1 * * *"
@@ -18,7 +18,7 @@ permissions: read-all
 
 jobs:
   test:
-    uses: ./.github/workflows/reusable-test-new.yml
+    uses: ./.github/workflows/reusable-test.yml
     with:
       build-cmd:         npm run bundle
       install-cmd:       npm clean-install

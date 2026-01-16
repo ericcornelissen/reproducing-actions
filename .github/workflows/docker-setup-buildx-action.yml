@@ -1,17 +1,17 @@
-name: JS-DevTools/npm-publish
+name: docker/setup-buildx-action
 on:
   pull_request:
     paths:
       - .github/workflows/reusable-test.yml
-      - .github/workflows/js-devtools-npm-publish.yml
+      - .github/workflows/docker-setup-buildx-action.yml
   push:
     branches:
       - main
     paths:
       - .github/workflows/reusable-test.yml
-      - .github/workflows/js-devtools-npm-publish.yml
+      - .github/workflows/docker-setup-buildx-action.yml
   schedule:
-    - cron: "26 1 * * *"
+    - cron: "38 1 * * *"
   workflow_dispatch: ~
 
 permissions: read-all
@@ -20,16 +20,14 @@ jobs:
   test:
     uses: ./.github/workflows/reusable-test.yml
     with:
-      build-cmd:    pnpm build
+      build-cmd:    yarn build
       install-cmd:  |
         corepack enable
-        corepack prepare pnpm@10.27.0 --activate
-
-        corepack pnpm install
-      node-version: 24
-      repository:   JS-DevTools/npm-publish
+        yarn install
+      node-version: 20
+      repository:   docker/setup-buildx-action
   version:
     if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
-      - uses: JS-DevTools/npm-publish@v4.1.3
+      - uses: docker/setup-buildx-action@v3.12.0

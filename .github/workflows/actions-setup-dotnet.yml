@@ -2,23 +2,23 @@ name: actions/setup-dotnet
 on:
   pull_request:
     paths:
-      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/reusable-test.yml
       - .github/workflows/actions-setup-dotnet.yml
   push:
     branches:
       - main
     paths:
-      - .github/workflows/reusable-test-new.yml
+      - .github/workflows/reusable-test.yml
       - .github/workflows/actions-setup-dotnet.yml
   schedule:
-    - cron: "6 1 * * *"
+    - cron: "12 1 * * *"
   workflow_dispatch: ~
 
 permissions: read-all
 
 jobs:
   test:
-    uses: ./.github/workflows/reusable-test-new.yml
+    uses: ./.github/workflows/reusable-test.yml
     with:
       build-cmd:    npm run build
       install-cmd:  npm clean-install

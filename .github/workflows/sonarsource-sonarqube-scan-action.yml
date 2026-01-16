@@ -1,15 +1,15 @@
-name: SonarSource/sonarqube-scan-action@v6
+name: SonarSource/sonarqube-scan-action
 on:
   pull_request:
     paths:
       - .github/workflows/reusable-test.yml
-      - .github/workflows/sonarsource-sonarqube-scan-action-v6.yml
+      - .github/workflows/sonarsource-sonarqube-scan-action.yml
   push:
     branches:
       - main
     paths:
       - .github/workflows/reusable-test.yml
-      - .github/workflows/sonarsource-sonarqube-scan-action-v6.yml
+      - .github/workflows/sonarsource-sonarqube-scan-action.yml
   schedule:
     - cron: "35 1 * * *"
   workflow_dispatch: ~
@@ -17,12 +17,15 @@ on:
 permissions: read-all
 
 jobs:
-  build:
+  test:
     uses: ./.github/workflows/reusable-test.yml
     with:
-      files:        dist/exec-BTlTa8sL.js dist/index.js dist/install-build-wrapper.js
       build-cmd:    npm run build
       install-cmd:  npm clean-install
       node-version: 20
       repository:   SonarSource/sonarqube-scan-action
-      version-ref:  v6
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: SonarSource/sonarqube-scan-action@v7.0.0

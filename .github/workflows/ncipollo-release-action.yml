@@ -1,15 +1,15 @@
-name: ncipollo/release-action@v1
+name: ncipollo/release-action
 on:
   pull_request:
     paths:
       - .github/workflows/reusable-test.yml
-      - .github/workflows/ncipollo-release-action-v1.yml
+      - .github/workflows/ncipollo-release-action.yml
   push:
     branches:
       - main
     paths:
       - .github/workflows/reusable-test.yml
-      - .github/workflows/ncipollo-release-action-v1.yml
+      - .github/workflows/ncipollo-release-action.yml
   schedule:
     - cron: "19 1 * * *"
   workflow_dispatch: ~
@@ -17,12 +17,15 @@ on:
 permissions: read-all
 
 jobs:
-  build:
+  test:
     uses: ./.github/workflows/reusable-test.yml
     with:
-      files:        dist/index.js
-      build-cmd:    npm run build
-      install-cmd:  npm install
-      node-version: 20.x
+      build-cmd:    yarn build
+      install-cmd:  yarn install
+      node-version: 20
       repository:   ncipollo/release-action
-      version-ref:  v1
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ncipollo/release-action@v1.20.0

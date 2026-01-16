@@ -10,45 +10,53 @@ with more information about the project and statuses.
 
 ## Statuses
 
-| Action | Version | Status |
-| ------ | ------- | ------ |
-| [actions/setup-java] | - | [![][actions/setup-java-badge]][actions/setup-java-url] |
-| [gitleaks/gitleaks-action] | - | [![][gitleaks/gitleaks-action-badge]][gitleaks/gitleaks-action-url] |
-| [actions/stale] | - | [![][actions/stale-badge]][actions/stale-url] |
-| [actions/github-script] | - | [![][actions/github-script-badge]][actions/github-script-url] |
-| [actions/setup-python] | - | [![][actions/setup-python-badge]][actions/setup-python-url] |
-| [actions/setup-dotnet] | - | [![][actions/setup-dotnet-badge]][actions/setup-dotnet-url] |
-| [actions/setup-go] | - | [![][actions/setup-go-badge]][actions/setup-go-url] |
-| [actions/labeler] | - | [![][actions/labeler-badge]][actions/labeler-url] |
-| [actions/dependency-review-action] | - | [![][actions/dependency-review-action-badge]][actions/dependency-review-action-url] |
-| [actions/cache] | - | [![][actions/cache-badge]][actions/cache-url] |
-| [JamesIves/github-pages-deploy-action] | - | [![][JamesIves/github-pages-deploy-action-badge]][JamesIves/github-pages-deploy-action-url] |
-| [step-security/harden-runner@v2] | v2 | [![][step-security/harden-runner-v2-badge]][step-security/harden-runner-v2-url] |
-| [peter-evans/create-pull-request@v7] | v7 | [![][peter-evans/create-pull-request-v7-badge]][peter-evans/create-pull-request-v7-url] |
-| [ncipollo/release-action@v1] | v1 | [![][ncipollo/release-action-v1-badge]][ncipollo/release-action-v1-url] |
-| [docker/login-action] | - | [![][docker/login-action-badge]][docker/login-action-url] |
-| [docker/build-push-action] | - | [![][docker/build-push-action-badge]][docker/build-push-action-url] |
-| [github/codeql-action] | - | [![][github/codeql-action-badge]][github/codeql-action-url] |
-| [dorny/paths-filter] | - | [![][dorny/paths-filter-badge]][dorny/paths-filter-url] |
-| [actions/attest-build-provenance] | - | [![][actions/attest-build-provenance-badge]][actions/attest-build-provenance-url] |
-| [JS-DevTools/npm-publish] | - | [![][JS-DevTools/npm-publish-badge]][JS-DevTools/npm-publish-url] |
-| [fastify/github-action-merge-dependabot] | - | [![][fastify/github-action-merge-dependabot-badge]][fastify/github-action-merge-dependabot-url] |
-| [googleapis/release-please-action] | - | [![][googleapis/release-please-action-badge]][googleapis/release-please-action-url] |
-| [actions/create-github-app-token] | - | [![][actions/create-github-app-token-badge]][actions/create-github-app-token-url] |
-| [asdf-vm/actions] | - | [![][asdf-vm/actions-badge]][asdf-vm/actions-url] |
-| [cardinalby/schema-validator-action] | - | [![][cardinalby/schema-validator-action-badge]][cardinalby/schema-validator-action-url] |
-| [gradle/actions] | - | [![][gradle/actions-badge]][gradle/actions-url] |
-| [SonarSource/sonarqube-scan-action@v6] | v6 | [![][SonarSource/sonarqube-scan-action-v6-badge]][SonarSource/sonarqube-scan-action-v6-url] |
-| [actions/setup-node] | - | [![][actions/setup-node-badge]][actions/setup-node-url] |
-| [actions/upload-artifact] | - | [![][actions/upload-artifact-badge]][actions/upload-artifact-url] |
-| [actions/download-artifact] | - | [![][actions/download-artifact-badge]][actions/download-artifact-url] |
-| [wearerequired/lint-action@v2] | v2 | [![][wearerequired/lint-action-v2-badge]][wearerequired/lint-action-v2-url] |
-| [actions/checkout] | - | [![][actions/checkout-badge]][actions/checkout-url] |
-| [actions/attest] | - | [![][actions/attest-badge]][actions/attest-url] |
-| [slsa-framework/slsa-github-generator] | - | [![][slsa-framework/slsa-github-generator-badge]][slsa-framework/slsa-github-generator-url] |
-| [actions-ecosystem/action-add-labels] | - | [![][actions-ecosystem/action-add-labels-badge]][actions-ecosystem/action-add-labels-url] |
-| [extractions/setup-crate] | - | [![][extractions/setup-crate-badge]][extractions/setup-crate-url] |
+| Action | Status |
+| ------ | ------ |
+| [actions/setup-java] | [![][actions/setup-java-badge]][actions/setup-java-url] |
+| [gitleaks/gitleaks-action] | [![][gitleaks/gitleaks-action-badge]][gitleaks/gitleaks-action-url] |
+| [actions/stale] | [![][actions/stale-badge]][actions/stale-url] |
+| [actions/github-script] | [![][actions/github-script-badge]][actions/github-script-url] |
+| [actions/setup-python] | [![][actions/setup-python-badge]][actions/setup-python-url] |
+| [actions/setup-dotnet] | [![][actions/setup-dotnet-badge]][actions/setup-dotnet-url] |
+| [actions/setup-go] | [![][actions/setup-go-badge]][actions/setup-go-url] |
+| [actions/labeler] | [![][actions/labeler-badge]][actions/labeler-url] |
+| [actions/dependency-review-action] | [![][actions/dependency-review-action-badge]][actions/dependency-review-action-url] |
+| [actions/cache] | [![][actions/cache-badge]][actions/cache-url] |
+| [JamesIves/github-pages-deploy-action] | [![][JamesIves/github-pages-deploy-action-badge]][JamesIves/github-pages-deploy-action-url] |
+| [step-security/harden-runner] | [![][step-security/harden-runner-badge]][step-security/harden-runner-url] |
+| [peter-evans/create-pull-request] | [![][peter-evans/create-pull-request-badge]][peter-evans/create-pull-request-url] |
+| [ncipollo/release-action] | [![][ncipollo/release-action-badge]][ncipollo/release-action-url] |
+| [docker/login-action] | [![][docker/login-action-badge]][docker/login-action-url] |
+| [docker/build-push-action] | [![][docker/build-push-action-badge]][docker/build-push-action-url] |
+| [github/codeql-action] | [![][github/codeql-action-badge]][github/codeql-action-url] |
+| [dorny/paths-filter] | [![][dorny/paths-filter-badge]][dorny/paths-filter-url] |
+| [actions/attest-build-provenance] | [![][actions/attest-build-provenance-badge]][actions/attest-build-provenance-url] |
+| [JS-DevTools/npm-publish] | [![][JS-DevTools/npm-publish-badge]][JS-DevTools/npm-publish-url] |
+| [fastify/github-action-merge-dependabot] | [![][fastify/github-action-merge-dependabot-badge]][fastify/github-action-merge-dependabot-url] |
+| [googleapis/release-please-action] | [![][googleapis/release-please-action-badge]][googleapis/release-please-action-url] |
+| [actions/create-github-app-token] | [![][actions/create-github-app-token-badge]][actions/create-github-app-token-url] |
+| [asdf-vm/actions] | [![][asdf-vm/actions-badge]][asdf-vm/actions-url] |
+| [cardinalby/schema-validator-action] | [![][cardinalby/schema-validator-action-badge]][cardinalby/schema-validator-action-url] |
+| [gradle/actions] | [![][gradle/actions-badge]][gradle/actions-url] |
+| [SonarSource/sonarqube-scan-action] | [![][SonarSource/sonarqube-scan-action-badge]][SonarSource/sonarqube-scan-action-url] |
+| [actions/setup-node] | [![][actions/setup-node-badge]][actions/setup-node-url] |
+| [actions/upload-artifact] | [![][actions/upload-artifact-badge]][actions/upload-artifact-url] |
+| [actions/download-artifact] | [![][actions/download-artifact-badge]][actions/download-artifact-url] |
+| [wearerequired/lint-action] | [![][wearerequired/lint-action-badge]][wearerequired/lint-action-url] |
+| [actions/checkout] | [![][actions/checkout-badge]][actions/checkout-url] |
+| [actions/attest] | [![][actions/attest-badge]][actions/attest-url] |
+| [slsa-framework/slsa-github-generator] | [![][slsa-framework/slsa-github-generator-badge]][slsa-framework/slsa-github-generator-url] |
+| [actions-ecosystem/action-add-labels] | [![][actions-ecosystem/action-add-labels-badge]][actions-ecosystem/action-add-labels-url] |
+| [extractions/setup-crate] | [![][extractions/setup-crate-badge]][extractions/setup-crate-url] |
+| [peter-evans/create-or-update-comment] | [![][peter-evans/create-or-update-comment-badge]][peter-evans/create-or-update-comment-url] |
+| [docker/setup-buildx-action] | [![][docker/setup-buildx-action-badge]][docker/setup-buildx-action-url] |
 <!-- INSERT ROW -->
+[docker/setup-buildx-action]: https://github.com/docker/setup-buildx-action
+[docker/setup-buildx-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/docker-setup-buildx-action.yml/badge.svg?event=schedule
+[docker/setup-buildx-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/docker-setup-buildx-action.yml
+[peter-evans/create-or-update-comment]: https://github.com/peter-evans/create-or-update-comment
+[peter-evans/create-or-update-comment-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/peter-evans-create-or-update-comment.yml/badge.svg?event=schedule
+[peter-evans/create-or-update-comment-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/peter-evans-create-or-update-comment.yml
 [extractions/setup-crate]: https://github.com/extractions/setup-crate
 [extractions/setup-crate-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/extractions-setup-crate.yml/badge.svg?event=schedule
 [extractions/setup-crate-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/extractions-setup-crate.yml
@@ -64,9 +72,9 @@ with more information about the project and statuses.
 [actions/checkout]: https://github.com/actions/checkout
 [actions/checkout-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-checkout.yml/badge.svg?event=schedule
 [actions/checkout-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-checkout.yml
-[wearerequired/lint-action@v2]: https://github.com/wearerequired/lint-action/tree/v2
-[wearerequired/lint-action-v2-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/wearerequired-lint-action-v2.yml/badge.svg?event=schedule
-[wearerequired/lint-action-v2-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/wearerequired-lint-action-v2.yml
+[wearerequired/lint-action]: https://github.com/wearerequired/lint-action
+[wearerequired/lint-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/wearerequired-lint-action.yml/badge.svg?event=schedule
+[wearerequired/lint-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/wearerequired-lint-action.yml
 [actions/download-artifact]: https://github.com/actions/download-artifact
 [actions/download-artifact-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-download-artifact.yml/badge.svg?event=schedule
 [actions/download-artifact-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-download-artifact.yml
@@ -76,9 +84,9 @@ with more information about the project and statuses.
 [actions/setup-node]: https://github.com/actions/setup-node
 [actions/setup-node-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-node.yml/badge.svg?event=schedule
 [actions/setup-node-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-setup-node.yml
-[SonarSource/sonarqube-scan-action@v6]: https://github.com/SonarSource/sonarqube-scan-action/tree/v6
-[SonarSource/sonarqube-scan-action-v6-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/sonarsource-sonarqube-scan-action-v6.yml/badge.svg?event=schedule
-[SonarSource/sonarqube-scan-action-v6-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/sonarsource-sonarqube-scan-action-v6.yml
+[SonarSource/sonarqube-scan-action]: https://github.com/SonarSource/sonarqube-scan-action
+[SonarSource/sonarqube-scan-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/sonarsource-sonarqube-scan-action.yml/badge.svg?event=schedule
+[SonarSource/sonarqube-scan-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/sonarsource-sonarqube-scan-action.yml
 [gradle/actions]: https://github.com/gradle/actions
 [gradle/actions-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/gradle-actions.yml/badge.svg?event=schedule
 [gradle/actions-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/gradle-actions.yml
@@ -115,15 +123,15 @@ with more information about the project and statuses.
 [docker/login-action]: https://github.com/docker/login-action
 [docker/login-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/docker-login-action.yml/badge.svg?event=schedule
 [docker/login-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/docker-login-action.yml
-[ncipollo/release-action@v1]: https://github.com/ncipollo/release-action/tree/v1
-[ncipollo/release-action-v1-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/ncipollo-release-action-v1.yml/badge.svg?event=schedule
-[ncipollo/release-action-v1-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/ncipollo-release-action-v1.yml
-[peter-evans/create-pull-request@v7]: https://github.com/peter-evans/create-pull-request/tree/v7
-[peter-evans/create-pull-request-v7-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/peter-evans-create-pull-request-v7.yml/badge.svg?event=schedule
-[peter-evans/create-pull-request-v7-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/peter-evans-create-pull-request-v7.yml
-[step-security/harden-runner@v2]: https://github.com/step-security/harden-runner/tree/v2
-[step-security/harden-runner-v2-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/step-security-harden-runner-v2.yml/badge.svg?event=schedule
-[step-security/harden-runner-v2-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/step-security-harden-runner-v2.yml
+[ncipollo/release-action]: https://github.com/ncipollo/release-action
+[ncipollo/release-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/ncipollo-release-action.yml/badge.svg?event=schedule
+[ncipollo/release-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/ncipollo-release-action.yml
+[peter-evans/create-pull-request]: https://github.com/peter-evans/create-pull-request
+[peter-evans/create-pull-request-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/peter-evans-create-pull-request.yml/badge.svg?event=schedule
+[peter-evans/create-pull-request-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/peter-evans-create-pull-request.yml
+[step-security/harden-runner]: https://github.com/step-security/harden-runner
+[step-security/harden-runner-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/step-security-harden-runner.yml/badge.svg?event=schedule
+[step-security/harden-runner-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/step-security-harden-runner.yml
 [JamesIves/github-pages-deploy-action]: https://github.com/JamesIves/github-pages-deploy-action
 [JamesIves/github-pages-deploy-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/jamesives-github-pages-deploy-action.yml/badge.svg?event=schedule
 [JamesIves/github-pages-deploy-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/jamesives-github-pages-deploy-action.yml
@@ -164,19 +172,27 @@ with more information about the project and statuses.
 
 To monitor the reproducibility of GitHub Actions we use GitHub Actions jobs that
 attempt to rebuild a given Action from its source code and see if that changes
-the build output. To see if a change occurred, we perform a byte-by-byte
-comparison as well as a checksums-based comparison. In both cases the committed
-build files are compared against the build output of a fresh build. If either
-doesn't match the Action is considered not reproducible.
+the build output. If it does not this _could_ indicate a supply chain attack or,
+[more likely][hanlon razor], a lack of awareness.
 
-For the checksum approach, SHA512 checksums are computed on the build output
-files stored in the repository and compared to SHA512 checksums computed after
-rebuilding the Action.
+To determine reproducibility we leverage the fact that GitHub Actions require
+all source code necessary to run the (JavaScript-based) Action be present in the
+repository. This usually means the build output is committed to the repository.
+Using this we can perform a fresh build and compare against the committed build
+output. To determine reproducibility we use a bit-by-bit comparison (as well as
+a SHA512 checksums-based comparison as backup). If there is any mismatch the
+Action is considered not reproducible.
 
-We only monitor major versions of Actions. This avoids the need of having to
-commit changes whenever a new Action version is released, but risks incorrect
-results when build details change (more on this in the "Incorrect Results"
-section).
+Each monitor focusses on one Action repository (which may consist of multiple
+Actions) and tests a specific version (e.g., v1.2.3). As versions are not
+necessarily immutable we run every monitor on a daily schedule. (This does not
+catch mutated versions, just ensures the mutated version is still reproducible.)
+
+The version being monitored is tracked in git and is automatically managed using
+[Dependabot].
+
+[dependabot]: https://github.com/dependabot
+[hanlon razor]: https://wikipedia.org/wiki/Hanlon%27s_razor
 
 ### Understanding Statuses
 
@@ -185,34 +201,36 @@ status is `passing` it indicates that Action is currently reproducible and if a
 status is `failing` it indicates that Action is not currently reproducible. A
 `failing` status (notwithstanding false negatives) may occur when
 
-- the build is randomized in some way, or
+- the build is randomized in some way, _or_
+- the build fails due to a compilation error, _or_
 - the build output has not been updated with respect to the latest source code
-  changes.
+  changes, _or_
+- the build output has not been updated with respect to the latest dependency
+  versions.
 
-Actions are monitored on a daily basis, so there is a slight lag in the status
+Note that Actions are tested once a day, so there is a slight lag in the status
 of any given Action.
 
 #### Incorrect Results
 
-A `passing` status could be a *false positive* if:
+A `passing` status could be a _false positive_ if:
 
 - The build process was changed but this has not yet been reflected in this
-  repository (e.g. the files checked for reproducibility are reproducible but
-  new build files are not).
+  repository (e.g., the build command changed and the old command is a no-op).
 
-A `failing` status could be a *false negative* if:
+A `failing` status could be a _false negative_ if:
 
 - The build process has changed but this has not yet been reflected in this
-  repository (e.g. the build output expected by this project is no longer used).
-- The CI job failed for some other reason (e.g. there was an unexpected error in
-  the job setup).
+  repository (e.g., the build command changed and the old command was removed).
+- The CI job failed for some other reason (e.g., there was an unexpected error
+  during the job setup).
 
 ### Action Coverage
 
 This project is geared towards monitoring any JavaScript-based Action with a
-build script at any supported version. Adding a monitor is a manual effort so
-not all available Actions are monitored. If you want to add a new monitor, open
-a [new issue] or follow the instructions from the [Contributing Guidelines].
+build script. Adding a monitor is a manual effort so not all available Actions
+are monitored. If you want to add a new monitor, open a [new issue] or follow
+the instructions from the [Contributing Guidelines].
 
 Any non-JavaScript Action or any JavaScript-based Action without a build step is
 currently considered out of scope. If you have a need for monitoring of such
@@ -222,20 +240,22 @@ Actions please check out and comment on [issue #1].
 [new issue]: https://github.com/ericcornelissen/reproducing-actions/issues/new
 [issue #1]: https://github.com/ericcornelissen/reproducing-actions/issues/1
 
-### Reproducibility
+### Reproducibility Definition
 
-An Action is considered reproducible if the build output files declared in the
-respective job in this project are byte-for-byte reproducible using the target
-project's dependencies and build command modulo Unix vs. Windows-style line
-endings.
+An Action is considered reproducible if any git-tracked files of the repository
+are bit-by-bit reproducible using the target project's dependencies and build
+command, modulo Unix vs. Windows-style line endings.
 
 ## Trophies
 
-The following is a list of unreproducible action versions detected by this
+The following is an overview of unreproducible Action versions detected by this
 project.
 
-- `gitleaks/gitleaks-action`: [v2.3.3 and v2.3.4](https://github.com/gitleaks/gitleaks-action/issues/137#issuecomment-1937801212)
-- `actions-ecosystem/action-add-labels`: [v1.1.3](https://github.com/actions-ecosystem/action-add-labels/issues/186)
+| Action | Version(s) | Cause |
+| ------ | ---------- | ----- |
+| gitleaks/gitleaks-action | v2.3.3...v2.3.4 | [outdated dependencies](https://github.com/gitleaks/gitleaks-action/issues/137#issuecomment-1937801212) |
+| actions-ecosystem/action-add-labels | v1.1.3 | [compiler error](https://github.com/actions-ecosystem/action-add-labels/issues/186) |
+| JS-DevTools/npm-publish | v4.0.0...v4.1.2 | [untracked files](https://github.com/JS-DevTools/npm-publish/pull/258) |
 
 ## Related Work
 

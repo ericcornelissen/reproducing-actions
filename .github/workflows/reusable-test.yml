@@ -1,18 +1,12 @@
 # WARNING:
 # When using this reusable workflow, provide only trusted values to the inputs
-# `build-cmd`, `install-cmd`, and `files`. The design of this workflow requires
-# these to be embedded in scripts, which allows them to be used to execute an
-# arbitrary command (in fact, that is exactly what `build-cmd` and `install-cmd`
-# do).
+# `build-cmd` and `install-cmd`. These inputs are embedded directly into scripts
+# because they are meant to be executed as commands.
 
 name: Check
 on:
   workflow_call:
     inputs:
-      files:
-        required: true
-        type: string
-
       # Setup
       build-cmd:
         required: true
@@ -35,26 +29,65 @@ on:
       repository:
         required: true
         type: string
-      version-ref:
-        required: true
+      working-directory:
+        required: false
         type: string
+        default: ""
 
 permissions: read-all
 
 jobs:
-  build:
+  setup:
+    name: setup
     runs-on: ubuntu-24.04
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          persist-credentials: false
+      - name: Determine version to reproduce
+        id: version
+        env:
+          REPO: ${{ inputs.repository }}
+        run: |
+          WORKFLOW=$(echo "${REPO//\//-}.yml" | tr '[:upper:]' '[:lower:]')
+          VERSION=$( \
+            cat ".github/workflows/$WORKFLOW" \
+              | grep -oE '^\s+- uses: [^@]+@v?[^"]*' \
+              | sed 's/.*@//' \
+          )
+          echo "$VERSION"
+          echo "VERSION=$VERSION" >>"$GITHUB_OUTPUT"
+  build:
+    name: build ${{ needs.setup.outputs.version }}
+    runs-on: ubuntu-24.04
+    needs:
+      - setup
     env:
-      CHECKSUMS_FILE: reproducing-actions-checksums.txt
       BACKUP_DIR: /tmp/reproducing-actions
+      CHECKSUMS_FILE: /tmp/reproducing-actions-checksums.txt
     steps:
       # Repository setup
       - name: Checkout repository
         uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
         with:
           persist-credentials: false
-          ref: ${{ inputs.version-ref }}
+          ref: ${{ needs.setup.outputs.version }}
           repository: ${{ inputs.repository }}
+      - name: Obtain original list of files
+        id: files
+        run: |
+          TMP=$(find . \( -path ./.git \) -prune -o -type f -print)
+          echo "$TMP"
+
+          {
+            echo 'FILES_LINES<<EOF'
+            echo "$TMP"
+            echo 'EOF'
+          } >>"${GITHUB_ENV}"
+          echo "FILES_LIST=$(echo $TMP | tr '\n' ' ')" >>"${GITHUB_ENV}"
 
       # Environment setup
       - name: Install Node.js (from version)
@@ -70,57 +103,66 @@ jobs:
           node-version-file: ${{ inputs.node-version-file }}
           package-manager-cache: false
       - name: Install dependencies
+        working-directory: ${{ inputs.working-directory }}
         run: ${{ inputs.install-cmd }}
 
       # Check reproducibility
       - name: Normalize line endings
         run: |
-          shopt -s globstar
-
-          for file in ${{ inputs.files }}; do
+          while IFS= read -r file; do
             echo "Normalizing line endings in '$file'"
-            sed -i 's/\r$//' "$file"
-          done
-      - name: Store original build files
+            sed -i 's/\r*$//' "$file"
+          done <<<"$FILES_LINES"
+      - name: Store original files
         run: |
-          shopt -s globstar
-
           mkdir --parents "$BACKUP_DIR"
-          cp --parents ${{ inputs.files }} "$BACKUP_DIR"
+          cp --parents $FILES_LIST "$BACKUP_DIR"
       - name: Compute original checksums (legacy)
         run: |
-          shopt -s globstar
-
-          shasum --algorithm 512 ${{ inputs.files }} >$CHECKSUMS_FILE
+          shasum --algorithm 512 $FILES_LIST >$CHECKSUMS_FILE
 
           echo 'Checksums:'
           echo '----------'
           cat $CHECKSUMS_FILE
+
       - name: Rebuild
+        working-directory: ${{ inputs.working-directory }}
         run: ${{ inputs.build-cmd }}
+
       - name: Normalize line endings
         run: |
-          shopt -s globstar
-
-          for file in ${{ inputs.files }}; do
+          while IFS= read -r file; do
             echo "Normalizing line endings in '$file'"
-            sed -i 's/\r$//' "$file"
-          done
-      - name: Check build files
+            sed -i 's/\r*$//' "$file"
+          done <<<"$FILES_LINES"
+      - name: Check byte-by-byte equality
         run: |
-          shopt -s globstar
-
-          for file in ${{ inputs.files }}; do
+          while IFS= read -r file; do
             rebuild=$file
             original=$BACKUP_DIR/$file
             echo "Checking '$rebuild' against '$original'"
             cmp "$rebuild" "$original"
-          done
+          done <<<"$FILES_LINES"
       - name: Check checksums (legacy)
         run: shasum --strict --check $CHECKSUMS_FILE
+      - name: Check for new files
+        run: |
+          git clean -dfX
+
+          BEFORE=$FILES_LINES
+          AFTER=$(find . \( -path ./.git \) -prune -o -type f -print)
+          if [ "$BEFORE" != "$AFTER" ]; then
+            echo '--- FILES BEFORE ---'
+            echo "$BEFORE"
+            echo '--- FILES AFTER ---'
+            echo "$AFTER"
+            exit 1
+          fi
+
       - name: Build files diff
         if: ${{ failure() }}
         run: |
-          shopt -s globstar
-
-          git diff ${{ inputs.files }}
+          while IFS= read -r file; do
+            echo "--- Diff of '$file' ---"
+            git diff "$file"
+          done <<<"$FILES_LINES"
