@@ -84,7 +84,7 @@ jobs:
 
           {
             echo 'lines<<EOF'
-            echo "$TMP"
+            echo -n "$TMP"
             echo 'EOF'
           } >>"${GITHUB_OUTPUT}"
           echo "list=$(echo $TMP | tr '\n' ' ')" >>"${GITHUB_OUTPUT}"
