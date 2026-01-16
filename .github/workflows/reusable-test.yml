@@ -79,7 +79,7 @@ jobs:
           repository: ${{ inputs.repository }}
       - name: Obtain original list of files
         run: |
-          git ls-files | tee "$FILES_LIST_FILE"
+          find . \( -path ./.git \) -prune -o -type f -print | tee "$FILES_LIST_FILE"
 
       # Environment setup
       - name: Install Node.js (from version)
@@ -150,5 +150,5 @@ jobs:
           before=$FILES_LIST_FILE
           after=$FILES_LIST_FILE.2
 
-          git ls-files >$after
+          find . \( -path ./.git \) -prune -o -type f -print >$after
           diff "$after" "$before"
