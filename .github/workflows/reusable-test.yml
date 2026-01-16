@@ -147,6 +147,8 @@ jobs:
           done <"$FILES_LIST_FILE"
       - name: Check for new files
         run: |
+          git clean -dfX
+
           before=$FILES_LIST_FILE
           after=$FILES_LIST_FILE.2
 
