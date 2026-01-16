@@ -138,15 +138,6 @@ jobs:
           done <"$FILES_LIST_FILE"
       - name: Check checksums (legacy)
         run: shasum --strict --check $CHECKSUMS_FILE
-      - name: Check for new files
-        run: |
-          git clean -dfX
-
-          before=$FILES_LIST_FILE
-          after=$FILES_LIST_FILE.2
-
-          find . \( -path ./.git \) -prune -o -type f -print >$after
-          cmp "$after" "$before"
 
       - name: Build files diff
         if: ${{ failure() }}
@@ -155,3 +146,12 @@ jobs:
             echo "--- Diff of '$file' ---"
             git diff "$file"
           done <"$FILES_LIST_FILE"
+      - name: Check for new files
+        run: |
+          git clean -dfX
+
+          before=$FILES_LIST_FILE
+          after=$FILES_LIST_FILE.2
+
+          find . \( -path ./.git \) -prune -o -type f -print >$after
+          diff "$after" "$before"
