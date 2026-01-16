@@ -66,9 +66,9 @@ jobs:
     needs:
       - setup
     env:
-      BACKUP_DIR: /tmp/reproducing-actions/original
-      CHECKSUMS_FILE: /tmp/reproducing-actions/checksums.txt
-      FILES_LIST_FILE: /tmp/reproducing-actions/files.txt
+      BACKUP_DIR: /tmp/reproducing-actions
+      CHECKSUMS_FILE: /tmp/reproducing-actions-checksums.txt
+      FILES_LIST_FILE: /tmp/reproducing-actions-files.txt
     steps:
       # Repository setup
       - name: Checkout repository
@@ -79,8 +79,7 @@ jobs:
           repository: ${{ inputs.repository }}
       - name: Obtain original list of files
         run: |
-          FILES=$(find . \( -path ./.git \) -prune -o -type f -print)
-          echo "$FILES" | tee "$FILES_LIST_FILE"
+          git ls-files | tee "$FILES_LIST_FILE"
 
       # Environment setup
       - name: Install Node.js (from version)
@@ -148,10 +147,8 @@ jobs:
           done <"$FILES_LIST_FILE"
       - name: Check for new files
         run: |
-          git clean -dfX
-
           before=$FILES_LIST_FILE
           after=$FILES_LIST_FILE.2
 
-          find . \( -path ./.git \) -prune -o -type f -print >$after
+          git ls-files >$after
           diff "$after" "$before"
