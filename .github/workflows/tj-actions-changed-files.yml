@@ -1,0 +1,31 @@
+name: tj-actions/changed-files
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-test.yml
+      - .github/workflows/tj-actions-changed-files.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-test.yml
+      - .github/workflows/tj-actions-changed-files.yml
+  schedule:
+    - cron: "40 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  test:
+    uses: ./.github/workflows/reusable-test.yml
+    with:
+      build-cmd:    yarn build
+      install-cmd:  yarn install
+      node-version: 24.x
+      repository:   tj-actions/changed-files
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: tj-actions/changed-files@v47.0.1

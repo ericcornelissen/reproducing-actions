@@ -51,7 +51,11 @@ with more information about the project and statuses.
 | [peter-evans/create-or-update-comment] | [![][peter-evans/create-or-update-comment-badge]][peter-evans/create-or-update-comment-url] |
 | [docker/setup-buildx-action] | [![][docker/setup-buildx-action-badge]][docker/setup-buildx-action-url] |
 | [actions/configure-pages] | [![][actions/configure-pages-badge]][actions/configure-pages-url] |
+| [tj-actions/changed-files] | [![][tj-actions/changed-files-badge]][tj-actions/changed-files-url] |
 <!-- INSERT ROW -->
+[tj-actions/changed-files]: https://github.com/tj-actions/changed-files
+[tj-actions/changed-files-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/tj-actions-changed-files.yml/badge.svg?event=schedule
+[tj-actions/changed-files-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/tj-actions-changed-files.yml
 [actions/configure-pages]: https://github.com/actions/configure-pages
 [actions/configure-pages-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/actions-configure-pages.yml/badge.svg?event=schedule
 [actions/configure-pages-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/actions-configure-pages.yml
