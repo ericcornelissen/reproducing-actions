@@ -52,7 +52,11 @@ with more information about the project and statuses.
 | [docker/setup-buildx-action] | [![][docker/setup-buildx-action-badge]][docker/setup-buildx-action-url] |
 | [actions/configure-pages] | [![][actions/configure-pages-badge]][actions/configure-pages-url] |
 | [tj-actions/changed-files] | [![][tj-actions/changed-files-badge]][tj-actions/changed-files-url] |
+| [mshick/add-pr-comment] | [![][mshick/add-pr-comment-badge]][mshick/add-pr-comment-url] |
 <!-- INSERT ROW -->
+[mshick/add-pr-comment]: https://github.com/mshick/add-pr-comment
+[mshick/add-pr-comment-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/mshick-add-pr-comment.yml/badge.svg?event=schedule
+[mshick/add-pr-comment-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/mshick-add-pr-comment.yml
 [tj-actions/changed-files]: https://github.com/tj-actions/changed-files
 [tj-actions/changed-files-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/tj-actions-changed-files.yml/badge.svg?event=schedule
 [tj-actions/changed-files-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/tj-actions-changed-files.yml

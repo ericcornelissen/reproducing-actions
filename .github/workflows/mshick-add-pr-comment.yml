@@ -1,0 +1,31 @@
+name: mshick/add-pr-comment
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-test.yml
+      - .github/workflows/mshick-add-pr-comment.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-test.yml
+      - .github/workflows/mshick-add-pr-comment.yml
+  schedule:
+    - cron: "41 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  test:
+    uses: ./.github/workflows/reusable-test.yml
+    with:
+      build-cmd:         npm run build
+      install-cmd:       npm clean-install
+      node-version-file: .node-version
+      repository:        mshick/add-pr-comment
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: mshick/add-pr-comment@v2.8.2
