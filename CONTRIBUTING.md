@@ -34,7 +34,7 @@ script. To add a monitor for a new Action follow these steps:
      last added workflow.
 1. Commit with the following message as a template. Fill out the gaps marked by
    `<` and `>`. For the build details provide links to the Action's source code
-   that motivate the values used in the monitor (typically from its CI config).
+   justifying the values used in the monitor (typically from its CI config).
 
    ```txt
    Add monitor for `<owner>/<repo>` at v<X>.<Y>.<Z>
@@ -55,5 +55,11 @@ longer supported. To remove a monitor follow these steps:
 
 1. Remove the respective workflow, or job within, from `.github/workflows/`.
 1. Remove the respective entry from the "Statuses" table in the `README.md`.
-1. Commit with the message `Remove monitor for <owner>/<repo> at v<X>`.
+1. Commit with the following message as a template. Fill out the gaps marked by
+   `<` and `>`.
+
+   ```txt
+   Remove monitor for `<owner>/<repo>`
+   ```
+
 1. Open a Pull Request.
