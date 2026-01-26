@@ -53,7 +53,11 @@ with more information about the project and statuses.
 | [actions/configure-pages] | [![][actions/configure-pages-badge]][actions/configure-pages-url] |
 | [tj-actions/changed-files] | [![][tj-actions/changed-files-badge]][tj-actions/changed-files-url] |
 | [mshick/add-pr-comment] | [![][mshick/add-pr-comment-badge]][mshick/add-pr-comment-url] |
+| [golangci/golangci-lint-action] | [![][golangci/golangci-lint-action-badge]][golangci/golangci-lint-action-url] |
 <!-- INSERT ROW -->
+[golangci/golangci-lint-action]: https://github.com/golangci/golangci-lint-action
+[golangci/golangci-lint-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/golangci-golangci-lint-action.yml/badge.svg?event=schedule
+[golangci/golangci-lint-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/golangci-golangci-lint-action.yml
 [mshick/add-pr-comment]: https://github.com/mshick/add-pr-comment
 [mshick/add-pr-comment-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/mshick-add-pr-comment.yml/badge.svg?event=schedule
 [mshick/add-pr-comment-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/mshick-add-pr-comment.yml
