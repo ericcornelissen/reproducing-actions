@@ -32,10 +32,18 @@ script. To add a monitor for a new Action follow these steps:
      possible values see the [`actions/setup-node`] documentation.
    - Set the `<MIN>` and `<HOUR>` values to the next minute when compared to the
      last added workflow.
-1. Commit with the title `Add monitor for <owner>/<repo> at v<X>` and a message
-   linking to the source code on which the `build-cmd`, `install-cmd`, and
-   `node-version(-file)` values are based. Use permanent URLs, i.e., including
-   the commit hash.
+1. Commit with the following message as a template. Fill out the gaps marked by
+   `<` and `>`. For the build details provide links to the Action's source code
+   that motivate the values used in the monitor (typically from its CI config).
+
+   ```txt
+   Add monitor for `<owner>/<repo>` at v<X>.<Y>.<Z>
+
+   - `build-cmd`: <GITHUB PERMALINK>
+   - `install-cmd`: <GITHUB PERMALINK>
+   - `node-version`: <GITHUB PERMALINK>
+   ```
+
 1. Open a Pull Request.
 
 [`actions/setup-node`]: https://github.com/actions/setup-node
