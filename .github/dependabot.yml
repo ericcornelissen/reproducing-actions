@@ -4,7 +4,6 @@ version: 2
 updates:
   - package-ecosystem: github-actions
     directory: /
-    open-pull-requests-limit: 1
     labels:
       - dependencies
     schedule:
