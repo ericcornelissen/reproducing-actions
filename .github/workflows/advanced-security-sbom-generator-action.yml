@@ -1,0 +1,31 @@
+name: advanced-security/sbom-generator-action
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-test.yml
+      - .github/workflows/advanced-security-sbom-generator-action.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-test.yml
+      - .github/workflows/advanced-security-sbom-generator-action.yml
+  schedule:
+    - cron: "43 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  test:
+    uses: ./.github/workflows/reusable-test.yml
+    with:
+      build-cmd:    npm run prepare
+      install-cmd:  npm clean-install
+      node-version: 16.x
+      repository:   advanced-security/sbom-generator-action
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: advanced-security/sbom-generator-action@v0.0.2
