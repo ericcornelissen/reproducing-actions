@@ -15,9 +15,10 @@ fi
 ## Derived values
 hyphenated=${action//'/'/'-'}
 hyphenated=$(echo "$hyphenated" | tr '[:upper:]' '[:lower:]')
-file=".github/workflows/${hyphenated}.yml"
+filename="${hyphenated}.yml"
+filepath=".github/workflows/${filename}"
 
-if [[ -f ${file} ]]; then
+if [[ -f ${filepath} ]]; then
 	echo "There is already a monitor for ${action}"
 	exit 1
 fi
@@ -25,16 +26,16 @@ fi
 ## Templates
 workflow=$(cat templates/workflow.yml)
 workflow=${workflow//'<ACTION>'/"${action}"}
-workflow=${workflow//'<FILE>'/"${file}"}
+workflow=${workflow//'<FILE>'/"${filepath}"}
 workflow=${workflow//'<VERSION>'/"${version}"}
 
 table=$(cat templates/table.md)
 table=${table//'<ACTION>'/"${action}"}
-table=${table//'<FILE>'/"${file}"}
+table=${table//'<FILE>'/"${filename}"}
 table=${table//'<VERSION>'/"${version}"}
 
 ## Output
-echo "${workflow}" >"${file}"
+echo "${workflow}" >"${filepath}"
 
 readme=$(cat README.md)
 readme=${readme//'<!-- INSERT ROW -->'/"${table}"}
