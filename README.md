@@ -55,7 +55,11 @@ with more information about the project and statuses.
 | [mshick/add-pr-comment] | [![][mshick/add-pr-comment-badge]][mshick/add-pr-comment-url] |
 | [golangci/golangci-lint-action] | [![][golangci/golangci-lint-action-badge]][golangci/golangci-lint-action-url] |
 | [advanced-security/sbom-generator-action] | [![][advanced-security/sbom-generator-action-badge]][advanced-security/sbom-generator-action-url] |
+| [actions/deploy-pages] | [![][actions/deploy-pages-badge]][actions/deploy-pages-url] |
 <!-- INSERT ROW -->
+[actions/deploy-pages]: https://github.com/actions/deploy-pages
+[actions/deploy-pages-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/actions-deploy-pages.yml/badge.svg?event=schedule
+[actions/deploy-pages-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/actions-deploy-pages.yml
 [advanced-security/sbom-generator-action]: https://github.com/advanced-security/sbom-generator-action
 [advanced-security/sbom-generator-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/advanced-security-sbom-generator-action.yml/badge.svg?event=schedule
 [advanced-security/sbom-generator-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/advanced-security-sbom-generator-action.yml
