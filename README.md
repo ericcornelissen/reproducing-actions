@@ -58,8 +58,8 @@ with more information about the project and statuses.
 | [actions/deploy-pages] | [![][actions/deploy-pages-badge]][actions/deploy-pages-url] |
 <!-- INSERT ROW -->
 [actions/deploy-pages]: https://github.com/actions/deploy-pages
-[actions/deploy-pages-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/actions-deploy-pages.yml/badge.svg?event=schedule
-[actions/deploy-pages-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/.github/workflows/actions-deploy-pages.yml
+[actions/deploy-pages-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-deploy-pages.yml/badge.svg?event=schedule
+[actions/deploy-pages-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-deploy-pages.yml
 [advanced-security/sbom-generator-action]: https://github.com/advanced-security/sbom-generator-action
 [advanced-security/sbom-generator-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/advanced-security-sbom-generator-action.yml/badge.svg?event=schedule
 [advanced-security/sbom-generator-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/advanced-security-sbom-generator-action.yml
@@ -85,7 +85,7 @@ with more information about the project and statuses.
 [extractions/setup-crate-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/extractions-setup-crate.yml/badge.svg?event=schedule
 [extractions/setup-crate-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/extractions-setup-crate.yml
 [actions-ecosystem/action-add-labels]: https://github.com/actions-ecosystem/action-add-labels
-[actions-ecosystem/action-add-labels-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-ecosystem-action-add-labels.yml/badge.svg
+[actions-ecosystem/action-add-labels-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-ecosystem-action-add-labels.yml/badge.svg?event=schedule
 [actions-ecosystem/action-add-labels-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-ecosystem-action-add-labels.yml
 [slsa-framework/slsa-github-generator]: https://github.com/slsa-framework/slsa-github-generator
 [slsa-framework/slsa-github-generator-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/slsa-framework-slsa-github-generator.yml/badge.svg?event=schedule
