@@ -1,0 +1,31 @@
+name: githubocto/repo-visualizer
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-test.yml
+      - .github/workflows/githubocto-repo-visualizer.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-test.yml
+      - .github/workflows/githubocto-repo-visualizer.yml
+  schedule:
+    - cron: "45 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  test:
+    uses: ./.github/workflows/reusable-test.yml
+    with:
+      build-cmd:    yarn build
+      install-cmd:  yarn install
+      node-version: 14
+      repository:   githubocto/repo-visualizer
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: githubocto/repo-visualizer@0.9.1
