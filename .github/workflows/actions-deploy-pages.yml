@@ -1,17 +1,17 @@
-name: tj-actions/changed-files
+name: actions/deploy-pages
 on:
   pull_request:
     paths:
       - .github/workflows/reusable-test.yml
-      - .github/workflows/tj-actions-changed-files.yml
+      - .github/workflows/actions-deploy-pages.yml
   push:
     branches:
       - main
     paths:
       - .github/workflows/reusable-test.yml
-      - .github/workflows/tj-actions-changed-files.yml
+      - .github/workflows/actions-deploy-pages.yml
   schedule:
-    - cron: "40 1 * * *"
+    - cron: "44 1 * * *"
   workflow_dispatch: ~
 
 permissions: read-all
@@ -20,12 +20,12 @@ jobs:
   test:
     uses: ./.github/workflows/reusable-test.yml
     with:
-      build-cmd:    yarn build
-      install-cmd:  yarn install
-      node-version: 24.x
-      repository:   tj-actions/changed-files
+      build-cmd:         npm run prepare
+      install-cmd:       npm clean-install
+      node-version-file: .node-version
+      repository:        actions/deploy-pages
   version:
     if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
-      - uses: tj-actions/changed-files@v47.0.2
+      - uses: actions/deploy-pages@v4.0.5
