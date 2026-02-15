@@ -56,7 +56,11 @@ with more information about the project and statuses.
 | [golangci/golangci-lint-action] | [![][golangci/golangci-lint-action-badge]][golangci/golangci-lint-action-url] |
 | [advanced-security/sbom-generator-action] | [![][advanced-security/sbom-generator-action-badge]][advanced-security/sbom-generator-action-url] |
 | [actions/deploy-pages] | [![][actions/deploy-pages-badge]][actions/deploy-pages-url] |
+| [githubocto/repo-visualizer] | [![][githubocto/repo-visualizer-badge]][githubocto/repo-visualizer-url] |
 <!-- INSERT ROW -->
+[githubocto/repo-visualizer]: https://github.com/githubocto/repo-visualizer
+[githubocto/repo-visualizer-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/githubocto-repo-visualizer.yml/badge.svg?event=schedule
+[githubocto/repo-visualizer-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/githubocto-repo-visualizer.yml
 [actions/deploy-pages]: https://github.com/actions/deploy-pages
 [actions/deploy-pages-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-deploy-pages.yml/badge.svg?event=schedule
 [actions/deploy-pages-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-deploy-pages.yml
