@@ -216,6 +216,14 @@ Actions) and tests a specific version (e.g., v1.2.3). As versions are not
 necessarily immutable we run every monitor on a daily schedule. (This does not
 catch mutated versions, just ensures the mutated version is still reproducible.)
 
+> [!NOTE]
+> We are running an experiment with 5 monitors to track the major version ref
+> instead of an exact version. In the GitHub Actions ecosystem it is common to
+> have a branch for the major version pointing to the latest release in that
+> line (for example a branch `v1` pointing to tag `v1.2.3`). The motivation is
+> that it creates fewer Pull Requests and commits that update monitors while
+> still being able to rely on Dependabot to update the version.
+
 The version being monitored is tracked in git and is automatically managed using
 [Dependabot].
 
