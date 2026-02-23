@@ -1,0 +1,31 @@
+name: SpoonLabs/sorald-buildbreaker
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-test.yml
+      - .github/workflows/spoonlabs-sorald-buildbreaker.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-test.yml
+      - .github/workflows/spoonlabs-sorald-buildbreaker.yml
+  schedule:
+    - cron: "46 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  test:
+    uses: ./.github/workflows/reusable-test.yml
+    with:
+      build-cmd:    npm run build
+      install-cmd:  npm install
+      node-version: 15
+      repository:   SpoonLabs/sorald-buildbreaker
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: SpoonLabs/sorald-buildbreaker@19b4488feba69494f4ca511b22e61d86dae02a5d
