@@ -57,7 +57,11 @@ with more information about the project and statuses.
 | [advanced-security/sbom-generator-action] | [![][advanced-security/sbom-generator-action-badge]][advanced-security/sbom-generator-action-url] |
 | [actions/deploy-pages] | [![][actions/deploy-pages-badge]][actions/deploy-pages-url] |
 | [githubocto/repo-visualizer] | [![][githubocto/repo-visualizer-badge]][githubocto/repo-visualizer-url] |
+| [SpoonLabs/sorald-buildbreaker] | [![][SpoonLabs/sorald-buildbreaker-badge]][SpoonLabs/sorald-buildbreaker-url] |
 <!-- INSERT ROW -->
+[SpoonLabs/sorald-buildbreaker]: https://github.com/SpoonLabs/sorald-buildbreaker
+[SpoonLabs/sorald-buildbreaker-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/spoonlabs-sorald-buildbreaker.yml/badge.svg?event=schedule
+[SpoonLabs/sorald-buildbreaker-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/spoonlabs-sorald-buildbreaker.yml
 [githubocto/repo-visualizer]: https://github.com/githubocto/repo-visualizer
 [githubocto/repo-visualizer-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/githubocto-repo-visualizer.yml/badge.svg?event=schedule
 [githubocto/repo-visualizer-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/githubocto-repo-visualizer.yml
