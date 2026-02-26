@@ -30,7 +30,6 @@ with more information about the project and statuses.
 | [docker/build-push-action] | [![][docker/build-push-action-badge]][docker/build-push-action-url] |
 | [github/codeql-action] | [![][github/codeql-action-badge]][github/codeql-action-url] |
 | [dorny/paths-filter] | [![][dorny/paths-filter-badge]][dorny/paths-filter-url] |
-| [actions/attest-build-provenance] | [![][actions/attest-build-provenance-badge]][actions/attest-build-provenance-url] |
 | [JS-DevTools/npm-publish] | [![][JS-DevTools/npm-publish-badge]][JS-DevTools/npm-publish-url] |
 | [fastify/github-action-merge-dependabot] | [![][fastify/github-action-merge-dependabot-badge]][fastify/github-action-merge-dependabot-url] |
 | [googleapis/release-please-action] | [![][googleapis/release-please-action-badge]][googleapis/release-please-action-url] |
@@ -140,9 +139,6 @@ with more information about the project and statuses.
 [JS-DevTools/npm-publish]: https://github.com/JS-DevTools/npm-publish
 [JS-DevTools/npm-publish-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/js-devtools-npm-publish.yml/badge.svg?event=schedule
 [JS-DevTools/npm-publish-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/js-devtools-npm-publish.yml
-[actions/attest-build-provenance]: https://github.com/actions/attest-build-provenance
-[actions/attest-build-provenance-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-attest-build-provenance.yml/badge.svg?event=schedule
-[actions/attest-build-provenance-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/actions-attest-build-provenance.yml
 [dorny/paths-filter]: https://github.com/dorny/paths-filter
 [dorny/paths-filter-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/dorny-paths-filter.yml/badge.svg?event=schedule
 [dorny/paths-filter-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/dorny-paths-filter.yml
