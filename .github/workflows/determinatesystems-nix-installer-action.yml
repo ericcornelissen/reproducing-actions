@@ -1,0 +1,36 @@
+name: DeterminateSystems/nix-installer-action
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-test.yml
+      - .github/workflows/determinatesystems-nix-installer-action.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-test.yml
+      - .github/workflows/determinatesystems-nix-installer-action.yml
+  schedule:
+    - cron: "47 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  test:
+    uses: ./.github/workflows/reusable-test.yml
+    with:
+      build-cmd:    |
+        pnpm run build
+        pnpm run package
+      install-cmd:  |
+        corepack enable
+        corepack prepare pnpm@8.15.7 --activate
+        corepack pnpm install
+      node-version: 24.13.0
+      repository:   DeterminateSystems/nix-installer-action
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: DeterminateSystems/nix-installer-action@v21

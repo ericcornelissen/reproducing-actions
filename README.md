@@ -57,7 +57,11 @@ with more information about the project and statuses.
 | [actions/deploy-pages] | [![][actions/deploy-pages-badge]][actions/deploy-pages-url] |
 | [githubocto/repo-visualizer] | [![][githubocto/repo-visualizer-badge]][githubocto/repo-visualizer-url] |
 | [SpoonLabs/sorald-buildbreaker] | [![][SpoonLabs/sorald-buildbreaker-badge]][SpoonLabs/sorald-buildbreaker-url] |
+| [DeterminateSystems/nix-installer-action] | [![][DeterminateSystems/nix-installer-action-badge]][DeterminateSystems/nix-installer-action-url] |
 <!-- INSERT ROW -->
+[DeterminateSystems/nix-installer-action]: https://github.com/DeterminateSystems/nix-installer-action
+[DeterminateSystems/nix-installer-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/determinatesystems-nix-installer-action.yml/badge.svg?event=schedule
+[DeterminateSystems/nix-installer-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/determinatesystems-nix-installer-action.yml
 [SpoonLabs/sorald-buildbreaker]: https://github.com/SpoonLabs/sorald-buildbreaker
 [SpoonLabs/sorald-buildbreaker-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/spoonlabs-sorald-buildbreaker.yml/badge.svg?event=schedule
 [SpoonLabs/sorald-buildbreaker-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/spoonlabs-sorald-buildbreaker.yml
