@@ -58,7 +58,11 @@ with more information about the project and statuses.
 | [githubocto/repo-visualizer] | [![][githubocto/repo-visualizer-badge]][githubocto/repo-visualizer-url] |
 | [SpoonLabs/sorald-buildbreaker] | [![][SpoonLabs/sorald-buildbreaker-badge]][SpoonLabs/sorald-buildbreaker-url] |
 | [DeterminateSystems/nix-installer-action] | [![][DeterminateSystems/nix-installer-action-badge]][DeterminateSystems/nix-installer-action-url] |
+| [softprops/action-gh-release] | [![][softprops/action-gh-release-badge]][softprops/action-gh-release-url] |
 <!-- INSERT ROW -->
+[softprops/action-gh-release]: https://github.com/softprops/action-gh-release
+[softprops/action-gh-release-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/softprops-action-gh-release.yml/badge.svg?event=schedule
+[softprops/action-gh-release-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/softprops-action-gh-release.yml
 [DeterminateSystems/nix-installer-action]: https://github.com/DeterminateSystems/nix-installer-action
 [DeterminateSystems/nix-installer-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/determinatesystems-nix-installer-action.yml/badge.svg?event=schedule
 [DeterminateSystems/nix-installer-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/determinatesystems-nix-installer-action.yml
