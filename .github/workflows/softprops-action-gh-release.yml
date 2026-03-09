@@ -1,0 +1,31 @@
+name: softprops/action-gh-release
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-test.yml
+      - .github/workflows/softprops-action-gh-release.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-test.yml
+      - .github/workflows/softprops-action-gh-release.yml
+  schedule:
+    - cron: "48 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  test:
+    uses: ./.github/workflows/reusable-test.yml
+    with:
+      build-cmd:         npm run build
+      install-cmd:       npm clean-install
+      node-version-file: .tool-versions
+      repository:        softprops/action-gh-release
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: softprops/action-gh-release@v2.5.0
