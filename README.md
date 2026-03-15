@@ -59,6 +59,7 @@ with more information about the project and statuses.
 | [SpoonLabs/sorald-buildbreaker] | [![][SpoonLabs/sorald-buildbreaker-badge]][SpoonLabs/sorald-buildbreaker-url] |
 | [DeterminateSystems/nix-installer-action] | [![][DeterminateSystems/nix-installer-action-badge]][DeterminateSystems/nix-installer-action-url] |
 | [softprops/action-gh-release] | [![][softprops/action-gh-release-badge]][softprops/action-gh-release-url] |
+| [stepci/stepci] | [![][stepci/stepci-badge]][stepci/stepci-url] |
 <!-- INSERT ROW -->
 [stepci/stepci]: https://github.com/stepci/stepci
 [stepci/stepci-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/stepci-stepci.yml/badge.svg?event=schedule
@@ -214,13 +215,19 @@ attempt to rebuild a given Action from its source code and see if that changes
 the build output. If it does not this _could_ indicate a supply chain attack or,
 [more likely][hanlon razor], a lack of awareness.
 
-To determine reproducibility we leverage the fact that GitHub Actions require
-all source code necessary to run the (JavaScript-based) Action be present in the
-repository. This usually means the build output is committed to the repository.
-Using this we can perform a fresh build and compare against the committed build
-output. To determine reproducibility we use a bit-by-bit comparison (as well as
-a SHA512 checksums-based comparison as backup). If there is any mismatch the
-Action is considered not reproducible.
+For JavaScript-based Actions we leverage the fact that GitHub Actions require
+all source code necessary to run the Action be present in the repository. This
+usually means the build output is committed to the repository. Using this we can
+perform a fresh build and compare against the committed build output. To
+determine reproducibility we use a bit-by-bit comparison (as well as a SHA512
+checksums-based comparison as backup). If there is any mismatch the Action is
+considered not reproducible.
+
+For Docker-based Actions we pull the published image and rebuild it from the
+source Dockerfile, then compare the two images using [diffoci]. If there is any
+semantic difference the Action is considered not reproducible.
+
+[diffoci]: https://github.com/reproducible-containers/diffoci
 
 Each monitor focusses on one Action repository (which may consist of multiple
 Actions) and tests a specific version (e.g., v1.2.3). As versions are not
@@ -274,14 +281,14 @@ A `failing` status could be a _false negative_ if:
 
 ### Action Coverage
 
-This project is geared towards monitoring any JavaScript-based Action with a
-build script. Adding a monitor is a manual effort so not all available Actions
-are monitored. If you want to add a new monitor, open a [new issue] or follow
-the instructions from the [Contributing Guidelines].
+This project is geared towards monitoring JavaScript-based Actions with a build
+script and Docker-based Actions. Adding a monitor is a manual effort so not all
+available Actions are monitored. If you want to add a new monitor, open a
+[new issue] or follow the instructions from the [Contributing Guidelines].
 
-Any non-JavaScript Action or any JavaScript-based Action without a build step is
-currently considered out of scope. If you have a need for monitoring of such
-Actions please check out and comment on [issue #1].
+Any JavaScript-based Action without a build step is currently considered out of
+scope. If you have a need for monitoring of such Actions please check out and
+comment on [issue #1].
 
 [contributing guidelines]: ./CONTRIBUTING.md
 [new issue]: https://github.com/ericcornelissen/reproducing-actions/issues/new
@@ -289,9 +296,13 @@ Actions please check out and comment on [issue #1].
 
 ### Reproducibility Definition
 
-An Action is considered reproducible if any git-tracked files of the repository
-are bit-by-bit reproducible using the target project's dependencies and build
-command, modulo Unix vs. Windows-style line endings.
+A JavaScript-based Action is considered reproducible if any git-tracked files of
+the repository are bit-by-bit reproducible using the target project's
+dependencies and build command, modulo Unix vs. Windows-style line endings.
+
+A Docker-based Action is considered reproducible if the image built from its
+source Dockerfile is semantically equivalent to the published image, as
+determined by [diffoci].
 
 ## Trophies
 
