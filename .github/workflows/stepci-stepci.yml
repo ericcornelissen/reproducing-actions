@@ -20,7 +20,11 @@ jobs:
   build:
     uses: ./.github/workflows/reusable-docker-test.yml
     with:
-      dockerfile:      Dockerfile.action
-      repository:      stepci/stepci
-      version-ref:     2.8.2
-      reference-image: ghcr.io/stepci/stepci:2.8.2
+      dockerfile: Dockerfile.action
+      image:      ghcr.io/stepci/stepci
+      repository: stepci/stepci
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: stepci/stepci@2.8.2
