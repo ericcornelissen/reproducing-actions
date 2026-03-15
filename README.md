@@ -60,6 +60,9 @@ with more information about the project and statuses.
 | [DeterminateSystems/nix-installer-action] | [![][DeterminateSystems/nix-installer-action-badge]][DeterminateSystems/nix-installer-action-url] |
 | [softprops/action-gh-release] | [![][softprops/action-gh-release-badge]][softprops/action-gh-release-url] |
 <!-- INSERT ROW -->
+[stepci/stepci]: https://github.com/stepci/stepci
+[stepci/stepci-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/stepci-stepci.yml/badge.svg?event=schedule
+[stepci/stepci-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/stepci-stepci.yml
 [softprops/action-gh-release]: https://github.com/softprops/action-gh-release
 [softprops/action-gh-release-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/softprops-action-gh-release.yml/badge.svg?event=schedule
 [softprops/action-gh-release-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/softprops-action-gh-release.yml
