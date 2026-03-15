@@ -65,9 +65,9 @@ jobs:
       # Environment setup
       - name: Install diffoci
         env:
-          DIFFOCI_VERSION: v0.1.6
+          DIFFOCI_VERSION: v0.1.8
         run: |
-          curl -L https://github.com/reproducible-containers/diffoci/releases/download/${DIFFOCI_VERSION}/diffoci-${DIFFOCI_VERSION}.linux-amd64 -o /usr/local/bin/diffoci
+          gh release download --repo reproducible-containers/diffoci "${DIFFOCI_VERSION}" --pattern "*linux-amd64" --output /usr/local/bin/diffoci
           chmod +x /usr/local/bin/diffoci
 
       # Original image
