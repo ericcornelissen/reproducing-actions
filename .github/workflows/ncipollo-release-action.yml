@@ -20,8 +20,11 @@ jobs:
   test:
     uses: ./.github/workflows/reusable-test.yml
     with:
-      build-cmd:    yarn build
-      install-cmd:  yarn install
+      build-cmd:    pnpm build
+      install-cmd:  |
+        corepack enable
+        corepack prepare pnpm@latest --activate
+        corepack pnpm install
       node-version: 20
       repository:   ncipollo/release-action
   version:
