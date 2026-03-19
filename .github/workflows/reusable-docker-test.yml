@@ -66,6 +66,7 @@ jobs:
       - name: Install diffoci
         env:
           DIFFOCI_VERSION: v0.1.8
+          GH_TOKEN: ${{ github.token }}
         run: |
           gh release download --repo reproducible-containers/diffoci "${DIFFOCI_VERSION}" --pattern "*linux-amd64" --output /usr/local/bin/diffoci
           chmod +x /usr/local/bin/diffoci
