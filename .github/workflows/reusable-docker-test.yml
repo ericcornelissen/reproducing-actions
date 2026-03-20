@@ -43,6 +43,8 @@ jobs:
     runs-on: ubuntu-24.04
     needs:
       - setup
+    env:
+      DOCKERFILE: ${{ inputs.dockerfile }}
     steps:
       # Repository setup
       - name: Checkout repository
@@ -65,14 +67,10 @@ jobs:
 
       # Build
       - name: Build image (1)
-        env:
-          DOCKERFILE: ${{ inputs.dockerfile }}
         run: |
           docker build --no-cache --file "$DOCKERFILE" --tag test1 .
 
       - name: Build image (2)
-        env:
-          DOCKERFILE: ${{ inputs.dockerfile }}
         run: |
           docker build --no-cache --file "$DOCKERFILE" --tag test2 .
 
