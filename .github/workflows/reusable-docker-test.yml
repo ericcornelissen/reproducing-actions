@@ -2,11 +2,6 @@
 on:
   workflow_call:
     inputs:
-      # Image coordinates
-      image:
-        required: true
-        type: string
-
       # Setup
       dockerfile:
         required: true
@@ -60,29 +55,28 @@ jobs:
       # Environment setup
       - name: Install diffoci
         env:
+          CHECKSUM: 01e6b50c1568c9d61c758ef6da81869f2c26c852698d73dca961b3617effe949
           DIFFOCI_VERSION: v0.1.8
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release download --repo reproducible-containers/diffoci "${DIFFOCI_VERSION}" --pattern "*linux-amd64" --output /usr/local/bin/diffoci
+          echo "$CHECKSUM  /usr/local/bin/diffoci" | sha256sum -c -
           chmod +x /usr/local/bin/diffoci
 
-      # Original image
-      - name: Pull reference image
-        env:
-          IMAGE: ${{ inputs.image }}:${{ needs.setup.outputs.version }}
-        run: |
-          docker pull "$IMAGE"
-
-      # Rebuild
-      - name: Build image
+      # Build
+      - name: Build image (1)
         env:
           DOCKERFILE: ${{ inputs.dockerfile }}
         run: |
-          docker build --no-cache --file "$DOCKERFILE" --tag test .
+          docker build --no-cache --file "$DOCKERFILE" --tag test1 .
+
+      - name: Build image (2)
+        env:
+          DOCKERFILE: ${{ inputs.dockerfile }}
+        run: |
+          docker build --no-cache --file "$DOCKERFILE" --tag test2 .
 
       # Check reproducibility
       - name: Diff images
-        env:
-          IMAGE_A: ${{ inputs.image }}:${{ needs.setup.outputs.version }}
         run: |
-          diffoci diff --semantic "$IMAGE_A" docker://test
+          diffoci diff --semantic docker://test1 docker://test2
