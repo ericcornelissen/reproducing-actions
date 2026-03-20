@@ -47,7 +47,6 @@ jobs:
           )
           echo "$VERSION"
           echo "version=$VERSION" >>"$GITHUB_OUTPUT"
-
   build:
     name: Reproducible build
     runs-on: ubuntu-24.04
