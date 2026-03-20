@@ -223,9 +223,11 @@ determine reproducibility we use a bit-by-bit comparison (as well as a SHA512
 checksums-based comparison as backup). If there is any mismatch the Action is
 considered not reproducible.
 
-For Docker-based Actions we pull the published image and rebuild it from the
-source Dockerfile, then compare the two images using [diffoci]. If there is any
-semantic difference the Action is considered not reproducible.
+For Docker-based Actions we build the image from the source Dockerfile twice and
+compare the two images using [diffoci]. We build twice rather than comparing
+against the published image because GitHub Actions builds the Docker image at
+runtime, so the published image is irrelevant to users of the action. If there
+is any semantic difference the Action is considered not reproducible.
 
 [diffoci]: https://github.com/reproducible-containers/diffoci
 
@@ -301,8 +303,8 @@ the repository are bit-by-bit reproducible using the target project's
 dependencies and build command, modulo Unix vs. Windows-style line endings.
 
 A Docker-based Action is considered reproducible if the image built from its
-source Dockerfile is semantically equivalent to the published image, as
-determined by [diffoci].
+source Dockerfile is semantically equivalent when built twice, as determined by
+[diffoci].
 
 ## Trophies
 
