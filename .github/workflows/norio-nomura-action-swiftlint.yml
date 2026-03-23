@@ -1,0 +1,29 @@
+name: norio-nomura/action-swiftlint
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-docker-test.yml
+      - .github/workflows/norio-nomura-action-swiftlint.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-docker-test.yml
+      - .github/workflows/norio-nomura-action-swiftlint.yml
+  schedule:
+    - cron: "26 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  test:
+    uses: ./.github/workflows/reusable-docker-test.yml
+    with:
+      dockerfile: Dockerfile
+      repository: norio-nomura/action-swiftlint
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: norio-nomura/action-swiftlint@v3.2.1
