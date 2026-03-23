@@ -57,7 +57,7 @@ jobs:
       # Environment setup
       - name: Install diffoci
         env:
-          CHECKSUM: 11e6b50c1568c9d61c758ef6da81869f2c26c852698d73dca961b3617effe949
+          CHECKSUM: 01e6b50c1568c9d61c758ef6da81869f2c26c852698d73dca961b3617effe949
           DIFFOCI_VERSION: v0.1.8
           GH_TOKEN: ${{ github.token }}
         run: |
