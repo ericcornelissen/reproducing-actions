@@ -1,3 +1,4 @@
+name: Check
 on:
   workflow_call:
     inputs:
@@ -38,7 +39,7 @@ jobs:
           echo "$VERSION"
           echo "version=$VERSION" >>"$GITHUB_OUTPUT"
   build:
-    name: Reproducible build
+    name: build ${{ needs.setup.outputs.version }}
     runs-on: ubuntu-24.04
     needs:
       - setup
@@ -64,16 +65,10 @@ jobs:
           echo "$CHECKSUM  /usr/local/bin/diffoci" | sha256sum -c -
           chmod +x /usr/local/bin/diffoci
 
-      # Build
-      - name: Build image (1)
-        run: |
-          docker build --no-cache --file "$DOCKERFILE" --tag test1 .
-
-      - name: Build image (2)
-        run: |
-          docker build --no-cache --file "$DOCKERFILE" --tag test2 .
-
       # Check reproducibility
+      - name: Build 1
+        run: docker build --no-cache --file "$DOCKERFILE" --tag test1 .
+      - name: Build 2
+        run: docker build --no-cache --file "$DOCKERFILE" --tag test2 .
       - name: Diff images
-        run: |
-          diffoci diff --semantic docker://test1 docker://test2
+        run: diffoci diff --semantic docker://test1 docker://test2

@@ -227,7 +227,8 @@ For Docker-based Actions we build the image from the source Dockerfile twice and
 compare the two images using [diffoci]. We build twice rather than comparing
 against the published image because GitHub Actions builds the Docker image at
 runtime, so the published image is irrelevant to users of the action. If there
-is any semantic difference the Action is considered not reproducible.
+is any semantic difference (as determined by `diffoci`) the Action is considered
+not reproducible.
 
 [diffoci]: https://github.com/reproducible-containers/diffoci
 
@@ -288,9 +289,9 @@ script and Docker-based Actions. Adding a monitor is a manual effort so not all
 available Actions are monitored. If you want to add a new monitor, open a
 [new issue] or follow the instructions from the [Contributing Guidelines].
 
-Any JavaScript-based Action without a build step is currently considered out of
-scope. If you have a need for monitoring of such Actions please check out and
-comment on [issue #1].
+Any non-JavaScript/Dockerilfe Action or any JavaScript-based Action without a
+build step is currently considered out of scope. If you have a need for
+monitoring of such Actions please check out and comment on [issue #1].
 
 [contributing guidelines]: ./CONTRIBUTING.md
 [new issue]: https://github.com/ericcornelissen/reproducing-actions/issues/new
