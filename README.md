@@ -62,12 +62,12 @@ with more information about the project and statuses.
 | [stepci/stepci] | [![][stepci/stepci-badge]][stepci/stepci-url] |
 | [norio-nomura/action-swiftlint] | [![][norio-nomura/action-swiftlint-badge]][norio-nomura/action-swiftlint-url] |
 <!-- INSERT ROW -->
-[stepci/stepci]: https://github.com/stepci/stepci
-[stepci/stepci-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/stepci-stepci.yml/badge.svg?event=schedule
-[stepci/stepci-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/stepci-stepci.yml
 [norio-nomura/action-swiftlint]: https://github.com/norio-nomura/action-swiftlint
 [norio-nomura/action-swiftlint-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/norio-nomura-action-swiftlint.yml/badge.svg?event=schedule
 [norio-nomura/action-swiftlint-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/norio-nomura-action-swiftlint.yml
+[stepci/stepci]: https://github.com/stepci/stepci
+[stepci/stepci-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/stepci-stepci.yml/badge.svg?event=schedule
+[stepci/stepci-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/stepci-stepci.yml
 [softprops/action-gh-release]: https://github.com/softprops/action-gh-release
 [softprops/action-gh-release-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/softprops-action-gh-release.yml/badge.svg?event=schedule
 [softprops/action-gh-release-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/softprops-action-gh-release.yml
@@ -321,6 +321,7 @@ project.
 | gitleaks/gitleaks-action | v2.3.3...v2.3.4 | [outdated dependencies](https://github.com/gitleaks/gitleaks-action/issues/137#issuecomment-1937801212) |
 | actions-ecosystem/action-add-labels | v1.1.3 | [compiler error](https://github.com/actions-ecosystem/action-add-labels/issues/186) |
 | JS-DevTools/npm-publish | v4.0.0...v4.1.2 | [untracked files](https://github.com/JS-DevTools/npm-publish/pull/258) |
+| stepci/stepci | ?...v2.8.2 | ??? |
 
 ## Related Work
 
