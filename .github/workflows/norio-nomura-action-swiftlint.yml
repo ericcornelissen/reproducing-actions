@@ -11,7 +11,7 @@ on:
       - .github/workflows/reusable-docker-test.yml
       - .github/workflows/norio-nomura-action-swiftlint.yml
   schedule:
-    - cron: "26 1 * * *"
+    - cron: "50 1 * * *"
   workflow_dispatch: ~
 
 permissions: read-all
