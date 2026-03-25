@@ -3,9 +3,6 @@
 config-variables: []
 
 paths:
-  .github/workflows/reusable-test*.yml:
-    ignore:
-      - 'shellcheck reported issue in this script: SC2086:.+'
   .github/workflows/*.yml:
     ignore:
       - 'constant expression "false" in condition.+'
