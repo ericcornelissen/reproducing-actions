@@ -115,7 +115,7 @@ jobs:
 
           echo 'Checksums:'
           echo '----------'
-          cat $CHECKSUMS_FILE
+          cat "$CHECKSUMS_FILE"
 
       - name: Rebuild
         working-directory: ${{ inputs.working-directory }}
@@ -136,7 +136,7 @@ jobs:
             cmp "$rebuild" "$original"
           done <"$FILES_LIST_FILE"
       - name: Check checksums (legacy)
-        run: shasum --strict --check $CHECKSUMS_FILE
+        run: shasum --strict --check "$CHECKSUMS_FILE"
 
       - name: Build files diff
         if: ${{ failure() }}
@@ -152,5 +152,5 @@ jobs:
           before=$FILES_LIST_FILE
           after=$FILES_LIST_FILE.2
 
-          find . \( -path ./.git \) -prune -o -type f -print >$after
+          find . \( -path ./.git \) -prune -o -type f -print >"$after"
           diff "$after" "$before"
