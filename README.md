@@ -59,7 +59,15 @@ with more information about the project and statuses.
 | [SpoonLabs/sorald-buildbreaker] | [![][SpoonLabs/sorald-buildbreaker-badge]][SpoonLabs/sorald-buildbreaker-url] |
 | [DeterminateSystems/nix-installer-action] | [![][DeterminateSystems/nix-installer-action-badge]][DeterminateSystems/nix-installer-action-url] |
 | [softprops/action-gh-release] | [![][softprops/action-gh-release-badge]][softprops/action-gh-release-url] |
+| [stepci/stepci] | [![][stepci/stepci-badge]][stepci/stepci-url] |
+| [norio-nomura/action-swiftlint] | [![][norio-nomura/action-swiftlint-badge]][norio-nomura/action-swiftlint-url] |
 <!-- INSERT ROW -->
+[norio-nomura/action-swiftlint]: https://github.com/norio-nomura/action-swiftlint
+[norio-nomura/action-swiftlint-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/norio-nomura-action-swiftlint.yml/badge.svg?event=schedule
+[norio-nomura/action-swiftlint-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/norio-nomura-action-swiftlint.yml
+[stepci/stepci]: https://github.com/stepci/stepci
+[stepci/stepci-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/stepci-stepci.yml/badge.svg?event=schedule
+[stepci/stepci-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/stepci-stepci.yml
 [softprops/action-gh-release]: https://github.com/softprops/action-gh-release
 [softprops/action-gh-release-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/softprops-action-gh-release.yml/badge.svg?event=schedule
 [softprops/action-gh-release-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/softprops-action-gh-release.yml
@@ -211,13 +219,22 @@ attempt to rebuild a given Action from its source code and see if that changes
 the build output. If it does not this _could_ indicate a supply chain attack or,
 [more likely][hanlon razor], a lack of awareness.
 
-To determine reproducibility we leverage the fact that GitHub Actions require
-all source code necessary to run the (JavaScript-based) Action be present in the
-repository. This usually means the build output is committed to the repository.
-Using this we can perform a fresh build and compare against the committed build
-output. To determine reproducibility we use a bit-by-bit comparison (as well as
-a SHA512 checksums-based comparison as backup). If there is any mismatch the
-Action is considered not reproducible.
+For JavaScript-based Actions we leverage the fact that GitHub Actions require
+all source code necessary to run the Action be present in the repository. This
+usually means the build output is committed to the repository. Using this we can
+perform a fresh build and compare against the committed build output. To
+determine reproducibility we use a bit-by-bit comparison (as well as a SHA512
+checksums-based comparison as backup). If there is any mismatch the Action is
+considered not reproducible.
+
+For Docker-based Actions we build the image from the source Dockerfile twice and
+compare the two images using [diffoci]. We build twice rather than comparing
+against the published image because GitHub Actions builds the Docker image at
+runtime, so the published image is irrelevant to users of the action. If there
+is any semantic difference (as determined by `diffoci`) the Action is considered
+not reproducible.
+
+[diffoci]: https://github.com/reproducible-containers/diffoci
 
 Each monitor focusses on one Action repository (which may consist of multiple
 Actions) and tests a specific version (e.g., v1.2.3). As versions are not
@@ -271,14 +288,14 @@ A `failing` status could be a _false negative_ if:
 
 ### Action Coverage
 
-This project is geared towards monitoring any JavaScript-based Action with a
-build script. Adding a monitor is a manual effort so not all available Actions
-are monitored. If you want to add a new monitor, open a [new issue] or follow
-the instructions from the [Contributing Guidelines].
+This project is geared towards monitoring JavaScript-based Actions with a build
+script and Docker-based Actions. Adding a monitor is a manual effort so not all
+available Actions are monitored. If you want to add a new monitor, open a
+[new issue] or follow the instructions from the [Contributing Guidelines].
 
-Any non-JavaScript Action or any JavaScript-based Action without a build step is
-currently considered out of scope. If you have a need for monitoring of such
-Actions please check out and comment on [issue #1].
+Any non-JavaScript/Dockerilfe Action or any JavaScript-based Action without a
+build step is currently considered out of scope. If you have a need for
+monitoring of such Actions please check out and comment on [issue #1].
 
 [contributing guidelines]: ./CONTRIBUTING.md
 [new issue]: https://github.com/ericcornelissen/reproducing-actions/issues/new
@@ -286,9 +303,13 @@ Actions please check out and comment on [issue #1].
 
 ### Reproducibility Definition
 
-An Action is considered reproducible if any git-tracked files of the repository
-are bit-by-bit reproducible using the target project's dependencies and build
-command, modulo Unix vs. Windows-style line endings.
+A JavaScript-based Action is considered reproducible if any git-tracked files of
+the repository are bit-by-bit reproducible using the target project's
+dependencies and build command, modulo Unix vs. Windows-style line endings.
+
+A Docker-based Action is considered reproducible if the image built from its
+source Dockerfile is semantically equivalent when built twice, as determined by
+[diffoci].
 
 ## Trophies
 
@@ -300,6 +321,7 @@ project.
 | gitleaks/gitleaks-action | v2.3.3...v2.3.4 | [outdated dependencies](https://github.com/gitleaks/gitleaks-action/issues/137#issuecomment-1937801212) |
 | actions-ecosystem/action-add-labels | v1.1.3 | [compiler error](https://github.com/actions-ecosystem/action-add-labels/issues/186) |
 | JS-DevTools/npm-publish | v4.0.0...v4.1.2 | [untracked files](https://github.com/JS-DevTools/npm-publish/pull/258) |
+| stepci/stepci | ?...v2.8.2 | [Node compile/npm cache](https://github.com/stepci/stepci/issues/260) |
 
 ## Related Work
 

@@ -1,0 +1,74 @@
+name: Check
+on:
+  workflow_call:
+    inputs:
+      # Setup
+      dockerfile:
+        required: true
+        type: string
+
+      # Target
+      repository:
+        required: true
+        type: string
+
+permissions: read-all
+
+jobs:
+  setup:
+    name: setup
+    runs-on: ubuntu-24.04
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+      - name: Determine version to reproduce
+        id: version
+        env:
+          REPO: ${{ inputs.repository }}
+        run: |
+          WORKFLOW=$(echo "${REPO//\//-}.yml" | tr '[:upper:]' '[:lower:]')
+          VERSION=$( \
+            cat ".github/workflows/$WORKFLOW" \
+              | grep -oE '^\s+- uses: [^@]+@v?[^"]*' \
+              | sed 's/.*@//' \
+          )
+          echo "$VERSION"
+          echo "version=$VERSION" >>"$GITHUB_OUTPUT"
+  build:
+    name: build ${{ needs.setup.outputs.version }}
+    runs-on: ubuntu-24.04
+    needs:
+      - setup
+    env:
+      DOCKERFILE: ${{ inputs.dockerfile }}
+    steps:
+      # Repository setup
+      - name: Checkout repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+          ref: ${{ needs.setup.outputs.version }}
+          repository: ${{ inputs.repository }}
+
+      # Environment setup
+      - name: Install diffoci
+        env:
+          CHECKSUM: 01e6b50c1568c9d61c758ef6da81869f2c26c852698d73dca961b3617effe949
+          DIFFOCI_VERSION: v0.1.8
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release download --repo reproducible-containers/diffoci "${DIFFOCI_VERSION}" --pattern "*linux-amd64" --output /usr/local/bin/diffoci
+          echo "$CHECKSUM  /usr/local/bin/diffoci" | sha256sum -c -
+          chmod +x /usr/local/bin/diffoci
+
+      # Check reproducibility
+      - name: Build 1
+        run: docker build --no-cache --file "$DOCKERFILE" --tag test1 .
+      - name: Build 2
+        run: docker build --no-cache --file "$DOCKERFILE" --tag test2 .
+      - name: Diff images
+        run: diffoci diff --semantic docker://test1 docker://test2

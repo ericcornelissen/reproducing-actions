@@ -1,0 +1,29 @@
+name: stepci/stepci
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-docker-test.yml
+      - .github/workflows/stepci-stepci.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-docker-test.yml
+      - .github/workflows/stepci-stepci.yml
+  schedule:
+    - cron: "49 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  test:
+    uses: ./.github/workflows/reusable-docker-test.yml
+    with:
+      dockerfile: Dockerfile.action
+      repository: stepci/stepci
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: stepci/stepci@2.8.2
