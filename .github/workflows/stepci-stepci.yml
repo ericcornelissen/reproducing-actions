@@ -11,7 +11,7 @@ on:
       - .github/workflows/reusable-docker-test.yml
       - .github/workflows/stepci-stepci.yml
   schedule:
-    - cron: "25 1 * * *"
+    - cron: "49 1 * * *"
   workflow_dispatch: ~
 
 permissions: read-all
