@@ -1,0 +1,30 @@
+name: mikefarah/yq
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-docker-image-test.yml
+      - .github/workflows/mikefarah-yq.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-docker-image-test.yml
+      - .github/workflows/mikefarah-yq.yml
+  schedule:
+    - cron: "49 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  test:
+    uses: ./.github/workflows/reusable-docker-image-test.yml
+    with:
+      dockerfile: Dockerfile
+      image: mikefarah/yq:4-githubaction
+      repository: mikefarah/yq
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: mikefarah/yq@v4.52.5

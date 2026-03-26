@@ -64,7 +64,7 @@ with more information about the project and statuses.
 | [denoland/setup-deno] | [![][denoland/setup-deno-badge]][denoland/setup-deno-url] |
 | [oven-sh/setup-bun] | [![][oven-sh/setup-bun-badge]][oven-sh/setup-bun-url] |
 | [pnpm/action-setup] | [![][pnpm/action-setup-badge]][pnpm/action-setup-url] |
-<!-- INSERT ROW -->
+| [mikefarah/yq] | [![][mikefarah/yq-badge]][mikefarah/yq-url] |
 [pnpm/action-setup]: https://github.com/pnpm/action-setup
 [pnpm/action-setup-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/pnpm-action-setup.yml/badge.svg?event=schedule
 [pnpm/action-setup-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/pnpm-action-setup.yml
@@ -74,6 +74,10 @@ with more information about the project and statuses.
 [denoland/setup-deno]: https://github.com/denoland/setup-deno
 [denoland/setup-deno-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/denoland-setup-deno.yml/badge.svg?event=schedule
 [denoland/setup-deno-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/denoland-setup-deno.yml
+<!-- INSERT ROW -->
+[mikefarah/yq]: https://github.com/mikefarah/yq
+[mikefarah/yq-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/mikefarah-yq.yml/badge.svg?event=schedule
+[mikefarah/yq-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/mikefarah-yq.yml
 [norio-nomura/action-swiftlint]: https://github.com/norio-nomura/action-swiftlint
 [norio-nomura/action-swiftlint-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/norio-nomura-action-swiftlint.yml/badge.svg?event=schedule
 [norio-nomura/action-swiftlint-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/norio-nomura-action-swiftlint.yml
