@@ -59,7 +59,7 @@ jobs:
               | sed 's/.*@//' \
           )
           echo "$VERSION"
-          echo "VERSION=$VERSION" >>"$GITHUB_OUTPUT"
+          echo "version=$VERSION" >>"$GITHUB_OUTPUT"
   build:
     name: build ${{ needs.setup.outputs.version }}
     runs-on: ubuntu-24.04
