@@ -61,7 +61,11 @@ with more information about the project and statuses.
 | [softprops/action-gh-release] | [![][softprops/action-gh-release-badge]][softprops/action-gh-release-url] |
 | [stepci/stepci] | [![][stepci/stepci-badge]][stepci/stepci-url] |
 | [norio-nomura/action-swiftlint] | [![][norio-nomura/action-swiftlint-badge]][norio-nomura/action-swiftlint-url] |
+| [pnpm/action-setup] | [![][pnpm/action-setup-badge]][pnpm/action-setup-url] |
 <!-- INSERT ROW -->
+[pnpm/action-setup]: https://github.com/pnpm/action-setup
+[pnpm/action-setup-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/pnpm-action-setup.yml/badge.svg?event=schedule
+[pnpm/action-setup-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/pnpm-action-setup.yml
 [norio-nomura/action-swiftlint]: https://github.com/norio-nomura/action-swiftlint
 [norio-nomura/action-swiftlint-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/norio-nomura-action-swiftlint.yml/badge.svg?event=schedule
 [norio-nomura/action-swiftlint-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/norio-nomura-action-swiftlint.yml
