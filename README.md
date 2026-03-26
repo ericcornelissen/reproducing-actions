@@ -62,7 +62,10 @@ with more information about the project and statuses.
 | [stepci/stepci] | [![][stepci/stepci-badge]][stepci/stepci-url] |
 | [norio-nomura/action-swiftlint] | [![][norio-nomura/action-swiftlint-badge]][norio-nomura/action-swiftlint-url] |
 | [mikefarah/yq] | [![][mikefarah/yq-badge]][mikefarah/yq-url] |
-<!-- INSERT ROW -->
+| [super-linter/super-linter] | [![][super-linter/super-linter-badge]][super-linter/super-linter-url] |
+[super-linter/super-linter]: https://github.com/super-linter/super-linter
+[super-linter/super-linter-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/super-linter-super-linter.yml/badge.svg?event=schedule
+[super-linter/super-linter-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/super-linter-super-linter.yml
 [mikefarah/yq]: https://github.com/mikefarah/yq
 [mikefarah/yq-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/mikefarah-yq.yml/badge.svg?event=schedule
 [mikefarah/yq-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/mikefarah-yq.yml

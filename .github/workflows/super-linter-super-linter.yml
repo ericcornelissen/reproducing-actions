@@ -1,17 +1,17 @@
-name: mikefarah/yq
+name: super-linter/super-linter
 on:
   pull_request:
     paths:
       - .github/workflows/reusable-docker-image-test.yml
-      - .github/workflows/mikefarah-yq.yml
+      - .github/workflows/super-linter-super-linter.yml
   push:
     branches:
       - main
     paths:
       - .github/workflows/reusable-docker-image-test.yml
-      - .github/workflows/mikefarah-yq.yml
+      - .github/workflows/super-linter-super-linter.yml
   schedule:
-    - cron: "51 1 * * *"
+    - cron: "52 1 * * *"
   workflow_dispatch: ~
 
 permissions: read-all
@@ -21,10 +21,10 @@ jobs:
     uses: ./.github/workflows/reusable-docker-image-test.yml
     with:
       dockerfile: Dockerfile
-      image: mikefarah/yq:4-githubaction
-      repository: mikefarah/yq
+      image: ghcr.io/super-linter/super-linter:v8.5.0
+      repository: super-linter/super-linter
   version:
     if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
-      - uses: mikefarah/yq@v4.52.5
+      - uses: super-linter/super-linter@v8.5.0
