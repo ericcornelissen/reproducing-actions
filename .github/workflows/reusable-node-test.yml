@@ -3,7 +3,6 @@
 # `build-cmd` and `install-cmd`. These inputs are embedded directly into scripts
 # because they are meant to be executed as commands.
 
-name: Check
 on:
   workflow_call:
     inputs:
