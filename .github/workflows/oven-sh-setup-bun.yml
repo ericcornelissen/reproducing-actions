@@ -20,7 +20,7 @@ jobs:
   test:
     uses: ./.github/workflows/reusable-node-test.yml
     with:
-      build-cmd:   bun build
+      build-cmd:   bun run build
       install-cmd: bun install
       bun-version: latest
       repository:  oven-sh/setup-bun
