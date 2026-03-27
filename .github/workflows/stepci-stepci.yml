@@ -26,4 +26,4 @@ jobs:
     if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
-      - uses: stepci/stepci@2.2.5
+      - uses: stepci/stepci@2.2.4
