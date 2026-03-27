@@ -1,0 +1,31 @@
+name: denoland/setup-deno
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-node-test.yml
+      - .github/workflows/denoland-setup-deno.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-node-test.yml
+      - .github/workflows/denoland-setup-deno.yml
+  schedule:
+    - cron: "53 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  test:
+    uses: ./.github/workflows/reusable-node-test.yml
+    with:
+      build-cmd:    deno run -A scripts/build.ts
+      install-cmd:  ~
+      deno-version: canary
+      repository:   denoland/setup-deno
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: denoland/setup-deno@v2.0.4

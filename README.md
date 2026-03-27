@@ -61,11 +61,19 @@ with more information about the project and statuses.
 | [softprops/action-gh-release] | [![][softprops/action-gh-release-badge]][softprops/action-gh-release-url] |
 | [stepci/stepci] | [![][stepci/stepci-badge]][stepci/stepci-url] |
 | [norio-nomura/action-swiftlint] | [![][norio-nomura/action-swiftlint-badge]][norio-nomura/action-swiftlint-url] |
+| [denoland/setup-deno] | [![][denoland/setup-deno-badge]][denoland/setup-deno-url] |
+| [oven-sh/setup-bun] | [![][oven-sh/setup-bun-badge]][oven-sh/setup-bun-url] |
 | [pnpm/action-setup] | [![][pnpm/action-setup-badge]][pnpm/action-setup-url] |
 <!-- INSERT ROW -->
 [pnpm/action-setup]: https://github.com/pnpm/action-setup
 [pnpm/action-setup-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/pnpm-action-setup.yml/badge.svg?event=schedule
 [pnpm/action-setup-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/pnpm-action-setup.yml
+[oven-sh/setup-bun]: https://github.com/oven-sh/setup-bun
+[oven-sh/setup-bun-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/oven-sh-setup-bun.yml/badge.svg?event=schedule
+[oven-sh/setup-bun-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/oven-sh-setup-bun.yml
+[denoland/setup-deno]: https://github.com/denoland/setup-deno
+[denoland/setup-deno-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/denoland-setup-deno.yml/badge.svg?event=schedule
+[denoland/setup-deno-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/denoland-setup-deno.yml
 [norio-nomura/action-swiftlint]: https://github.com/norio-nomura/action-swiftlint
 [norio-nomura/action-swiftlint-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/norio-nomura-action-swiftlint.yml/badge.svg?event=schedule
 [norio-nomura/action-swiftlint-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/norio-nomura-action-swiftlint.yml
