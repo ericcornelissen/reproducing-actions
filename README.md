@@ -61,7 +61,11 @@ with more information about the project and statuses.
 | [softprops/action-gh-release] | [![][softprops/action-gh-release-badge]][softprops/action-gh-release-url] |
 | [stepci/stepci] | [![][stepci/stepci-badge]][stepci/stepci-url] |
 | [norio-nomura/action-swiftlint] | [![][norio-nomura/action-swiftlint-badge]][norio-nomura/action-swiftlint-url] |
+| [denoland/setup-deno] | [![][denoland/setup-deno-badge]][denoland/setup-deno-url] |
 <!-- INSERT ROW -->
+[denoland/setup-deno]: https://github.com/denoland/setup-deno
+[denoland/setup-deno-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/denoland-setup-deno.yml/badge.svg?event=schedule
+[denoland/setup-deno-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/denoland-setup-deno.yml
 [norio-nomura/action-swiftlint]: https://github.com/norio-nomura/action-swiftlint
 [norio-nomura/action-swiftlint-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/norio-nomura-action-swiftlint.yml/badge.svg?event=schedule
 [norio-nomura/action-swiftlint-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/norio-nomura-action-swiftlint.yml
