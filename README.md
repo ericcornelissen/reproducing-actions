@@ -62,7 +62,11 @@ with more information about the project and statuses.
 | [stepci/stepci] | [![][stepci/stepci-badge]][stepci/stepci-url] |
 | [norio-nomura/action-swiftlint] | [![][norio-nomura/action-swiftlint-badge]][norio-nomura/action-swiftlint-url] |
 | [denoland/setup-deno] | [![][denoland/setup-deno-badge]][denoland/setup-deno-url] |
+| [oven-sh/setup-bun] | [![][oven-sh/setup-bun-badge]][oven-sh/setup-bun-url] |
 <!-- INSERT ROW -->
+[oven-sh/setup-bun]: https://github.com/oven-sh/setup-bun
+[oven-sh/setup-bun-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/oven-sh-setup-bun.yml/badge.svg?event=schedule
+[oven-sh/setup-bun-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/oven-sh-setup-bun.yml
 [denoland/setup-deno]: https://github.com/denoland/setup-deno
 [denoland/setup-deno-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/denoland-setup-deno.yml/badge.svg?event=schedule
 [denoland/setup-deno-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/denoland-setup-deno.yml
