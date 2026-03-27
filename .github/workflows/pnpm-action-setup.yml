@@ -20,12 +20,11 @@ jobs:
   test:
     uses: ./.github/workflows/reusable-node-test.yml
     with:
-      build-cmd:    pnpm build
+      build-cmd:    pnpm run build
       install-cmd:  |
         corepack enable
-        corepack prepare pnpm@9.15.5 --activate
+        corepack prepare pnpm@^9 --activate
         corepack pnpm install
-      node-version: 24
       repository:   pnpm/action-setup
   version:
     if: ${{ false }}
