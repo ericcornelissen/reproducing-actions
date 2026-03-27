@@ -111,7 +111,6 @@ jobs:
         with:
           node-version-file: ${{ inputs.node-version-file }}
           package-manager-cache: false
-
       - name: Install dependencies
         working-directory: ${{ inputs.working-directory }}
         run: ${{ inputs.install-cmd }}
