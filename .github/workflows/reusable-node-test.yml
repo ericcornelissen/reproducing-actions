@@ -19,6 +19,10 @@ on:
         required: false
         type: string
         default: ""
+      deno-version:
+        required: false
+        type: string
+        default: ""
       node-version:
         required: false
         type: string
@@ -90,6 +94,11 @@ jobs:
         uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
         with:
           bun-version: ${{ inputs.bun-version }}
+      - name: Install Deno
+        if: ${{ inputs.deno-version != '' }}
+        uses: denoland/setup-deno@667a34cdef165d8d2b2e98dde39547c9daac7282 # v2.0.4
+        with:
+          deno-version: ${{ inputs.deno-version }}
       - name: Install Node.js (from version)
         if: ${{ inputs.node-version != '' }}
         uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6.2.0
@@ -102,6 +111,7 @@ jobs:
         with:
           node-version-file: ${{ inputs.node-version-file }}
           package-manager-cache: false
+
       - name: Install dependencies
         working-directory: ${{ inputs.working-directory }}
         run: ${{ inputs.install-cmd }}
