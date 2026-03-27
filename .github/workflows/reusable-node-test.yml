@@ -15,15 +15,15 @@ on:
         type: string
 
       # Environment
+      bun-version:
+        required: false
+        type: string
+        default: ""
       node-version:
         required: false
         type: string
         default: ""
       node-version-file:
-        required: false
-        type: string
-        default: ""
-      bun-version:
         required: false
         type: string
         default: ""
@@ -85,6 +85,11 @@ jobs:
           find . \( -path ./.git \) -prune -o -type f -print | tee "$FILES_LIST_FILE"
 
       # Environment setup
+      - name: Install Bun
+        if: ${{ inputs.bun-version != '' }}
+        uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
+        with:
+          bun-version: ${{ inputs.bun-version }}
       - name: Install Node.js (from version)
         if: ${{ inputs.node-version != '' }}
         uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6.2.0
@@ -97,11 +102,6 @@ jobs:
         with:
           node-version-file: ${{ inputs.node-version-file }}
           package-manager-cache: false
-      - name: Install Bun
-        if: ${{ inputs.bun-version == '' }}
-        uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
-        with:
-          bun-version: ${{ inputs.bun-version }}
       - name: Install dependencies
         working-directory: ${{ inputs.working-directory }}
         run: ${{ inputs.install-cmd }}
