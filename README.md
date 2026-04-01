@@ -63,6 +63,11 @@ with more information about the project and statuses.
 | [norio-nomura/action-swiftlint] | [![][norio-nomura/action-swiftlint-badge]][norio-nomura/action-swiftlint-url] |
 | [mikefarah/yq] | [![][mikefarah/yq-badge]][mikefarah/yq-url] |
 | [super-linter/super-linter] | [![][super-linter/super-linter-badge]][super-linter/super-linter-url] |
+| [google/osv-scanner-action] | [![][google/osv-scanner-action-badge]][google/osv-scanner-action-url] |
+<!-- INSERT ROW -->
+[google/osv-scanner-action]: https://github.com/google/osv-scanner-action
+[google/osv-scanner-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/google-osv-scanner-action.yml/badge.svg?event=schedule
+[google/osv-scanner-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/google-osv-scanner-action.yml
 [super-linter/super-linter]: https://github.com/super-linter/super-linter
 [super-linter/super-linter-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/super-linter-super-linter.yml/badge.svg?event=schedule
 [super-linter/super-linter-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/super-linter-super-linter.yml
