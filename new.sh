@@ -2,13 +2,16 @@
 # SPDX-License-Identifier: BSD-2-Clause-Patent
 
 ## Arguments
-action="$1"
-version="$2"
+kind="$1"
+action="$2"
+version="$3"
 
 ## Usage
-if [[ -z ${action} || -z ${version} ]]; then
-	echo 'USAGE:   new.sh <action> <version>'
-	echo 'EXAMPLE: new.sh action/checkout v6.0.1'
+if [[ -z "${kind}" || -z ${action} || -z ${version} || ("${kind}" != "node" && "${kind}" != "docker") ]]; then
+	echo 'USAGE:   new.sh <kind> <action> <version>'
+	echo 'EXAMPLE: new.sh node action/checkout v6.0.1'
+	echo ''
+	echo 'where <kind> must be one of: "node", "docker"'
 	exit 0
 fi
 
@@ -24,7 +27,14 @@ if [[ -f ${filepath} ]]; then
 fi
 
 ## Templates
-workflow=$(cat templates/workflow.yml)
+case "${kind}" in
+	"node")
+	workflow=$(cat templates/workflow-node.yml)
+	;;
+	"docker")
+	workflow=$(cat templates/workflow-docker.yml)
+	;;
+esac
 workflow=${workflow//'<ACTION>'/"${action}"}
 workflow=${workflow//'<FILE>'/"${filepath}"}
 workflow=${workflow//'<VERSION>'/"${version}"}
