@@ -1,0 +1,30 @@
+name: google/osv-scanner-action
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-docker-image-test.yml
+      - .github/workflows/google-osv-scanner-action.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-docker-image-test.yml
+      - .github/workflows/google-osv-scanner-action.yml
+  schedule:
+    - cron: "53 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  test:
+    uses: ./.github/workflows/reusable-docker-image-test.yml
+    with:
+      dockerfile: goreleaser-action.dockerfile
+      image: ghcr.io/google/osv-scanner-action:v2.3.5
+      repository: google/osv-scanner
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google/osv-scanner-action@v2.3.5
