@@ -7,7 +7,7 @@ action="$2"
 version="$3"
 
 ## Usage
-if [[ -z "${kind}" || -z ${action} || -z ${version} || ("${kind}" != "node" && "${kind}" != "docker") ]]; then
+if [[ -z ${kind} || -z ${action} || -z ${version} || (${kind} != 'node' && ${kind} != 'docker') ]]; then
 	echo 'USAGE:   new.sh <kind> <action> <version>'
 	echo 'EXAMPLE: new.sh node action/checkout v6.0.1'
 	echo ''
@@ -28,10 +28,10 @@ fi
 
 ## Templates
 case "${kind}" in
-	"node")
+'node')
 	workflow=$(cat templates/workflow-node.yml)
 	;;
-	"docker")
+'docker')
 	workflow=$(cat templates/workflow-docker.yml)
 	;;
 esac
