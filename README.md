@@ -61,14 +61,23 @@ with more information about the project and statuses.
 | [softprops/action-gh-release] | [![][softprops/action-gh-release-badge]][softprops/action-gh-release-url] |
 | [stepci/stepci] | [![][stepci/stepci-badge]][stepci/stepci-url] |
 | [norio-nomura/action-swiftlint] | [![][norio-nomura/action-swiftlint-badge]][norio-nomura/action-swiftlint-url] |
+| [denoland/setup-deno] | [![][denoland/setup-deno-badge]][denoland/setup-deno-url] |
+| [oven-sh/setup-bun] | [![][oven-sh/setup-bun-badge]][oven-sh/setup-bun-url] |
 | [mikefarah/yq] | [![][mikefarah/yq-badge]][mikefarah/yq-url] |
 | [super-linter/super-linter] | [![][super-linter/super-linter-badge]][super-linter/super-linter-url] |
+<!-- INSERT ROW -->
 [super-linter/super-linter]: https://github.com/super-linter/super-linter
 [super-linter/super-linter-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/super-linter-super-linter.yml/badge.svg?event=schedule
 [super-linter/super-linter-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/super-linter-super-linter.yml
 [mikefarah/yq]: https://github.com/mikefarah/yq
 [mikefarah/yq-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/mikefarah-yq.yml/badge.svg?event=schedule
 [mikefarah/yq-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/mikefarah-yq.yml
+[oven-sh/setup-bun]: https://github.com/oven-sh/setup-bun
+[oven-sh/setup-bun-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/oven-sh-setup-bun.yml/badge.svg?event=schedule
+[oven-sh/setup-bun-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/oven-sh-setup-bun.yml
+[denoland/setup-deno]: https://github.com/denoland/setup-deno
+[denoland/setup-deno-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/denoland-setup-deno.yml/badge.svg?event=schedule
+[denoland/setup-deno-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/denoland-setup-deno.yml
 [norio-nomura/action-swiftlint]: https://github.com/norio-nomura/action-swiftlint
 [norio-nomura/action-swiftlint-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/norio-nomura-action-swiftlint.yml/badge.svg?event=schedule
 [norio-nomura/action-swiftlint-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/norio-nomura-action-swiftlint.yml
@@ -325,10 +334,11 @@ project.
 
 | Action | Version(s) | Cause |
 | ------ | ---------- | ----- |
-| gitleaks/gitleaks-action | v2.3.3...v2.3.4 | [outdated dependencies](https://github.com/gitleaks/gitleaks-action/issues/137#issuecomment-1937801212) |
-| actions-ecosystem/action-add-labels | v1.1.3 | [compiler error](https://github.com/actions-ecosystem/action-add-labels/issues/186) |
-| JS-DevTools/npm-publish | v4.0.0...v4.1.2 | [untracked files](https://github.com/JS-DevTools/npm-publish/pull/258) |
-| stepci/stepci | ?...v2.8.2 | [Node compile/npm cache](https://github.com/stepci/stepci/issues/260) |
+| `gitleaks/gitleaks-action` | v2.3.3...v2.3.4 | [outdated dependencies](https://github.com/gitleaks/gitleaks-action/issues/137#issuecomment-1937801212) |
+| `actions-ecosystem/action-add-labels` | v1.1.3 | [compiler error](https://github.com/actions-ecosystem/action-add-labels/issues/186) |
+| `JS-DevTools/npm-publish` | v4.0.0...v4.1.2 | [untracked files](https://github.com/JS-DevTools/npm-publish/pull/258) |
+| `stepci/stepci` | v1.0.5...v2.8.2 | [Node compile/npm cache](https://github.com/stepci/stepci/issues/260) |
+| `SonarSource/sonarqube-scan-action` | v7.1.0 | [outdated build](https://community.sonarsource.com/t/the-sonarsource-sonarqube-scan-action-7-1-0-build-output-is-not-reproducible/180749) |
 
 ## Related Work
 

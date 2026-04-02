@@ -25,24 +25,37 @@ script. To add a monitor for a new Action follow these steps:
    GitHub Actions workflow with the name of the Action and update the statuses
    table in the `README.md`.
 1. Manually adjust the newly created workflow:
-   - Set the `<BUILD>` command, typically `npm run build`.
-   - Set the `<INSTALL>` command, typically `npm clean-install`.
-   - Set the `<NODE>` version, this can be a version, e.g. `node-version: 20.x`,
-     or a version file, e.g. `node-version-file: .nvmrc`. For more detail on
-     possible values see the [`actions/setup-node`] documentation.
    - Set the `<MIN>` and `<HOUR>` values to the next minute when compared to the
      last added workflow.
+   - For Node.js-based Actions:
+      - Set the `<BUILD>` command, typically `npm run build`.
+      - Set the `<INSTALL>` command, typically `npm clean-install`.
+      - Set the `<NODE>` version, this can be a version, e.g.
+        `node-version: 20.x`, or a version file, e.g.
+        `node-version-file: .nvmrc`. For more detail on possible values see the
+        [`actions/setup-node`] documentation.
+   - For Docker-based Actions:
+      - Set the `<DOCKERFILE>` value, typically `Dockerfile`.
 1. Commit with the following message as a template. Fill out the gaps marked by
    `<` and `>`. For the build details provide links to the Action's source code
    justifying the values used in the monitor (typically from its CI config).
+   - For Node.js-based Actions:
 
-   ```txt
-   Add monitor for `<owner>/<repo>` at v<X>.<Y>.<Z>
+     ```txt
+     Add monitor for `<owner>/<repo>` at v<X>.<Y>.<Z>
 
-   - `build-cmd`: <GITHUB PERMALINK>
-   - `install-cmd`: <GITHUB PERMALINK>
-   - `node-version`: <GITHUB PERMALINK>
-   ```
+     - `build-cmd`: <GITHUB PERMALINK>
+     - `install-cmd`: <GITHUB PERMALINK>
+     - `node-version`: <GITHUB PERMALINK>
+     ```
+
+   - For Docker-based Actions:
+
+     ```txt
+     Add monitor for `<owner>/<repo>` at v<X>.<Y>.<Z>
+
+     - `dockerfile`: <GITHUB PERMALINK>
+     ```
 
 1. Open a Pull Request.
 
