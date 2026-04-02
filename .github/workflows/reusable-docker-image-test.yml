@@ -78,6 +78,6 @@ jobs:
       - name: Pull
         run: docker pull "$IMAGE"
       - name: Build
-        run: docker buildx --no-cache --file "$DOCKERFILE" --tag rebuild .
+        run: docker buildx build --no-cache --file "$DOCKERFILE" --tag rebuild .
       - name: Diff images
         run: diffoci diff --semantic "docker://$IMAGE" docker://rebuild
