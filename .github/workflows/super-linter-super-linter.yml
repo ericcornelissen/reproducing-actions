@@ -21,10 +21,10 @@ jobs:
     uses: ./.github/workflows/reusable-docker-image-test.yml
     with:
       dockerfile: Dockerfile
-      image: ghcr.io/super-linter/super-linter:v8.5.0
+      image: ghcr.io/super-linter/super-linter:v8.6.0
       repository: super-linter/super-linter
   version:
     if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
-      - uses: super-linter/super-linter@v8.5.0
+      - uses: super-linter/super-linter@v8.6.0
