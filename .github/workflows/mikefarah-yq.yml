@@ -24,6 +24,7 @@ jobs:
       image: mikefarah/yq:4-githubaction
       repository: mikefarah/yq
   version:
+    if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
       - uses: mikefarah/yq@v4.52.5
