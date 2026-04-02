@@ -339,6 +339,7 @@ project.
 | `JS-DevTools/npm-publish` | v4.0.0...v4.1.2 | [untracked files](https://github.com/JS-DevTools/npm-publish/pull/258) |
 | `stepci/stepci` | v1.0.5...v2.8.2 | [Node compile/npm cache](https://github.com/stepci/stepci/issues/260) |
 | `SonarSource/sonarqube-scan-action` | v7.1.0 | [outdated build](https://community.sonarsource.com/t/the-sonarsource-sonarqube-scan-action-7-1-0-build-output-is-not-reproducible/180749) |
+| `mikefarah/yq` | ?...v4.52.5 | [unknown](https://github.com/mikefarah/yq/issues/2643) |
 
 ## Related Work
 
