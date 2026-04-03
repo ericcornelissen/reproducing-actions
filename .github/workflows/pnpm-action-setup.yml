@@ -23,11 +23,11 @@ jobs:
       build-cmd:    pnpm run build
       install-cmd:  |
         corepack enable
-        corepack prepare pnpm@^9 --activate
+        corepack prepare pnpm@^8.14.3 --activate
         corepack pnpm install
       repository:   pnpm/action-setup
   version:
     if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
-      - uses: pnpm/action-setup@v5.0.0
+      - uses: pnpm/action-setup@v4.2.0

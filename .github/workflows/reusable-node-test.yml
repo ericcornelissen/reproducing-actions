@@ -141,7 +141,7 @@ jobs:
         run: |
           while IFS= read -r file; do
             echo "--- Diff of '$file' ---"
-            git diff --text "$file"
+            git diff "$file"
           done <"$FILES_LIST_FILE"
       - name: Check for new files
         run: |
