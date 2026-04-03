@@ -71,6 +71,8 @@ jobs:
 
       # Check reproducibility
       - name: Pull
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: docker pull "$IMAGE"
       - name: Build
         run: docker build --no-cache --file "$DOCKERFILE" --tag rebuild .
