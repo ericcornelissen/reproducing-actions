@@ -1,0 +1,30 @@
+name: securego/gosec
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-docker-image-test.yml
+      - .github/workflows/securego-gosec.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-docker-image-test.yml
+      - .github/workflows/securego-gosec.yml
+  schedule:
+    - cron: "54 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  test:
+    uses: ./.github/workflows/reusable-docker-image-test.yml
+    with:
+      dockerfile: <DOCKERFILE>
+      image: ghcr.io/securego/gosec:2.24.7
+      repository: securego/gosec
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: securego/gosec@v2.25.0
