@@ -71,10 +71,10 @@ jobs:
 
       # Check reproducibility
       - name: Pull
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
         run: docker pull "$IMAGE"
       - name: Build
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: docker build --no-cache --file "$DOCKERFILE" --tag rebuild .
       - name: Diff images
         run: diffoci diff --semantic "docker://$IMAGE" docker://rebuild
