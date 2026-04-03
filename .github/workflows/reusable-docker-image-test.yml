@@ -79,6 +79,9 @@ jobs:
         env:
           BUILD_ARGS: ${{ inputs.build-args }}
           GITHUB_TOKEN: ${{ github.token }}
-        run: docker build --no-cache --file "$DOCKERFILE" $BUILD_ARGS --tag rebuild .
+        run: |
+          echo "$GITHUB_TOKEN" > /tmp/github_token
+          echo "docker build --no-cache --file $DOCKERFILE $BUILD_ARGS --tag rebuild ."
+          docker build --no-cache --file "$DOCKERFILE" $BUILD_ARGS --tag rebuild .
       - name: Diff images
         run: diffoci diff --semantic "docker://$IMAGE" docker://rebuild
