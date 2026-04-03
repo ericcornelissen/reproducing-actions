@@ -2,17 +2,38 @@
 # SPDX-License-Identifier: BSD-2-Clause-Patent
 
 ## Arguments
-kind="$1"
-action="$2"
-version="$3"
+action="$1"
+version="$2"
+kind="$3"
 
 ## Usage
-if [[ -z ${kind} || -z ${action} || -z ${version} || (${kind} != 'node' && ${kind} != 'docker') ]]; then
-	echo 'USAGE:   ./new.sh <kind> <action> <version>'
+if [[ -z ${action} || -z ${version} || (${kind} != '' && ${kind} != 'node' && ${kind} != 'docker') ]]; then
+	echo 'USAGE:   ./new.sh <action> <version> [kind]'
 	echo 'EXAMPLE: ./new.sh node actions/checkout v6.0.1'
 	echo ''
-	echo 'where <kind> must be one of: "node", "docker"'
+	echo 'where <kind> can be one of: "node", "docker"'
 	exit 0
+fi
+
+if [[ -z ${kind} ]]; then
+	if ! manifest=$(curl -sf "https://raw.githubusercontent.com/${action}/refs/tags/${version}/action.yml"); then
+		echo "${action}@${version} not found"
+		exit 1
+	fi
+
+	using=$(echo "$manifest" | grep -oP "using:\s*['\"]?\K[^'\"]+")
+	case "${using}" in
+	node*)
+		kind='node'
+		;;
+	docker)
+		kind='docker'
+		;;
+	composite)
+		echo 'Composite actions are not monitored'
+		exit 1
+		;;
+	esac
 fi
 
 ## Derived values
@@ -28,10 +49,10 @@ fi
 
 ## Templates
 case "${kind}" in
-'node')
+node)
 	workflow=$(cat templates/workflow-node.yml)
 	;;
-'docker')
+docker)
 	workflow=$(cat templates/workflow-docker.yml)
 	;;
 esac
