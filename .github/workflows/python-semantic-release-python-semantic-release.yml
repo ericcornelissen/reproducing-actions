@@ -1,0 +1,29 @@
+name: python-semantic-release/python-semantic-release
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-docker-test.yml
+      - .github/workflows/python-semantic-release-python-semantic-release.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-docker-test.yml
+      - .github/workflows/python-semantic-release-python-semantic-release.yml
+  schedule:
+    - cron: "54 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  test:
+    uses: ./.github/workflows/reusable-docker-test.yml
+    with:
+      dockerfile: src/gh_action/Dockerfile
+      repository: python-semantic-release/python-semantic-release
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: python-semantic-release/python-semantic-release@v10.5.3
