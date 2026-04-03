@@ -61,40 +61,50 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           NEW: ${{ steps.parse.outputs.new }}
+          NUMBER: ${{ github.event.pull_request.number }}
           OLD: ${{ steps.parse.outputs.old }}
-          REPO: ${{ steps.parse.outputs.repo }}
+          THAT_REPO: ${{ steps.parse.outputs.repo }}
+          THIS_REPO: ${{ github.repository }}
         run: |
           set -euo pipefail
 
-          WAS_IMMUTABLE=$(gh release view "v${OLD}" --repo "${REPO}" --json isImmutable | jq .isImmutable)
-          IS_IMMUTABLE=$(gh release view "v${NEW}" --repo "${REPO}" --json isImmutable | jq .isImmutable)
+          WAS_IMMUTABLE=$(gh release view "v${OLD}" --repo "${THAT_REPO}" --json isImmutable | jq .isImmutable)
+          IS_IMMUTABLE=$(gh release view "v${NEW}" --repo "${THAT_REPO}" --json isImmutable | jq .isImmutable)
 
           echo "::debug::was ${WAS_IMMUTABLE}; is ${IS_IMMUTABLE}"
-          {
           case "${WAS_IMMUTABLE};${IS_IMMUTABLE}" in
           'true;true')
-            echo "comment="
+            COMMENT=""
             ;;
           'false;false')
-            echo "comment=${OLD} was not an immutable release and ${NEW} still is not. :neutral_face:"
+            COMMENT="${OLD} was not an immutable release and ${NEW} still is not. :neutral_face:"
             ;;
           'true;false')
-            echo "comment=${OLD} was an immutable release but ${NEW} is not. :cry:"
+            COMMENT="${OLD} was an immutable release but ${NEW} is not. :cry:"
             ;;
           'false;true')
-            echo "comment=${OLD} was not an immutable release but ${NEW} is! :smile:"
+            COMMENT="${OLD} was not an immutable release but ${NEW} is! :smile:"
             ;;
           esac
-          } >>"$GITHUB_OUTPUT"
+
+          exists=$(gh pr view "${NUMBER}" --repo "${THIS_REPO}" --json comments | jq --raw-output --arg comment "${COMMENT}" 'any(.comments[].body; . == $comment)')
+          if [[ ${exists} == 'true' ]]; then
+            echo '::debug::comment exists, not commenting again'
+            SKIP='true'
+          else
+            echo '::debug::comment does not yet exists'
+            SKIP='false'
+          fi
+
+          echo "comment=${COMMENT}" >>"$GITHUB_OUTPUT"
+          echo "skip=${SKIP}" >>"$GITHUB_OUTPUT"
       - name: Comment
-        if: ${{ steps.check.outputs.comment != '' }}
+        if: ${{ steps.check.outputs.comment != '' && steps.check.outputs.skip == 'false' }}
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
-          GH_URL: ${{ github.server_url }}
           COMMENT: ${{ steps.check.outputs.comment }}
           NUMBER: ${{ github.event.pull_request.number }}
-          REPO: ${{ github.repository }}
+          THIS_REPO: ${{ github.repository }}
         run: |
-          URL="${GH_URL}/${REPO}/pull/${NUMBER}"
-          gh pr comment "${URL}" --body "${COMMENT}"
+          gh pr comment "${NUMBER}" --repo "${THIS_REPO}" --body "${COMMENT}"
