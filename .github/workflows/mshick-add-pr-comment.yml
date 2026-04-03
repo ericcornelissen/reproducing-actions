@@ -22,10 +22,10 @@ jobs:
     with:
       build-cmd:         npm run build
       install-cmd:       npm clean-install
-      node-version-file: .node-version
+      node-version-file: package.json
       repository:        mshick/add-pr-comment
   version:
     if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
-      - uses: mshick/add-pr-comment@v3.9.0
+      - uses: mshick/add-pr-comment@v3.10.0

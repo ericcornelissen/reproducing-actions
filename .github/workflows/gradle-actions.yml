@@ -32,4 +32,4 @@ jobs:
     if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
-      - uses: gradle/actions@v6.0.1
+      - uses: gradle/actions@v6.1.0
