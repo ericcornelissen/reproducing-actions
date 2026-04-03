@@ -1,4 +1,5 @@
 # Configuration file for asdf (https://asdf-vm.com/)
 actionlint 1.7.11
+diffoci 0.1.8
 shellcheck 0.11.0
 shfmt 3.13.0
