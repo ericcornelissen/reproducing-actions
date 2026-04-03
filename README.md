@@ -64,7 +64,11 @@ with more information about the project and statuses.
 | [denoland/setup-deno] | [![][denoland/setup-deno-badge]][denoland/setup-deno-url] |
 | [oven-sh/setup-bun] | [![][oven-sh/setup-bun-badge]][oven-sh/setup-bun-url] |
 | [mikefarah/yq] | [![][mikefarah/yq-badge]][mikefarah/yq-url] |
+| [Platane/snk] | [![][Platane/snk-badge]][Platane/snk-url] |
 <!-- INSERT ROW -->
+[Platane/snk]: https://github.com/Platane/snk
+[Platane/snk-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/platane-snk.yml/badge.svg?event=schedule
+[Platane/snk-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/platane-snk.yml
 [mikefarah/yq]: https://github.com/mikefarah/yq
 [mikefarah/yq-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/mikefarah-yq.yml/badge.svg?event=schedule
 [mikefarah/yq-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/mikefarah-yq.yml
