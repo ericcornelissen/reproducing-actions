@@ -63,7 +63,15 @@ with more information about the project and statuses.
 | [norio-nomura/action-swiftlint] | [![][norio-nomura/action-swiftlint-badge]][norio-nomura/action-swiftlint-url] |
 | [denoland/setup-deno] | [![][denoland/setup-deno-badge]][denoland/setup-deno-url] |
 | [oven-sh/setup-bun] | [![][oven-sh/setup-bun-badge]][oven-sh/setup-bun-url] |
+| [mikefarah/yq] | [![][mikefarah/yq-badge]][mikefarah/yq-url] |
+| [Platane/snk] | [![][Platane/snk-badge]][Platane/snk-url] |
 <!-- INSERT ROW -->
+[Platane/snk]: https://github.com/Platane/snk
+[Platane/snk-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/platane-snk.yml/badge.svg?event=schedule
+[Platane/snk-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/platane-snk.yml
+[mikefarah/yq]: https://github.com/mikefarah/yq
+[mikefarah/yq-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/mikefarah-yq.yml/badge.svg?event=schedule
+[mikefarah/yq-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/mikefarah-yq.yml
 [oven-sh/setup-bun]: https://github.com/oven-sh/setup-bun
 [oven-sh/setup-bun-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/oven-sh-setup-bun.yml/badge.svg?event=schedule
 [oven-sh/setup-bun-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/oven-sh-setup-bun.yml
@@ -331,6 +339,7 @@ project.
 | `JS-DevTools/npm-publish` | v4.0.0...v4.1.2 | [untracked files](https://github.com/JS-DevTools/npm-publish/pull/258) |
 | `stepci/stepci` | v1.0.5...v2.8.2 | [Node compile/npm cache](https://github.com/stepci/stepci/issues/260) |
 | `SonarSource/sonarqube-scan-action` | v7.1.0 | [outdated build](https://community.sonarsource.com/t/the-sonarsource-sonarqube-scan-action-7-1-0-build-output-is-not-reproducible/180749) |
+| `mikefarah/yq` | ?...v4.52.5 | [unknown](https://github.com/mikefarah/yq/issues/2643) |
 
 ## Related Work
 
