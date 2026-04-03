@@ -20,8 +20,8 @@ jobs:
   test:
     uses: ./.github/workflows/reusable-docker-image-test.yml
     with:
-      dockerfile: <DOCKERFILE>
-      image: ghcr.io/securego/gosec:2.24.7
+      dockerfile: Dockerfile
+      image:      ghcr.io/securego/gosec:2.24.7
       repository: securego/gosec
   version:
     if: ${{ false }}
