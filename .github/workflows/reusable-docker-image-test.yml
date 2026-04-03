@@ -3,6 +3,9 @@ on:
   workflow_call:
     inputs:
       # Setup
+      build-args:
+        required: false
+        type: string
       dockerfile:
         required: true
         type: string
@@ -74,7 +77,7 @@ jobs:
         run: docker pull "$IMAGE"
       - name: Build
         env:
-          GITHUB_TOKEN: ${{ github.token }}
-        run: docker build --no-cache --file "$DOCKERFILE" --tag rebuild .
+          BUILD_ARGS: ${{ inputs.build-args }}
+        run: docker build --no-cache --file "$DOCKERFILE" $BUILD_ARGS --tag rebuild .
       - name: Diff images
         run: diffoci diff --semantic "docker://$IMAGE" docker://rebuild
