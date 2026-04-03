@@ -20,10 +20,10 @@ jobs:
               actionlint
           - what: Shell scripts
             how: |
-              shellcheck new.sh
+              shellcheck new.sh remove.sh
           - what: Formatting
             how: |
-              shfmt --simplify --diff new.sh
+              shfmt --simplify --diff new.sh remove.sh
           - what: Schedules
             how: |
               duplicates=$( \
