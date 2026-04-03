@@ -24,6 +24,19 @@ jobs:
           - what: Formatting
             how: |
               shfmt --simplify --diff new.sh
+          - what: Schedules
+            how: |
+              duplicates=$( \
+                grep -Rho '^[[:space:]]*- cron: ".*"' .github/workflows/*.yml \
+                  | sed 's/.*cron: "\(.*\)"/\1/' \
+                  | sort \
+                  | uniq -d \
+              )
+              if [[ -n $duplicates ]]; then
+                echo 'The following cron values appear multiple times:'
+                echo "$duplicates"
+                exit 1
+              fi
     steps:
       - name: Checkout repository
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
