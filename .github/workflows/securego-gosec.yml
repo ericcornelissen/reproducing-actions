@@ -20,6 +20,7 @@ jobs:
   test:
     uses: ./.github/workflows/reusable-docker-image-test.yml
     with:
+      build-args: --build-arg GO_VERSION=1.26
       dockerfile: Dockerfile
       image:      ghcr.io/securego/gosec:2.24.7
       repository: securego/gosec
