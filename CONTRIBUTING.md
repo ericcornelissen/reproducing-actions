@@ -66,8 +66,8 @@ script. To add a monitor for a new Action follow these steps:
 A monitor may be removed if the Action is deprecated or the major version is no
 longer supported. To remove a monitor follow these steps:
 
-1. Remove the respective workflow, or job within, from `.github/workflows/`.
-1. Remove the respective entry from the "Statuses" table in the `README.md`.
+1. Run `./remove.sh` using the instructions it provides. This will remove an
+   existing monitor and update the `README.md` accordingly.
 1. Commit with the following message as a template. Fill out the gaps marked by
    `<` and `>`.
 
