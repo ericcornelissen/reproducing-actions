@@ -1,0 +1,31 @@
+name: di-sukharev/opencommit
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-node-test.yml
+      - .github/workflows/di-sukharev-opencommit.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-node-test.yml
+      - .github/workflows/di-sukharev-opencommit.yml
+  schedule:
+    - cron: "54 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  test:
+    uses: ./.github/workflows/reusable-node-test.yml
+    with:
+      build-cmd:    npm run build
+      install-cmd:  npm clean-install
+      node-version: 16
+      repository:   di-sukharev/opencommit
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: di-sukharev/opencommit@github-action-v1.0.4

@@ -63,7 +63,11 @@ with more information about the project and statuses.
 | [norio-nomura/action-swiftlint] | [![][norio-nomura/action-swiftlint-badge]][norio-nomura/action-swiftlint-url] |
 | [denoland/setup-deno] | [![][denoland/setup-deno-badge]][denoland/setup-deno-url] |
 | [oven-sh/setup-bun] | [![][oven-sh/setup-bun-badge]][oven-sh/setup-bun-url] |
+| [di-sukharev/opencommit] | [![][di-sukharev/opencommit-badge]][di-sukharev/opencommit-url] |
 <!-- INSERT ROW -->
+[di-sukharev/opencommit]: https://github.com/di-sukharev/opencommit
+[di-sukharev/opencommit-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/di-sukharev-opencommit.yml/badge.svg?event=schedule
+[di-sukharev/opencommit-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/di-sukharev-opencommit.yml
 [oven-sh/setup-bun]: https://github.com/oven-sh/setup-bun
 [oven-sh/setup-bun-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/oven-sh-setup-bun.yml/badge.svg?event=schedule
 [oven-sh/setup-bun-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/oven-sh-setup-bun.yml
