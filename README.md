@@ -305,13 +305,8 @@ script and Docker-based Actions. Adding a monitor is a manual effort so not all
 available Actions are monitored. If you want to add a new monitor, open a
 [new issue] or follow the instructions from the [Contributing Guidelines].
 
-Any non-JavaScript/Dockerilfe Action or any JavaScript-based Action without a
-build step is currently considered out of scope. If you have a need for
-monitoring of such Actions please check out and comment on [issue #1].
-
 [contributing guidelines]: ./CONTRIBUTING.md
 [new issue]: https://github.com/ericcornelissen/reproducing-actions/issues/new
-[issue #1]: https://github.com/ericcornelissen/reproducing-actions/issues/1
 
 ### Reproducibility Definition
 
