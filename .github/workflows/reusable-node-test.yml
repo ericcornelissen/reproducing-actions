@@ -45,28 +45,9 @@ permissions: read-all
 
 jobs:
   setup:
-    name: setup
-    runs-on: ubuntu-24.04
-    outputs:
-      version: ${{ steps.version.outputs.version }}
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-        with:
-          persist-credentials: false
-      - name: Determine version to reproduce
-        id: version
-        env:
-          REPO: ${{ inputs.repository }}
-        run: |
-          WORKFLOW=$(echo "${REPO//\//-}.yml" | tr '[:upper:]' '[:lower:]')
-          VERSION=$( \
-            cat ".github/workflows/$WORKFLOW" \
-              | grep -oE '^\s+- uses: [^@]+@v?[^"]*' \
-              | sed 's/.*@//' \
-          )
-          echo "$VERSION"
-          echo "version=$VERSION" >>"$GITHUB_OUTPUT"
+    uses: ./.github/workflows/reusable-setup.yml
+    with:
+      repository: ${{ inputs.repository }}
   build:
     name: build ${{ needs.setup.outputs.version }}
     runs-on: ubuntu-24.04
