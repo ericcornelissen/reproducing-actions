@@ -8,8 +8,8 @@ version="$3"
 
 ## Usage
 if [[ -z ${kind} || -z ${action} || -z ${version} || (${kind} != 'node' && ${kind} != 'docker') ]]; then
-	echo 'USAGE:   new.sh <kind> <action> <version>'
-	echo 'EXAMPLE: new.sh node action/checkout v6.0.1'
+	echo 'USAGE:   ./new.sh <kind> <action> <version>'
+	echo 'EXAMPLE: ./new.sh node actions/checkout v6.0.1'
 	echo ''
 	echo 'where <kind> must be one of: "node", "docker"'
 	exit 0

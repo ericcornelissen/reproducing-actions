@@ -6,3 +6,6 @@ paths:
   .github/workflows/*.yml:
     ignore:
       - 'constant expression "false" in condition.+'
+  .github/workflows/reusable-docker-image-test.yml:
+    ignore:
+      - 'SC2086:info:1:46: Double quote to prevent globbing and word splitting'

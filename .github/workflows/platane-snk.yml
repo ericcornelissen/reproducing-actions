@@ -1,17 +1,17 @@
-name: super-linter/super-linter
+name: Platane/snk
 on:
   pull_request:
     paths:
       - .github/workflows/reusable-docker-image-test.yml
-      - .github/workflows/super-linter-super-linter.yml
+      - .github/workflows/platane-snk.yml
   push:
     branches:
       - main
     paths:
       - .github/workflows/reusable-docker-image-test.yml
-      - .github/workflows/super-linter-super-linter.yml
+      - .github/workflows/platane-snk.yml
   schedule:
-    - cron: "52 1 * * *"
+    - cron: "54 1 * * *"
   workflow_dispatch: ~
 
 permissions: read-all
@@ -20,12 +20,11 @@ jobs:
   test:
     uses: ./.github/workflows/reusable-docker-image-test.yml
     with:
-      build-args: --secret id=GITHUB_TOKEN,src=/tmp/github_token
       dockerfile: Dockerfile
-      image: ghcr.io/super-linter/super-linter:v8.6.0
-      repository: super-linter/super-linter
+      image:      platane/snk@sha256:b107f810d467a26b1e7ac46751073d1247728421155a47e77f6cd2dc66dcc74c
+      repository: Platane/snk
   version:
     if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
-      - uses: super-linter/super-linter@v8.6.0
+      - uses: Platane/snk@v3.4.1
