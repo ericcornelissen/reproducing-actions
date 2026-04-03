@@ -65,7 +65,11 @@ with more information about the project and statuses.
 | [oven-sh/setup-bun] | [![][oven-sh/setup-bun-badge]][oven-sh/setup-bun-url] |
 | [mikefarah/yq] | [![][mikefarah/yq-badge]][mikefarah/yq-url] |
 | [super-linter/super-linter] | [![][super-linter/super-linter-badge]][super-linter/super-linter-url] |
+| [Platane/snk] | [![][Platane/snk-badge]][Platane/snk-url] |
 <!-- INSERT ROW -->
+[Platane/snk]: https://github.com/Platane/snk
+[Platane/snk-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/platane-snk.yml/badge.svg?event=schedule
+[Platane/snk-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/platane-snk.yml
 [super-linter/super-linter]: https://github.com/super-linter/super-linter
 [super-linter/super-linter-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/super-linter-super-linter.yml/badge.svg?event=schedule
 [super-linter/super-linter-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/super-linter-super-linter.yml
