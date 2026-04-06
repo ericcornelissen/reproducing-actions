@@ -20,9 +20,10 @@ jobs:
   test:
     uses: ./.github/workflows/reusable-node-test.yml
     with:
+      bun-version:  latest
       build-cmd:    npm run build
       install-cmd:  npm clean-install
-      node-version: 20
+      node-version: 24
       repository:   extractions/setup-crate
   version:
     if: ${{ false }}
