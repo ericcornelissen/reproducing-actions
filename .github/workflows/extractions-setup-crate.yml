@@ -28,4 +28,4 @@ jobs:
     if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
-      - uses: extractions/setup-crate@v1.4.0
+      - uses: extractions/setup-crate@v2.0.0
