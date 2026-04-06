@@ -23,8 +23,6 @@ jobs:
     runs-on: ubuntu-24.04
     needs:
       - setup
-    env:
-      DOCKERFILE: ${{ inputs.dockerfile }}
     steps:
       # Repository setup
       - name: Checkout repository
@@ -33,6 +31,13 @@ jobs:
           persist-credentials: false
           ref: ${{ needs.setup.outputs.version }}
           repository: ${{ inputs.repository }}
+      - name: Obtain working directory
+        id: derived
+        env:
+          DOCKERFILE: ${{ inputs.dockerfile }}
+        run: |
+          echo "working-directory=$(dirname "$DOCKERFILE")" >>"$GITHUB_OUTPUT"
+          echo "dockerfile=$(basename "$DOCKERFILE")" >>"$GITHUB_OUTPUT"
 
       # Environment setup
       - name: Install diffoci
@@ -47,8 +52,14 @@ jobs:
 
       # Check reproducibility
       - name: Build 1
+        working-directory: ${{ steps.derived.outputs.working-directory }}
+        env:
+          DOCKERFILE: ${{ steps.derived.outputs.dockerfile }}
         run: docker build --no-cache --file "$DOCKERFILE" --tag test1 .
       - name: Build 2
+        working-directory: ${{ steps.derived.outputs.working-directory }}
+        env:
+          DOCKERFILE: ${{ steps.derived.outputs.dockerfile }}
         run: docker build --no-cache --file "$DOCKERFILE" --tag test2 .
       - name: Diff images
         run: diffoci diff --semantic docker://test1 docker://test2

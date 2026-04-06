@@ -64,7 +64,11 @@ with more information about the project and statuses.
 | [denoland/setup-deno] | [![][denoland/setup-deno-badge]][denoland/setup-deno-url] |
 | [oven-sh/setup-bun] | [![][oven-sh/setup-bun-badge]][oven-sh/setup-bun-url] |
 | [pnpm/action-setup] | [![][pnpm/action-setup-badge]][pnpm/action-setup-url] |
+| [python-semantic-release/python-semantic-release] | [![][python-semantic-release/python-semantic-release-badge]][python-semantic-release/python-semantic-release-url] |
 <!-- INSERT ROW -->
+[python-semantic-release/python-semantic-release]: https://github.com/python-semantic-release/python-semantic-release
+[python-semantic-release/python-semantic-release-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/python-semantic-release-python-semantic-release.yml/badge.svg?event=schedule
+[python-semantic-release/python-semantic-release-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/python-semantic-release-python-semantic-release.yml
 [pnpm/action-setup]: https://github.com/pnpm/action-setup
 [pnpm/action-setup-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/pnpm-action-setup.yml/badge.svg?event=schedule
 [pnpm/action-setup-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/pnpm-action-setup.yml
