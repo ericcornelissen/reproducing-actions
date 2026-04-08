@@ -23,6 +23,14 @@ jobs:
       dockerfile: goreleaser-action.dockerfile
       image: ghcr.io/google/osv-scanner-action:v2.3.5
       repository: google/osv-scanner
+      setup-cmd: >-
+        CGO_ENABLED=0 GOOS=linux GOARCH=amd64
+        go build -trimpath -ldflags="-s -w"
+        -o osv-scanner-action ./cmd/osv-scanner
+        &&
+        CGO_ENABLED=0 GOOS=linux GOARCH=amd64
+        go build -trimpath -ldflags="-s -w"
+        -o osv-reporter ./cmd/osv-reporter
   version:
     if: ${{ false }}
     runs-on: ubuntu-latest

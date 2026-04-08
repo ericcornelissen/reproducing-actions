@@ -1,3 +1,8 @@
+# WARNING:
+# When using this reusable workflow, provide only trusted values to the input
+# `setup-cmd`. This input is embedded directly into a script because it is
+# meant to be executed as a command.
+
 name: Check
 on:
   workflow_call:
@@ -9,6 +14,10 @@ on:
       image:
         required: true
         type: string
+      setup-cmd:
+        required: false
+        type: string
+        default: ""
 
       # Target
       repository:
@@ -59,6 +68,9 @@ jobs:
           repository: ${{ inputs.repository }}
 
       # Environment setup
+      - name: Setup
+        if: ${{ inputs.setup-cmd != '' }}
+        run: ${{ inputs.setup-cmd }}
       - name: Install diffoci
         env:
           CHECKSUM: 01e6b50c1568c9d61c758ef6da81869f2c26c852698d73dca961b3617effe949
