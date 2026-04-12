@@ -20,10 +20,10 @@ jobs:
   test:
     uses: ./.github/workflows/reusable-node-test.yml
     with:
-      build-cmd:    npm run build
-      install-cmd:  npm clean-install
-      node-version: 20.x
-      repository:   peter-evans/create-pull-request
+      build-cmd:         npm run build
+      install-cmd:       npm clean-install
+      node-version-file: package.json
+      repository:        peter-evans/create-pull-request
   version:
     if: ${{ false }}
     runs-on: ubuntu-latest
