@@ -63,6 +63,7 @@ with more information about the project and statuses.
 | [norio-nomura/action-swiftlint] | [![][norio-nomura/action-swiftlint-badge]][norio-nomura/action-swiftlint-url] |
 | [denoland/setup-deno] | [![][denoland/setup-deno-badge]][denoland/setup-deno-url] |
 | [oven-sh/setup-bun] | [![][oven-sh/setup-bun-badge]][oven-sh/setup-bun-url] |
+| [pnpm/action-setup] | [![][pnpm/action-setup-badge]][pnpm/action-setup-url] |
 | [mikefarah/yq] | [![][mikefarah/yq-badge]][mikefarah/yq-url] |
 | [Platane/snk] | [![][Platane/snk-badge]][Platane/snk-url] |
 <!-- INSERT ROW -->
@@ -72,6 +73,9 @@ with more information about the project and statuses.
 [mikefarah/yq]: https://github.com/mikefarah/yq
 [mikefarah/yq-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/mikefarah-yq.yml/badge.svg?event=schedule
 [mikefarah/yq-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/mikefarah-yq.yml
+[pnpm/action-setup]: https://github.com/pnpm/action-setup
+[pnpm/action-setup-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/pnpm-action-setup.yml/badge.svg?event=schedule
+[pnpm/action-setup-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/pnpm-action-setup.yml
 [oven-sh/setup-bun]: https://github.com/oven-sh/setup-bun
 [oven-sh/setup-bun-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/oven-sh-setup-bun.yml/badge.svg?event=schedule
 [oven-sh/setup-bun-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/oven-sh-setup-bun.yml
@@ -309,13 +313,8 @@ script and Docker-based Actions. Adding a monitor is a manual effort so not all
 available Actions are monitored. If you want to add a new monitor, open a
 [new issue] or follow the instructions from the [Contributing Guidelines].
 
-Any non-JavaScript/Dockerilfe Action or any JavaScript-based Action without a
-build step is currently considered out of scope. If you have a need for
-monitoring of such Actions please check out and comment on [issue #1].
-
 [contributing guidelines]: ./CONTRIBUTING.md
 [new issue]: https://github.com/ericcornelissen/reproducing-actions/issues/new
-[issue #1]: https://github.com/ericcornelissen/reproducing-actions/issues/1
 
 ### Reproducibility Definition
 
@@ -339,6 +338,9 @@ project.
 | `JS-DevTools/npm-publish` | v4.0.0...v4.1.2 | [untracked files](https://github.com/JS-DevTools/npm-publish/pull/258) |
 | `stepci/stepci` | v1.0.5...v2.8.2 | [Node compile/npm cache](https://github.com/stepci/stepci/issues/260) |
 | `SonarSource/sonarqube-scan-action` | v7.1.0 | [outdated build](https://community.sonarsource.com/t/the-sonarsource-sonarqube-scan-action-7-1-0-build-output-is-not-reproducible/180749) |
+| `pnpm/action-setup` | v4.0.0...v6.0.0 | [outdated build](https://github.com/pnpm/action-setup/issues/34) |
+| `extractions/setup-crate` | v2.0.0 | [absolute path](https://github.com/extractions/setup-crate/issues/11) |
+| `peter-evans/create-pull-request` | v8.1.1 | [outdated build](https://github.com/peter-evans/create-pull-request/issues/4366) |
 | `mikefarah/yq` | ?...v4.52.5 | [unknown](https://github.com/mikefarah/yq/issues/2643) |
 
 ## Related Work

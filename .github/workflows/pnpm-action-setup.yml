@@ -1,17 +1,17 @@
-name: docker/build-push-action
+name: pnpm/action-setup
 on:
   pull_request:
     paths:
       - .github/workflows/reusable-node-test.yml
-      - .github/workflows/docker-build-push-action.yml
+      - .github/workflows/pnpm-action-setup.yml
   push:
     branches:
       - main
     paths:
       - .github/workflows/reusable-node-test.yml
-      - .github/workflows/docker-build-push-action.yml
+      - .github/workflows/pnpm-action-setup.yml
   schedule:
-    - cron: "21 1 * * *"
+    - cron: "51 1 * * *"
   workflow_dispatch: ~
 
 permissions: read-all
@@ -20,14 +20,14 @@ jobs:
   test:
     uses: ./.github/workflows/reusable-node-test.yml
     with:
-      build-cmd:    yarn build
+      build-cmd:    pnpm run build
       install-cmd:  |
         corepack enable
-        yarn install
-      node-version: 20.x
-      repository:   docker/build-push-action
+        corepack prepare pnpm@^9 --activate
+        corepack pnpm install
+      repository:   pnpm/action-setup
   version:
     if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
-      - uses: docker/build-push-action@v7.1.0
+      - uses: pnpm/action-setup@v6.0.0

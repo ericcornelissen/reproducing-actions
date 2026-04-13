@@ -11,7 +11,7 @@ on:
       - .github/workflows/reusable-docker-image-test.yml
       - .github/workflows/platane-snk.yml
   schedule:
-    - cron: "54 1 * * *"
+    - cron: "55 1 * * *"
   workflow_dispatch: ~
 
 permissions: read-all
