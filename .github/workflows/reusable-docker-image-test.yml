@@ -1,0 +1,65 @@
+name: Check
+on:
+  workflow_call:
+    inputs:
+      # Setup
+      build-args:
+        required: false
+        type: string
+      dockerfile:
+        required: true
+        type: string
+      image:
+        required: true
+        type: string
+
+      # Target
+      repository:
+        required: true
+        type: string
+
+permissions: read-all
+
+jobs:
+  setup:
+    uses: ./.github/workflows/reusable-setup.yml
+    with:
+      repository: ${{ inputs.repository }}
+  build:
+    name: build ${{ needs.setup.outputs.version }}
+    runs-on: ubuntu-24.04
+    needs:
+      - setup
+    env:
+      DOCKERFILE: ${{ inputs.dockerfile }}
+      IMAGE: ${{ inputs.image }}
+    steps:
+      # Repository setup
+      - name: Checkout repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+          ref: ${{ needs.setup.outputs.version }}
+          repository: ${{ inputs.repository }}
+
+      # Environment setup
+      - name: Install diffoci
+        env:
+          CHECKSUM: 01e6b50c1568c9d61c758ef6da81869f2c26c852698d73dca961b3617effe949
+          DIFFOCI_VERSION: v0.1.8
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release download --repo reproducible-containers/diffoci "${DIFFOCI_VERSION}" --pattern "*linux-amd64" --output /usr/local/bin/diffoci
+          echo "$CHECKSUM  /usr/local/bin/diffoci" | sha256sum -c -
+          chmod +x /usr/local/bin/diffoci
+
+      # Check reproducibility
+      - name: Pull
+        run: docker pull "$IMAGE"
+      - name: Build
+        env:
+          BUILD_ARGS: ${{ inputs.build-args }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: docker build --no-cache --file "$DOCKERFILE" $BUILD_ARGS --tag rebuild .
+      - name: Diff images
+        run: diffoci diff --semantic "docker://$IMAGE" docker://rebuild

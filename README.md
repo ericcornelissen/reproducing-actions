@@ -64,7 +64,15 @@ with more information about the project and statuses.
 | [denoland/setup-deno] | [![][denoland/setup-deno-badge]][denoland/setup-deno-url] |
 | [oven-sh/setup-bun] | [![][oven-sh/setup-bun-badge]][oven-sh/setup-bun-url] |
 | [pnpm/action-setup] | [![][pnpm/action-setup-badge]][pnpm/action-setup-url] |
+| [mikefarah/yq] | [![][mikefarah/yq-badge]][mikefarah/yq-url] |
+| [Platane/snk] | [![][Platane/snk-badge]][Platane/snk-url] |
 <!-- INSERT ROW -->
+[Platane/snk]: https://github.com/Platane/snk
+[Platane/snk-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/platane-snk.yml/badge.svg?event=schedule
+[Platane/snk-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/platane-snk.yml
+[mikefarah/yq]: https://github.com/mikefarah/yq
+[mikefarah/yq-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/mikefarah-yq.yml/badge.svg?event=schedule
+[mikefarah/yq-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/mikefarah-yq.yml
 [pnpm/action-setup]: https://github.com/pnpm/action-setup
 [pnpm/action-setup-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/pnpm-action-setup.yml/badge.svg?event=schedule
 [pnpm/action-setup-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/pnpm-action-setup.yml
@@ -333,6 +341,7 @@ project.
 | `pnpm/action-setup` | v4.0.0...v6.0.0 | [outdated build](https://github.com/pnpm/action-setup/issues/34) |
 | `extractions/setup-crate` | v2.0.0 | [absolute path](https://github.com/extractions/setup-crate/issues/11) |
 | `peter-evans/create-pull-request` | v8.1.1 | [outdated build](https://github.com/peter-evans/create-pull-request/issues/4366) |
+| `mikefarah/yq` | ?...v4.52.5 | [unknown](https://github.com/mikefarah/yq/issues/2643) |
 
 ## Related Work
 
