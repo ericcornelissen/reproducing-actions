@@ -64,7 +64,11 @@ with more information about the project and statuses.
 | [denoland/setup-deno] | [![][denoland/setup-deno-badge]][denoland/setup-deno-url] |
 | [oven-sh/setup-bun] | [![][oven-sh/setup-bun-badge]][oven-sh/setup-bun-url] |
 | [pnpm/action-setup] | [![][pnpm/action-setup-badge]][pnpm/action-setup-url] |
+| [dacbd/create-issue-action] | [![][dacbd/create-issue-action-badge]][dacbd/create-issue-action-url] |
 <!-- INSERT ROW -->
+[dacbd/create-issue-action]: https://github.com/dacbd/create-issue-action
+[dacbd/create-issue-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/dacbd-create-issue-action.yml/badge.svg?event=schedule
+[dacbd/create-issue-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/dacbd-create-issue-action.yml
 [pnpm/action-setup]: https://github.com/pnpm/action-setup
 [pnpm/action-setup-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/pnpm-action-setup.yml/badge.svg?event=schedule
 [pnpm/action-setup-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/pnpm-action-setup.yml
