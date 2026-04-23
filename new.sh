@@ -71,3 +71,27 @@ echo "${workflow}" >"${filepath}"
 readme=$(cat README.md)
 readme=${readme//'<!-- INSERT ROW -->'/"${table}"}
 echo "${readme}" >'README.md'
+
+## Commit message
+case "${kind}" in
+node)
+	echo "#!/bin/sh
+if [ -n \"\$2\" ]; then exit 0; fi
+echo 'Add monitor for \`${action}\` at ${version}
+
+- \`build-cmd\`: <GITHUB PERMALINK>
+- \`install-cmd\`: <GITHUB PERMALINK>
+- \`node-version\`: <GITHUB PERMALINK>
+' >\"\$1\"
+" >.git/hooks/prepare-commit-msg
+	;;
+docker)
+	echo "#!/bin/sh
+if [ -n \"\$2\" ]; then exit 0; fi
+echo 'Add monitor for \`${action}\` at ${version}
+
+- \`dockerfile\`: <GITHUB PERMALINK>
+' >\"\$1\"
+" >.git/hooks/prepare-commit-msg
+	;;
+esac
