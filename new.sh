@@ -83,6 +83,7 @@ echo 'Add monitor for \`${action}\` at ${version}
 - \`install-cmd\`: <GITHUB PERMALINK>
 - \`node-version\`: <GITHUB PERMALINK>
 ' >\"\$1\"
+if [ -f '.git/hooks/prepare-commit-msg' ]; then rm .git/hooks/prepare-commit-msg; fi
 " >.git/hooks/prepare-commit-msg
 	;;
 docker)
@@ -92,6 +93,8 @@ echo 'Add monitor for \`${action}\` at ${version}
 
 - \`dockerfile\`: <GITHUB PERMALINK>
 ' >\"\$1\"
+if [ -f '.git/hooks/prepare-commit-msg' ]; then rm .git/hooks/prepare-commit-msg; fi
 " >.git/hooks/prepare-commit-msg
 	;;
 esac
+chmod +x .git/hooks/prepare-commit-msg
