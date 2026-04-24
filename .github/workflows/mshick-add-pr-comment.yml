@@ -28,4 +28,4 @@ jobs:
     if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
-      - uses: mshick/add-pr-comment@v3.10.0
+      - uses: mshick/add-pr-comment@v3.11.0
