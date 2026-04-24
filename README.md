@@ -65,7 +65,11 @@ with more information about the project and statuses.
 | [oven-sh/setup-bun] | [![][oven-sh/setup-bun-badge]][oven-sh/setup-bun-url] |
 | [pnpm/action-setup] | [![][pnpm/action-setup-badge]][pnpm/action-setup-url] |
 | [dacbd/create-issue-action] | [![][dacbd/create-issue-action-badge]][dacbd/create-issue-action-url] |
+| [svenstaro/upload-release-action] | [![][svenstaro/upload-release-action-badge]][svenstaro/upload-release-action-url] |
 <!-- INSERT ROW -->
+[svenstaro/upload-release-action]: https://github.com/svenstaro/upload-release-action
+[svenstaro/upload-release-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/svenstaro-upload-release-action.yml/badge.svg?event=schedule
+[svenstaro/upload-release-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/svenstaro-upload-release-action.yml
 [dacbd/create-issue-action]: https://github.com/dacbd/create-issue-action
 [dacbd/create-issue-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/dacbd-create-issue-action.yml/badge.svg?event=schedule
 [dacbd/create-issue-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/dacbd-create-issue-action.yml

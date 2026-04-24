@@ -1,0 +1,31 @@
+name: svenstaro/upload-release-action
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-node-test.yml
+      - .github/workflows/svenstaro-upload-release-action.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-node-test.yml
+      - .github/workflows/svenstaro-upload-release-action.yml
+  schedule:
+    - cron: "55 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  test:
+    uses: ./.github/workflows/reusable-node-test.yml
+    with:
+      build-cmd:    npm run all
+      install-cmd:  npm install
+      node-version: 24
+      repository:   svenstaro/upload-release-action
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: svenstaro/upload-release-action@2.11.5
