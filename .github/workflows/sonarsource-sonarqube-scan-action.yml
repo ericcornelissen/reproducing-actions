@@ -28,4 +28,4 @@ jobs:
     if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
-      - uses: SonarSource/sonarqube-scan-action@v7.2.0
+      - uses: SonarSource/sonarqube-scan-action@v7.2.1
