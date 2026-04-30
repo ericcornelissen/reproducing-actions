@@ -65,7 +65,11 @@ with more information about the project and statuses.
 | [oven-sh/setup-bun] | [![][oven-sh/setup-bun-badge]][oven-sh/setup-bun-url] |
 | [pnpm/action-setup] | [![][pnpm/action-setup-badge]][pnpm/action-setup-url] |
 | [dacbd/create-issue-action] | [![][dacbd/create-issue-action-badge]][dacbd/create-issue-action-url] |
+| [svenstaro/upload-release-action] | [![][svenstaro/upload-release-action-badge]][svenstaro/upload-release-action-url] |
 <!-- INSERT ROW -->
+[svenstaro/upload-release-action]: https://github.com/svenstaro/upload-release-action
+[svenstaro/upload-release-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/svenstaro-upload-release-action.yml/badge.svg?event=schedule
+[svenstaro/upload-release-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/svenstaro-upload-release-action.yml
 [dacbd/create-issue-action]: https://github.com/dacbd/create-issue-action
 [dacbd/create-issue-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/dacbd-create-issue-action.yml/badge.svg?event=schedule
 [dacbd/create-issue-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/dacbd-create-issue-action.yml
@@ -334,6 +338,7 @@ project.
 | `JS-DevTools/npm-publish` | v4.0.0...v4.1.2 | [untracked files](https://github.com/JS-DevTools/npm-publish/pull/258) |
 | `stepci/stepci` | v1.0.5...v2.8.2 | [Node compile/npm cache](https://github.com/stepci/stepci/issues/260) |
 | `SonarSource/sonarqube-scan-action` | v7.1.0 | [outdated build](https://community.sonarsource.com/t/the-sonarsource-sonarqube-scan-action-7-1-0-build-output-is-not-reproducible/180749) |
+|                                     | v7.2.0...v8.0.0 | lockfile contains private registry URLs for `resolved` fields |
 | `pnpm/action-setup` | v4.0.0...v6.0.1 | [outdated build](https://github.com/pnpm/action-setup/issues/34) |
 | `extractions/setup-crate` | v2.0.0 | [absolute path](https://github.com/extractions/setup-crate/issues/11) |
 | `peter-evans/create-pull-request` | v8.1.1 | [outdated build](https://github.com/peter-evans/create-pull-request/issues/4366) |
