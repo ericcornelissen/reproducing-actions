@@ -26,3 +26,11 @@ fi
 ## Remove
 rm "${filepath}"
 sed -i "/^\(| \)\?\[${action//'/'/'\/'}/d" README.md
+
+## Commit message
+echo -n "#!/bin/sh
+if [ -n \"\$2\" ]; then exit 0; fi
+echo 'Remove monitor for \`<owner>/<repo>\`' >\"\$1\"
+if [ -f '.git/hooks/prepare-commit-msg' ]; then rm .git/hooks/prepare-commit-msg; fi
+" >.git/hooks/prepare-commit-msg
+chmod +x .git/hooks/prepare-commit-msg
