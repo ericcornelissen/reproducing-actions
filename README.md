@@ -66,7 +66,11 @@ with more information about the project and statuses.
 | [pnpm/action-setup] | [![][pnpm/action-setup-badge]][pnpm/action-setup-url] |
 | [mikefarah/yq] | [![][mikefarah/yq-badge]][mikefarah/yq-url] |
 | [Platane/snk] | [![][Platane/snk-badge]][Platane/snk-url] |
+| [google/osv-scanner-action] | [![][google/osv-scanner-action-badge]][google/osv-scanner-action-url] |
 <!-- INSERT ROW -->
+[google/osv-scanner-action]: https://github.com/google/osv-scanner-action
+[google/osv-scanner-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/google-osv-scanner-action.yml/badge.svg?event=schedule
+[google/osv-scanner-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/google-osv-scanner-action.yml
 [Platane/snk]: https://github.com/Platane/snk
 [Platane/snk-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/platane-snk.yml/badge.svg?event=schedule
 [Platane/snk-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/platane-snk.yml
