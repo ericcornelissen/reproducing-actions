@@ -346,6 +346,7 @@ project.
 | `pnpm/action-setup` | v4.0.0...v6.0.1 | [outdated build](https://github.com/pnpm/action-setup/issues/34) |
 | `extractions/setup-crate` | v2.0.0 | [absolute path](https://github.com/extractions/setup-crate/issues/11) |
 | `peter-evans/create-pull-request` | v8.1.1 | [outdated build](https://github.com/peter-evans/create-pull-request/issues/4366) |
+| `addnab/docker-run-action` | v3 | [`apk` package database](https://github.com/addnab/docker-run-action/pull/67) |
 
 ## Related Work
 
