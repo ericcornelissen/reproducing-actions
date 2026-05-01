@@ -66,7 +66,11 @@ with more information about the project and statuses.
 | [pnpm/action-setup] | [![][pnpm/action-setup-badge]][pnpm/action-setup-url] |
 | [dacbd/create-issue-action] | [![][dacbd/create-issue-action-badge]][dacbd/create-issue-action-url] |
 | [svenstaro/upload-release-action] | [![][svenstaro/upload-release-action-badge]][svenstaro/upload-release-action-url] |
+| [addnab/docker-run-action] | [![][addnab/docker-run-action-badge]][addnab/docker-run-action-url] |
 <!-- INSERT ROW -->
+[addnab/docker-run-action]: https://github.com/addnab/docker-run-action
+[addnab/docker-run-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/addnab-docker-run-action.yml/badge.svg?event=schedule
+[addnab/docker-run-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/addnab-docker-run-action.yml
 [svenstaro/upload-release-action]: https://github.com/svenstaro/upload-release-action
 [svenstaro/upload-release-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/svenstaro-upload-release-action.yml/badge.svg?event=schedule
 [svenstaro/upload-release-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/svenstaro-upload-release-action.yml
@@ -342,6 +346,7 @@ project.
 | `pnpm/action-setup` | v4.0.0...v6.0.1 | [outdated build](https://github.com/pnpm/action-setup/issues/34) |
 | `extractions/setup-crate` | v2.0.0 | [absolute path](https://github.com/extractions/setup-crate/issues/11) |
 | `peter-evans/create-pull-request` | v8.1.1 | [outdated build](https://github.com/peter-evans/create-pull-request/issues/4366) |
+| `addnab/docker-run-action` | v3 | [`apk` package database](https://github.com/addnab/docker-run-action/pull/67) |
 
 ## Related Work
 
