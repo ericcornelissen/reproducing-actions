@@ -66,7 +66,11 @@ with more information about the project and statuses.
 | [pnpm/action-setup] | [![][pnpm/action-setup-badge]][pnpm/action-setup-url] |
 | [dacbd/create-issue-action] | [![][dacbd/create-issue-action-badge]][dacbd/create-issue-action-url] |
 | [svenstaro/upload-release-action] | [![][svenstaro/upload-release-action-badge]][svenstaro/upload-release-action-url] |
+| [addnab/docker-run-action] | [![][addnab/docker-run-action-badge]][addnab/docker-run-action-url] |
 <!-- INSERT ROW -->
+[addnab/docker-run-action]: https://github.com/addnab/docker-run-action
+[addnab/docker-run-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/addnab-docker-run-action.yml/badge.svg?event=schedule
+[addnab/docker-run-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/addnab-docker-run-action.yml
 [svenstaro/upload-release-action]: https://github.com/svenstaro/upload-release-action
 [svenstaro/upload-release-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/svenstaro-upload-release-action.yml/badge.svg?event=schedule
 [svenstaro/upload-release-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/svenstaro-upload-release-action.yml
