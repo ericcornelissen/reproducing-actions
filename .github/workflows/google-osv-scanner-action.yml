@@ -7,6 +7,7 @@ on:
   push:
     branches:
       - main
+      - google-osv
     paths:
       - .github/workflows/reusable-docker-image-test.yml
       - .github/workflows/google-osv-scanner-action.yml
