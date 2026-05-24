@@ -22,6 +22,7 @@ jobs:
     uses: ./.github/workflows/reusable-docker-image-test.yml
     with:
       dockerfile: goreleaser-action.dockerfile
+      go-version: "1.26.1"
       image: ghcr.io/google/osv-scanner-action:v2.3.5
       repository: google/osv-scanner
       setup-cmd: >-
