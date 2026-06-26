@@ -350,15 +350,31 @@ project.
 
 ## Related Work
 
+### Actions Reproducibility
+
+- [ActionsRemaker] ([demo][actionsremaker demo]): A tangentially related project
+  that aims to reproduce GitHub Actions jobs (rather than Actions themselves).
+- [ASF GitHub Actions Repository]: The Apache Software Foundation automatically
+  rebuilds JavaScript Actions on Dependabot update Pull Requests.
+
+### Broader Reproducibility
+
+- [999 crates of Rust on the wall]: Point in time reproducibility of popular
+  packages on the Cargo registry.
 - [Reproducible Builds]: A project dedicated to promoting and making builds
   reproducible.
+- [cargo-goggles]: Automatically test the reproducibility of a project's Cargo
+  dependencies.
+- [Lila]: Decentralized collection of reproducibility attestations for Nix.
 - [Reproducible Builds for Maven Central Repository]: A project dedicated to
   rebuild instructions for artifacts published to (Maven) Central Repository.
 - [OSS Rebuild]: Aims to apply the reproducible build concepts at low-cost and
   high-scale for open-source package ecosystems.
-- [ActionsRemaker] ([demo][actionsremaker demo]): A tangentially related project
-  that aims to reproduce GitHub Actions jobs (rather than Actions themselves).
 
+[999 crates of rust on the wall]: https://lawngno.me/blog/2024/06/10/divine-provenance.html
+[asf github actions repository]: https://github.com/apache/infrastructure-actions
+[cargo-goggles]: https://github.com/M4SS-Code/cargo-goggles
+[lila]: https://arxiv.org/abs/2601.20662
 [reproducible builds]: https://reproducible-builds.org/
 [reproducible builds for maven central repository]: https://github.com/jvm-repo-rebuild/reproducible-central
 [oss rebuild]: https://github.com/google/oss-rebuild
