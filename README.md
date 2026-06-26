@@ -67,7 +67,11 @@ with more information about the project and statuses.
 | [dacbd/create-issue-action] | [![][dacbd/create-issue-action-badge]][dacbd/create-issue-action-url] |
 | [svenstaro/upload-release-action] | [![][svenstaro/upload-release-action-badge]][svenstaro/upload-release-action-url] |
 | [addnab/docker-run-action] | [![][addnab/docker-run-action-badge]][addnab/docker-run-action-url] |
+| [pnpm/setup] | [![][pnpm/setup-badge]][pnpm/setup-url] |
 <!-- INSERT ROW -->
+[pnpm/setup]: https://github.com/pnpm/setup
+[pnpm/setup-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/pnpm-setup.yml/badge.svg?event=schedule
+[pnpm/setup-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/pnpm-setup.yml
 [addnab/docker-run-action]: https://github.com/addnab/docker-run-action
 [addnab/docker-run-action-badge]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/addnab-docker-run-action.yml/badge.svg?event=schedule
 [addnab/docker-run-action-url]: https://github.com/ericcornelissen/reproducing-actions/actions/workflows/addnab-docker-run-action.yml
