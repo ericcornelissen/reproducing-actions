@@ -1,0 +1,33 @@
+name: pnpm/setup
+on:
+  pull_request:
+    paths:
+      - .github/workflows/reusable-node-test.yml
+      - .github/workflows/pnpm-setup.yml
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/reusable-node-test.yml
+      - .github/workflows/pnpm-setup.yml
+  schedule:
+    - cron: "57 1 * * *"
+  workflow_dispatch: ~
+
+permissions: read-all
+
+jobs:
+  test:
+    uses: ./.github/workflows/reusable-node-test.yml
+    with:
+      build-cmd:    pnpm run build
+      install-cmd:  |
+        corepack enable
+        corepack prepare pnpm@^11 --activate
+        corepack pnpm install
+      repository:   pnpm/setup
+  version:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: pnpm/setup@v1.0.0
