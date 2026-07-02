@@ -30,4 +30,4 @@ jobs:
     if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
-      - uses: docker/build-push-action@v7.2.0
+      - uses: docker/build-push-action@v7.3.0
