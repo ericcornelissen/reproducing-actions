@@ -151,7 +151,4 @@ jobs:
           after=$FILES_LIST_FILE.2
 
           find . \( -path ./.git \) -prune -o -type f -print >"$after"
-
-          LC_ALL=C sort -o "$before" "$before"
-          LC_ALL=C sort -o "$after" "$after"
           diff "$after" "$before"

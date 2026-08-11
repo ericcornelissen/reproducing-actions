@@ -20,8 +20,11 @@ jobs:
   test:
     uses: ./.github/workflows/reusable-node-test.yml
     with:
-      build-cmd:         npm run build
-      install-cmd:       npm clean-install
+      build-cmd: |
+        npm clean-install
+        npm run build
+        npm clean-install --omit dev
+      install-cmd:       npm clean-install --omit dev
       node-version-file: .node-version
       repository:        JamesIves/github-pages-deploy-action
   version:
