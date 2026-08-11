@@ -100,6 +100,9 @@ jobs:
       - name: Normalize line endings
         run: |
           while IFS= read -r file; do
+            if [ ! -f "$file" ]; then
+               echo "Skipping '$file' (not found)"
+            fi
             echo "Normalizing line endings in '$file'"
             sed -i 's/\r*$//' "$file"
           done <"$FILES_LIST_FILE"
@@ -122,6 +125,9 @@ jobs:
       - name: Normalize line endings
         run: |
           while IFS= read -r file; do
+            if [ ! -f "$file" ]; then
+               echo "Skipping '$file' (not found)"
+            fi
             echo "Normalizing line endings in '$file'"
             sed -i 's/\r*$//' "$file"
           done <"$FILES_LIST_FILE"
