@@ -20,12 +20,8 @@ jobs:
   test:
     uses: ./.github/workflows/reusable-node-test.yml
     with:
-      build-cmd:         |
-        yarn build
-        yarn install --production --frozen-lockfile
-      install-cmd:       |
-        npm install -g yarn
-        yarn install --frozen-lockfile
+      build-cmd:         npm run build
+      install-cmd:       npm clean-install
       node-version-file: .node-version
       repository:        JamesIves/github-pages-deploy-action
   version:
