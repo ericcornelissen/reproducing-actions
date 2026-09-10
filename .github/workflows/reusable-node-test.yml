@@ -122,24 +122,16 @@ jobs:
       - name: Normalize line endings
         run: |
           while IFS= read -r file; do
-            if [ -f "$file" ]; then
-              echo "Normalizing line endings in '$file'"
-              sed -i 's/\r*$//' "$file"
-            else
-              echo "File not found '$file', skipping"
-            fi
+            echo "Normalizing line endings in '$file'"
+            sed -i 's/\r*$//' "$file"
           done <"$FILES_LIST_FILE"
       - name: Check byte-by-byte equality
         run: |
           while IFS= read -r file; do
-            if [ -f "$file" ]; then
-              rebuild=$file
-              original=$BACKUP_DIR/$file
-              echo "Checking '$rebuild' against '$original'"
-              cmp "$rebuild" "$original"
-            else
-              echo "File not found '$file', skipping"
-            fi
+            rebuild=$file
+            original=$BACKUP_DIR/$file
+            echo "Checking '$rebuild' against '$original'"
+            cmp "$rebuild" "$original"
           done <"$FILES_LIST_FILE"
       - name: Check checksums (legacy)
         run: shasum --strict --check "$CHECKSUMS_FILE"
@@ -148,14 +140,10 @@ jobs:
         if: ${{ failure() }}
         run: |
           while IFS= read -r file; do
-            if [ -f "$file" ]; then
-              echo "--- Diff of '$file' ---"
-              git diff --text "$file"
-            else
-              echo "File not found '$file', skipping"
-            fi
+            echo "--- Diff of '$file' ---"
+            git diff --text "$file"
           done <"$FILES_LIST_FILE"
-      - name: Check for new/removed files
+      - name: Check for new files
         run: |
           git clean -dfX
 

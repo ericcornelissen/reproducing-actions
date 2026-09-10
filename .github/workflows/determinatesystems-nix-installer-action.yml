@@ -23,8 +23,7 @@ jobs:
       build-cmd:    |
         npm run build
         npm run package
-      install-cmd:  |
-        npm clean-install
+      install-cmd:  npm clean-install
       node-version: 24.13.0
       repository:   DeterminateSystems/nix-installer-action
   version:
