@@ -21,16 +21,13 @@ jobs:
     uses: ./.github/workflows/reusable-node-test.yml
     with:
       build-cmd:    |
-        pnpm run build
-        pnpm run package
-      install-cmd:  |
-        corepack enable
-        corepack prepare pnpm@10.32.1 --activate
-        corepack pnpm install
+        npm run build
+        npm run package
+      install-cmd:  npm clean-install
       node-version: 24.13.0
       repository:   DeterminateSystems/nix-installer-action
   version:
     if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
-      - uses: DeterminateSystems/nix-installer-action@v22
+      - uses: DeterminateSystems/nix-installer-action@v23
