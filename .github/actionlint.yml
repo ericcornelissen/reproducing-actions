@@ -5,4 +5,5 @@ config-variables: []
 paths:
   .github/workflows/*.yml:
     ignore:
+      - 'label "ubuntu-26.04" is unknown'
       - 'constant expression "false" in condition.+'
