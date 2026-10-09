@@ -269,14 +269,6 @@ Actions) and tests a specific version (e.g., v1.2.3). As versions are not
 necessarily immutable we run every monitor on a daily schedule. (This does not
 catch mutated versions, just ensures the mutated version is still reproducible.)
 
-> [!NOTE]
-> We are running an experiment with 5 monitors to track the major version ref
-> instead of an exact version. In the GitHub Actions ecosystem it is common to
-> have a branch for the major version pointing to the latest release in that
-> line (for example a branch `v1` pointing to tag `v1.2.3`). The motivation is
-> that it creates fewer Pull Requests and commits that update monitors while
-> still being able to rely on Dependabot to update the version.
-
 The version being monitored is tracked in git and is automatically managed using
 [Dependabot].
 
@@ -346,7 +338,7 @@ project.
 | `JS-DevTools/npm-publish` | v4.0.0...v4.1.2 | [untracked files](https://github.com/JS-DevTools/npm-publish/pull/258) |
 | `stepci/stepci` | v1.0.5...v2.8.2 | [Node compile/npm cache](https://github.com/stepci/stepci/issues/260) |
 | `SonarSource/sonarqube-scan-action` | v7.1.0 | [outdated build](https://community.sonarsource.com/t/the-sonarsource-sonarqube-scan-action-7-1-0-build-output-is-not-reproducible/180749) |
-|                                     | v7.2.0...v8.2.1 | lockfile contains private registry URLs for `resolved` fields |
+|                                     | v7.2.0...v8.3.0 | lockfile contains private registry URLs for `resolved` fields |
 | `pnpm/action-setup` | v4.0.0...v6.0.5 | [outdated build](https://github.com/pnpm/action-setup/issues/34) |
 | `extractions/setup-crate` | v2.0.0 | [absolute path](https://github.com/extractions/setup-crate/issues/11) |
 | `peter-evans/create-pull-request` | v8.1.1 | [outdated build](https://github.com/peter-evans/create-pull-request/issues/4366) |
