@@ -30,4 +30,4 @@ jobs:
     if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
-      - uses: pnpm/setup@v3.1.1
+      - uses: pnpm/setup@v3.1.2
