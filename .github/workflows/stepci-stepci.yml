@@ -18,7 +18,7 @@ permissions: read-all
 
 jobs:
   test:
-    uses: ./.github/workflows/reusable-docker-test.yml
+    uses: $/.github/workflows/reusable-docker-test.yml
     with:
       dockerfile: Dockerfile.action
       repository: stepci/stepci
