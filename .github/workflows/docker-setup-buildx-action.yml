@@ -18,7 +18,7 @@ permissions: read-all
 
 jobs:
   test:
-    uses: ./.github/workflows/reusable-node-test.yml
+    uses: $/.github/workflows/reusable-node-test.yml
     with:
       build-cmd:    yarn build
       install-cmd:  |

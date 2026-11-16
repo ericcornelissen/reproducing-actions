@@ -15,7 +15,7 @@ permissions: read-all
 
 jobs:
   setup:
-    uses: ./.github/workflows/reusable-setup.yml
+    uses: $/.github/workflows/reusable-setup.yml
     with:
       repository: ${{ inputs.repository }}
   build:
